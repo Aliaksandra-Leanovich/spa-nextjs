@@ -1,10 +1,21 @@
 import type { NextPage } from "next";
-import Head from "next/head";
-import Image from "next/image";
-import styles from "../styles/Home.module.css";
+import React from "react";
+import { PricingBlock } from "../components/PricingBlock/PricingBlock";
+import { CustomiseBlock } from "../components/TemplateBlocks/CustomiseBlock";
+import { ExtensionBlock } from "../components/TemplateBlocks/ExtensionBlock";
+import { ManagementBlock } from "../components/TemplateBlocks/ManagementBlock";
+import { MainBlock } from "../components/TemplateBlocks/MainBlock";
 
 const Home: NextPage = () => {
-  return <div></div>;
+  return (
+    <>
+      <MainBlock />
+      <ManagementBlock />
+      <ExtensionBlock />
+      <CustomiseBlock />
+      <PricingBlock />
+    </>
+  );
 };
 
 export default Home;
