@@ -1,4 +1,4 @@
-import React, { FormEvent, useState } from "react";
+import React from "react";
 import Logo from "/public/logo.svg";
 import { Navigation } from "../Navigation/Navigation";
 import { StyledHeader, LogoContainer } from "./style";

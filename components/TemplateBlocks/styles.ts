@@ -18,15 +18,23 @@ export const MainContainer = styled.section`
 export const MainBlockContainer = styled.section`
   margin: 0 auto;
   width: 100%;
-  height: 100%;
   padding: 131px 220px 0;
   background-color: ${Colors.BLUE};
-  background-image: url(${background.src});
-  background-repeat: no-repeat;
-  background-position: center;
-
   ${media.LAPTOP2} {
     padding: 131px 34px 0;
+  }
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(${background.src});
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
   }
 `;
 
