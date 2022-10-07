@@ -1,29 +1,21 @@
 import styled from "@emotion/styled";
 import { Colors } from "../../ui/colors";
-import { typography } from "../../ui/typography";
-import { media } from "../../ui/media";
-import Link from 'next/link';
 
-const StyledHeader = styled.div`
+const StyledHeader = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 34px;
-  padding-bottom: 34px;
+  padding: 16px 34px;
   width: 100%;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  position: fixed;
+  background-color: ${Colors.BLUE};
 `;
-const StyledLogo = styled(Link)`
-  width: 191px;
-  ${media.PHONE} {
-    width: 134px;
-  }
+
+export const LogoContainer = styled.div`
+  max-width: 191px;
 `;
-const LogOutBtn = styled.button`
-  ${typography.button}
-  color: ${Colors.BLUE};
-  padding: 16px 40px;
-  background-color: ${Colors.YELLOW};
-  border: none;
-  border-radius: 8px;
-`;
-export { StyledHeader, LogOutBtn, StyledLogo };
+
+export { StyledHeader };

@@ -1,5 +1,6 @@
 {
   "name": "whitepace-fullstack-trainee",
+  "homepage": "https://aliaksandra-leanovich.github.io/whitepace-fullstack-trainee/",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -12,11 +13,15 @@
   "dependencies": {
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",
+    "@hookform/resolvers": "^2.9.8",
     "firebase": "^9.10.0",
     "next": "12.3.1",
+    "normalize.css": "^8.0.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-hook-form": "^7.36.1"
+    "react-hook-form": "^7.36.1",
+    "swiper": "^8.4.3",
+    "yup": "^0.32.11"
   },
   "devDependencies": {
     "@types/node": "18.8.1",

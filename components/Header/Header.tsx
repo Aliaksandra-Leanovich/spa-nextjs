@@ -1,17 +1,15 @@
-import React from "react";
+import React, { FormEvent, useState } from "react";
 import Logo from "/public/logo.svg";
 import { Navigation } from "../Navigation/Navigation";
-import { StyledHeader, LogOutBtn } from "./style";
+import { StyledHeader, LogoContainer } from "./style";
 
 export const Header = () => {
   return (
     <StyledHeader>
-      {/*<StyledLogo to={routes.HOME}>
-
-            </StyledLogo>*/}
-      <img src={Logo.src} alt={"logo"} />
+      <LogoContainer>
+        <img src={Logo.src} alt={"logo"} />
+      </LogoContainer>
       <Navigation />
-      <LogOutBtn>Logout</LogOutBtn>
     </StyledHeader>
   );
 };
