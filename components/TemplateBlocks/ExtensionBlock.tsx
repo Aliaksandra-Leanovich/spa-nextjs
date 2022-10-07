@@ -1,28 +1,29 @@
 import React from "react";
+import { LinkTemplate } from "../LinkTemplate/LinkTemplate";
+import ImageWork from "/public/team-work3.webp";
 
 import {
   MainContainer,
   ContainerBlock,
   BlockTitle,
   BlockDescription,
-  BlockButton,
   ContainerDescription,
-  ContainerBlue,
+  ImageContainer,
 } from "./styles";
 
 export const ExtensionBlock = () => {
   return (
     <MainContainer>
-      <ContainerBlock>
+      <ContainerBlock id="solutions">
         <ContainerDescription>
           <BlockTitle>Use as Extension</BlockTitle>
           <BlockDescription>
             Use the web clipper extension, available on Chrome and Firefox, to
             save web pages or take screenshots as notes.
           </BlockDescription>
-          <BlockButton>Lets Go</BlockButton>
+          <LinkTemplate href="/whitepacefree" text="Lets Go" />
         </ContainerDescription>
-        <ContainerBlue />
+        <ImageContainer src={ImageWork.src} alt={"work together"} />
       </ContainerBlock>
     </MainContainer>
   );

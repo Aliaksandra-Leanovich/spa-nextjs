@@ -1,18 +1,20 @@
 import React from "react";
 import { Header } from "../Header/Header";
+import { LinkTemplate } from "../LinkTemplate/LinkTemplate";
+import ImageWork from "/public/team-work1.webp";
 import {
   MainContainer,
   ContainerBlock,
   BlockTitle,
   BlockDescription,
-  BlockButton,
   ContainerDescription,
-  ContainerBlue,
+  ImageContainer,
+  MainBlockContainer,
 } from "./styles";
 
 export const MainBlock = () => {
   return (
-    <MainContainer>
+    <MainBlockContainer>
       <Header />
       <ContainerBlock>
         <ContainerDescription>
@@ -21,10 +23,10 @@ export const MainBlock = () => {
             Project management software that enables your teams to collaborate,
             plan, analyze and manage everyday tasks
           </BlockDescription>
-          <BlockButton>Try Whitepace free</BlockButton>
+          <LinkTemplate href="/whitepacefree" text="Try Whitepace free" />
         </ContainerDescription>
-        <ContainerBlue />
+        <ImageContainer src={ImageWork.src} alt={"work together"} />
       </ContainerBlock>
-    </MainContainer>
+    </MainBlockContainer>
   );
 };

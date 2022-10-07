@@ -1,19 +1,20 @@
 import React from "react";
+import { LinkTemplate } from "../LinkTemplate/LinkTemplate";
+import ImageWork from "/public/team-work.webp";
 
 import {
-  ManagementContainer,
+  WhiteSectionContainer,
   ContainerBlock,
   BlockTitleBlack,
   BlockDescriptionBlack,
-  BlockButton,
   ContainerDescription,
-  ContainerBlue,
+  ImageContainer,
 } from "./styles";
 
 export const CustomiseBlock = () => {
   return (
-    <ManagementContainer>
-      <ContainerBlock>
+    <WhiteSectionContainer>
+      <ContainerBlock id="resources">
         <ContainerDescription>
           <BlockTitleBlack>Customise it to your needs</BlockTitleBlack>
           <BlockDescriptionBlack>
@@ -21,10 +22,10 @@ export const CustomiseBlock = () => {
             editors (Rich Text or Markdown). Or create your own scripts and
             plugins using the Extension API.
           </BlockDescriptionBlack>
-          <BlockButton>Lets Go</BlockButton>
+          <LinkTemplate href="/whitepacefree" text="Lets Go" />
         </ContainerDescription>
-        <ContainerBlue />
+        <ImageContainer src={ImageWork.src} alt={"work together"} />
       </ContainerBlock>
-    </ManagementContainer>
+    </WhiteSectionContainer>
   );
 };
