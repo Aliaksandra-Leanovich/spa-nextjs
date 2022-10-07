@@ -3,7 +3,7 @@ import { Colors } from "../../ui/colors";
 import { media } from "../../ui/media";
 import { typography } from "../../ui/typography";
 
-export const PricingContainer = styled.div`
+export const PricingContainer = styled.section`
   margin: 0 auto;
   width: 100%;
   padding: 0 32px 140px 32px;
@@ -38,31 +38,42 @@ export const Tab = styled.div`
   border: 1px solid ${Colors.YELLOW};
   border-radius: 10px;
   padding: 40px 44px;
-  max-width: 470px;
-  width: 100%;
-  ${media.LAPTOP} {
-    max-width: 424px;
-  }
-  ${media.TABLET} {
-    max-width: 341px;
-  }
-  ${media.PHONE} {
-    max-width: 289px;
-    padding: 20px;
-  }
+  height: max-content;
+
   cursor: pointer;
   transition: all 0.5s ease-out;
   &:hover {
-    transform: translateY(-5px);
+    transform: translateY(-40px);
     background-color: ${Colors.BLUE};
-    color: ${Colors.YELLOW};
     padding: 80px 44px;
     ${media.PHONE} {
       padding: 20px;
     }
   }
-`;
 
+  &:hover #point path {
+    fill: yellow;
+  }
+  &:hover #text {
+    color: ${Colors.WHITE};
+  }
+  &:hover #price {
+    color: ${Colors.YELLOW};
+  }
+  &:hover #button {
+    color: ${Colors.WHITE};
+    background-color: ${Colors.LIGHTBLUE};
+    border: none;
+  }
+`;
+export const Point = styled.img`
+  height: 18px;
+  margin-right: 19px;
+
+  &:hover path {
+    fill: ${Colors.YELLOW};
+  }
+`;
 export const TabSet = styled.p`
   ${typography.paragraph1}
   margin-bottom: 25px;
@@ -80,6 +91,9 @@ export const TabDescr = styled.p`
 export const TabAdvantage = styled.div`
   ${typography.paragraph3}
   margin-bottom: 28px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 `;
 export const TabButton = styled.button`
   ${typography.button}
