@@ -7,12 +7,16 @@ import managbackground from "/public/managmentbackground.svg";
 export const ContainerBlock = styled.section`
   margin: 0 auto;
   width: 100%;
-  padding: 140px 32px;
+  padding: 140px 220px;
   background-color: ${Colors.BLUE};
   background-image: url(${managbackground.src});
   left: 0;
   bottom: 0;
   background-repeat: no-repeat;
+
+  ${media.LAPTOP2} {
+    padding: 140px 32px;
+  }
 `;
 export const TextContainer = styled.div`
   display: flex;

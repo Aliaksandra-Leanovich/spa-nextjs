@@ -15,6 +15,7 @@ export const CustomiseBlock = () => {
   return (
     <WhiteSectionContainer>
       <ContainerBlock id="resources">
+        <ImageContainer src={ImageWork.src} alt={"work together"} />
         <ContainerDescription>
           <BlockTitleBlack>Customise it to your needs</BlockTitleBlack>
           <BlockDescriptionBlack>
@@ -24,7 +25,6 @@ export const CustomiseBlock = () => {
           </BlockDescriptionBlack>
           <LinkTemplate href="/whitepacefree" text="Lets Go" />
         </ContainerDescription>
-        <ImageContainer src={ImageWork.src} alt={"work together"} />
       </ContainerBlock>
     </WhiteSectionContainer>
   );

@@ -6,11 +6,15 @@ import { typography } from "../../ui/typography";
 export const PricingContainer = styled.section`
   margin: 0 auto;
   width: 100%;
-  padding: 0 32px 140px 32px;
+  padding: 220px 32px 220px 32px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+
+  ${media.LAPTOP2} {
+    padding: 0 32px 140px 32px;
+  }
 `;
 
 export const BlockTitle = styled.h2`

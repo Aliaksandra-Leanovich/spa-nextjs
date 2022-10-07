@@ -26,7 +26,7 @@ const StyledLink = styled.a`
   ${typography.button}
   border: none;
   border-radius: 8px;
-  padding: 20px;
+  padding: 18px;
 
   cursor: pointer;
   width: max-content;
@@ -39,6 +39,5 @@ const StyledLink = styled.a`
 
 const Arrow = styled.img`
   width: 10px;
-
-  /* margin-left: 20px; */
+  margin-left: 10px;
 `;

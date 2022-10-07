@@ -6,12 +6,17 @@ import { typography } from "../../ui/typography";
 export const SponsorsBlockContainer = styled.section`
   margin: 0 auto;
   width: 100%;
-  padding: 140px 32px;
+
   background-color: ${Colors.WHITE};
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+
+  padding: 140px 220px;
+  ${media.LAPTOP2} {
+    padding: 140px 34px;
+  }
 `;
 export const BlockTitleBlack = styled.h2`
   ${typography.H2}

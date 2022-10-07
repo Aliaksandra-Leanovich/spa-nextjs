@@ -5,8 +5,13 @@ import { typography } from "../../ui/typography";
 
 export const StyledFooter = styled.footer`
   width: 100%;
-  padding: 140px 34px 34px;
+
   background-color: ${Colors.BLUE};
+
+  padding: 140px 220px 34px;
+  ${media.LAPTOP2} {
+    padding: 140px 34px 34px;
+  }
 `;
 
 export const ContainerFooter = styled.div`

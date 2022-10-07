@@ -30,10 +30,7 @@ const TextLink = styled.span`
     color: ${Colors.YELLOW};
   }
 `;
-const Arrow = styled.img`
-  width: 9px;
-  margin-left: 20px;
-`;
+
 export const StyledRightNavigation = styled.div<IProps>`
   background: ${Colors.BLACK};
   height: 100vh;
@@ -74,4 +71,4 @@ const NavigationContainer = styled.div`
   display: flex;
 `;
 
-export { StyledNavigation, StyledLink, TextLink, Arrow, NavigationContainer };
+export { StyledNavigation, StyledLink, TextLink, NavigationContainer };

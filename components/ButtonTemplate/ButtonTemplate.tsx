@@ -29,7 +29,7 @@ const StyledButton = styled.button<IProps>`
 
   ${typography.button}
 
-  padding: 16px 40px;
+  padding: 18px 40px;
   margin-right: 26px;
 
   border: none;

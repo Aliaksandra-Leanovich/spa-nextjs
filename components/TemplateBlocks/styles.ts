@@ -8,18 +8,26 @@ import managbackground from "/public/managmentbackground.svg";
 export const MainContainer = styled.section`
   margin: 0 auto;
   width: 100%;
-  padding: 0 32px;
   background-color: ${Colors.BLUE};
+
+  padding: 0 220px;
+  ${media.LAPTOP2} {
+    padding: 0 34px;
+  }
 `;
 export const MainBlockContainer = styled.section`
   margin: 0 auto;
   width: 100%;
   height: 100%;
-  padding: 131px 32px 0;
+  padding: 131px 220px 0;
   background-color: ${Colors.BLUE};
   background-image: url(${background.src});
   background-repeat: no-repeat;
   background-position: center;
+
+  ${media.LAPTOP2} {
+    padding: 131px 34px 0;
+  }
 `;
 
 export const ContainerBlock = styled.div`
@@ -104,17 +112,25 @@ export const FavoiteBlockContainer = styled.section`
   margin: 0 auto;
   width: 100%;
   height: 100%;
-  padding: 0 32px;
   background-color: ${Colors.BLUE};
   background-image: url(${background.src});
   background-position: center;
+
+  padding: 0 220px;
+  ${media.LAPTOP2} {
+    padding: 0 34px;
+  }
 `;
 
 export const WhiteSectionContainer = styled.div`
   margin: 0 auto;
   width: 100%;
-  padding: 50px 32px;
+
   background-color: ${Colors.WHITE};
+  padding: 50px 220px;
+  ${media.LAPTOP2} {
+    padding: 0 34px;
+  }
 `;
 export const ClientsContainer = styled.div`
   display: flex;

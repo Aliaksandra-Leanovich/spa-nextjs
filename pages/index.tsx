@@ -13,6 +13,7 @@ import { SponsorsBlock } from "../components/SponsorsBlock/SponsorsBlock";
 import { ClientsBlock } from "../components/TemplateBlocks/ClientsBlock";
 import { TodayBlock } from "../components/TemplateBlocks/TodayBlock";
 import { Footer } from "../components/Footer/Footer";
+import { media } from "../ui/media";
 
 const Home: NextPage = () => {
   return (

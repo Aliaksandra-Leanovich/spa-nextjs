@@ -3,7 +3,6 @@ import {
   StyledNavigation,
   StyledLink,
   TextLink,
-  Arrow,
   NavigationContainer,
   StyledRightNavigation,
   ContainerLinks,
@@ -11,7 +10,6 @@ import {
 } from "./styles";
 import { app } from "../../utils/firebase";
 import { getAuth, signOut } from "firebase/auth";
-import ArrowIcon from "/public/icons/arrow.svg";
 import Link from "next/link";
 import router from "next/router";
 import { routes } from "../../routes/routes";
@@ -22,22 +20,18 @@ import { ButtonTemplate } from "../ButtonTemplate/ButtonTemplate";
 const config = [
   {
     href: "#products",
-    icon: ArrowIcon.src,
     title: "Products",
   },
   {
     href: "#solutions",
-    icon: ArrowIcon.src,
     title: "Solutions",
   },
   {
     href: "#resources",
-    icon: ArrowIcon.src,
     title: "Resources",
   },
   {
     href: "#pricing",
-    icon: ArrowIcon.src,
     title: "Pricing",
   },
 ];
@@ -64,8 +58,6 @@ export const Navigation = () => {
           <Link href={link.href} key={index}>
             <StyledLink>
               <TextLink>{link.title}</TextLink>
-
-              <Arrow src={link.icon} alt={"arrow"} />
             </StyledLink>
           </Link>
         ))}
@@ -87,7 +79,6 @@ export const Navigation = () => {
             <Link href={link.href} key={index}>
               <StyledLink>
                 <TextLink>{link.title}</TextLink>
-                <Arrow src={link.icon} alt={"arrow"} />
               </StyledLink>
             </Link>
           ))}
