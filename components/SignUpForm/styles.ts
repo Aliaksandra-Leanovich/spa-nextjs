@@ -11,23 +11,8 @@ export const StyledForm = styled.form`
 
   padding: 50px;
 
-  background-color: #043873;
-  border-radius: 10px;
-`;
-
-export const StyledInput = styled.input`
-  font-weight: 16px;
-  line-height: 20px;
-
-  padding: 16px;
-  width: 100%;
-
-  border-radius: 20px;
-  border: 2px solid black;
-
-  &::placeholder {
-    color: black;
-  }
+  background-color: ${Colors.WHITE};
+  border-radius: 15px;
 `;
 
 export const StyledButton = styled.button`
@@ -44,25 +29,34 @@ export const StyledButton = styled.button`
 
   cursor: pointer;
 `;
-export const ContainerForm = styled.div`
+export const ErrorMessage = styled.p`
+  position: absolute;
+`;
+export const ErrorMessage1 = styled.p`
+  position: absolute;
+`;
+export const ContainerForm = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   width: 100%;
-  height: 80vh;
+  height: 100vh;
+  background-color: ${Colors.BLUE};
+  position: relative;
 `;
 export const StyledLink = styled.a`
-  color: ${Colors.BLUE};
+  color: ${Colors.YELLOW};
   ${typography.bodytext}
+  text-decoration: underline;
 
-  border-bottom: 1px solid ${Colors.BLUE};
   cursor: pointer;
   &:hover {
-    color: ${Colors.YELLOW};
-    border-bottom: 1px solid ${Colors.YELLOW};
+    color: ${Colors.WHITE};
   }
 `;
 export const FormTitle = styled.h3`
   ${typography.H3}
+  color: ${Colors.WHITE};
+  text-align: center;
 `;
