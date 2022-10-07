@@ -82,12 +82,16 @@ export const BlockDescriptionBlack = styled.p`
 export const ManagementContainer = styled.section`
   margin: 0 auto;
   width: 100%;
-  padding: 50px 32px;
+  padding: 50px 220px;
   background-color: ${Colors.WHITE};
   background-image: url(${managbackground.src});
   left: 0;
   bottom: 0;
   background-repeat: no-repeat;
+
+  ${media.LAPTOP2} {
+    padding: 50px 34px;
+  }
 `;
 
 export const ImageContainer = styled.img`
