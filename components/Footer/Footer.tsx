@@ -28,21 +28,15 @@ import Facebook from "/public/icons/Facebook.svg";
 const config = [
   {
     category: "Product",
-    subcategory1: "Overview",
-    subcategory2: "Pricing",
-    subcategory3: "Customer Stories",
+    subcategory: ["Overview", "Pricing", "Customer Stories"],
   },
   {
     category: "Resources",
-    subcategory1: "Blog",
-    subcategory2: "Guides tutorials",
-    subcategory3: "Help center",
+    subcategory: ["Blog", "Guides tutorials", "Help center"],
   },
   {
     category: "Company",
-    subcategory1: "About us",
-    subcategory2: "Careers",
-    subcategory3: "Media kit",
+    subcategory: ["About us", "Careers", "Media kit"],
   },
 ];
 
@@ -60,9 +54,11 @@ export const Footer = () => {
         {config.map((category, index) => (
           <BlockWithLinks key={index}>
             <CategoryFooter>{category.category}</CategoryFooter>
-            <SmallCategoryFooter>{category.subcategory1}</SmallCategoryFooter>
-            <SmallCategoryFooter>{category.subcategory2}</SmallCategoryFooter>
-            <SmallCategoryFooter>{category.subcategory3}</SmallCategoryFooter>
+            {category.subcategory.map((subcategory, index) => (
+              <SmallCategoryFooter key={index}>
+                {subcategory}
+              </SmallCategoryFooter>
+            ))}
           </BlockWithLinks>
         ))}
         <BlockWithButton>

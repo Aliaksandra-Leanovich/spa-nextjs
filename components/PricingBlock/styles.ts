@@ -6,12 +6,13 @@ import { typography } from "../../ui/typography";
 export const PricingContainer = styled.section`
   margin: 0 auto;
   width: 100%;
-  padding: 0 220px 140px;
+
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 
+  padding: 0 220px 140px;
   ${media.LAPTOP2} {
     padding: 0 32px 140px 32px;
   }
@@ -26,7 +27,16 @@ export const BlockTitle = styled.h2`
 export const BlockDescription = styled.p`
   ${typography.subtitle}
   color: ${Colors.BLACK};
-  margin-bottom: 60px;
+  margin-bottom: 120px;
+  ${media.LAPTOP2} {
+    margin-bottom: 114px;
+  }
+  ${media.LAPTOP} {
+    margin-bottom: 138px;
+  }
+  ${media.PHONE} {
+    margin-bottom: 85px;
+  }
 `;
 
 export const BlockTabs = styled.div`
@@ -47,9 +57,9 @@ export const Tab = styled.div`
   cursor: pointer;
   transition: all 0.5s ease-out;
   &:hover {
-    transform: translateY(-40px);
+    transform: scaleY(1.2);
     background-color: ${Colors.BLUE};
-    padding: 80px 44px;
+
     ${media.PHONE} {
       padding: 20px;
     }
