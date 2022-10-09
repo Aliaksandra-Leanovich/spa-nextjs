@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
 import React from "react";
+import { Colors } from "../../ui/colors";
 import { media } from "../../ui/media";
 import { typography } from "../../ui/typography";
 
@@ -38,5 +39,10 @@ const StyledButton = styled.button<IProps>`
   ${media.LAPTOP} {
     margin-right: 0px;
     margin-bottom: 2rem;
+  }
+  transition: all 0.5s ease-out;
+  &:hover {
+    background-color: ${Colors.LIGHTBLUE};
+    transform: translateY(-2px);
   }
 `;

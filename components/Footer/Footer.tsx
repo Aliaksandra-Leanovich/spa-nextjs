@@ -7,6 +7,7 @@ import {
   BottomFooterContainer,
   BottomFooterDecription,
   CategoryFooter,
+  CategoryFooterDescription,
   ContainerFooter,
   DecriptionFooter,
   EnglishContainer,
@@ -73,14 +74,18 @@ export const Footer = () => {
         <BottomFooterDecription>
           <EnglishContainer>
             <WorldImage src={World.src} alt="world" />
-            <SmallCategoryFooter>English</SmallCategoryFooter>
+            <CategoryFooterDescription>English</CategoryFooterDescription>
             <ArrowImage src={Arrow.src} alt="arrow" />
           </EnglishContainer>
 
-          <SmallCategoryFooter>Tearms &amp; privacy</SmallCategoryFooter>
-          <SmallCategoryFooter>Security</SmallCategoryFooter>
-          <SmallCategoryFooter>Status</SmallCategoryFooter>
-          <SmallCategoryFooter>©2021 Whitepace LLC.</SmallCategoryFooter>
+          <CategoryFooterDescription>
+            Tearms &amp; privacy
+          </CategoryFooterDescription>
+          <CategoryFooterDescription>Security</CategoryFooterDescription>
+          <CategoryFooterDescription>Status</CategoryFooterDescription>
+          <CategoryFooterDescription>
+            ©2021 Whitepace LLC.
+          </CategoryFooterDescription>
         </BottomFooterDecription>
         <SocialMediaContainer>
           <SocialMediaImage src={Facebook.src} alt="Facebook" />

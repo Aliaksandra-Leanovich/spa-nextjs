@@ -71,12 +71,33 @@ export const TitleFooter = styled.h5`
   color: ${Colors.WHITE};
   ${typography.H5}
 `;
-export const SmallCategoryFooter = styled.div`
+export const SmallCategoryFooter = styled.p`
   ${typography.paragraph3}
   color: ${Colors.WHITE};
   &:hover {
     color: ${Colors.YELLOW};
     cursor: pointer;
+  }
+`;
+export const CategoryFooterDescription = styled.p`
+  ${typography.paragraph3}
+  color: ${Colors.WHITE};
+  margin-right: 60px;
+  &:hover {
+    color: ${Colors.YELLOW};
+    cursor: pointer;
+  }
+  &:last-child {
+    margin-right: 0;
+  }
+  //should be phone
+  ${media.TABLET} {
+    margin-right: 0;
+    margin-bottom: 20px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 `;
 
@@ -87,10 +108,9 @@ export const EnglishContainer = styled.div`
   align-items: center;
 `;
 export const BottomFooterContainer = styled.div`
-  width: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  width: 100%;
 
   ${media.TABLET} {
     justify-content: flex-start;
@@ -103,27 +123,31 @@ export const BottomFooterContainer = styled.div`
   }
 `;
 export const BottomFooterDecription = styled.div`
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  column-gap: 60px;
+  display: flex;
 
   ${media.TABLET} {
     border-bottom: 1px solid ${Colors.WHITE};
     padding-bottom: 20px;
-    column-gap: 20px;
     margin-bottom: 40px;
   }
-  ${media.PHONE} {
-    display: grid;
-    row-gap: 20px;
-    text-align: center;
+  ${media.TABLET} {
+    width: 100%;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
 `;
 export const SocialMediaContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 32px;
+
+  ${media.TABLET} {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 export const ArrowImage = styled.img`
