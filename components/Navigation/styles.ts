@@ -7,7 +7,7 @@ interface IProps {
   open: boolean;
 }
 
-const StyledNavigation = styled.nav`
+export const StyledNavigationSC = styled.nav`
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -16,13 +16,13 @@ const StyledNavigation = styled.nav`
     display: none;
   }
 `;
-const StyledLink = styled.span`
+export const StyledLinkSC = styled.span`
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-right: 40px;
 `;
-const TextLink = styled.span`
+export const TextLinkSC = styled.span`
   ${typography.subtitle}
   color: ${Colors.WHITE};
   cursor: pointer;
@@ -31,7 +31,7 @@ const TextLink = styled.span`
   }
 `;
 
-export const StyledRightNavigation = styled.div<IProps>`
+export const StyledRightNavigationSC = styled.div<IProps>`
   background: ${Colors.BLACK};
   height: 100vh;
   display: flex;
@@ -50,7 +50,7 @@ export const StyledRightNavigation = styled.div<IProps>`
     width: 100%;
   }
 `;
-export const ContainerLinks = styled.div`
+export const ContainerLinksSC = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -61,14 +61,12 @@ export const ContainerLinks = styled.div`
   }
 `;
 
-export const ContainerButtons = styled.div`
+export const ContainerButtonsSC = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
 `;
 
-const NavigationContainer = styled.div`
+export const NavigationContainerSC = styled.div`
   display: flex;
 `;
-
-export { StyledNavigation, StyledLink, TextLink, NavigationContainer };

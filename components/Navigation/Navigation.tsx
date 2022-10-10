@@ -1,13 +1,5 @@
 import React, { FormEvent, useState } from "react";
-import {
-  StyledNavigation,
-  StyledLink,
-  TextLink,
-  NavigationContainer,
-  StyledRightNavigation,
-  ContainerLinks,
-  ContainerButtons,
-} from "./styles";
+
 import { app } from "../../utils/firebase";
 import { getAuth, signOut } from "firebase/auth";
 import Link from "next/link";
@@ -15,7 +7,17 @@ import router from "next/router";
 import { routes } from "../../routes/routes";
 import { LinkTemplate } from "../LinkTemplate/LinkTemplate";
 import { Burger } from "../Burger/Burger";
-import { ButtonTemplate } from "../ButtonTemplate/ButtonTemplate";
+import { Button } from "../Button/Button";
+import { Colors } from "../../ui/colors";
+import {
+  ContainerButtonsSC,
+  ContainerLinksSC,
+  NavigationContainerSC,
+  StyledLinkSC,
+  StyledNavigationSC,
+  StyledRightNavigationSC,
+  TextLinkSC,
+} from "./styles";
 
 const config = [
   {
@@ -52,49 +54,51 @@ export const Navigation = () => {
       });
   };
   return (
-    <NavigationContainer>
-      <StyledNavigation>
+    <NavigationContainerSC>
+      <StyledNavigationSC>
         {config.map((link, index) => (
           <Link href={link.href} key={index}>
-            <StyledLink>
-              <TextLink>{link.title}</TextLink>
-            </StyledLink>
+            <StyledLinkSC>
+              <TextLinkSC>{link.title}</TextLinkSC>
+            </StyledLinkSC>
           </Link>
         ))}
         <form onSubmit={handleSubmit}>
-          <ButtonTemplate
-            color="lightblue"
+          <Button
+            color={Colors.LIGHTBLUE}
+            background={Colors.BLUE}
             type="submit"
             text="Logout"
-            background="yellow"
+            padding="18px 40px"
           />
         </form>
         <LinkTemplate href="/whitepacefree" text="Try Whitepace free" />
-      </StyledNavigation>
+      </StyledNavigationSC>
 
       <Burger open={open} setOpen={setOpen} />
-      <StyledRightNavigation open={open}>
-        <ContainerLinks>
+      <StyledRightNavigationSC open={open}>
+        <ContainerLinksSC>
           {config.map((link, index) => (
             <Link href={link.href} key={index}>
-              <StyledLink>
-                <TextLink>{link.title}</TextLink>
-              </StyledLink>
+              <StyledLinkSC>
+                <TextLinkSC>{link.title}</TextLinkSC>
+              </StyledLinkSC>
             </Link>
           ))}
-        </ContainerLinks>
-        <ContainerButtons>
+        </ContainerLinksSC>
+        <ContainerButtonsSC>
           <form onSubmit={handleSubmit}>
-            <ButtonTemplate
-              color="lightblue"
+            <Button
+              color={Colors.LIGHTBLUE}
+              background={Colors.BLUE}
               type="submit"
               text="Logout"
-              background="yellow"
+              padding="18px 40px"
             />
           </form>
           <LinkTemplate href="/whitepacefree" text="Try Whitepace free" />
-        </ContainerButtons>
-      </StyledRightNavigation>
-    </NavigationContainer>
+        </ContainerButtonsSC>
+      </StyledRightNavigationSC>
+    </NavigationContainerSC>
   );
 };
