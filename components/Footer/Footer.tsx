@@ -1,30 +1,30 @@
 import React from "react";
 import { LinkTemplate } from "../LinkTemplate/LinkTemplate";
-import {
-  ArrowImage,
-  BlockWithButton,
-  BlockWithLinks,
-  BottomFooterContainer,
-  BottomFooterDecription,
-  CategoryFooter,
-  CategoryFooterDescription,
-  ContainerFooter,
-  DecriptionFooter,
-  EnglishContainer,
-  LogoContainer,
-  SmallCategoryFooter,
-  SocialMediaContainer,
-  SocialMediaImage,
-  StyledFooter,
-  TitleFooter,
-  WorldImage,
-} from "./style";
 import Logo from "/public/logo.svg";
 import Arrow from "/public/icons/arrow.svg";
 import World from "/public/icons/world.svg";
 import Twitter from "/public/icons/Twitter.svg";
 import Linkedin from "/public/icons/Linkedin.svg";
 import Facebook from "/public/icons/Facebook.svg";
+import {
+  ArrowImageSC,
+  BlockWithButtonSC,
+  BlockWithLinksSC,
+  BottomFooterContainerSC,
+  BottomFooterDecriptionSC,
+  CategoryFooterDescriptionSC,
+  CategoryFooterSC,
+  ContainerFooterSC,
+  DecriptionFooterSC,
+  EnglishContainerSC,
+  LogoContainerSC,
+  SmallCategoryFooterSC,
+  SocialMediaContainerSC,
+  SocialMediaImageSC,
+  StyledFooterSC,
+  TitleFooterSC,
+  WorldImageSC,
+} from "./style";
 
 const config = [
   {
@@ -43,56 +43,56 @@ const config = [
 
 export const Footer = () => {
   return (
-    <StyledFooter>
-      <ContainerFooter>
-        <BlockWithLinks>
-          <LogoContainer src={Logo.src} alt="logo" />
-          <DecriptionFooter>
+    <StyledFooterSC>
+      <ContainerFooterSC>
+        <BlockWithLinksSC>
+          <LogoContainerSC src={Logo.src} alt="logo" />
+          <DecriptionFooterSC>
             whitepace was created for the new ways we live and work. We make a
             better workspace around the world
-          </DecriptionFooter>
-        </BlockWithLinks>
+          </DecriptionFooterSC>
+        </BlockWithLinksSC>
         {config.map((category, index) => (
-          <BlockWithLinks key={index}>
-            <CategoryFooter>{category.category}</CategoryFooter>
+          <BlockWithLinksSC key={index}>
+            <CategoryFooterSC>{category.category}</CategoryFooterSC>
             {category.subcategory.map((subcategory, index) => (
-              <SmallCategoryFooter key={index}>
+              <SmallCategoryFooterSC key={index}>
                 {subcategory}
-              </SmallCategoryFooter>
+              </SmallCategoryFooterSC>
             ))}
-          </BlockWithLinks>
+          </BlockWithLinksSC>
         ))}
-        <BlockWithButton>
-          <TitleFooter>Try It Today</TitleFooter>
-          <SmallCategoryFooter>
+        <BlockWithButtonSC>
+          <TitleFooterSC>Try It Today</TitleFooterSC>
+          <SmallCategoryFooterSC>
             Get started for free. Add your whole team as your needs grow.
-          </SmallCategoryFooter>
+          </SmallCategoryFooterSC>
           <LinkTemplate href="/whitepace" text="Start today" />
-        </BlockWithButton>
-      </ContainerFooter>
-      <BottomFooterContainer>
-        <BottomFooterDecription>
-          <EnglishContainer>
-            <WorldImage src={World.src} alt="world" />
-            <CategoryFooterDescription>English</CategoryFooterDescription>
-            <ArrowImage src={Arrow.src} alt="arrow" />
-          </EnglishContainer>
+        </BlockWithButtonSC>
+      </ContainerFooterSC>
+      <BottomFooterContainerSC>
+        <BottomFooterDecriptionSC>
+          <EnglishContainerSC>
+            <WorldImageSC src={World.src} alt="world" />
+            <CategoryFooterDescriptionSC>English</CategoryFooterDescriptionSC>
+            <ArrowImageSC src={Arrow.src} alt="arrow" />
+          </EnglishContainerSC>
 
-          <CategoryFooterDescription>
+          <CategoryFooterDescriptionSC>
             Tearms &amp; privacy
-          </CategoryFooterDescription>
-          <CategoryFooterDescription>Security</CategoryFooterDescription>
-          <CategoryFooterDescription>Status</CategoryFooterDescription>
-          <CategoryFooterDescription>
+          </CategoryFooterDescriptionSC>
+          <CategoryFooterDescriptionSC>Security</CategoryFooterDescriptionSC>
+          <CategoryFooterDescriptionSC>Status</CategoryFooterDescriptionSC>
+          <CategoryFooterDescriptionSC>
             ©2021 Whitepace LLC.
-          </CategoryFooterDescription>
-        </BottomFooterDecription>
-        <SocialMediaContainer>
-          <SocialMediaImage src={Facebook.src} alt="Facebook" />
-          <SocialMediaImage src={Twitter.src} alt="twitter" />
-          <SocialMediaImage src={Linkedin.src} alt="Linkedin" />
-        </SocialMediaContainer>
-      </BottomFooterContainer>
-    </StyledFooter>
+          </CategoryFooterDescriptionSC>
+        </BottomFooterDecriptionSC>
+        <SocialMediaContainerSC>
+          <SocialMediaImageSC src={Facebook.src} alt="Facebook" />
+          <SocialMediaImageSC src={Twitter.src} alt="twitter" />
+          <SocialMediaImageSC src={Linkedin.src} alt="Linkedin" />
+        </SocialMediaContainerSC>
+      </BottomFooterContainerSC>
+    </StyledFooterSC>
   );
 };
