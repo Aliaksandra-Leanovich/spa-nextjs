@@ -2,8 +2,6 @@ import type { NextPage } from "next";
 import React from "react";
 import { PricingBlock } from "../components/PricingBlock/PricingBlock";
 import styled from "@emotion/styled";
-import { EveryWhereBlock } from "../components/EverywhereBlock/EveryWhereBlock";
-import { SponsorsBlock } from "../components/SponsorsBlock/SponsorsBlock";
 import { Footer } from "../components/Footer/Footer";
 import { MainSection } from "../components/Sections/MainSection";
 import { ManagementSection } from "../components/Sections/ManagementSection";
@@ -13,6 +11,8 @@ import { DataSection } from "../components/Sections/DataSection";
 import { FavoriteSection } from "../components/Sections/FavoriteSection";
 import { ClientsSection } from "../components/Sections/ClientsSection";
 import { TodaySection } from "../components/Sections/TodaySection";
+import { EverywhereSection } from "../components/Sections/EverywhereSection";
+import { SponsorsSection } from "../components/Sections/SponsorsSection";
 
 const Home: NextPage = () => {
   return (
@@ -22,9 +22,9 @@ const Home: NextPage = () => {
       <ExtensionSection />
       <CustomiseSection />
       <PricingBlock />
-      <EveryWhereBlock />
+      <EverywhereSection />
       <DataSection />
-      <SponsorsBlock />
+      <SponsorsSection />
       <FavoriteSection />
       <ClientsSection />
       <TodaySection />

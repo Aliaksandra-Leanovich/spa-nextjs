@@ -5,6 +5,7 @@ import { typography } from "../../ui/typography";
 import background from "/public/icons/mainbackground.svg";
 import managBackground from "/public/icons/managmentbackground.svg";
 import favoriteBackground from "/public/icons/favoriteBackground.svg";
+
 interface IProps {
   color?: string;
   margin?: string;
@@ -128,12 +129,13 @@ export const FavoiteContainerSC = styled.section`
   margin: 0 auto;
   width: 100%;
   height: 100%;
-  background-color: ${Colors.BLUE};
   background-position: center;
+  position: relative;
 
-  padding: 0 220px;
+  padding: 140px 220px 0;
+  background-color: ${Colors.BLUE};
   ${media.LAPTOP2} {
-    padding: 0 34px;
+    padding: 131px 34px 0;
   }
   &::after {
     content: "";
@@ -149,15 +151,16 @@ export const FavoiteContainerSC = styled.section`
     opacity: 0.3;
   }
 `;
+export const ContainerEverywhereSC = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
 
-export const WhiteSectionContainer = styled.div`
-  margin: 0 auto;
-  width: 100%;
-
-  background-color: ${Colors.WHITE};
-  padding: 50px 220px;
   ${media.LAPTOP2} {
-    padding: 0 34px;
+    justify-content: flex-start;
+    align-items: flex-start;
   }
 `;
 export const ClientsContainer = styled.div`
@@ -180,4 +183,69 @@ export const TodayContainerSC = styled.div`
 export const WrapperSC = styled.section<IProps>`
   width: 100%;
   background-color: ${({ background }) => background};
+
+  margin: 0 auto;
+  width: 100%;
+  padding: 50px 220px;
+  ${media.LAPTOP2} {
+    padding: 0 34px;
+  }
+`;
+export const EverywhereContainerSC = styled.section<IProps>`
+  margin: 0 auto;
+  width: 100%;
+  padding: 140px 220px;
+  background-color: ${({ background }) => background};
+
+  position: relative;
+  ${media.LAPTOP2} {
+    padding: 132px 34px;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-image: url(${managBackground.src});
+    background-repeat: no-repeat;
+    background-position: 1px 125px;
+    width: 100%;
+    height: 100%;
+  }
+`;
+
+export const SponsorsBlockContainer = styled.section<IProps>`
+  margin: 0 auto;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: ${({ background }) => background};
+
+  padding: 140px 220px;
+  ${media.LAPTOP2} {
+    padding: 140px 34px;
+  }
+`;
+
+export const SponsorsContainerSC = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  ${media.TABLET} {
+    flex-direction: column;
+    justify-content: center;
+  }
+`;
+
+export const SponsorsImageSC = styled.img`
+  height: 71px;
+  ${media.TABLET} {
+    margin-bottom: 100px;
+  }
 `;
