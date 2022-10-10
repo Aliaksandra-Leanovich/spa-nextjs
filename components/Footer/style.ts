@@ -3,7 +3,7 @@ import { Colors } from "../../ui/colors";
 import { media } from "../../ui/media";
 import { typography } from "../../ui/typography";
 
-export const StyledFooter = styled.footer`
+export const StyledFooterSC = styled.footer`
   width: 100%;
 
   background-color: ${Colors.BLUE};
@@ -14,7 +14,7 @@ export const StyledFooter = styled.footer`
   }
 `;
 
-export const ContainerFooter = styled.div`
+export const ContainerFooterSC = styled.div`
   display: grid;
   grid-template-columns: 2.4fr 1fr 1.2fr 0.6fr 2fr;
   column-gap: 100px;
@@ -23,7 +23,6 @@ export const ContainerFooter = styled.div`
 
   border-bottom: 1px solid ${Colors.WHITE};
 
-  //!!! Tablet
   ${media.LAPTOP} {
     grid-template-columns: 1fr;
     row-gap: 100px;
@@ -40,57 +39,60 @@ export const ContainerFooter = styled.div`
   }
 `;
 
-export const BlockWithLinks = styled.div`
+export const BlockWithLinksSC = styled.div`
   display: grid;
   row-gap: 15px;
 `;
-export const BlockWithButton = styled.div`
+export const BlockWithButtonSC = styled.div`
   display: grid;
-  row-gap: 23px;
+  row-gap: 24px;
 `;
-export const LogoContainer = styled.img`
+export const LogoContainerSC = styled.img`
   height: 34px;
 `;
 
-export const CategoryFooter = styled.p`
+export const CategoryFooterSC = styled.p`
   color: ${Colors.WHITE};
   ${typography.paragraph2}
 `;
 
-export const TextFooter = styled.p`
+export const TextFooterSC = styled.p`
   ${typography.bodytext}
   color: ${Colors.WHITE};
 `;
-export const DecriptionFooter = styled.p`
+export const DecriptionFooterSC = styled.p`
   color: ${Colors.WHITE};
   ${typography.paragraph2};
   font-weight: 400;
 `;
 
-export const TitleFooter = styled.h5`
+export const TitleFooterSC = styled.h5`
   color: ${Colors.WHITE};
   ${typography.H5}
 `;
-export const SmallCategoryFooter = styled.p`
+export const SmallCategoryFooterSC = styled.p`
   ${typography.paragraph3}
   color: ${Colors.WHITE};
+
   &:hover {
     color: ${Colors.YELLOW};
     cursor: pointer;
   }
 `;
-export const CategoryFooterDescription = styled.p`
+export const CategoryFooterDescriptionSC = styled.p`
   ${typography.paragraph3}
   color: ${Colors.WHITE};
   margin-right: 60px;
+
   &:hover {
     color: ${Colors.YELLOW};
     cursor: pointer;
   }
+
   &:last-child {
     margin-right: 0;
   }
-  //should be phone
+
   ${media.TABLET} {
     margin-right: 0;
     margin-bottom: 20px;
@@ -101,13 +103,13 @@ export const CategoryFooterDescription = styled.p`
   }
 `;
 
-export const EnglishContainer = styled.div`
+export const EnglishContainerSC = styled.div`
   display: grid;
   grid-template-columns: 2fr 5fr 1.2fr;
   column-gap: 6px;
   align-items: center;
 `;
-export const BottomFooterContainer = styled.div`
+export const BottomFooterContainerSC = styled.div`
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -122,7 +124,7 @@ export const BottomFooterContainer = styled.div`
     justify-content: center;
   }
 `;
-export const BottomFooterDecription = styled.div`
+export const BottomFooterDecriptionSC = styled.div`
   display: flex;
 
   ${media.TABLET} {
@@ -137,7 +139,7 @@ export const BottomFooterDecription = styled.div`
     flex-direction: column;
   }
 `;
-export const SocialMediaContainer = styled.div`
+export const SocialMediaContainerSC = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 32px;
@@ -150,14 +152,14 @@ export const SocialMediaContainer = styled.div`
   }
 `;
 
-export const ArrowImage = styled.img`
+export const ArrowImageSC = styled.img`
   height: 10px;
 `;
 
-export const WorldImage = styled.img`
-  height: 19px;
+export const WorldImageSC = styled.img`
+  height: 18px;
 `;
 
-export const SocialMediaImage = styled.img`
-  height: 17px;
+export const SocialMediaImageSC = styled.img`
+  height: 16px;
 `;

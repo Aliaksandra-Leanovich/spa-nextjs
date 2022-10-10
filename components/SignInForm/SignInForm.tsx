@@ -5,11 +5,12 @@ import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { app } from "../../utils/firebase";
 import { useRouter } from "next/router";
 import { ContainerForm, FormTitle, NoUserMessage, StyledForm } from "./styles";
-import { InputTemplate } from "../InputTemplate/InputTemplate";
-import { ButtonTemplate } from "../ButtonTemplate/ButtonTemplate";
+import { Input } from "../Input/Input";
 import { LinkTemplate } from "../LinkTemplate/LinkTemplate";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as Yup from "yup";
+import { Colors } from "../../ui/colors";
+import { Button } from "../Button/Button";
 
 interface IUserForm {
   email: string;
@@ -58,25 +59,26 @@ export const SignInForm = () => {
       </FormTitle>
       <StyledForm onSubmit={handleSubmit(onSubmit)}>
         <NoUserMessage>{noUser ? "No such user" : ""}</NoUserMessage>
-        <InputTemplate
+        <Input
           type="email"
           label="email"
           errors={errors.email}
           register={register}
           placeholder="Enter your email"
         />
-        <InputTemplate
+        <Input
           type="password"
           label="password"
           errors={errors.password}
           register={register}
           placeholder="Enter your password"
         />
-        <ButtonTemplate
-          color="blue"
-          background="yellow"
+        <Button
           type="submit"
           text="Sign In"
+          color={Colors.BLUE}
+          background={Colors.YELLOW}
+          padding="18px 40px"
         />
       </StyledForm>
       <LinkTemplate href="/signup" text="I dont have an account" />

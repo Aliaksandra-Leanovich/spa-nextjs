@@ -9,7 +9,7 @@ interface IProps {
   padding: string;
 }
 
-export const StyledButton = styled.button<IProps>`
+export const StyledButtonSC = styled.button<IProps>`
   background-color: ${({ background }) => background};
   color: ${({ color }) => color};
   padding: ${({ padding }) => padding};

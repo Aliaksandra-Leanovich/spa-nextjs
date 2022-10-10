@@ -1,5 +1,5 @@
 import React from "react";
-import { StyledButton } from "./styles";
+import { StyledButtonSC } from "./styles";
 
 interface IButton {
   background: string;
@@ -11,13 +11,13 @@ interface IButton {
 
 export const Button = ({ text, type, color, background, padding }: IButton) => {
   return (
-    <StyledButton
+    <StyledButtonSC
       color={color}
       type={type}
       background={background}
       padding={padding}
     >
       {text}
-    </StyledButton>
+    </StyledButtonSC>
   );
 };

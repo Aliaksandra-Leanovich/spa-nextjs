@@ -5,11 +5,13 @@ import { routes } from "../../routes/routes";
 import { app } from "../../utils/firebase";
 import { useRouter } from "next/router";
 import { ContainerForm, FormTitle, StyledForm } from "./styles";
-import { InputTemplate } from "../InputTemplate/InputTemplate";
-import { ButtonTemplate } from "../ButtonTemplate/ButtonTemplate";
+import { Input } from "../Input/Input";
+
 import { LinkTemplate } from "../LinkTemplate/LinkTemplate";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as Yup from "yup";
+import { Button } from "../Button/Button";
+import { Colors } from "../../ui/colors";
 
 interface IFormInput {
   name: string;
@@ -56,32 +58,33 @@ export const SignUpForm = () => {
         Get started for free. Add your whole team as your needs grow.{" "}
       </FormTitle>
       <StyledForm onSubmit={handleSubmit(onSubmit)}>
-        <InputTemplate
+        <Input
           type="text"
           label="name"
           errors={errors.name}
           register={register}
           placeholder="Enter your name"
         />
-        <InputTemplate
+        <Input
           type="email"
           label="email"
           errors={errors.email}
           register={register}
           placeholder="Enter your email"
         />
-        <InputTemplate
+        <Input
           type="password"
           label="password"
           errors={errors.password}
           register={register}
           placeholder="Enter your password"
         />
-        <ButtonTemplate
+        <Button
           type="submit"
           text="Sign Up"
-          color="blue"
-          background="yellow"
+          color={Colors.BLUE}
+          background={Colors.YELLOW}
+          padding="18px 40px"
         />
       </StyledForm>
       <LinkTemplate href="/signin" text="I already have an account." />
