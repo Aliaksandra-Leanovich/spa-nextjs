@@ -64,8 +64,8 @@ export const Navigation = () => {
         ))}
         <form onSubmit={handleSubmit}>
           <Button
-            color={Colors.LIGHTBLUE}
-            background={Colors.BLUE}
+            color={Colors.BLUE}
+            background={Colors.YELLOW}
             type="submit"
             text="Logout"
             padding="18px 40px"
@@ -88,8 +88,8 @@ export const Navigation = () => {
         <ContainerButtonsSC>
           <form onSubmit={handleSubmit}>
             <Button
-              color={Colors.LIGHTBLUE}
-              background={Colors.BLUE}
+              color={Colors.BLUE}
+              background={Colors.YELLOW}
               type="submit"
               text="Logout"
               padding="18px 40px"

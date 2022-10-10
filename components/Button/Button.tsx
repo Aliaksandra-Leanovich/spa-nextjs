@@ -1,7 +1,7 @@
 import React, { ButtonHTMLAttributes } from "react";
 import { ButtonSC } from "./styles";
 
-interface IButton extends ButtonHTMLAttributes<HTMLButtonElement> {
+export interface IButton extends ButtonHTMLAttributes<HTMLButtonElement> {
   background: string;
   color: string;
   text: string;

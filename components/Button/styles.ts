@@ -2,12 +2,9 @@ import styled from "@emotion/styled";
 import { Colors } from "../../ui/colors";
 import { media } from "../../ui/media";
 import { typography } from "../../ui/typography";
+import { IButton } from "./Button";
 
-interface IProps {
-  color: string;
-  background: string;
-  padding: string;
-}
+type IProps = Pick<IButton, "color" | "background" | "padding">;
 
 export const ButtonSC = styled.button<IProps>`
   background-color: ${({ background }) => background};

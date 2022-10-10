@@ -1,10 +1,10 @@
 import React from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-import quotesImage from "/public/Quote.svg";
-import Avatar1 from "/public/avatar1.svg";
-import Avatar2 from "/public/avatar2.svg";
-import Avatar3 from "/public/avatar3.svg";
+import quotesImage from "/public/icons/Quote.svg";
+import Avatar1 from "/public/icons/avatar1.svg";
+import Avatar2 from "/public/icons/avatar2.svg";
+import Avatar3 from "/public/icons/avatar3.svg";
 import "swiper/css";
 import "swiper/css/pagination";
 import SwiperCore, { EffectCoverflow, Pagination } from "swiper";
