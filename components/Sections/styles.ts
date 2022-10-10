@@ -2,22 +2,19 @@ import styled from "@emotion/styled";
 import { Colors } from "../../ui/colors";
 import { media } from "../../ui/media";
 import { typography } from "../../ui/typography";
-import background from "/public/mainbackground.svg";
-import managbackground from "/public/managmentbackground.svg";
+import background from "/public/icons/mainbackground.svg";
+import managBackground from "/public/icons/managmentbackground.svg";
+import favoriteBackground from "/public/icons/favoriteBackground.svg";
+interface IProps {
+  color?: string;
+  margin?: string;
+  background?: string;
+}
 
-export const MainContainer = styled.section`
+export const MainContainerSC = styled.section`
   margin: 0 auto;
   width: 100%;
-  background-color: ${Colors.BLUE};
-
-  padding: 0 220px;
-  ${media.LAPTOP2} {
-    padding: 0 34px;
-  }
-`;
-export const MainBlockContainer = styled.section`
-  margin: 0 auto;
-  width: 100%;
+  position: relative;
   padding: 131px 220px 0;
   background-color: ${Colors.BLUE};
   ${media.LAPTOP2} {
@@ -38,7 +35,7 @@ export const MainBlockContainer = styled.section`
   }
 `;
 
-export const ContainerBlock = styled.div`
+export const ContainerSC = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 60px;
@@ -56,7 +53,7 @@ export const ContainerBlock = styled.div`
   }
 `;
 
-export const ContainerDescription = styled.div`
+export const DescriptionContainerSC = styled.div`
   display: flex;
   flex-direction: column;
   ${media.TABLET} {
@@ -64,45 +61,19 @@ export const ContainerDescription = styled.div`
     text-align: center;
   }
 `;
-export const BlockTitle = styled.h2`
+export const TitleSC = styled.h2<IProps>`
   ${typography.H2}
-  color: ${Colors.WHITE};
-  margin-bottom: 24px;
+  color: ${({ color }) => color};
+  margin: ${({ margin }) => margin};
 `;
 
-export const BlockDescription = styled.p`
+export const DescriptionSC = styled.p<IProps>`
   ${typography.subtitle}
-  color: ${Colors.WHITE};
-  margin-bottom: 60px;
-`;
-export const BlockTitleBlack = styled.h2`
-  ${typography.H2}
-  color: ${Colors.BLACK};
-  margin-bottom: 24px;
+  color: ${({ color }) => color};
+  margin: ${({ margin }) => margin};
 `;
 
-export const BlockDescriptionBlack = styled.p`
-  ${typography.subtitle}
-  color: ${Colors.BLACK};
-  margin-bottom: 60px;
-`;
-
-export const ManagementContainer = styled.section`
-  margin: 0 auto;
-  width: 100%;
-  padding: 50px 220px;
-  background-color: ${Colors.WHITE};
-  background-image: url(${managbackground.src});
-  left: 0;
-  bottom: 0;
-  background-repeat: no-repeat;
-
-  ${media.LAPTOP2} {
-    padding: 50px 34px;
-  }
-`;
-
-export const ImageContainer = styled.img`
+export const ImageContainerSC = styled.img`
   width: 100%;
   max-width: 824px;
 
@@ -120,17 +91,62 @@ export const ImageContainer = styled.img`
   }
 `;
 
-export const FavoiteBlockContainer = styled.section`
+export const AppsContainerSC = styled.div`
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 40px;
+`;
+export const AppImageSC = styled.img`
+  height: 60px;
+`;
+
+export const ManagementContainer = styled.section`
+  margin: 0 auto;
+  position: relative;
+  width: 100%;
+  padding: 50px 220px;
+  background-color: ${Colors.WHITE};
+
+  ${media.LAPTOP2} {
+    padding: 50px 34px;
+  }
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-image: url(${managBackground.src});
+    background-repeat: no-repeat;
+    background-position: 57px 125px;
+    width: 100%;
+    height: 100%;
+  }
+`;
+
+export const FavoiteContainerSC = styled.section`
   margin: 0 auto;
   width: 100%;
   height: 100%;
   background-color: ${Colors.BLUE};
-  background-image: url(${background.src});
   background-position: center;
 
   padding: 0 220px;
   ${media.LAPTOP2} {
     padding: 0 34px;
+  }
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(${favoriteBackground.src});
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
   }
 `;
 
@@ -151,7 +167,7 @@ export const ClientsContainer = styled.div`
   flex-direction: column;
 `;
 
-export const TodayContainer = styled.div`
+export const TodayContainerSC = styled.div`
   padding: 140px 32px;
   display: flex;
   margin: 0 auto;
@@ -161,22 +177,7 @@ export const TodayContainer = styled.div`
   width: 100%;
 `;
 
-export const BlockTodayDescription = styled.p`
-  ${typography.subtitle}
-  color: ${Colors.WHITE};
-
-  margin: 0 0 40px;
-`;
-export const BlockTodayDescriptionSecond = styled.div`
-  ${typography.subtitle}
-  color: ${Colors.WHITE};
-  margin: 40px 0;
-`;
-export const AppsContainer = styled.div`
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  column-gap: 40px;
-`;
-export const AppImage = styled.img`
-  height: 60px;
+export const WrapperSC = styled.section<IProps>`
+  width: 100%;
+  background-color: ${({ background }) => background};
 `;
