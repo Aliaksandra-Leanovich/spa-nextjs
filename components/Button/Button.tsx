@@ -1,23 +1,22 @@
-import React from "react";
-import { StyledButtonSC } from "./styles";
+import React, { ButtonHTMLAttributes } from "react";
+import { ButtonSC } from "./styles";
 
-interface IButton {
+interface IButton extends ButtonHTMLAttributes<HTMLButtonElement> {
   background: string;
   color: string;
-  type: "button" | "submit" | "reset";
   text: string;
   padding: string;
 }
 
 export const Button = ({ text, type, color, background, padding }: IButton) => {
   return (
-    <StyledButtonSC
+    <ButtonSC
       color={color}
       type={type}
       background={background}
       padding={padding}
     >
       {text}
-    </StyledButtonSC>
+    </ButtonSC>
   );
 };

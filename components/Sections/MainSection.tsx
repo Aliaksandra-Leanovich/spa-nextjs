@@ -2,9 +2,12 @@ import React from "react";
 import { Header } from "../Header/Header";
 import { LinkTemplate } from "../LinkTemplate/LinkTemplate";
 import ImageWork from "/public/icons/team-work1.webp";
+import background from "/public/icons/mainbackground.svg";
 
 import { Colors } from "../../ui/colors";
 import {
+  BackgroundImageContainerSC,
+  BackgroundImageSC,
   ContainerSC,
   DescriptionContainerSC,
   DescriptionSC,
@@ -17,6 +20,9 @@ export const MainSection = () => {
   return (
     <MainContainerSC>
       <Header />
+      <BackgroundImageContainerSC>
+        <BackgroundImageSC src={background.src} />
+      </BackgroundImageContainerSC>
       <ContainerSC>
         <DescriptionContainerSC>
           <TitleSC color={Colors.WHITE} margin="0 0 24px 0">

@@ -3,7 +3,6 @@ import Link from "next/link";
 import React from "react";
 import { Colors } from "../../ui/colors";
 import { typography } from "../../ui/typography";
-import ArrowRightIcon from "public/icons/arrow-right.svg";
 
 interface IButton {
   href: string;
@@ -13,9 +12,7 @@ interface IButton {
 export const LinkTemplate = ({ href, text }: IButton) => {
   return (
     <Link href={href}>
-      <StyledLink>
-        {text} <Arrow src={ArrowRightIcon.src} alt={"arrow"} />
-      </StyledLink>
+      <StyledLink>{text}</StyledLink>
     </Link>
   );
 };

@@ -13,7 +13,11 @@ import { Colors } from "../../ui/colors";
 
 export const CustomiseSection = () => {
   return (
-    <WrapperSC background={Colors.WHITE}>
+    <WrapperSC
+      padding="140px 220px"
+      mobilePadding="100px 16px"
+      tabletPadding="140px 34px"
+    >
       <ContainerSC id="resources">
         <ImageContainerSC src={ImageWork.src} alt={"work together"} />
         <DescriptionContainerSC>

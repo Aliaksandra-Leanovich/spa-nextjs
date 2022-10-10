@@ -13,7 +13,11 @@ import DataImg from "/public/icons/data.svg";
 
 export const DataSection = () => {
   return (
-    <WrapperSC background={Colors.WHITE}>
+    <WrapperSC
+      padding="140px 220px"
+      mobilePadding="80px 16px"
+      tabletPadding="140px 34px"
+    >
       <ContainerSC>
         <DescriptionContainerSC>
           <TitleSC margin="0 0 24px 0" color={Colors.BLACK}>

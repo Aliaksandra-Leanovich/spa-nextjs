@@ -2,14 +2,15 @@ import styled from "@emotion/styled";
 import { Colors } from "../../ui/colors";
 import { media } from "../../ui/media";
 import { typography } from "../../ui/typography";
-import background from "/public/icons/mainbackground.svg";
-import managBackground from "/public/icons/managmentbackground.svg";
-import favoriteBackground from "/public/icons/favoriteBackground.svg";
 
 interface IProps {
   color?: string;
   margin?: string;
   background?: string;
+  padding?: string;
+  mobilePadding?: string;
+  backgroundImage?: string;
+  tabletPadding?: string;
 }
 
 export const MainContainerSC = styled.section`
@@ -20,19 +21,6 @@ export const MainContainerSC = styled.section`
   background-color: ${Colors.BLUE};
   ${media.LAPTOP2} {
     padding: 131px 34px 0;
-  }
-  &::after {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-image: url(${background.src});
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 100%;
-    height: 100%;
-    opacity: 0.3;
   }
 `;
 
@@ -101,56 +89,6 @@ export const AppImageSC = styled.img`
   height: 60px;
 `;
 
-export const ManagementContainer = styled.section`
-  margin: 0 auto;
-  position: relative;
-  width: 100%;
-  padding: 50px 220px;
-  background-color: ${Colors.WHITE};
-
-  ${media.LAPTOP2} {
-    padding: 50px 34px;
-  }
-  &::after {
-    content: "";
-    display: block;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    background-image: url(${managBackground.src});
-    background-repeat: no-repeat;
-    background-position: 57px 125px;
-    width: 100%;
-    height: 100%;
-  }
-`;
-
-export const FavoiteContainerSC = styled.section`
-  margin: 0 auto;
-  width: 100%;
-  height: 100%;
-  background-position: center;
-  position: relative;
-
-  padding: 140px 220px 0;
-  background-color: ${Colors.BLUE};
-  ${media.LAPTOP2} {
-    padding: 131px 34px 0;
-  }
-  &::after {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-image: url(${favoriteBackground.src});
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 100%;
-    height: 100%;
-    opacity: 0.3;
-  }
-`;
 export const ContainerEverywhereSC = styled.div`
   display: flex;
   justify-content: center;
@@ -179,56 +117,21 @@ export const TodayContainerSC = styled.div`
   flex-direction: column;
   width: 100%;
 `;
-
-export const WrapperSC = styled.section<IProps>`
-  width: 100%;
+export const SectionContainerSC = styled.section<IProps>`
   background-color: ${({ background }) => background};
-
-  margin: 0 auto;
-  width: 100%;
-  padding: 50px 220px;
-  ${media.LAPTOP2} {
-    padding: 0 34px;
-  }
-`;
-export const EverywhereContainerSC = styled.section<IProps>`
-  margin: 0 auto;
-  width: 100%;
-  padding: 140px 220px;
-  background-color: ${({ background }) => background};
-
   position: relative;
-  ${media.LAPTOP2} {
-    padding: 132px 34px;
-  }
-
-  &::after {
-    content: "";
-    display: block;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    background-image: url(${managBackground.src});
-    background-repeat: no-repeat;
-    background-position: 1px 125px;
-    width: 100%;
-    height: 100%;
-  }
-`;
-
-export const SponsorsBlockContainer = styled.section<IProps>`
-  margin: 0 auto;
   width: 100%;
+`;
+export const WrapperSC = styled.div<IProps>`
+  width: 100%;
+  padding: ${({ padding }) => padding};
+  margin: 0 auto;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  background-color: ${({ background }) => background};
-
-  padding: 140px 220px;
   ${media.LAPTOP2} {
-    padding: 140px 34px;
+    padding: ${({ tabletPadding }) => tabletPadding};
+  }
+  ${media.TABLET} {
+    padding: ${({ mobilePadding }) => mobilePadding};
   }
 `;
 
@@ -237,7 +140,7 @@ export const SponsorsContainerSC = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  ${media.TABLET} {
+  ${media.LAPTOP} {
     flex-direction: column;
     justify-content: center;
   }
@@ -245,7 +148,49 @@ export const SponsorsContainerSC = styled.div`
 
 export const SponsorsImageSC = styled.img`
   height: 71px;
-  ${media.TABLET} {
+  ${media.LAPTOP} {
     margin-bottom: 100px;
   }
+`;
+export const BackgroundImageContainerSC = styled.div`
+  position: absolute;
+  z-index: 0;
+  bottom: 0;
+  left: 0;
+
+  opacity: 0.3;
+`;
+
+export const BackgroundImageContainerManagSC = styled.div`
+  position: absolute;
+  z-index: 0;
+  left: -80px;
+  top: 160px;
+
+  opacity: 0.6;
+`;
+export const BackgroundImageContainerEverywhSC = styled.div`
+  position: absolute;
+  z-index: 0;
+  left: -100px;
+  top: -210px;
+
+  opacity: 0.6;
+
+  ${media.LAPTOP2} {
+    left: -250px;
+    top: -200px;
+  }
+  ${media.TABLET} {
+    left: -200px;
+    top: -210px;
+  }
+  ${media.PHONE} {
+    display: none;
+  }
+`;
+
+export const BackgroundImageSC = styled.img``;
+export const BackgroundImageFavSC = styled.img`
+  width: 100%;
 `;

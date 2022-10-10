@@ -1,6 +1,6 @@
 import React from "react";
 import { LinkTemplate } from "../LinkTemplate/LinkTemplate";
-import Logo from "/public/logo.svg";
+import Logo from "/public/icons/logo.svg";
 import Arrow from "/public/icons/arrow.svg";
 import World from "/public/icons/world.svg";
 import Twitter from "/public/icons/Twitter.svg";
