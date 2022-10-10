@@ -16,14 +16,28 @@ export const ContainerReviews = styled.div`
   column-gap: 32px;
   justify-content: center;
   align-items: center;
+
+  margin-bottom: 60px;
 `;
 export const Review = styled.div`
-  padding: 60px 24px;
+  padding: 60px 40px;
   background-color: ${Colors.LIGHTBLUE};
   border-radius: 10px;
 
   ${media.PHONE} {
     padding: 20px;
+  }
+
+  transition: all 0.5s ease-out;
+  &:hover {
+    background-color: ${Colors.WHITE};
+    box-shadow: 15px 10px 50px rgba(0, 0, 0, 0.1);
+  }
+  &:hover p {
+    color: ${Colors.BLACK};
+  }
+  &:hover #commas path {
+    fill: ${Colors.BLUE};
   }
 `;
 export const BlockReview = styled.div`
@@ -36,7 +50,7 @@ export const QuotesImage = styled.img`
 `;
 export const TextReview = styled.p`
   margin-bottom: 40px;
-  ${typography.bodytext}
+  ${typography.subtitle}
   color: ${Colors.WHITE};
 `;
 
