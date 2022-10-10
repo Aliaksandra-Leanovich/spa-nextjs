@@ -1,5 +1,4 @@
 import React, { FormEvent, useState } from "react";
-
 import { app } from "../../utils/firebase";
 import { getAuth, signOut } from "firebase/auth";
 import Link from "next/link";
