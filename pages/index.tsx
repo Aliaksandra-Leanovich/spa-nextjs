@@ -5,14 +5,14 @@ import styled from "@emotion/styled";
 import { EveryWhereBlock } from "../components/EverywhereBlock/EveryWhereBlock";
 import { SponsorsBlock } from "../components/SponsorsBlock/SponsorsBlock";
 import { Footer } from "../components/Footer/Footer";
-import { MainSection } from "../components/TemplateBlocks/MainSection";
-import { ManagementSection } from "../components/TemplateBlocks/ManagementSection";
-import { ExtensionSection } from "../components/TemplateBlocks/ExtensionSection";
-import { CustomiseSection } from "../components/TemplateBlocks/CustomiseSection";
-import { DataSection } from "../components/TemplateBlocks/DataSection";
-import { FavoriteSection } from "../components/TemplateBlocks/FavoriteSection";
-import { ClientsSection } from "../components/TemplateBlocks/ClientsSection";
-import { TodaySection } from "../components/TemplateBlocks/TodaySection";
+import { MainSection } from "../components/Sections/MainSection";
+import { ManagementSection } from "../components/Sections/ManagementSection";
+import { ExtensionSection } from "../components/Sections/ExtensionSection";
+import { CustomiseSection } from "../components/Sections/CustomiseSection";
+import { DataSection } from "../components/Sections/DataSection";
+import { FavoriteSection } from "../components/Sections/FavoriteSection";
+import { ClientsSection } from "../components/Sections/ClientsSection";
+import { TodaySection } from "../components/Sections/TodaySection";
 
 const Home: NextPage = () => {
   return (
