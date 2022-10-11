@@ -18,27 +18,6 @@ export const PricingContainer = styled.section`
   }
 `;
 
-export const BlockTitle = styled.h2`
-  ${typography.H2}
-  color: ${Colors.BLACK};
-  margin-bottom: 24px;
-`;
-
-export const BlockDescription = styled.p`
-  ${typography.subtitle}
-  color: ${Colors.BLACK};
-  margin-bottom: 120px;
-  ${media.LAPTOP2} {
-    margin-bottom: 114px;
-  }
-  ${media.LAPTOP} {
-    margin-bottom: 138px;
-  }
-  ${media.PHONE} {
-    margin-bottom: 85px;
-  }
-`;
-
 export const BlockTabs = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -88,27 +67,7 @@ export const Point = styled.img`
     fill: ${Colors.YELLOW};
   }
 `;
-export const TabSet = styled.p`
-  ${typography.paragraph1}
-  margin-bottom: 25px;
-`;
-export const TabPrice = styled.h4`
-  ${typography.H3}
-  margin-bottom: 25px;
-`;
 
-export const TabDescr = styled.p`
-  ${typography.paragraph2}
-  margin-bottom: 25px;
-`;
-
-export const TabAdvantage = styled.div`
-  ${typography.paragraph3}
-  margin-bottom: 28px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-`;
 export const TabButton = styled.button`
   ${typography.button}
   border: 1px solid ${Colors.YELLOW};

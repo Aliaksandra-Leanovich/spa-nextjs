@@ -7,7 +7,7 @@ interface IProps {
   open: boolean;
 }
 
-export const StyledNavigationSC = styled.nav`
+const StyledNavigation = styled.nav`
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -16,29 +16,15 @@ export const StyledNavigationSC = styled.nav`
     display: none;
   }
 `;
-export const StyledLinkSC = styled.span`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-right: 40px;
-`;
-export const TextLinkSC = styled.span`
-  ${typography.subtitle}
-  color: ${Colors.WHITE};
-  cursor: pointer;
-  &:hover {
-    color: ${Colors.YELLOW};
-  }
-`;
 
-export const StyledRightNavigationSC = styled.div<IProps>`
+export const StyledRightNavigation = styled.div<IProps>`
   background: ${Colors.BLACK};
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 
-  padding: 2rem;
+  padding: 30px;
   position: absolute;
   top: 0;
   right: 0;
@@ -50,7 +36,7 @@ export const StyledRightNavigationSC = styled.div<IProps>`
     width: 100%;
   }
 `;
-export const ContainerLinksSC = styled.div`
+export const ContainerLinks = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -61,12 +47,14 @@ export const ContainerLinksSC = styled.div`
   }
 `;
 
-export const ContainerButtonsSC = styled.div`
+export const ContainerButtons = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
 `;
 
-export const NavigationContainerSC = styled.div`
+const NavigationContainer = styled.div`
   display: flex;
 `;
+
+export { StyledNavigation, NavigationContainer };

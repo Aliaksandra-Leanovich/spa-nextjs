@@ -1,4 +1,11 @@
 import React, { FormEvent, useState } from "react";
+import {
+  StyledNavigation,
+  NavigationContainer,
+  StyledRightNavigation,
+  ContainerLinks,
+  ContainerButtons,
+} from "./styles";
 import { app } from "../../utils/firebase";
 import { getAuth, signOut } from "firebase/auth";
 import Link from "next/link";
@@ -8,15 +15,7 @@ import { LinkTemplate } from "../LinkTemplate/LinkTemplate";
 import { Burger } from "../Burger/Burger";
 import { Button } from "../Button/Button";
 import { Colors } from "../../ui/colors";
-import {
-  ContainerButtonsSC,
-  ContainerLinksSC,
-  NavigationContainerSC,
-  StyledLinkSC,
-  StyledNavigationSC,
-  StyledRightNavigationSC,
-  TextLinkSC,
-} from "./styles";
+import { Subtitle } from "../../ui/typography";
 
 const config = [
   {
@@ -40,8 +39,8 @@ const config = [
 export const Navigation = () => {
   const [open, setOpen] = useState<boolean>(false);
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
     const auth = getAuth(app);
     signOut(auth)
       .then(() => {
@@ -53,51 +52,39 @@ export const Navigation = () => {
       });
   };
   return (
-    <NavigationContainerSC>
-      <StyledNavigationSC>
+    <NavigationContainer>
+      <StyledNavigation>
         {config.map((link, index) => (
           <Link href={link.href} key={index}>
-            <StyledLinkSC>
-              <TextLinkSC>{link.title}</TextLinkSC>
-            </StyledLinkSC>
+            <Subtitle color={Colors.WHITE} margin="0 40px 0 0">
+              {link.title}
+            </Subtitle>
           </Link>
         ))}
         <form onSubmit={handleSubmit}>
-          <Button
-            color={Colors.BLUE}
-            background={Colors.YELLOW}
-            type="submit"
-            text="Logout"
-            padding="18px 40px"
-          />
+          <Button type="submit" text="Logout" variant="primary" />
         </form>
         <LinkTemplate href="/whitepacefree" text="Try Whitepace free" />
-      </StyledNavigationSC>
+      </StyledNavigation>
 
       <Burger open={open} setOpen={setOpen} />
-      <StyledRightNavigationSC open={open}>
-        <ContainerLinksSC>
+      <StyledRightNavigation open={open}>
+        <ContainerLinks>
           {config.map((link, index) => (
             <Link href={link.href} key={index}>
-              <StyledLinkSC>
-                <TextLinkSC>{link.title}</TextLinkSC>
-              </StyledLinkSC>
+              <Subtitle color={Colors.WHITE} margin="30px 0 0 0">
+                {link.title}
+              </Subtitle>
             </Link>
           ))}
-        </ContainerLinksSC>
-        <ContainerButtonsSC>
+        </ContainerLinks>
+        <ContainerButtons>
           <form onSubmit={handleSubmit}>
-            <Button
-              color={Colors.BLUE}
-              background={Colors.YELLOW}
-              type="submit"
-              text="Logout"
-              padding="18px 40px"
-            />
+            <Button variant="primary" type="submit" text="Logout" />
           </form>
           <LinkTemplate href="/whitepacefree" text="Try Whitepace free" />
-        </ContainerButtonsSC>
-      </StyledRightNavigationSC>
-    </NavigationContainerSC>
+        </ContainerButtons>
+      </StyledRightNavigation>
+    </NavigationContainer>
   );
 };
