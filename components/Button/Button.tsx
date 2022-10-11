@@ -2,20 +2,13 @@ import React, { ButtonHTMLAttributes } from "react";
 import { ButtonSC } from "./styles";
 
 export interface IButton extends ButtonHTMLAttributes<HTMLButtonElement> {
-  background: string;
-  color: string;
   text: string;
-  padding: string;
+  variant: string;
 }
 
-export const Button = ({ text, type, color, background, padding }: IButton) => {
+export const Button = ({ text, type, variant }: IButton) => {
   return (
-    <ButtonSC
-      color={color}
-      type={type}
-      background={background}
-      padding={padding}
-    >
+    <ButtonSC variant={variant} type={type}>
       {text}
     </ButtonSC>
   );
