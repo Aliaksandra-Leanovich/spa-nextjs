@@ -82,27 +82,19 @@ export const Footer = () => {
         <BottomFooterDecription>
           <EnglishContainer>
             <WorldImage src={World.src} alt="world" />
-            <ParagraphXS color={Colors.WHITE} margin="0 6px ">
-              English
-            </ParagraphXS>
+            <ParagraphXS color={Colors.WHITE}>English</ParagraphXS>
             <ArrowImage src={Arrow.src} alt="arrow" />
           </EnglishContainer>
-          <TextContainer margin="0 60px 0 0">
-            <ParagraphXS color={Colors.WHITE} tabletMargin="0 0 20px 0">
-              Tearms &amp; privacy
-            </ParagraphXS>
+          <TextContainer margin="0 60px 0 0" tabletMargin=" 0 0 20px 0">
+            <ParagraphXS color={Colors.WHITE}>Tearms &amp; privacy</ParagraphXS>
           </TextContainer>
 
-          <TextContainer margin="0 60px 0 0">
-            <ParagraphXS color={Colors.WHITE} tabletMargin="0 0 20px 0">
-              Security
-            </ParagraphXS>
+          <TextContainer margin="0 60px 0 0" tabletMargin="0 0 20px 0">
+            <ParagraphXS color={Colors.WHITE}>Security</ParagraphXS>
           </TextContainer>
 
-          <TextContainer margin="0 60px 0 0">
-            <ParagraphXS color={Colors.WHITE} tabletMargin="0 0 20px 0">
-              Status
-            </ParagraphXS>
+          <TextContainer margin="0 60px 0 0" tabletMargin="0 0 20px 0">
+            <ParagraphXS color={Colors.WHITE}>Status</ParagraphXS>
           </TextContainer>
 
           <ParagraphXS color={Colors.WHITE}>©2021 Whitepace LLC.</ParagraphXS>
