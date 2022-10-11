@@ -1,7 +1,21 @@
 import { css } from "@emotion/react";
+import styled from "@emotion/styled";
+import { string } from "yup";
 import { media } from "./media";
 
-const H1 = css`
+interface IProps {
+  color?: string;
+  margin?: string;
+  tabletMargin?: string;
+  laptopMargin?: string;
+  laptop2Margin?: string;
+  phoneMargin?: string;
+  weight?: string;
+}
+
+export const H1 = styled.h1<IProps>`
+  color: ${({ color }) => color};
+  margin: ${({ margin }) => margin};
   font-family: "Inter";
   font-weight: 700;
   font-size: 56px;
@@ -12,66 +26,99 @@ const H1 = css`
   }
 `;
 
-const H2 = css`
+export const H2 = styled.h2<IProps>`
+  color: ${({ color }) => color};
+  margin: ${({ margin }) => margin};
+
   font-family: "Inter";
   font-weight: 700;
   font-size: 64px;
   line-height: 77px;
   letter-spacing: -0.02em;
+
+  ${media.TABLET} {
+    font-size: 54px;
+    line-height: 65px;
+  }
   ${media.PHONE} {
     font-size: 36px;
     line-height: 44px;
   }
 `;
 
-const H3 = css`
+export const H3 = styled.p<IProps>`
+  color: ${({ color }) => color};
+  margin: ${({ margin }) => margin};
   font-family: "Inter";
   font-weight: 700;
   font-size: 36px;
   line-height: 44px;
 `;
-const H5 = css`
+
+export const H5 = styled.h5<IProps>`
+  color: ${({ color }) => color};
+  margin: ${({ margin }) => margin};
+
   font-family: "Inter";
   font-weight: 700;
   font-size: 28px;
   line-height: 36px;
 `;
 
-const subtitle = css`
+export const ParagraphSmall = styled.p<IProps>`
+  color: ${({ color }) => color};
+  margin: ${({ margin }) => margin};
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: ${({ weight }) => weight};
+`;
+export const ParagraphMedium = styled.p<IProps>`
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 36px;
+  color: ${({ color }) => color};
+  margin: ${({ margin }) => margin};
+  font-weight: ${({ weight }) => weight};
+`;
+
+export const ParagraphXS = styled.p<IProps>`
+  color: ${({ color }) => color};
+  margin: ${({ margin }) => margin};
+
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  ${media.TABLET} {
+    margin: ${({ tabletMargin }) => tabletMargin};
+  }
+`;
+
+export const Subtitle = styled.p<IProps>`
+  color: ${({ color }) => color};
+  margin: ${({ margin }) => margin};
+
   font-family: "Inter";
   font-weight: 400;
   font-size: 18px;
   line-height: 30px;
   letter-spacing: -0.02em;
+
+  ${media.LAPTOP2} {
+    margin: ${({ laptop2Margin }) => laptop2Margin};
+  }
+  ${media.LAPTOP} {
+    margin: ${({ laptopMargin }) => laptopMargin};
+  }
+  ${media.PHONE} {
+    margin: ${({ phoneMargin }) => phoneMargin};
+  }
 `;
 
-const bodytext = css`
-  font-family: "Inter";
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 20px;
-  letter-spacing: -0.02em;
-`;
-const paragraph1 = css`
-  font-family: "Inter";
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 36px;
-`;
-const paragraph2 = css`
-  font-family: "Inter";
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 23px;
-`;
-const paragraph3 = css`
-  font-family: "Inter";
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 20px;
-`;
-
-const button = css`
+export const button = css`
   font-family: "Inter";
   font-weight: 500;
   font-size: 18px;
@@ -84,14 +131,5 @@ const button = css`
 `;
 
 export const typography = {
-  H1,
-  H2,
-  H3,
-  H5,
-  subtitle,
-  bodytext,
-  paragraph1,
-  paragraph2,
-  paragraph3,
   button,
 };

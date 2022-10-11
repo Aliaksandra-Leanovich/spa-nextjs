@@ -1,5 +1,4 @@
 import React from "react";
-// Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import quotesImage from "/public/icons/Quote.svg";
 import Avatar1 from "/public/icons/avatar1.svg";
@@ -18,11 +17,11 @@ import {
   ReviewerImage,
   ReviewerInformation,
   ReviewerName,
-  ReviewerPosition,
-  TextReview,
   Container,
   ContainerMobile,
 } from "./style";
+import { Subtitle } from "../../ui/typography";
+import { Colors } from "../../ui/colors";
 
 const config = [
   {
@@ -81,14 +80,18 @@ export const Slider = () => {
               {config.map((review, index) => (
                 <Review key={index}>
                   <BlockReview>
-                    <QuotesImage src={review.icon} />
-                    <TextReview>{review.comment}</TextReview>
+                    <QuotesImage src={review.icon} id="commas" />
+                    <Subtitle color={Colors.WHITE} margin="0 0 40px 0">
+                      {review.comment}
+                    </Subtitle>
                   </BlockReview>
                   <ReviewerBlock>
                     <ReviewerImage src={review.avatar} />
                     <ReviewerInformation>
                       <ReviewerName>{review.name}</ReviewerName>
-                      <ReviewerPosition>{review.position}</ReviewerPosition>
+                      <Subtitle color={Colors.WHITE}>
+                        {review.position}
+                      </Subtitle>
                     </ReviewerInformation>
                   </ReviewerBlock>
                 </Review>
@@ -101,13 +104,17 @@ export const Slider = () => {
                 <Review key={index}>
                   <BlockReview>
                     <QuotesImage src={review.icon} />
-                    <TextReview>{review.comment}</TextReview>
+                    <Subtitle color={Colors.WHITE} margin="0 0 40px 0">
+                      {review.comment}
+                    </Subtitle>
                   </BlockReview>
                   <ReviewerBlock>
                     <ReviewerImage src={review.avatar} />
                     <ReviewerInformation>
                       <ReviewerName>{review.name}</ReviewerName>
-                      <ReviewerPosition>{review.position}</ReviewerPosition>
+                      <Subtitle color={Colors.WHITE}>
+                        {review.position}
+                      </Subtitle>
                     </ReviewerInformation>
                   </ReviewerBlock>
                 </Review>
@@ -120,13 +127,17 @@ export const Slider = () => {
                 <Review key={index}>
                   <BlockReview>
                     <QuotesImage src={review.icon} />
-                    <TextReview>{review.comment}</TextReview>
+                    <Subtitle color={Colors.WHITE} margin="0 0 40px 0">
+                      {review.comment}
+                    </Subtitle>
                   </BlockReview>
                   <ReviewerBlock>
                     <ReviewerImage src={review.avatar} />
                     <ReviewerInformation>
                       <ReviewerName>{review.name}</ReviewerName>
-                      <ReviewerPosition>{review.position}</ReviewerPosition>
+                      <Subtitle color={Colors.WHITE}>
+                        {review.position}
+                      </Subtitle>
                     </ReviewerInformation>
                   </ReviewerBlock>
                 </Review>
@@ -150,13 +161,15 @@ export const Slider = () => {
               <Review>
                 <BlockReview>
                   <QuotesImage src={review.icon} />
-                  <TextReview>{review.comment}</TextReview>
+                  <Subtitle color={Colors.WHITE} margin="0 0 40px 0">
+                    {review.comment}
+                  </Subtitle>
                 </BlockReview>
                 <ReviewerBlock>
                   <ReviewerImage src={review.avatar} />
                   <ReviewerInformation>
                     <ReviewerName>{review.name}</ReviewerName>
-                    <ReviewerPosition>{review.position}</ReviewerPosition>
+                    <Subtitle color={Colors.WHITE}>{review.position}</Subtitle>
                   </ReviewerInformation>
                 </ReviewerBlock>
               </Review>

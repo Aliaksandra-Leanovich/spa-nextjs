@@ -47,16 +47,10 @@ export const ContainerForm = styled.section`
 `;
 export const StyledLink = styled.a`
   color: ${Colors.YELLOW};
-  ${typography.bodytext}
   text-decoration: underline;
 
   cursor: pointer;
   &:hover {
     color: ${Colors.WHITE};
   }
-`;
-export const FormTitle = styled.h3`
-  ${typography.H3}
-  color: ${Colors.WHITE};
-  text-align: center;
 `;

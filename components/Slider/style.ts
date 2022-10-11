@@ -1,7 +1,6 @@
 import styled from "@emotion/styled";
 import { Colors } from "../../ui/colors";
 import { media } from "../../ui/media";
-import { typography } from "../../ui/typography";
 
 export const Container = styled.div`
   display: flex;
@@ -48,11 +47,6 @@ export const QuotesImage = styled.img`
   width: 86px;
   margin-bottom: 32px;
 `;
-export const TextReview = styled.p`
-  margin-bottom: 40px;
-  ${typography.subtitle}
-  color: ${Colors.WHITE};
-`;
 
 export const ReviewerBlock = styled.div`
   display: flex;
@@ -90,10 +84,7 @@ export const ReviewerName = styled.p`
     margin-bottom: 24px;
   }
 `;
-export const ReviewerPosition = styled.p`
-  ${typography.subtitle};
-  color: ${Colors.WHITE};
-`;
+
 export const ContainerMobile = styled.div`
   display: none;
   width: 100%;

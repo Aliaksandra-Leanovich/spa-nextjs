@@ -4,13 +4,14 @@ import { routes } from "../../routes/routes";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { app } from "../../utils/firebase";
 import { useRouter } from "next/router";
-import { ContainerForm, FormTitle, NoUserMessage, StyledForm } from "./styles";
+import { ContainerForm, NoUserMessage, StyledForm } from "./styles";
 import { Input } from "../Input/Input";
+import { Button } from "../Button/Button";
 import { LinkTemplate } from "../LinkTemplate/LinkTemplate";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as Yup from "yup";
 import { Colors } from "../../ui/colors";
-import { Button } from "../Button/Button";
+import { H3 } from "../../ui/typography";
 
 interface IUserForm {
   email: string;
@@ -54,9 +55,9 @@ export const SignInForm = () => {
 
   return (
     <ContainerForm>
-      <FormTitle>
+      <H3 color={Colors.WHITE}>
         Get started for free. Add your whole team as your needs grow.{" "}
-      </FormTitle>
+      </H3>
       <StyledForm onSubmit={handleSubmit(onSubmit)}>
         <NoUserMessage>{noUser ? "No such user" : ""}</NoUserMessage>
         <Input
@@ -73,13 +74,7 @@ export const SignInForm = () => {
           register={register}
           placeholder="Enter your password"
         />
-        <Button
-          type="submit"
-          text="Sign In"
-          color={Colors.BLUE}
-          background={Colors.YELLOW}
-          padding="18px 40px"
-        />
+        <Button type="submit" text="Sign In" variant="secondary" />
       </StyledForm>
       <LinkTemplate href="/signup" text="I dont have an account" />
     </ContainerForm>

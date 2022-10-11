@@ -1,16 +1,22 @@
 import styled from "@emotion/styled";
 import { Colors } from "../../ui/colors";
 import { media } from "../../ui/media";
-import { typography } from "../../ui/typography";
 
 interface IProps {
   color?: string;
-  margin?: string;
+
   background?: string;
+  backgroundImage?: string;
+
   padding?: string;
   mobilePadding?: string;
-  backgroundImage?: string;
   tabletPadding?: string;
+
+  margin?: string;
+  mobileMargin?: string;
+  tabletMargin?: string;
+  laptopMargin?: string;
+  laptop2Margin?: string;
 }
 
 export const MainContainerSC = styled.section`
@@ -50,17 +56,6 @@ export const DescriptionContainerSC = styled.div`
     text-align: center;
   }
 `;
-export const TitleSC = styled.h2<IProps>`
-  ${typography.H2}
-  color: ${({ color }) => color};
-  margin: ${({ margin }) => margin};
-`;
-
-export const DescriptionSC = styled.p<IProps>`
-  ${typography.subtitle}
-  color: ${({ color }) => color};
-  margin: ${({ margin }) => margin};
-`;
 
 export const ImageContainerSC = styled.img`
   width: 100%;
@@ -99,6 +94,7 @@ export const ContainerEverywhereSC = styled.div`
   ${media.LAPTOP2} {
     justify-content: flex-start;
     align-items: flex-start;
+    text-align: start;
   }
 `;
 export const ClientsContainer = styled.div`
@@ -121,12 +117,7 @@ export const SectionContainerSC = styled.section<IProps>`
   background-color: ${({ background }) => background};
   position: relative;
   width: 100%;
-`;
-export const WrapperSC = styled.div<IProps>`
-  width: 100%;
   padding: ${({ padding }) => padding};
-  margin: 0 auto;
-
   ${media.LAPTOP2} {
     padding: ${({ tabletPadding }) => tabletPadding};
   }
@@ -140,6 +131,7 @@ export const SponsorsContainerSC = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin-top: 100px;
   ${media.LAPTOP} {
     flex-direction: column;
     justify-content: center;
@@ -190,7 +182,26 @@ export const BackgroundImageContainerEverywhSC = styled.div`
   }
 `;
 
-export const BackgroundImageSC = styled.img``;
+export const BackgroundImageSC = styled.img`
+  width: 100%;
+`;
 export const BackgroundImageFavSC = styled.img`
   width: 100%;
+`;
+
+export const TextContainer = styled.div<IProps>`
+  margin: ${({ margin }) => margin};
+
+  ${media.LAPTOP2} {
+    margin: ${({ laptop2Margin }) => laptop2Margin};
+  }
+  ${media.LAPTOP} {
+    margin: ${({ laptopMargin }) => laptopMargin};
+  }
+  ${media.TABLET} {
+    margin: ${({ tabletMargin }) => tabletMargin};
+  }
+  ${media.PHONE} {
+    margin: ${({ mobileMargin }) => mobileMargin};
+  }
 `;

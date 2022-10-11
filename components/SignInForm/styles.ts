@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 import { Colors } from "../../ui/colors";
-import { typography } from "../../ui/typography";
+
 export const StyledForm = styled.form`
   display: grid;
   row-gap: 20px;
@@ -23,12 +23,6 @@ export const ContainerForm = styled.section`
   width: 100%;
   height: 100vh;
   background-color: ${Colors.BLUE};
-`;
-
-export const FormTitle = styled.h3`
-  ${typography.H3}
-  color: ${Colors.WHITE};
-  text-align: center;
 `;
 
 export const NoUserMessage = styled.p``;

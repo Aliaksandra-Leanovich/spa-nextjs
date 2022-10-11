@@ -4,14 +4,14 @@ import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import { routes } from "../../routes/routes";
 import { app } from "../../utils/firebase";
 import { useRouter } from "next/router";
-import { ContainerForm, FormTitle, StyledForm } from "./styles";
+import { ContainerForm, StyledForm } from "./styles";
 import { Input } from "../Input/Input";
-
+import { Button } from "../Button/Button";
 import { LinkTemplate } from "../LinkTemplate/LinkTemplate";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as Yup from "yup";
-import { Button } from "../Button/Button";
 import { Colors } from "../../ui/colors";
+import { H3 } from "../../ui/typography";
 
 interface IFormInput {
   name: string;
@@ -54,9 +54,9 @@ export const SignUpForm = () => {
 
   return (
     <ContainerForm>
-      <FormTitle>
+      <H3 color={Colors.WHITE}>
         Get started for free. Add your whole team as your needs grow.{" "}
-      </FormTitle>
+      </H3>
       <StyledForm onSubmit={handleSubmit(onSubmit)}>
         <Input
           type="text"
@@ -79,13 +79,7 @@ export const SignUpForm = () => {
           register={register}
           placeholder="Enter your password"
         />
-        <Button
-          type="submit"
-          text="Sign Up"
-          color={Colors.BLUE}
-          background={Colors.YELLOW}
-          padding="18px 40px"
-        />
+        <Button type="submit" text="Sign Up" variant="secondary" />
       </StyledForm>
       <LinkTemplate href="/signin" text="I already have an account." />
     </ContainerForm>

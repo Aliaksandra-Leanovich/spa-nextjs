@@ -3,18 +3,17 @@ import { Header } from "../Header/Header";
 import { LinkTemplate } from "../LinkTemplate/LinkTemplate";
 import ImageWork from "/public/icons/team-work1.webp";
 import background from "/public/icons/mainbackground.svg";
-
 import { Colors } from "../../ui/colors";
 import {
   BackgroundImageContainerSC,
   BackgroundImageSC,
   ContainerSC,
   DescriptionContainerSC,
-  DescriptionSC,
   ImageContainerSC,
   MainContainerSC,
-  TitleSC,
+  TextContainer,
 } from "./styles";
+import { H2, ParagraphSmall } from "../../ui/typography";
 
 export const MainSection = () => {
   return (
@@ -25,13 +24,14 @@ export const MainSection = () => {
       </BackgroundImageContainerSC>
       <ContainerSC>
         <DescriptionContainerSC>
-          <TitleSC color={Colors.WHITE} margin="0 0 24px 0">
-            Get More Done with whitepace
-          </TitleSC>
-          <DescriptionSC color={Colors.WHITE} margin=" 0 0 60px 0">
-            Project management software that enables your teams to collaborate,
-            plan, analyze and manage everyday tasks
-          </DescriptionSC>
+          <H2 color={Colors.WHITE}>Get More Done with whitepace</H2>
+          <TextContainer margin=" 24px 0 60px 0">
+            <ParagraphSmall color={Colors.WHITE}>
+              Project management software that enables your teams to
+              collaborate, plan, analyze and manage everyday tasks
+            </ParagraphSmall>
+          </TextContainer>
+
           <LinkTemplate href="/whitepacefree" text="Try Whitepace free" />
         </DescriptionContainerSC>
         <ImageContainerSC src={ImageWork.src} alt={"work together"} />
