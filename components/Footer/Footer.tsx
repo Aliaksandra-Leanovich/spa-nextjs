@@ -1,5 +1,19 @@
 import React from "react";
 import { LinkTemplate } from "../LinkTemplate/LinkTemplate";
+import {
+  ArrowImage,
+  BlockWithButton,
+  BlockWithLinks,
+  BottomFooterContainer,
+  BottomFooterDecription,
+  ContainerFooter,
+  EnglishContainer,
+  LogoContainer,
+  SocialMediaContainer,
+  SocialMediaImage,
+  StyledFooter,
+  WorldImage,
+} from "./style";
 import Logo from "/public/icons/logo.svg";
 import Arrow from "/public/icons/arrow.svg";
 import World from "/public/icons/world.svg";
@@ -7,24 +21,13 @@ import Twitter from "/public/icons/Twitter.svg";
 import Linkedin from "/public/icons/Linkedin.svg";
 import Facebook from "/public/icons/Facebook.svg";
 import {
-  ArrowImageSC,
-  BlockWithButtonSC,
-  BlockWithLinksSC,
-  BottomFooterContainerSC,
-  BottomFooterDecriptionSC,
-  CategoryFooterDescriptionSC,
-  CategoryFooterSC,
-  ContainerFooterSC,
-  DecriptionFooterSC,
-  EnglishContainerSC,
-  LogoContainerSC,
-  SmallCategoryFooterSC,
-  SocialMediaContainerSC,
-  SocialMediaImageSC,
-  StyledFooterSC,
-  TitleFooterSC,
-  WorldImageSC,
-} from "./style";
+  H5,
+  ParagraphMedium,
+  ParagraphSmall,
+  ParagraphXS,
+} from "../../ui/typography";
+import { Colors } from "../../ui/colors";
+import { TextContainer } from "../Sections/styles";
 
 const config = [
   {
@@ -43,56 +46,73 @@ const config = [
 
 export const Footer = () => {
   return (
-    <StyledFooterSC>
-      <ContainerFooterSC>
-        <BlockWithLinksSC>
-          <LogoContainerSC src={Logo.src} alt="logo" />
-          <DecriptionFooterSC>
-            whitepace was created for the new ways we live and work. We make a
-            better workspace around the world
-          </DecriptionFooterSC>
-        </BlockWithLinksSC>
+    <StyledFooter>
+      <ContainerFooter>
+        <BlockWithLinks>
+          <LogoContainer src={Logo.src} alt="logo" />
+          <TextContainer margin="15 px 0 0 0">
+            <ParagraphMedium color={Colors.WHITE}>
+              whitepace was created for the new ways we live and work. We make a
+              better workspace around the world
+            </ParagraphMedium>
+          </TextContainer>
+        </BlockWithLinks>
         {config.map((category, index) => (
-          <BlockWithLinksSC key={index}>
-            <CategoryFooterSC>{category.category}</CategoryFooterSC>
+          <BlockWithLinks key={index}>
+            <ParagraphSmall weight="700" color={Colors.WHITE}>
+              {category.category}
+            </ParagraphSmall>
             {category.subcategory.map((subcategory, index) => (
-              <SmallCategoryFooterSC key={index}>
+              <ParagraphXS color={Colors.WHITE} key={index}>
                 {subcategory}
-              </SmallCategoryFooterSC>
+              </ParagraphXS>
             ))}
-          </BlockWithLinksSC>
+          </BlockWithLinks>
         ))}
-        <BlockWithButtonSC>
-          <TitleFooterSC>Try It Today</TitleFooterSC>
-          <SmallCategoryFooterSC>
+        <BlockWithButton>
+          <H5 color={Colors.WHITE}>Try It Today</H5>
+          <TextContainer></TextContainer>
+          <ParagraphXS color={Colors.WHITE} margin="24px 0">
             Get started for free. Add your whole team as your needs grow.
-          </SmallCategoryFooterSC>
+          </ParagraphXS>
           <LinkTemplate href="/whitepace" text="Start today" />
-        </BlockWithButtonSC>
-      </ContainerFooterSC>
-      <BottomFooterContainerSC>
-        <BottomFooterDecriptionSC>
-          <EnglishContainerSC>
-            <WorldImageSC src={World.src} alt="world" />
-            <CategoryFooterDescriptionSC>English</CategoryFooterDescriptionSC>
-            <ArrowImageSC src={Arrow.src} alt="arrow" />
-          </EnglishContainerSC>
+        </BlockWithButton>
+      </ContainerFooter>
+      <BottomFooterContainer>
+        <BottomFooterDecription>
+          <EnglishContainer>
+            <WorldImage src={World.src} alt="world" />
+            <ParagraphXS color={Colors.WHITE} margin="0 6px ">
+              English
+            </ParagraphXS>
+            <ArrowImage src={Arrow.src} alt="arrow" />
+          </EnglishContainer>
+          <TextContainer margin="0 60px 0 0">
+            <ParagraphXS color={Colors.WHITE} tabletMargin="0 0 20px 0">
+              Tearms &amp; privacy
+            </ParagraphXS>
+          </TextContainer>
 
-          <CategoryFooterDescriptionSC>
-            Tearms &amp; privacy
-          </CategoryFooterDescriptionSC>
-          <CategoryFooterDescriptionSC>Security</CategoryFooterDescriptionSC>
-          <CategoryFooterDescriptionSC>Status</CategoryFooterDescriptionSC>
-          <CategoryFooterDescriptionSC>
-            ©2021 Whitepace LLC.
-          </CategoryFooterDescriptionSC>
-        </BottomFooterDecriptionSC>
-        <SocialMediaContainerSC>
-          <SocialMediaImageSC src={Facebook.src} alt="Facebook" />
-          <SocialMediaImageSC src={Twitter.src} alt="twitter" />
-          <SocialMediaImageSC src={Linkedin.src} alt="Linkedin" />
-        </SocialMediaContainerSC>
-      </BottomFooterContainerSC>
-    </StyledFooterSC>
+          <TextContainer margin="0 60px 0 0">
+            <ParagraphXS color={Colors.WHITE} tabletMargin="0 0 20px 0">
+              Security
+            </ParagraphXS>
+          </TextContainer>
+
+          <TextContainer margin="0 60px 0 0">
+            <ParagraphXS color={Colors.WHITE} tabletMargin="0 0 20px 0">
+              Status
+            </ParagraphXS>
+          </TextContainer>
+
+          <ParagraphXS color={Colors.WHITE}>©2021 Whitepace LLC.</ParagraphXS>
+        </BottomFooterDecription>
+        <SocialMediaContainer>
+          <SocialMediaImage src={Facebook.src} alt="Facebook" />
+          <SocialMediaImage src={Twitter.src} alt="twitter" />
+          <SocialMediaImage src={Linkedin.src} alt="Linkedin" />
+        </SocialMediaContainer>
+      </BottomFooterContainer>
+    </StyledFooter>
   );
 };
