@@ -4,7 +4,7 @@ import { routes } from "../../routes/routes";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { app } from "../../utils/firebase";
 import { useRouter } from "next/router";
-import { ContainerForm, NoUserMessage, StyledForm } from "./styles";
+import { ContainerFormSC, NoUserMessageSC, StyledFormSC } from "./styles";
 import { Input } from "../Input/Input";
 import { Button } from "../Button/Button";
 import { LinkTemplate } from "../LinkTemplate/LinkTemplate";
@@ -55,12 +55,12 @@ export const SignInForm = () => {
   };
 
   return (
-    <ContainerForm>
+    <ContainerFormSC>
       <H3 color={Colors.WHITE}>
         Get started for free. Add your whole team as your needs grow.{" "}
       </H3>
-      <StyledForm onSubmit={handleSubmit(onSubmit)}>
-        <NoUserMessage>{noUser ? "No such user" : ""}</NoUserMessage>
+      <StyledFormSC onSubmit={handleSubmit(onSubmit)}>
+        <NoUserMessageSC>{noUser ? "No such user" : ""}</NoUserMessageSC>
         <Input
           type="email"
           label="email"
@@ -76,8 +76,8 @@ export const SignInForm = () => {
           placeholder="Enter your password"
         />
         <Button type="submit" text="Sign In" variant="secondary" />
-      </StyledForm>
+      </StyledFormSC>
       <LinkTemplate href="/signup" text="I dont have an account" />
-    </ContainerForm>
+    </ContainerFormSC>
   );
 };

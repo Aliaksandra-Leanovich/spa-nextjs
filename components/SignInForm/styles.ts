@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import { Colors } from "../../ui/colors";
 
-export const StyledForm = styled.form`
+export const StyledFormSC = styled.form`
   display: grid;
   row-gap: 20px;
 
@@ -15,7 +15,7 @@ export const StyledForm = styled.form`
   border-radius: 15px;
 `;
 
-export const ContainerForm = styled.section`
+export const ContainerFormSC = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -25,4 +25,6 @@ export const ContainerForm = styled.section`
   background-color: ${Colors.BLUE};
 `;
 
-export const NoUserMessage = styled.p``;
+export const NoUserMessageSC = styled.p`
+  color: #cd3232;
+`;
