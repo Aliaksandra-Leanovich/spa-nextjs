@@ -1,7 +1,6 @@
 import { css } from "@emotion/react";
 import styled from "@emotion/styled";
 import { Colors } from "../../ui/colors";
-import { typography } from "../../ui/typography";
 import { IButton } from "./Button";
 
 export const theme = {
@@ -13,15 +12,13 @@ export const theme = {
 const variantStyles = (variant = "primary") =>
   ({
     primary: css`
-      color: ${theme.secondary};
       background: ${theme.primary};
       border: none;
       padding: 18px 40px;
-      margin-right: 26px;
+      margin: 0 25px 0 50px;
       border-radius: 8px;
     `,
     secondary: css`
-      color: ${theme.black};
       background: ${theme.primary};
       border: none;
       border-radius: 8px;
@@ -31,11 +28,10 @@ const variantStyles = (variant = "primary") =>
 
 export const ButtonSC = styled.button<Pick<IButton, "variant">>`
   ${({ variant }) => variantStyles(variant)}
-  ${typography.button}
-  transition: all 0.5s ease-out;
+
+  transition: background-color 0.5s ease-out;
 
   &:hover {
     background-color: ${Colors.LIGHTBLUE};
-    transform: translateY(-2px);
   }
 `;
