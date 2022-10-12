@@ -4,7 +4,6 @@ import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import { routes } from "../../routes/routes";
 import { app } from "../../utils/firebase";
 import { useRouter } from "next/router";
-import { ContainerForm, StyledForm } from "./styles";
 import { Input } from "../Input/Input";
 import { Button } from "../Button/Button";
 import { LinkTemplate } from "../LinkTemplate/LinkTemplate";
@@ -12,6 +11,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as Yup from "yup";
 import { Colors } from "../../ui/colors";
 import { H3 } from "../../ui/typography";
+import { ContainerFormSC, StyledFormSC } from "./styles";
 
 interface IFormInput {
   name: string;
@@ -22,7 +22,7 @@ interface IFormInput {
 const validationSchema = Yup.object().shape({
   name: Yup.string()
     .required("Name is required")
-    .min(6, "Name must be at least 6 characters")
+    .min(2, "Name must be at least 2 characters")
     .max(20, "Name must not exceed 20 characters"),
   email: Yup.string().required("Email is required").email("Email is invalid"),
   password: Yup.string()
@@ -47,17 +47,17 @@ export const SignUpForm = () => {
     createUserWithEmailAndPassword(auth, data.email, data.password)
       .then(async (userCredential) => {
         const user = userCredential.user;
-        await router.push(routes.SIGNIN);
+        await router.push(routes.HOME);
       })
       .catch(console.error);
   };
 
   return (
-    <ContainerForm>
+    <ContainerFormSC>
       <H3 color={Colors.WHITE}>
         Get started for free. Add your whole team as your needs grow.{" "}
       </H3>
-      <StyledForm onSubmit={handleSubmit(onSubmit)}>
+      <StyledFormSC onSubmit={handleSubmit(onSubmit)}>
         <Input
           type="text"
           label="name"
@@ -80,8 +80,8 @@ export const SignUpForm = () => {
           placeholder="Enter your password"
         />
         <Button type="submit" text="Sign Up" variant="secondary" />
-      </StyledForm>
+      </StyledFormSC>
       <LinkTemplate href="/signin" text="I already have an account." />
-    </ContainerForm>
+    </ContainerFormSC>
   );
 };
