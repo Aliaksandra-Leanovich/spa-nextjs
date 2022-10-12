@@ -1,20 +1,19 @@
-import React from "react";
+import React, { InputHTMLAttributes } from "react";
 import { Path, UseFormRegister } from "react-hook-form";
 import { ContainerSC, ErrorMessageSC, StyledInputSC } from "./style";
 
 interface IFormValues {
   email: string;
   password: string;
-  name: string;
+  name?: string;
+  errors?: string;
 }
 
-type InputProps = {
-  type: string;
-  placeholder: string;
+interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   label: Path<IFormValues>;
   register: UseFormRegister<any>;
   errors: any;
-};
+}
 
 export const Input = ({
   type,
