@@ -1,6 +1,5 @@
 import { css } from "@emotion/react";
 import styled from "@emotion/styled";
-import { string } from "yup";
 import { media } from "./media";
 
 interface IProps {
@@ -11,6 +10,7 @@ interface IProps {
   laptop2Margin?: string;
   phoneMargin?: string;
   weight?: string;
+  hoverColor?: string;
 }
 
 export const H1 = styled.h1<IProps>`
@@ -95,6 +95,10 @@ export const ParagraphXS = styled.p<IProps>`
   ${media.TABLET} {
     margin: ${({ tabletMargin }) => tabletMargin};
   }
+  &:hover {
+    cursor: pointer;
+    color: ${({ hoverColor }) => hoverColor};
+  }
 `;
 
 export const Subtitle = styled.p<IProps>`
@@ -107,7 +111,7 @@ export const Subtitle = styled.p<IProps>`
   line-height: 30px;
   letter-spacing: -0.02em;
 
-  ${media.LAPTOP2} {
+  ${media.DESKTOP} {
     margin: ${({ laptop2Margin }) => laptop2Margin};
   }
   ${media.LAPTOP} {
@@ -115,6 +119,10 @@ export const Subtitle = styled.p<IProps>`
   }
   ${media.PHONE} {
     margin: ${({ phoneMargin }) => phoneMargin};
+  }
+  &:hover {
+    cursor: pointer;
+    color: ${({ hoverColor }) => hoverColor};
   }
 `;
 
@@ -129,7 +137,17 @@ export const button = css`
     line-height: 30px;
   }
 `;
-
+export const ButtonTextSC = styled.p`
+  font-family: "Inter";
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 23px;
+  ${media.PHONE} {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+  }
+`;
 export const typography = {
   button,
 };
