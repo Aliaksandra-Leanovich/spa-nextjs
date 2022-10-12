@@ -2,6 +2,14 @@ import styled from "@emotion/styled";
 import { Colors } from "../../ui/colors";
 import { media } from "../../ui/media";
 
+interface IProps {
+  margin?: string;
+  mobileMargin?: string;
+  tabletMargin?: string;
+  laptopMargin?: string;
+  laptop2Margin?: string;
+}
+
 export const StyledFooterSC = styled.footer`
   width: 100%;
 
@@ -115,4 +123,20 @@ export const WorldImageSC = styled.img`
 
 export const SocialMediaImageSC = styled.img`
   height: 17px;
+`;
+export const TextContainerSC = styled.div<IProps>`
+  margin: ${({ margin }) => margin};
+
+  ${media.DESKTOP} {
+    margin: ${({ laptop2Margin }) => laptop2Margin};
+  }
+  ${media.LAPTOP} {
+    margin: ${({ laptopMargin }) => laptopMargin};
+  }
+  ${media.TABLET} {
+    margin: ${({ tabletMargin }) => tabletMargin};
+  }
+  ${media.PHONE} {
+    margin: ${({ mobileMargin }) => mobileMargin};
+  }
 `;

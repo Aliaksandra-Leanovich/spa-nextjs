@@ -12,6 +12,7 @@ import {
   SocialMediaContainerSC,
   SocialMediaImageSC,
   StyledFooterSC,
+  TextContainerSC,
   WorldImageSC,
 } from "./style";
 import Logo from "/public/icons/logo.svg";
@@ -27,7 +28,6 @@ import {
   ParagraphXS,
 } from "../../ui/typography";
 import { Colors } from "../../ui/colors";
-import { TextContainerSC } from "../Sections/styles";
 
 const config = [
   {

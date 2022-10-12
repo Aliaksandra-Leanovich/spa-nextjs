@@ -11,12 +11,6 @@ interface IProps {
   padding?: string;
   mobilePadding?: string;
   tabletPadding?: string;
-
-  margin?: string;
-  mobileMargin?: string;
-  tabletMargin?: string;
-  laptopMargin?: string;
-  laptop2Margin?: string;
 }
 
 export const MainContainerSC = styled.section`
