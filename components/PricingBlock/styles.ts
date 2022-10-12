@@ -3,7 +3,7 @@ import { Colors } from "../../ui/colors";
 import { media } from "../../ui/media";
 import { typography } from "../../ui/typography";
 
-export const PricingContainer = styled.section`
+export const PricingContainerSC = styled.section`
   margin: 0 auto;
   width: 100%;
 
@@ -13,12 +13,12 @@ export const PricingContainer = styled.section`
   flex-direction: column;
 
   padding: 0 220px 140px;
-  ${media.LAPTOP2} {
+  ${media.DESKTOP} {
     padding: 0 32px 140px 32px;
   }
 `;
 
-export const BlockTabs = styled.div`
+export const BlockTabsSC = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 32px;
@@ -27,13 +27,10 @@ export const BlockTabs = styled.div`
     grid-template-rows: repeat(3, 1fr);
   }
 `;
-export const Tab = styled.div`
+export const TabSC = styled.div`
   border: 1px solid ${Colors.YELLOW};
   border-radius: 10px;
-  padding: 40px 44px;
-  height: max-content;
 
-  cursor: pointer;
   transition: all 0.5s ease-out;
   &:hover {
     transform: scaleY(1.2);
@@ -44,9 +41,6 @@ export const Tab = styled.div`
     }
   }
 
-  &:hover #point path {
-    fill: yellow;
-  }
   &:hover #text {
     color: ${Colors.WHITE};
   }
@@ -59,7 +53,7 @@ export const Tab = styled.div`
     border: none;
   }
 `;
-export const Point = styled.img`
+export const PointSC = styled.img`
   height: 18px;
   margin-right: 19px;
 
@@ -68,9 +62,11 @@ export const Point = styled.img`
   }
 `;
 
-export const TabButton = styled.button`
+export const TabButtonSC = styled.button`
   ${typography.button}
   border: 1px solid ${Colors.YELLOW};
   border-radius: 8px;
   padding: 16px 40px;
 `;
+
+export const TabAdvantagesSC = styled.div``;
