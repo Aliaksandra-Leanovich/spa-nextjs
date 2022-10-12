@@ -56,7 +56,11 @@ export const Navigation = () => {
       <StyledNavigation>
         {config.map((link, index) => (
           <Link href={link.href} key={index}>
-            <Subtitle color={Colors.WHITE} margin="0 40px 0 0">
+            <Subtitle
+              color={Colors.WHITE}
+              margin="0 40px 0 0"
+              hoverColor={Colors.YELLOW}
+            >
               {link.title}
             </Subtitle>
           </Link>
@@ -72,7 +76,11 @@ export const Navigation = () => {
         <ContainerLinks>
           {config.map((link, index) => (
             <Link href={link.href} key={index}>
-              <Subtitle color={Colors.WHITE} margin="30px 0 0 0">
+              <Subtitle
+                color={Colors.WHITE}
+                margin="30px 0 0 0"
+                hoverColor={Colors.YELLOW}
+              >
                 {link.title}
               </Subtitle>
             </Link>
