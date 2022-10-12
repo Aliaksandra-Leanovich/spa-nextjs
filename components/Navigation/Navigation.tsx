@@ -13,7 +13,7 @@ import router from "next/router";
 import { routes } from "../../routes/routes";
 import { LinkTemplate } from "../LinkTemplate/LinkTemplate";
 import { Burger } from "../Burger/Burger";
-import { Button } from "../Button/Button";
+import { Button, Varients } from "../Button/Button";
 import { Colors } from "../../ui/colors";
 import { Subtitle } from "../../ui/typography";
 
@@ -66,7 +66,7 @@ export const Navigation = () => {
           </Link>
         ))}
         <form onSubmit={handleSubmit}>
-          <Button type="submit" text="Logout" variant="primary" />
+          <Button type="submit" text="Logout" variant={Varients.primary} />
         </form>
         <LinkTemplate href="/whitepacefree" text="Try Whitepace free" />
       </StyledNavigation>
@@ -88,7 +88,7 @@ export const Navigation = () => {
         </ContainerLinks>
         <ContainerButtons>
           <form onSubmit={handleSubmit}>
-            <Button variant="primary" type="submit" text="Logout" />
+            <Button variant={Varients.primary} type="submit" text="Logout" />
           </form>
           <LinkTemplate href="/whitepacefree" text="Try Whitepace free" />
         </ContainerButtons>

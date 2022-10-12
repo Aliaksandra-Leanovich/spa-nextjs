@@ -5,7 +5,7 @@ import { routes } from "../../routes/routes";
 import { app } from "../../utils/firebase";
 import { useRouter } from "next/router";
 import { Input } from "../Input/Input";
-import { Button } from "../Button/Button";
+import { Button, Varients } from "../Button/Button";
 import { LinkTemplate } from "../LinkTemplate/LinkTemplate";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as Yup from "yup";
@@ -79,7 +79,7 @@ export const SignUpForm = () => {
           register={register}
           placeholder="Enter your password"
         />
-        <Button type="submit" text="Sign Up" variant="secondary" />
+        <Button type="submit" text="Sign Up" variant={Varients.secondary} />
       </StyledFormSC>
       <LinkTemplate href="/signin" text="I already have an account." />
     </ContainerFormSC>
