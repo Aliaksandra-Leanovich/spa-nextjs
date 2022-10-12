@@ -2,11 +2,13 @@ import React from "react";
 import PointIcon from "/public/icons/Point.svg";
 import {
   BlockTabsSC,
+  Border,
   PointSC,
   PricingContainerSC,
   TabAdvantagesSC,
   TabButtonSC,
   TabSC,
+  TabTextContainerSC,
   TextContainerSC,
 } from "./styles";
 import {
@@ -80,35 +82,38 @@ export const PricingBlock = () => {
       <BlockTabsSC>
         {config.map((tab, index) => (
           <TabSC key={index}>
-            <TextContainerSC>
-              <ParagraphMedium color={Colors.BLACK} weight="600">
-                {tab.set}
-              </ParagraphMedium>
-            </TextContainerSC>
-            <TextContainerSC>
-              <H3 color={Colors.BLACK} id="price">
-                {tab.price}
-              </H3>
-            </TextContainerSC>
+            <Border />
+            <TabTextContainerSC>
+              <TextContainerSC>
+                <ParagraphMedium color={Colors.BLACK} weight="600">
+                  {tab.set}
+                </ParagraphMedium>
+              </TextContainerSC>
+              <TextContainerSC>
+                <H3 color={Colors.BLACK} id="price">
+                  {tab.price}
+                </H3>
+              </TextContainerSC>
 
-            <TextContainerSC>
-              <ParagraphMedium color={Colors.BLACK} id="text">
-                {tab.description}
-              </ParagraphMedium>
-            </TextContainerSC>
+              <TextContainerSC>
+                <ParagraphMedium color={Colors.BLACK} id="text">
+                  {tab.description}
+                </ParagraphMedium>
+              </TextContainerSC>
 
-            <TabAdvantagesSC>
-              {tab.advantages.map((advantage, index) => (
-                <TextContainerSC key={index}>
-                  <ParagraphXS color={Colors.BLACK} id="text">
-                    <PointSC src={tab.icon} id="point" />
-                    {advantage}
-                  </ParagraphXS>
-                </TextContainerSC>
-              ))}
-            </TabAdvantagesSC>
+              <TabAdvantagesSC>
+                {tab.advantages.map((advantage, index) => (
+                  <TextContainerSC key={index}>
+                    <ParagraphXS color={Colors.BLACK} id="text">
+                      <PointSC src={tab.icon} id="point" />
+                      {advantage}
+                    </ParagraphXS>
+                  </TextContainerSC>
+                ))}
+              </TabAdvantagesSC>
 
-            <TabButtonSC id="button">Get Started</TabButtonSC>
+              <TabButtonSC id="button">Get Started</TabButtonSC>
+            </TabTextContainerSC>
           </TabSC>
         ))}
       </BlockTabsSC>
