@@ -21,7 +21,7 @@ export const DataSection = () => {
       <ContainerSC>
         <DescriptionContainerSC>
           <H2 color={Colors.BLACK}>100% your data</H2>
-          <TextContainerSC margin="24px 0 40px 0">
+          <TextContainerSC>
             <ParagraphSmall color={Colors.BLACK}>
               The app is open source and your notes are saved to an open format,
               so you will always have access to them. Uses End-To-End Encryption

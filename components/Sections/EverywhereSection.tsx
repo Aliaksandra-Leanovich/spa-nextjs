@@ -25,7 +25,7 @@ export const EverywhereSection = () => {
 
       <ContainerEverywhereSC>
         <H2 color={Colors.WHITE}>Your work, everywhere you are</H2>
-        <TextContainerSC margin="24px 0 60px 0">
+        <TextContainerSC>
           <ParagraphSmall color={Colors.WHITE}>
             Access your notes from your computer, phone or tablet by
             synchronising with various services, including whitepace, Dropbox

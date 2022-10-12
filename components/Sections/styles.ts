@@ -189,19 +189,6 @@ export const BackgroundImageFavSC = styled.img`
   width: 100%;
 `;
 
-export const TextContainerSC = styled.div<IProps>`
-  margin: ${({ margin }) => margin};
-
-  ${media.DESKTOP} {
-    margin: ${({ laptop2Margin }) => laptop2Margin};
-  }
-  ${media.LAPTOP} {
-    margin: ${({ laptopMargin }) => laptopMargin};
-  }
-  ${media.TABLET} {
-    margin: ${({ tabletMargin }) => tabletMargin};
-  }
-  ${media.PHONE} {
-    margin: ${({ mobileMargin }) => mobileMargin};
-  }
+export const TextContainerSC = styled.div`
+  margin: 24px 0 60px 0;
 `;

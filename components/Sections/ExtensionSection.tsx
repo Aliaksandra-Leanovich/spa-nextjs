@@ -22,7 +22,7 @@ export const ExtensionSection = () => {
       <ContainerSC id="solutions">
         <DescriptionContainerSC>
           <H2 color={Colors.WHITE}>Use as Extension</H2>
-          <TextContainerSC margin="24px 0 60px 0">
+          <TextContainerSC>
             <ParagraphSmall color={Colors.WHITE}>
               Use the web clipper extension, available on Chrome and Firefox, to
               save web pages or take screenshots as notes.

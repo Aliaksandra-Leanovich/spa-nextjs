@@ -23,14 +23,14 @@ export const TodaySection = () => {
     >
       <TodayContainerSC>
         <H2 color={Colors.WHITE}>Try Whitepace today</H2>
-        <TextContainerSC margin="24px 0 40px 0">
+        <TextContainerSC>
           <ParagraphSmall color={Colors.WHITE}>
             Get started for free. Add your whole team as your needs grow.
           </ParagraphSmall>
         </TextContainerSC>
 
         <LinkTemplate href="/whitepace" text="Try Taskey free" />
-        <TextContainerSC margin="40px 0">
+        <TextContainerSC>
           <ParagraphSmall color={Colors.WHITE}>
             On a big team? Contact sales
           </ParagraphSmall>

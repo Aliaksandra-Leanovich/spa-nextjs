@@ -25,7 +25,7 @@ export const MainSection = () => {
       <ContainerSC>
         <DescriptionContainerSC>
           <H2 color={Colors.WHITE}>Get More Done with whitepace</H2>
-          <TextContainerSC margin=" 24px 0 60px 0">
+          <TextContainerSC>
             <ParagraphSmall color={Colors.WHITE}>
               Project management software that enables your teams to
               collaborate, plan, analyze and manage everyday tasks

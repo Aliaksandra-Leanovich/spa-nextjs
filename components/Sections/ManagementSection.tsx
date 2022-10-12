@@ -30,7 +30,7 @@ export const ManagementSection = () => {
       <ContainerSC id="products">
         <DescriptionContainerSC>
           <H2 color={Colors.BLACK}>Project Management</H2>
-          <TextContainerSC margin="24px 0 60px 0">
+          <TextContainerSC>
             <ParagraphSmall color={Colors.BLACK}>
               Images, videos, PDFs and audio files are supported. Create math
               expressions and diagrams directly from the app. Take photos with
@@ -48,7 +48,7 @@ export const ManagementSection = () => {
 
         <DescriptionContainerSC>
           <H2 color={Colors.BLACK}>Work together</H2>
-          <TextContainerSC margin="24px 0 60px 0">
+          <TextContainerSC>
             <ParagraphSmall color={Colors.BLACK}>
               With whitepace, share your notes with your colleagues and
               collaborate on them. You can also publish a note to the internet
