@@ -3,6 +3,7 @@ import Link from "next/link";
 import React from "react";
 import { Colors } from "../../ui/colors";
 import { typography } from "../../ui/typography";
+import ArrowRightIcon from "public/icons/arrow-right.svg";
 
 interface IButton {
   href: string;
@@ -12,7 +13,9 @@ interface IButton {
 export const LinkTemplate = ({ href, text }: IButton) => {
   return (
     <Link href={href}>
-      <StyledLink>{text}</StyledLink>
+      <StyledLink>
+        {text} <Arrow src={ArrowRightIcon.src} alt={"arrow"} />
+      </StyledLink>
     </Link>
   );
 };
@@ -24,13 +27,12 @@ const StyledLink = styled.a`
   border: none;
   border-radius: 8px;
   padding: 18px;
-
+  z-index: 1;
   cursor: pointer;
   width: max-content;
-  transition: all 0.5s ease-out;
+  transition: background-color 0.5s ease-out;
   &:hover {
     background-color: ${Colors.YELLOW};
-    transform: translateY(-2px);
   }
 `;
 
