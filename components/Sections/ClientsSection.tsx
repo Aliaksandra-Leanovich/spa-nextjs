@@ -3,7 +3,11 @@ import { Colors } from "../../ui/colors";
 import { H2 } from "../../ui/typography";
 import { Slider } from "../Slider/Slider";
 
-import { ClientsContainer, SectionContainerSC, TextContainer } from "./styles";
+import {
+  ClientsContainer,
+  SectionContainerSC,
+  TextContainerSC,
+} from "./styles";
 
 export const ClientsSection = () => {
   return (
@@ -13,9 +17,9 @@ export const ClientsSection = () => {
       tabletPadding="140px 34px"
     >
       <ClientsContainer>
-        <TextContainer margin="0 0 60px 0">
+        <TextContainerSC margin="0 0 60px 0">
           <H2 color={Colors.BLACK}>What Our Clients Says</H2>
-        </TextContainer>
+        </TextContainerSC>
 
         <Slider />
       </ClientsContainer>

@@ -8,7 +8,7 @@ import {
   AppImageSC,
   AppsContainerSC,
   SectionContainerSC,
-  TextContainer,
+  TextContainerSC,
   TodayContainerSC,
 } from "./styles";
 import { H2, ParagraphSmall } from "../../ui/typography";
@@ -23,18 +23,18 @@ export const TodaySection = () => {
     >
       <TodayContainerSC>
         <H2 color={Colors.WHITE}>Try Whitepace today</H2>
-        <TextContainer margin="24px 0 40px 0">
+        <TextContainerSC margin="24px 0 40px 0">
           <ParagraphSmall color={Colors.WHITE}>
             Get started for free. Add your whole team as your needs grow.
           </ParagraphSmall>
-        </TextContainer>
+        </TextContainerSC>
 
         <LinkTemplate href="/whitepace" text="Try Taskey free" />
-        <TextContainer margin="40px 0">
+        <TextContainerSC margin="40px 0">
           <ParagraphSmall color={Colors.WHITE}>
             On a big team? Contact sales
           </ParagraphSmall>
-        </TextContainer>
+        </TextContainerSC>
 
         <AppsContainerSC>
           <AppImageSC src={Apple.src} alt="apple" />

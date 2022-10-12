@@ -7,7 +7,7 @@ import {
   BackgroundImageSC,
   ContainerEverywhereSC,
   SectionContainerSC,
-  TextContainer,
+  TextContainerSC,
 } from "./styles";
 import { H2, ParagraphSmall } from "../../ui/typography";
 
@@ -25,14 +25,14 @@ export const EverywhereSection = () => {
 
       <ContainerEverywhereSC>
         <H2 color={Colors.WHITE}>Your work, everywhere you are</H2>
-        <TextContainer margin="24px 0 60px 0">
+        <TextContainerSC margin="24px 0 60px 0">
           <ParagraphSmall color={Colors.WHITE}>
             Access your notes from your computer, phone or tablet by
             synchronising with various services, including whitepace, Dropbox
             and OneDrive. The app is available on Windows, macOS, Linux, Android
             and iOS. A terminal app is also available!
           </ParagraphSmall>
-        </TextContainer>
+        </TextContainerSC>
 
         <LinkTemplate href="/whitepacefree" text="Try Taskey" />
       </ContainerEverywhereSC>

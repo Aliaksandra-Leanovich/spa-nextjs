@@ -7,7 +7,7 @@ import {
   DescriptionContainerSC,
   ImageContainerSC,
   SectionContainerSC,
-  TextContainer,
+  TextContainerSC,
 } from "./styles";
 import ImageWork from "/public/icons/team-work3.webp";
 
@@ -22,12 +22,12 @@ export const ExtensionSection = () => {
       <ContainerSC id="solutions">
         <DescriptionContainerSC>
           <H2 color={Colors.WHITE}>Use as Extension</H2>
-          <TextContainer margin="24px 0 60px 0">
+          <TextContainerSC margin="24px 0 60px 0">
             <ParagraphSmall color={Colors.WHITE}>
               Use the web clipper extension, available on Chrome and Firefox, to
               save web pages or take screenshots as notes.
             </ParagraphSmall>
-          </TextContainer>
+          </TextContainerSC>
 
           <LinkTemplate href="/whitepacefree" text="Lets Go" />
         </DescriptionContainerSC>

@@ -11,7 +11,7 @@ import {
   DescriptionContainerSC,
   ImageContainerSC,
   MainContainerSC,
-  TextContainer,
+  TextContainerSC,
 } from "./styles";
 import { H2, ParagraphSmall } from "../../ui/typography";
 
@@ -25,12 +25,12 @@ export const MainSection = () => {
       <ContainerSC>
         <DescriptionContainerSC>
           <H2 color={Colors.WHITE}>Get More Done with whitepace</H2>
-          <TextContainer margin=" 24px 0 60px 0">
+          <TextContainerSC margin=" 24px 0 60px 0">
             <ParagraphSmall color={Colors.WHITE}>
               Project management software that enables your teams to
               collaborate, plan, analyze and manage everyday tasks
             </ParagraphSmall>
-          </TextContainer>
+          </TextContainerSC>
 
           <LinkTemplate href="/whitepacefree" text="Try Whitepace free" />
         </DescriptionContainerSC>

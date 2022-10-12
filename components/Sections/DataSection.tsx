@@ -7,7 +7,7 @@ import {
   DescriptionContainerSC,
   ImageContainerSC,
   SectionContainerSC,
-  TextContainer,
+  TextContainerSC,
 } from "./styles";
 import DataImg from "/public/icons/data.svg";
 
@@ -21,14 +21,14 @@ export const DataSection = () => {
       <ContainerSC>
         <DescriptionContainerSC>
           <H2 color={Colors.BLACK}>100% your data</H2>
-          <TextContainer margin="24px 0 40px 0">
+          <TextContainerSC margin="24px 0 40px 0">
             <ParagraphSmall color={Colors.BLACK}>
               The app is open source and your notes are saved to an open format,
               so you will always have access to them. Uses End-To-End Encryption
               (E2EE) to secure your notes and ensure no-one but yourself can
               access them.
             </ParagraphSmall>
-          </TextContainer>
+          </TextContainerSC>
 
           <LinkTemplate href="/whitepacefree" text="Read more" />
         </DescriptionContainerSC>

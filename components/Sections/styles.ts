@@ -25,7 +25,7 @@ export const MainContainerSC = styled.section`
   position: relative;
   padding: 131px 220px 0;
   background-color: ${Colors.BLUE};
-  ${media.LAPTOP2} {
+  ${media.DESKTOP} {
     padding: 131px 34px 0;
   }
 `;
@@ -61,7 +61,7 @@ export const ImageContainerSC = styled.img`
   width: 100%;
   max-width: 824px;
 
-  ${media.LAPTOP2} {
+  ${media.DESKTOP} {
     max-width: 684px;
   }
   ${media.LAPTOP} {
@@ -91,7 +91,7 @@ export const ContainerEverywhereSC = styled.div`
   flex-direction: column;
   text-align: center;
 
-  ${media.LAPTOP2} {
+  ${media.DESKTOP} {
     justify-content: flex-start;
     align-items: flex-start;
     text-align: start;
@@ -118,7 +118,7 @@ export const SectionContainerSC = styled.section<IProps>`
   position: relative;
   width: 100%;
   padding: ${({ padding }) => padding};
-  ${media.LAPTOP2} {
+  ${media.DESKTOP} {
     padding: ${({ tabletPadding }) => tabletPadding};
   }
   ${media.TABLET} {
@@ -169,7 +169,7 @@ export const BackgroundImageContainerEverywhSC = styled.div`
 
   opacity: 0.6;
 
-  ${media.LAPTOP2} {
+  ${media.DESKTOP} {
     left: -250px;
     top: -200px;
   }
@@ -189,10 +189,10 @@ export const BackgroundImageFavSC = styled.img`
   width: 100%;
 `;
 
-export const TextContainer = styled.div<IProps>`
+export const TextContainerSC = styled.div<IProps>`
   margin: ${({ margin }) => margin};
 
-  ${media.LAPTOP2} {
+  ${media.DESKTOP} {
     margin: ${({ laptop2Margin }) => laptop2Margin};
   }
   ${media.LAPTOP} {

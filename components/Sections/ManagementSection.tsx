@@ -10,7 +10,7 @@ import {
   BackgroundImageContainerManagSC,
   BackgroundImageSC,
   SectionContainerSC,
-  TextContainer,
+  TextContainerSC,
 } from "./styles";
 import { Colors } from "../../ui/colors";
 import { H2, ParagraphSmall } from "../../ui/typography";
@@ -30,13 +30,13 @@ export const ManagementSection = () => {
       <ContainerSC id="products">
         <DescriptionContainerSC>
           <H2 color={Colors.BLACK}>Project Management</H2>
-          <TextContainer margin="24px 0 60px 0">
+          <TextContainerSC margin="24px 0 60px 0">
             <ParagraphSmall color={Colors.BLACK}>
               Images, videos, PDFs and audio files are supported. Create math
               expressions and diagrams directly from the app. Take photos with
               the mobile app and save them to a note.
             </ParagraphSmall>
-          </TextContainer>
+          </TextContainerSC>
 
           <LinkTemplate href="/whitepacefree" text="Get Started" />
         </DescriptionContainerSC>
@@ -48,13 +48,13 @@ export const ManagementSection = () => {
 
         <DescriptionContainerSC>
           <H2 color={Colors.BLACK}>Work together</H2>
-          <TextContainer margin="24px 0 60px 0">
+          <TextContainerSC margin="24px 0 60px 0">
             <ParagraphSmall color={Colors.BLACK}>
               With whitepace, share your notes with your colleagues and
               collaborate on them. You can also publish a note to the internet
               and share the URL with others.
             </ParagraphSmall>
-          </TextContainer>
+          </TextContainerSC>
 
           <LinkTemplate href="/whitepacefree" text="Try it now" />
         </DescriptionContainerSC>

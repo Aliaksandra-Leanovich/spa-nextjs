@@ -9,7 +9,7 @@ import {
   DescriptionContainerSC,
   ImageContainerSC,
   SectionContainerSC,
-  TextContainer,
+  TextContainerSC,
 } from "./styles";
 import ImageApps from "/public/icons/Apps.svg";
 import { H2, ParagraphSmall } from "../../ui/typography";
@@ -32,13 +32,13 @@ export const FavoriteSection = () => {
           <H2 color={Colors.WHITE}>
             Work with Your Favorite Apps Using whitepace
           </H2>
-          <TextContainer margin="24px 0 60px 0">
+          <TextContainerSC margin="24px 0 60px 0">
             <ParagraphSmall color={Colors.WHITE}>
               Whitepace teams up with your favorite software. Integrate with
               over 1000+ apps with Zapier to have all the tools you need for
               your project success.
             </ParagraphSmall>
-          </TextContainer>
+          </TextContainerSC>
 
           <LinkTemplate href="/whitepacefree" text="Read more" />
         </DescriptionContainerSC>
