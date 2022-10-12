@@ -1,9 +1,5 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import quotesImage from "/public/icons/Quote.svg";
-import Avatar1 from "/public/icons/avatar1.svg";
-import Avatar2 from "/public/icons/avatar2.svg";
-import Avatar3 from "/public/icons/avatar3.svg";
 import "swiper/css";
 import "swiper/css/pagination";
 import SwiperCore, { EffectCoverflow, Pagination } from "swiper";
@@ -22,37 +18,14 @@ import {
 } from "./style";
 import { Subtitle } from "../../ui/typography";
 import { Colors } from "../../ui/colors";
+import { IReviewers } from "../Sections/ClientsSection";
 
-const config = [
-  {
-    comment:
-      "Whitepate is designed as a collaboration tool for businesses that is a full project management solution.",
-    icon: quotesImage.src,
-    avatar: Avatar1.src,
-    name: "Oberon Shaw, MCH",
-    position: "Head of Talent Acquisition, North America",
-  },
-  {
-    comment:
-      "Whitepate is designed as a collaboration tool for businesses that is a full project management solution.",
-    icon: quotesImage.src,
-    avatar: Avatar2.src,
-    name: "Oberon Shaw, MCH",
-    position: "Head of Talent Acquisition, North America",
-  },
-  {
-    comment:
-      "Whitepate is designed as a collaboration tool for businesses that is a full project management solution.",
-    icon: quotesImage.src,
-    avatar: Avatar3.src,
-    name: "Oberon Shaw, MCH",
-    position: "Head of Talent Acquisition, North America",
-  },
-];
-
+interface IData {
+  data: IReviewers[];
+}
 SwiperCore.use([EffectCoverflow, Pagination]);
 
-export const Slider = () => {
+export const Slider = ({ data }: IData) => {
   return (
     <>
       <Container>
@@ -77,7 +50,7 @@ export const Slider = () => {
         >
           <SwiperSlide>
             <ContainerReviews>
-              {config.map((review, index) => (
+              {data.map((review, index) => (
                 <Review key={index}>
                   <BlockReview>
                     <QuotesImage src={review.icon} id="commas" />
@@ -100,7 +73,7 @@ export const Slider = () => {
           </SwiperSlide>
           <SwiperSlide>
             <ContainerReviews>
-              {config.map((review, index) => (
+              {data.map((review, index) => (
                 <Review key={index}>
                   <BlockReview>
                     <QuotesImage src={review.icon} />
@@ -123,7 +96,7 @@ export const Slider = () => {
           </SwiperSlide>
           <SwiperSlide>
             <ContainerReviews>
-              {config.map((review, index) => (
+              {data.map((review, index) => (
                 <Review key={index}>
                   <BlockReview>
                     <QuotesImage src={review.icon} />
@@ -156,7 +129,7 @@ export const Slider = () => {
           modules={[Pagination]}
           className="mySwiper"
         >
-          {config.map((review, index) => (
+          {data.map((review, index) => (
             <SwiperSlide key={index}>
               <Review>
                 <BlockReview>
