@@ -70,3 +70,7 @@ export const TabButtonSC = styled.button`
 `;
 
 export const TabAdvantagesSC = styled.div``;
+
+export const TextContainerSC = styled.div`
+  margin: 0 0 24px 0;
+`;

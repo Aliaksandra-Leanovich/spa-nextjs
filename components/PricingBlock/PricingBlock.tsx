@@ -7,6 +7,7 @@ import {
   TabAdvantagesSC,
   TabButtonSC,
   TabSC,
+  TextContainerSC,
 } from "./styles";
 import {
   H2,
@@ -16,7 +17,6 @@ import {
   Subtitle,
 } from "../../ui/typography";
 import { Colors } from "../../ui/colors";
-import { TextContainerSC } from "../Sections/styles";
 
 const config = [
   {
@@ -80,18 +80,18 @@ export const PricingBlock = () => {
       <BlockTabsSC>
         {config.map((tab, index) => (
           <TabSC key={index}>
-            <TextContainerSC margin="0 0 24px 0">
+            <TextContainerSC>
               <ParagraphMedium color={Colors.BLACK} weight="600">
                 {tab.set}
               </ParagraphMedium>
             </TextContainerSC>
-            <TextContainerSC margin="0 0 25px 0">
+            <TextContainerSC>
               <H3 color={Colors.BLACK} id="price">
                 {tab.price}
               </H3>
             </TextContainerSC>
 
-            <TextContainerSC margin="0 0 24px 0">
+            <TextContainerSC>
               <ParagraphMedium color={Colors.BLACK} id="text">
                 {tab.description}
               </ParagraphMedium>
@@ -99,7 +99,7 @@ export const PricingBlock = () => {
 
             <TabAdvantagesSC>
               {tab.advantages.map((advantage, index) => (
-                <TextContainerSC key={index} margin="0 0 28px 0">
+                <TextContainerSC key={index}>
                   <ParagraphXS color={Colors.BLACK} id="text">
                     <PointSC src={tab.icon} id="point" />
                     {advantage}
