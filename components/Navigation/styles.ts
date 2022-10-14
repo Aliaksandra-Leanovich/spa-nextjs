@@ -1,6 +1,5 @@
 import styled from "@emotion/styled";
 import { Colors } from "../../ui/colors";
-import { typography } from "../../ui/typography";
 import { media } from "../../ui/media";
 
 interface IProps {
@@ -35,6 +34,9 @@ export const StyledRightNavigation = styled.div<IProps>`
   ${media.PHONE} {
     width: 100%;
   }
+  body {
+    overflow: ${({ open }) => (open ? "hidden" : "auto")};
+  }
 `;
 export const ContainerLinks = styled.div`
   display: flex;
@@ -48,13 +50,28 @@ export const ContainerLinks = styled.div`
 `;
 
 export const ContainerButtons = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  row-gap: 20px;
 `;
 
 const NavigationContainer = styled.div`
   display: flex;
 `;
-
+export const HoverLinkSC = styled.a`
+  color: ${Colors.WHITE};
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  letter-spacing: -0.02em;
+  margin: 0 40px 0 0;
+  &:hover {
+    cursor: pointer;
+    color: ${Colors.YELLOW};
+  }
+  ${media.TABLET} {
+    margin: 30px 0 0;
+  }
+`;
 export { StyledNavigation, NavigationContainer };

@@ -5,17 +5,15 @@ import {
   StyledRightNavigation,
   ContainerLinks,
   ContainerButtons,
+  HoverLinkSC,
 } from "./styles";
 import { app } from "../../utils/firebase";
 import { getAuth, signOut } from "firebase/auth";
 import Link from "next/link";
 import router from "next/router";
-import { routes } from "../../routes/routes";
 import { LinkTemplate } from "../LinkTemplate/LinkTemplate";
 import { Burger } from "../Burger/Burger";
-import { Button, Varients } from "../Button/Button";
-import { Colors } from "../../ui/colors";
-import { Subtitle } from "../../ui/typography";
+import { Button, Variants } from "../Button/Button";
 
 const config = [
   {
@@ -45,7 +43,7 @@ export const Navigation = () => {
     signOut(auth)
       .then(() => {
         localStorage.removeItem("authUser");
-        router.push(routes.SIGNIN);
+        router.push("/signin");
       })
       .catch((error) => {
         // An error happened.
@@ -56,19 +54,17 @@ export const Navigation = () => {
       <StyledNavigation>
         {config.map((link, index) => (
           <Link href={link.href} key={index}>
-            <Subtitle
-              color={Colors.WHITE}
-              margin="0 40px 0 0"
-              hoverColor={Colors.YELLOW}
-            >
-              {link.title}
-            </Subtitle>
+            <HoverLinkSC>{link.title}</HoverLinkSC>
           </Link>
         ))}
         <form onSubmit={handleSubmit}>
-          <Button type="submit" text="Logout" variant={Varients.primary} />
+          <Button type="submit" text="Logout" variant={Variants.primary} />
         </form>
-        <LinkTemplate href="/whitepacefree" text="Try Whitepace free" />
+        <LinkTemplate
+          href="/whitepacefree"
+          text="Try Whitepace free"
+          padding="18px 24px"
+        />
       </StyledNavigation>
 
       <Burger open={open} setOpen={setOpen} />
@@ -76,21 +72,19 @@ export const Navigation = () => {
         <ContainerLinks>
           {config.map((link, index) => (
             <Link href={link.href} key={index}>
-              <Subtitle
-                color={Colors.WHITE}
-                margin="30px 0 0 0"
-                hoverColor={Colors.YELLOW}
-              >
-                {link.title}
-              </Subtitle>
+              <HoverLinkSC>{link.title}</HoverLinkSC>
             </Link>
           ))}
         </ContainerLinks>
         <ContainerButtons>
           <form onSubmit={handleSubmit}>
-            <Button variant={Varients.primary} type="submit" text="Logout" />
+            <Button variant={Variants.primary} type="submit" text="Logout" />
           </form>
-          <LinkTemplate href="/whitepacefree" text="Try Whitepace free" />
+          <LinkTemplate
+            href="/whitepacefree"
+            text="Try Whitepace free"
+            padding="18px 24px"
+          />
         </ContainerButtons>
       </StyledRightNavigation>
     </NavigationContainer>
