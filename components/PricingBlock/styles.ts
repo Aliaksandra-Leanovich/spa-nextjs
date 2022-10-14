@@ -4,6 +4,9 @@ import { media } from "../../ui/media";
 import { typography } from "../../ui/typography";
 
 export const PricingContainerSC = styled.section`
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+
   margin: 0 auto;
   width: 100%;
 
@@ -16,6 +19,11 @@ export const PricingContainerSC = styled.section`
   ${media.DESKTOP} {
     padding: 0 32px 140px 32px;
   }
+  ${media.TABLET} {
+    display: block;
+
+    padding: 60px 16px;
+  }
 `;
 
 export const BlockTabsSC = styled.div`
@@ -23,8 +31,17 @@ export const BlockTabsSC = styled.div`
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 32px;
   ${media.TABLET} {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, 1fr);
+    display: none;
+  }
+`;
+export const TextContainerTitleSC = styled.div`
+  text-align: center;
+`;
+export const ContainerSliderSC = styled.div`
+  display: none;
+
+  ${media.TABLET} {
+    display: flex;
   }
 `;
 export const Border = styled.div`
@@ -34,33 +51,6 @@ export const Border = styled.div`
   border-radius: 10px;
   z-index: -1;
   inset: 0;
-`;
-
-export const TabSC = styled.div`
-  position: relative;
-  height: max-content;
-  z-index: 1;
-
-  &:hover {
-    ${Border} {
-      transform: scaleY(1.2);
-      background-color: ${Colors.BLUE};
-      ${media.PHONE} {
-        padding: 20px;
-      }
-    }
-    &:hover p {
-      color: ${Colors.WHITE};
-    }
-    &:hover #price {
-      color: ${Colors.YELLOW};
-    }
-    &:hover #button {
-      color: ${Colors.WHITE};
-      background-color: ${Colors.LIGHTBLUE};
-      border: none;
-    }
-  }
 `;
 
 export const PointSC = styled.img`
@@ -87,4 +77,42 @@ export const TextContainerSC = styled.div`
 
 export const TabTextContainerSC = styled.div`
   padding: 40px 44px;
+`;
+
+export const TabSC = styled.div`
+  position: relative;
+  height: max-content;
+  z-index: 1;
+
+  &:hover {
+    ${Border} {
+      transform: scaleY(1.2);
+      background-color: ${Colors.BLUE};
+      ${media.PHONE} {
+        padding: 20px;
+      }
+    }
+    &:hover p {
+      color: ${Colors.WHITE};
+    }
+
+    &:hover ${TabButtonSC} {
+      color: ${Colors.WHITE};
+      background-color: ${Colors.LIGHTBLUE};
+      border: none;
+    }
+  }
+`;
+export const TextContainerDescriptionSC = styled.div`
+  text-align: center;
+  margin: 24px 0 124px;
+  ${media.DESKTOP} {
+    margin: 24px 0 114px;
+  }
+  ${media.LAPTOP} {
+    margin: 24px 0 135px;
+  }
+  ${media.TABLET} {
+    margin: 24px 0 85px;
+  }
 `;

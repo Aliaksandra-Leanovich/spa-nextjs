@@ -3,22 +3,28 @@ import PointIcon from "/public/icons/Point.svg";
 import {
   BlockTabsSC,
   Border,
+  ContainerSliderSC,
   PointSC,
   PricingContainerSC,
   TabAdvantagesSC,
   TabButtonSC,
   TabSC,
   TabTextContainerSC,
+  TextContainerDescriptionSC,
   TextContainerSC,
+  TextContainerTitleSC,
 } from "./styles";
-import {
-  H2,
-  H3,
-  ParagraphMedium,
-  ParagraphXS,
-  Subtitle,
-} from "../../ui/typography";
 import { Colors } from "../../ui/colors";
+import { SliderPricing } from "../SliderPricing/SliderPricing";
+import { TypographySC, VariantsTypography } from "../../ui/typography";
+
+export interface IPricePlans {
+  set: string;
+  price: string;
+  description: string;
+  advantages: string[];
+  icon: string;
+}
 
 const config = [
   {
@@ -69,54 +75,74 @@ const config = [
 export const PricingBlock = () => {
   return (
     <PricingContainerSC id="pricing">
-      <H2 color={Colors.BLACK}>Choose Your Plan</H2>
-      <Subtitle
-        margin="0 0 120px 0 "
-        laptop2Margin="0 0 114px 0"
-        laptopMargin="0 0 138px 0"
-        tabletMargin="0 0 85px 0"
-      >
-        Whether you want to get organized, keep your personal life on track, or
-        boost workplace productivity, Evernote has the right plan for you.
-      </Subtitle>
+      <TextContainerTitleSC>
+        <TypographySC variant={VariantsTypography.h2} color={Colors.BLACK}>
+          Choose Your Plan
+        </TypographySC>
+      </TextContainerTitleSC>
+      <TextContainerDescriptionSC>
+        <TypographySC
+          variant={VariantsTypography.paragraphMedium}
+          color={Colors.BLACK}
+        >
+          Whether you want to get organized, keep your personal life on track,
+          or boost workplace productivity, Evernote has the right plan for you.
+        </TypographySC>
+      </TextContainerDescriptionSC>
+
       <BlockTabsSC>
         {config.map((tab, index) => (
           <TabSC key={index}>
             <Border />
             <TabTextContainerSC>
               <TextContainerSC>
-                <ParagraphMedium color={Colors.BLACK} weight="600">
+                <TypographySC
+                  variant={VariantsTypography.h2}
+                  color={Colors.BLACK}
+                >
                   {tab.set}
-                </ParagraphMedium>
+                </TypographySC>
               </TextContainerSC>
               <TextContainerSC>
-                <H3 color={Colors.BLACK} id="price">
+                <TypographySC
+                  variant={VariantsTypography.h3}
+                  color={Colors.BLACK}
+                >
                   {tab.price}
-                </H3>
+                </TypographySC>
               </TextContainerSC>
 
               <TextContainerSC>
-                <ParagraphMedium color={Colors.BLACK} id="text">
+                <TypographySC
+                  variant={VariantsTypography.paragraphMedium}
+                  color={Colors.BLACK}
+                >
                   {tab.description}
-                </ParagraphMedium>
+                </TypographySC>
               </TextContainerSC>
 
               <TabAdvantagesSC>
                 {tab.advantages.map((advantage, index) => (
                   <TextContainerSC key={index}>
-                    <ParagraphXS color={Colors.BLACK} id="text">
-                      <PointSC src={tab.icon} id="point" />
+                    <TypographySC
+                      variant={VariantsTypography.paragraphXS}
+                      color={Colors.BLACK}
+                    >
+                      <PointSC src={tab.icon} />
                       {advantage}
-                    </ParagraphXS>
+                    </TypographySC>
                   </TextContainerSC>
                 ))}
               </TabAdvantagesSC>
 
-              <TabButtonSC id="button">Get Started</TabButtonSC>
+              <TabButtonSC>Get Started</TabButtonSC>
             </TabTextContainerSC>
           </TabSC>
         ))}
       </BlockTabsSC>
+      <ContainerSliderSC>
+        <SliderPricing data={config} />
+      </ContainerSliderSC>
     </PricingContainerSC>
   );
 };
