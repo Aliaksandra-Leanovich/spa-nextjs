@@ -30,9 +30,7 @@ export const Input = ({
         {...register(label)}
       />
 
-      <ErrorMessageSC>
-        {errors ? <div>{errors.message}</div> : null}
-      </ErrorMessageSC>
+      {errors ? <ErrorMessageSC>{errors.message}</ErrorMessageSC> : null}
     </ContainerSC>
   );
 };
