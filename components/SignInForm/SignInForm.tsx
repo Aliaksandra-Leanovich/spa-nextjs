@@ -1,22 +1,21 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
-import { routes } from "../../routes/routes";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { app } from "../../utils/firebase";
 import { useRouter } from "next/router";
 import { ContainerFormSC, NoUserMessageSC, StyledFormSC } from "./styles";
 import { Input } from "../Input/Input";
-import { Button, Varients } from "../Button/Button";
+import { Button, Variants } from "../Button/Button";
 import { LinkTemplate } from "../LinkTemplate/LinkTemplate";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as Yup from "yup";
 import { Colors } from "../../ui/colors";
-import { H3 } from "../../ui/typography";
+import { TypographySC, VariantsTypography } from "../../ui/typography";
 
 interface IUserForm {
   email: string;
   password: string;
-  errors: string;
+  errors?: string;
 }
 
 interface IUserLocal {
@@ -46,7 +45,7 @@ export const SignInForm = () => {
       .then(async (userCredential: any) => {
         const user = userCredential.user.accessToken;
         localStorage.setItem("authUser", JSON.stringify(user));
-        await router.push(routes.HOME);
+        await router.push("/");
       })
       .catch((error) => {
         const errorMessage = error.message;
@@ -56,9 +55,9 @@ export const SignInForm = () => {
 
   return (
     <ContainerFormSC>
-      <H3 color={Colors.WHITE}>
+      <TypographySC variant={VariantsTypography.h3} color={Colors.WHITE}>
         Get started for free. Add your whole team as your needs grow.{" "}
-      </H3>
+      </TypographySC>
       <StyledFormSC onSubmit={handleSubmit(onSubmit)}>
         <NoUserMessageSC>{noUser ? "No such user" : ""}</NoUserMessageSC>
         <Input
@@ -75,7 +74,7 @@ export const SignInForm = () => {
           register={register}
           placeholder="Enter your password"
         />
-        <Button type="submit" text="Sign In" variant={Varients.secondary} />
+        <Button type="submit" text="Sign In" variant={Variants.secondary} />
       </StyledFormSC>
       <LinkTemplate href="/signup" text="I dont have an account" />
     </ContainerFormSC>
