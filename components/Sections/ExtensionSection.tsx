@@ -1,38 +1,42 @@
 import React from "react";
 import { Colors } from "../../ui/colors";
-import { H2, ParagraphSmall } from "../../ui/typography";
+import { TypographySC, VariantsTypography } from "../../ui/typography";
 import { LinkTemplate } from "../LinkTemplate/LinkTemplate";
 import {
+  BlueContainerSC,
   ContainerSC,
   DescriptionContainerSC,
   ImageContainerSC,
-  SectionContainerSC,
   TextContainerSC,
 } from "./styles";
 import ImageWork from "/public/icons/team-work3.webp";
 
 export const ExtensionSection = () => {
   return (
-    <SectionContainerSC
-      background={Colors.BLUE}
-      padding="140px 220px"
-      mobilePadding="80px 16px"
-      tabletPadding="140px 34px"
-    >
+    <BlueContainerSC>
       <ContainerSC id="solutions">
         <DescriptionContainerSC>
-          <H2 color={Colors.WHITE}>Use as Extension</H2>
+          <TypographySC variant={VariantsTypography.h2} color={Colors.WHITE}>
+            Use as Extension
+          </TypographySC>
           <TextContainerSC>
-            <ParagraphSmall color={Colors.WHITE}>
+            <TypographySC
+              variant={VariantsTypography.paragraphSmall}
+              color={Colors.WHITE}
+            >
               Use the web clipper extension, available on Chrome and Firefox, to
               save web pages or take screenshots as notes.
-            </ParagraphSmall>
+            </TypographySC>
           </TextContainerSC>
 
-          <LinkTemplate href="/whitepacefree" text="Lets Go" />
+          <LinkTemplate
+            href="/whitepacefree"
+            text="Lets Go"
+            padding="20px 40px"
+          />
         </DescriptionContainerSC>
         <ImageContainerSC src={ImageWork.src} alt={"work together"} />
       </ContainerSC>
-    </SectionContainerSC>
+    </BlueContainerSC>
   );
 };

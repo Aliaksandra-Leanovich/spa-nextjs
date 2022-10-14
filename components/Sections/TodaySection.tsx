@@ -7,34 +7,50 @@ import { Colors } from "../../ui/colors";
 import {
   AppImageSC,
   AppsContainerSC,
-  SectionContainerSC,
-  TextContainerSC,
+  BlueContainerSC,
+  TextContainerTodaySC,
+  TextContainerTodaySecondSC,
   TodayContainerSC,
+  TodayTitleSC,
 } from "./styles";
-import { H2, ParagraphSmall } from "../../ui/typography";
+import { TypographySC, VariantsTypography } from "../../ui/typography";
 
 export const TodaySection = () => {
   return (
-    <SectionContainerSC
-      background={Colors.BLUE}
-      padding="140px 32px 32px 32px"
-      mobilePadding="100px 16px"
-      tabletPadding="140px 20px"
-    >
+    <BlueContainerSC>
       <TodayContainerSC>
-        <H2 color={Colors.WHITE}>Try Whitepace today</H2>
-        <TextContainerSC>
-          <ParagraphSmall color={Colors.WHITE}>
-            Get started for free. Add your whole team as your needs grow.
-          </ParagraphSmall>
-        </TextContainerSC>
+        <TodayTitleSC>
+          Try Whitepace <span>today</span>
+        </TodayTitleSC>
 
-        <LinkTemplate href="/whitepace" text="Try Taskey free" />
-        <TextContainerSC>
-          <ParagraphSmall color={Colors.WHITE}>
+        <TextContainerTodaySC>
+          <TypographySC
+            variant={VariantsTypography.paragraphSmall}
+            color={Colors.WHITE}
+          >
+            Get started for free.
+          </TypographySC>
+          <TypographySC
+            variant={VariantsTypography.paragraphSmall}
+            color={Colors.WHITE}
+          >
+            Add your whole team as your needs grow.
+          </TypographySC>
+        </TextContainerTodaySC>
+
+        <LinkTemplate
+          href="/whitepace"
+          text="Try Taskey free"
+          padding="20px 40px"
+        />
+        <TextContainerTodaySecondSC>
+          <TypographySC
+            variant={VariantsTypography.paragraphSmall}
+            color={Colors.WHITE}
+          >
             On a big team? Contact sales
-          </ParagraphSmall>
-        </TextContainerSC>
+          </TypographySC>
+        </TextContainerTodaySecondSC>
 
         <AppsContainerSC>
           <AppImageSC src={Apple.src} alt="apple" />
@@ -42,6 +58,6 @@ export const TodaySection = () => {
           <AppImageSC src={Android.src} alt="android" />
         </AppsContainerSC>
       </TodayContainerSC>
-    </SectionContainerSC>
+    </BlueContainerSC>
   );
 };

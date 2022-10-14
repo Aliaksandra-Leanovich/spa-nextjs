@@ -5,23 +5,18 @@ import favoriteBackground from "/public/icons/favoriteBackground.svg";
 import {
   BackgroundImageContainerSC,
   BackgroundImageFavSC,
+  BlueContainerSC,
   ContainerSC,
   DescriptionContainerSC,
   ImageContainerSC,
-  SectionContainerSC,
   TextContainerSC,
 } from "./styles";
 import ImageApps from "/public/icons/Apps.svg";
-import { H2, ParagraphSmall } from "../../ui/typography";
+import { TypographySC, VariantsTypography } from "../../ui/typography";
 
 export const FavoriteSection = () => {
   return (
-    <SectionContainerSC
-      background={Colors.BLUE}
-      padding="140px 220px"
-      mobilePadding="100px 16px"
-      tabletPadding="140px 34px"
-    >
+    <BlueContainerSC>
       <BackgroundImageContainerSC>
         <BackgroundImageFavSC src={favoriteBackground.src} />
       </BackgroundImageContainerSC>
@@ -29,20 +24,27 @@ export const FavoriteSection = () => {
       <ContainerSC>
         <ImageContainerSC src={ImageApps.src} alt={"work together"} />
         <DescriptionContainerSC>
-          <H2 color={Colors.WHITE}>
+          <TypographySC variant={VariantsTypography.h2} color={Colors.WHITE}>
             Work with Your Favorite Apps Using whitepace
-          </H2>
+          </TypographySC>
           <TextContainerSC>
-            <ParagraphSmall color={Colors.WHITE}>
+            <TypographySC
+              variant={VariantsTypography.paragraphSmall}
+              color={Colors.WHITE}
+            >
               Whitepace teams up with your favorite software. Integrate with
               over 1000+ apps with Zapier to have all the tools you need for
               your project success.
-            </ParagraphSmall>
+            </TypographySC>
           </TextContainerSC>
 
-          <LinkTemplate href="/whitepacefree" text="Read more" />
+          <LinkTemplate
+            href="/whitepacefree"
+            text="Read more"
+            padding="20px 40px"
+          />
         </DescriptionContainerSC>
       </ContainerSC>
-    </SectionContainerSC>
+    </BlueContainerSC>
   );
 };

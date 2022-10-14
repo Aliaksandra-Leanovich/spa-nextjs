@@ -5,34 +5,39 @@ import {
   ContainerSC,
   ImageContainerSC,
   DescriptionContainerSC,
-  SectionContainerSC,
   TextContainerSC,
+  WhiteContainerSC,
 } from "./styles";
 import { Colors } from "../../ui/colors";
-import { H2, ParagraphSmall } from "../../ui/typography";
+import { TypographySC, VariantsTypography } from "../../ui/typography";
 
 export const CustomiseSection = () => {
   return (
-    <SectionContainerSC
-      padding="140px 220px"
-      mobilePadding="100px 16px"
-      tabletPadding="140px 34px"
-    >
+    <WhiteContainerSC>
       <ContainerSC id="resources">
         <ImageContainerSC src={ImageWork.src} alt={"work together"} />
         <DescriptionContainerSC>
-          <H2 color={Colors.BLACK}>Customise it to your needs</H2>
+          <TypographySC variant={VariantsTypography.h2} color={Colors.BLACK}>
+            Customise it to your needs
+          </TypographySC>
           <TextContainerSC>
-            <ParagraphSmall color={Colors.BLACK}>
+            <TypographySC
+              variant={VariantsTypography.paragraphSmall}
+              color={Colors.BLACK}
+            >
               Customise the app with plugins, custom themes and multiple text
               editors (Rich Text or Markdown). Or create your own scripts and
               plugins using the Extension API.
-            </ParagraphSmall>
+            </TypographySC>
           </TextContainerSC>
 
-          <LinkTemplate href="/whitepacefree" text="Lets Go" />
+          <LinkTemplate
+            href="/whitepacefree"
+            text="Lets Go"
+            padding="20px 40px"
+          />
         </DescriptionContainerSC>
       </ContainerSC>
-    </SectionContainerSC>
+    </WhiteContainerSC>
   );
 };

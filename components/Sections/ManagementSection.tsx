@@ -9,36 +9,40 @@ import {
   ImageContainerSC,
   BackgroundImageContainerManagSC,
   BackgroundImageSC,
-  SectionContainerSC,
   TextContainerSC,
+  WhiteContainerSC,
 } from "./styles";
 import { Colors } from "../../ui/colors";
-import { H2, ParagraphSmall } from "../../ui/typography";
+import { TypographySC, VariantsTypography } from "../../ui/typography";
 
 export const ManagementSection = () => {
   return (
-    <SectionContainerSC
-      background={Colors.WHITE}
-      padding="140px 220px"
-      mobilePadding="80px 16px"
-      tabletPadding="140px 32px"
-    >
+    <WhiteContainerSC>
       <BackgroundImageContainerManagSC>
         <BackgroundImageSC src={managBackground.src} />
       </BackgroundImageContainerManagSC>
 
       <ContainerSC id="products">
         <DescriptionContainerSC>
-          <H2 color={Colors.BLACK}>Project Management</H2>
+          <TypographySC variant={VariantsTypography.h2} color={Colors.BLACK}>
+            Project Management
+          </TypographySC>
           <TextContainerSC>
-            <ParagraphSmall color={Colors.BLACK}>
+            <TypographySC
+              variant={VariantsTypography.paragraphSmall}
+              color={Colors.BLACK}
+            >
               Images, videos, PDFs and audio files are supported. Create math
               expressions and diagrams directly from the app. Take photos with
               the mobile app and save them to a note.
-            </ParagraphSmall>
+            </TypographySC>
           </TextContainerSC>
 
-          <LinkTemplate href="/whitepacefree" text="Get Started" />
+          <LinkTemplate
+            href="/whitepacefree"
+            text="Get Started"
+            padding="20px 40px"
+          />
         </DescriptionContainerSC>
         <ImageContainerSC src={ImageWorkManag.src} alt={"work together"} />
       </ContainerSC>
@@ -47,18 +51,27 @@ export const ManagementSection = () => {
         <ImageContainerSC src={ImageWork.src} alt={"work together"} />
 
         <DescriptionContainerSC>
-          <H2 color={Colors.BLACK}>Work together</H2>
+          <TypographySC variant={VariantsTypography.h2} color={Colors.BLACK}>
+            Work together
+          </TypographySC>
           <TextContainerSC>
-            <ParagraphSmall color={Colors.BLACK}>
+            <TypographySC
+              variant={VariantsTypography.paragraphSmall}
+              color={Colors.BLACK}
+            >
               With whitepace, share your notes with your colleagues and
               collaborate on them. You can also publish a note to the internet
               and share the URL with others.
-            </ParagraphSmall>
+            </TypographySC>
           </TextContainerSC>
 
-          <LinkTemplate href="/whitepacefree" text="Try it now" />
+          <LinkTemplate
+            href="/whitepacefree"
+            text="Try it now"
+            padding="20px 40px"
+          />
         </DescriptionContainerSC>
       </ContainerSC>
-    </SectionContainerSC>
+    </WhiteContainerSC>
   );
 };

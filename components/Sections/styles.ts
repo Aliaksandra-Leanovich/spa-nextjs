@@ -2,17 +2,6 @@ import styled from "@emotion/styled";
 import { Colors } from "../../ui/colors";
 import { media } from "../../ui/media";
 
-interface IProps {
-  color?: string;
-
-  background?: string;
-  backgroundImage?: string;
-
-  padding?: string;
-  mobilePadding?: string;
-  tabletPadding?: string;
-}
-
 export const MainContainerSC = styled.section`
   margin: 0 auto;
   width: 100%;
@@ -97,6 +86,10 @@ export const ClientsContainer = styled.div`
   align-items: center;
   flex-direction: column;
 `;
+export const TextContainerSliderSC = styled.div`
+  text-align: center;
+  margin-bottom: 60px;
+`;
 
 export const TodayContainerSC = styled.div`
   padding: 140px 32px;
@@ -104,19 +97,34 @@ export const TodayContainerSC = styled.div`
   margin: 0 auto;
   justify-content: center;
   align-items: center;
+  text-align: center;
   flex-direction: column;
   width: 100%;
 `;
-export const SectionContainerSC = styled.section<IProps>`
-  background-color: ${({ background }) => background};
+export const WhiteContainerSC = styled.section`
+  background-color: ${Colors.WHITE};
+  padding: 140px 220px;
   position: relative;
   width: 100%;
-  padding: ${({ padding }) => padding};
+
   ${media.DESKTOP} {
-    padding: ${({ tabletPadding }) => tabletPadding};
+    padding: 140px 34px;
   }
   ${media.TABLET} {
-    padding: ${({ mobilePadding }) => mobilePadding};
+    padding: 90px 16px;
+  }
+`;
+export const BlueContainerSC = styled.section`
+  background-color: ${Colors.BLUE};
+  padding: 140px 220px;
+  position: relative;
+  width: 100%;
+
+  ${media.DESKTOP} {
+    padding: 140px 34px;
+  }
+  ${media.TABLET} {
+    padding: 90px 16px;
   }
 `;
 
@@ -143,7 +151,7 @@ export const BackgroundImageContainerSC = styled.div`
   z-index: 0;
   bottom: 0;
   left: 0;
-
+  width: 100%;
   opacity: 0.3;
 `;
 
@@ -185,4 +193,33 @@ export const BackgroundImageFavSC = styled.img`
 
 export const TextContainerSC = styled.div`
   margin: 24px 0 60px 0;
+`;
+export const TextContainerTodaySC = styled.div`
+  margin: 24px 0 40px 0;
+`;
+export const TextContainerTodaySecondSC = styled.div`
+  margin: 40px 0;
+`;
+export const TodayTitleSC = styled.h2`
+  color: ${Colors.WHITE};
+  font-family: "Inter";
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 77px;
+  letter-spacing: -0.02em;
+
+  ${media.TABLET} {
+    font-size: 54px;
+    line-height: 65px;
+  }
+  ${media.PHONE} {
+    font-size: 36px;
+    line-height: 44px;
+  }
+
+  & span {
+    ${media.DESKTOP} {
+      display: block;
+    }
+  }
 `;

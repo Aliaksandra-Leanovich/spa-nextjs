@@ -5,37 +5,41 @@ import managBackground from "/public/icons/everywhereBackground.svg";
 import {
   BackgroundImageContainerEverywhSC,
   BackgroundImageSC,
+  BlueContainerSC,
   ContainerEverywhereSC,
-  SectionContainerSC,
   TextContainerSC,
 } from "./styles";
-import { H2, ParagraphSmall } from "../../ui/typography";
+import { TypographySC, VariantsTypography } from "../../ui/typography";
 
 export const EverywhereSection = () => {
   return (
-    <SectionContainerSC
-      background={Colors.BLUE}
-      padding="140px 220px"
-      mobilePadding="100px 16px"
-      tabletPadding="140px 34px"
-    >
+    <BlueContainerSC>
       <BackgroundImageContainerEverywhSC>
         <BackgroundImageSC src={managBackground.src} />
       </BackgroundImageContainerEverywhSC>
 
       <ContainerEverywhereSC>
-        <H2 color={Colors.WHITE}>Your work, everywhere you are</H2>
+        <TypographySC variant={VariantsTypography.h2} color={Colors.WHITE}>
+          Your work, everywhere you are
+        </TypographySC>
         <TextContainerSC>
-          <ParagraphSmall color={Colors.WHITE}>
+          <TypographySC
+            variant={VariantsTypography.paragraphSmall}
+            color={Colors.WHITE}
+          >
             Access your notes from your computer, phone or tablet by
             synchronising with various services, including whitepace, Dropbox
             and OneDrive. The app is available on Windows, macOS, Linux, Android
             and iOS. A terminal app is also available!
-          </ParagraphSmall>
+          </TypographySC>
         </TextContainerSC>
 
-        <LinkTemplate href="/whitepacefree" text="Try Taskey" />
+        <LinkTemplate
+          href="/whitepacefree"
+          text="Try Taskey"
+          padding="20px 40px"
+        />
       </ContainerEverywhereSC>
-    </SectionContainerSC>
+    </BlueContainerSC>
   );
 };
