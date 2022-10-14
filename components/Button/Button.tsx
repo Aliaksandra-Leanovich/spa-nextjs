@@ -1,20 +1,21 @@
 import React, { ButtonHTMLAttributes } from "react";
+import { ButtonTextSC } from "../../ui/typography";
 import { ButtonSC } from "./styles";
 
-export enum Varients {
+export enum Variants {
   primary = "primary",
   secondary = "secondary",
 }
 
 export interface IButton extends ButtonHTMLAttributes<HTMLButtonElement> {
   text: string;
-  variant: Varients;
+  variant: Variants;
 }
 
 export const Button = ({ text, type, variant }: IButton) => {
   return (
     <ButtonSC variant={variant} type={type}>
-      {text}
+      <ButtonTextSC>{text}</ButtonTextSC>
     </ButtonSC>
   );
 };
