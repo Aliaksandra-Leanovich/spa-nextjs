@@ -2,14 +2,15 @@ import styled from "@emotion/styled";
 import { Colors } from "../../ui/colors";
 import { media } from "../../ui/media";
 
-export const Container = styled.div`
+export const ContainerSC = styled.div`
   display: flex;
+  margin-top: 60px;
   width: 100%;
   ${media.TABLET} {
     display: none;
   }
 `;
-export const ContainerReviews = styled.div`
+export const ContainerReviewsSC = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 32px;
@@ -18,7 +19,12 @@ export const ContainerReviews = styled.div`
 
   margin-bottom: 60px;
 `;
-export const Review = styled.div`
+export const BlockReviewSC = styled.div`
+  border-bottom: 1px solid ${Colors.WHITE};
+  margin-bottom: 60px;
+`;
+
+export const ReviewSC = styled.div`
   padding: 60px 40px;
   background-color: ${Colors.LIGHTBLUE};
   border-radius: 10px;
@@ -27,7 +33,7 @@ export const Review = styled.div`
     padding: 20px;
   }
 
-  transition: all 0.5s ease-out;
+  transition: background-color 0.5s ease-out, box-shadow 0.5s ease-out;
   &:hover {
     background-color: ${Colors.WHITE};
     box-shadow: 15px 10px 50px rgba(0, 0, 0, 0.1);
@@ -35,27 +41,24 @@ export const Review = styled.div`
   &:hover p {
     color: ${Colors.BLACK};
   }
-  &:hover #commas path {
-    fill: ${Colors.BLUE};
+  &:hover ${BlockReviewSC} {
+    border-bottom-color: ${Colors.BLACK};
   }
 `;
-export const BlockReview = styled.div`
-  border-bottom: 1px solid ${Colors.WHITE};
-  margin-bottom: 60px;
-`;
-export const QuotesImage = styled.img`
+
+export const QuotesImageSC = styled.img`
   width: 86px;
   margin-bottom: 32px;
 `;
 
-export const ReviewerBlock = styled.div`
+export const ReviewerBlockSC = styled.div`
   display: flex;
   ${media.TABLET} {
     flex-direction: column;
     align-items: flex-start;
   }
 `;
-export const ReviewerImage = styled.img`
+export const ReviewerImageSC = styled.img`
   width: 95px;
   height: 95px;
   margin-right: 42px;
@@ -64,7 +67,7 @@ export const ReviewerImage = styled.img`
     margin-bottom: 24px;
   }
 `;
-export const ReviewerInformation = styled.div`
+export const ReviewerInformationSC = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -73,7 +76,7 @@ export const ReviewerInformation = styled.div`
     align-items: flex-start;
   }
 `;
-export const ReviewerName = styled.p`
+export const ReviewerNameSC = styled.p`
   font-family: "Inter";
   font-style: normal;
   font-weight: 600;
@@ -85,7 +88,7 @@ export const ReviewerName = styled.p`
   }
 `;
 
-export const ContainerMobile = styled.div`
+export const ContainerMobileSC = styled.div`
   display: none;
   width: 100%;
   ${media.TABLET} {

@@ -1,125 +1,142 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+
 import "swiper/css";
 import "swiper/css/pagination";
 import SwiperCore, { EffectCoverflow, Pagination } from "swiper";
-
 import {
-  BlockReview,
-  ContainerReviews,
-  QuotesImage,
-  Review,
-  ReviewerBlock,
-  ReviewerImage,
-  ReviewerInformation,
-  ReviewerName,
-  Container,
-  ContainerMobile,
+  BlockReviewSC,
+  ContainerMobileSC,
+  ContainerReviewsSC,
+  ContainerSC,
+  QuotesImageSC,
+  ReviewerBlockSC,
+  ReviewerImageSC,
+  ReviewerInformationSC,
+  ReviewerNameSC,
+  ReviewSC,
 } from "./style";
-import { Subtitle } from "../../ui/typography";
+import { TypographySC, VariantsTypography } from "../../ui/typography";
 import { Colors } from "../../ui/colors";
 import { IReviewers } from "../Sections/ClientsSection";
+import styled from "@emotion/styled";
+
+SwiperCore.use([EffectCoverflow, Pagination]);
 
 interface IData {
   data: IReviewers[];
 }
-SwiperCore.use([EffectCoverflow, Pagination]);
 
 export const Slider = ({ data }: IData) => {
   return (
     <>
-      <Container>
-        <Swiper
+      <ContainerSC>
+        <SwiperCustom
           effect={"coverflow"}
           grabCursor={true}
           centeredSlides={true}
           slidesPerView={"auto"}
           coverflowEffect={{
-            rotate: 50,
             stretch: 0,
             depth: 100,
             modifier: 1,
             slideShadows: false,
           }}
-          spaceBetween={30}
           pagination={{
             clickable: true,
           }}
-          className="swiper"
           modules={[Pagination]}
         >
           <SwiperSlide>
-            <ContainerReviews>
+            <ContainerReviewsSC>
               {data.map((review, index) => (
-                <Review key={index}>
-                  <BlockReview>
-                    <QuotesImage src={review.icon} id="commas" />
-                    <Subtitle color={Colors.WHITE} margin="0 0 40px 0">
+                <ReviewSC key={index}>
+                  <BlockReviewSC>
+                    <QuotesImageSC src={review.icon} />
+                    <TypographySC
+                      variant={VariantsTypography.subtitle}
+                      color={Colors.WHITE}
+                    >
                       {review.comment}
-                    </Subtitle>
-                  </BlockReview>
-                  <ReviewerBlock>
-                    <ReviewerImage src={review.avatar} />
-                    <ReviewerInformation>
-                      <ReviewerName>{review.name}</ReviewerName>
-                      <Subtitle color={Colors.WHITE}>
+                    </TypographySC>
+                  </BlockReviewSC>
+                  <ReviewerBlockSC>
+                    <ReviewerImageSC src={review.avatar} />
+                    <ReviewerInformationSC>
+                      <ReviewerNameSC>{review.name}</ReviewerNameSC>
+                      <TypographySC
+                        variant={VariantsTypography.subtitle}
+                        color={Colors.WHITE}
+                      >
                         {review.position}
-                      </Subtitle>
-                    </ReviewerInformation>
-                  </ReviewerBlock>
-                </Review>
+                      </TypographySC>
+                    </ReviewerInformationSC>
+                  </ReviewerBlockSC>
+                </ReviewSC>
               ))}
-            </ContainerReviews>
+            </ContainerReviewsSC>
           </SwiperSlide>
           <SwiperSlide>
-            <ContainerReviews>
+            <ContainerReviewsSC>
               {data.map((review, index) => (
-                <Review key={index}>
-                  <BlockReview>
-                    <QuotesImage src={review.icon} />
-                    <Subtitle color={Colors.WHITE} margin="0 0 40px 0">
+                <ReviewSC key={index}>
+                  <BlockReviewSC>
+                    <QuotesImageSC src={review.icon} />
+                    <TypographySC
+                      variant={VariantsTypography.subtitle}
+                      color={Colors.WHITE}
+                    >
                       {review.comment}
-                    </Subtitle>
-                  </BlockReview>
-                  <ReviewerBlock>
-                    <ReviewerImage src={review.avatar} />
-                    <ReviewerInformation>
-                      <ReviewerName>{review.name}</ReviewerName>
-                      <Subtitle color={Colors.WHITE}>
+                    </TypographySC>
+                  </BlockReviewSC>
+                  <ReviewerBlockSC>
+                    <ReviewerImageSC src={review.avatar} />
+                    <ReviewerInformationSC>
+                      <ReviewerNameSC>{review.name}</ReviewerNameSC>
+                      <TypographySC
+                        variant={VariantsTypography.subtitle}
+                        color={Colors.WHITE}
+                      >
                         {review.position}
-                      </Subtitle>
-                    </ReviewerInformation>
-                  </ReviewerBlock>
-                </Review>
+                      </TypographySC>
+                    </ReviewerInformationSC>
+                  </ReviewerBlockSC>
+                </ReviewSC>
               ))}
-            </ContainerReviews>
+            </ContainerReviewsSC>
           </SwiperSlide>
           <SwiperSlide>
-            <ContainerReviews>
+            <ContainerReviewsSC>
               {data.map((review, index) => (
-                <Review key={index}>
-                  <BlockReview>
-                    <QuotesImage src={review.icon} />
-                    <Subtitle color={Colors.WHITE} margin="0 0 40px 0">
+                <ReviewSC key={index}>
+                  <BlockReviewSC>
+                    <QuotesImageSC src={review.icon} />
+                    <TypographySC
+                      variant={VariantsTypography.subtitle}
+                      color={Colors.WHITE}
+                    >
                       {review.comment}
-                    </Subtitle>
-                  </BlockReview>
-                  <ReviewerBlock>
-                    <ReviewerImage src={review.avatar} />
-                    <ReviewerInformation>
-                      <ReviewerName>{review.name}</ReviewerName>
-                      <Subtitle color={Colors.WHITE}>
+                    </TypographySC>
+                  </BlockReviewSC>
+                  <ReviewerBlockSC>
+                    <ReviewerImageSC src={review.avatar} />
+                    <ReviewerInformationSC>
+                      <ReviewerNameSC>{review.name}</ReviewerNameSC>
+                      <TypographySC
+                        variant={VariantsTypography.subtitle}
+                        color={Colors.WHITE}
+                      >
                         {review.position}
-                      </Subtitle>
-                    </ReviewerInformation>
-                  </ReviewerBlock>
-                </Review>
+                      </TypographySC>
+                    </ReviewerInformationSC>
+                  </ReviewerBlockSC>
+                </ReviewSC>
               ))}
-            </ContainerReviews>
+            </ContainerReviewsSC>
           </SwiperSlide>
-        </Swiper>
-      </Container>
-      <ContainerMobile>
+        </SwiperCustom>
+      </ContainerSC>
+      <ContainerMobileSC>
         <Swiper
           slidesPerView={"auto"}
           spaceBetween={30}
@@ -131,25 +148,48 @@ export const Slider = ({ data }: IData) => {
         >
           {data.map((review, index) => (
             <SwiperSlide key={index}>
-              <Review>
-                <BlockReview>
-                  <QuotesImage src={review.icon} />
-                  <Subtitle color={Colors.WHITE} margin="0 0 40px 0">
+              <ReviewSC>
+                <BlockReviewSC>
+                  <QuotesImageSC src={review.icon} />
+                  <TypographySC
+                    variant={VariantsTypography.subtitle}
+                    color={Colors.WHITE}
+                  >
                     {review.comment}
-                  </Subtitle>
-                </BlockReview>
-                <ReviewerBlock>
-                  <ReviewerImage src={review.avatar} />
-                  <ReviewerInformation>
-                    <ReviewerName>{review.name}</ReviewerName>
-                    <Subtitle color={Colors.WHITE}>{review.position}</Subtitle>
-                  </ReviewerInformation>
-                </ReviewerBlock>
-              </Review>
+                  </TypographySC>
+                </BlockReviewSC>
+                <ReviewerBlockSC>
+                  <ReviewerImageSC src={review.avatar} />
+                  <ReviewerInformationSC>
+                    <ReviewerNameSC>{review.name}</ReviewerNameSC>
+                    <TypographySC
+                      variant={VariantsTypography.subtitle}
+                      color={Colors.WHITE}
+                    >
+                      {review.position}
+                    </TypographySC>
+                  </ReviewerInformationSC>
+                </ReviewerBlockSC>
+              </ReviewSC>
             </SwiperSlide>
           ))}
         </Swiper>
-      </ContainerMobile>
+      </ContainerMobileSC>
     </>
   );
 };
+
+const SwiperCustom = styled(Swiper)`
+  .swiper-pagination-bullet {
+    background-color: ${Colors.LIGHTBLUE};
+    opacity: 1;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+
+    margin-right: 12px;
+  }
+  .swiper-pagination-bullet-active {
+    background-color: ${Colors.BLUE};
+  }
+`;
