@@ -86,7 +86,7 @@ const variantTypography = (variant = VariantsTypography.subtitle) =>
     `,
     paragraphMediumBold: css`
       font-family: "Inter";
-      font-weight: 400;
+      font-weight: 600;
       font-size: 24px;
       line-height: 36px;
     `,

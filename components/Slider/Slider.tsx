@@ -13,8 +13,8 @@ import {
   ReviewerBlockSC,
   ReviewerImageSC,
   ReviewerInformationSC,
-  ReviewerNameSC,
   ReviewSC,
+  TextConteinerCommentSC,
 } from "./style";
 import { TypographySC, VariantsTypography } from "../../ui/typography";
 import { Colors } from "../../ui/colors";
@@ -53,17 +53,60 @@ export const Slider = ({ data }: IData) => {
                 <ReviewSC key={index}>
                   <BlockReviewSC>
                     <QuotesImageSC src={review.icon} />
-                    <TypographySC
-                      variant={VariantsTypography.subtitle}
-                      color={Colors.WHITE}
-                    >
-                      {review.comment}
-                    </TypographySC>
+                    <TextConteinerCommentSC>
+                      <TypographySC
+                        variant={VariantsTypography.subtitle}
+                        color={Colors.WHITE}
+                      >
+                        {review.comment}
+                      </TypographySC>
+                    </TextConteinerCommentSC>
                   </BlockReviewSC>
                   <ReviewerBlockSC>
                     <ReviewerImageSC src={review.avatar} />
                     <ReviewerInformationSC>
-                      <ReviewerNameSC>{review.name}</ReviewerNameSC>
+                      <TypographySC
+                        variant={VariantsTypography.paragraphMediumBold}
+                        color={Colors.BLUE}
+                      >
+                        {review.name}
+                      </TypographySC>
+                      <TypographySC
+                        variant={VariantsTypography.subtitle}
+                        color={Colors.WHITE}
+                      >
+                        {review.position}
+                      </TypographySC>
+                    </ReviewerInformationSC>
+                  </ReviewerBlockSC>
+                </ReviewSC>
+              ))}
+            </ContainerReviewsSC>
+          </SwiperSlide>
+          <SwiperSlide>
+            <ContainerReviewsSC>
+              {data.map((review, index) => (
+                <ReviewSC key={index}>
+                  <BlockReviewSC>
+                    <QuotesImageSC src={review.icon} />
+                    <TextConteinerCommentSC>
+                      <TypographySC
+                        variant={VariantsTypography.subtitle}
+                        color={Colors.WHITE}
+                      >
+                        {review.comment}
+                      </TypographySC>
+                    </TextConteinerCommentSC>
+                  </BlockReviewSC>
+                  <ReviewerBlockSC>
+                    <ReviewerImageSC src={review.avatar} />
+                    <ReviewerInformationSC>
+                      <TypographySC
+                        variant={VariantsTypography.paragraphMediumBold}
+                        color={Colors.BLUE}
+                      >
+                        {review.name}
+                      </TypographySC>
                       <TypographySC
                         variant={VariantsTypography.subtitle}
                         color={Colors.WHITE}
@@ -92,36 +135,12 @@ export const Slider = ({ data }: IData) => {
                   <ReviewerBlockSC>
                     <ReviewerImageSC src={review.avatar} />
                     <ReviewerInformationSC>
-                      <ReviewerNameSC>{review.name}</ReviewerNameSC>
                       <TypographySC
-                        variant={VariantsTypography.subtitle}
-                        color={Colors.WHITE}
+                        variant={VariantsTypography.paragraphMediumBold}
+                        color={Colors.BLUE}
                       >
-                        {review.position}
+                        {review.name}
                       </TypographySC>
-                    </ReviewerInformationSC>
-                  </ReviewerBlockSC>
-                </ReviewSC>
-              ))}
-            </ContainerReviewsSC>
-          </SwiperSlide>
-          <SwiperSlide>
-            <ContainerReviewsSC>
-              {data.map((review, index) => (
-                <ReviewSC key={index}>
-                  <BlockReviewSC>
-                    <QuotesImageSC src={review.icon} />
-                    <TypographySC
-                      variant={VariantsTypography.subtitle}
-                      color={Colors.WHITE}
-                    >
-                      {review.comment}
-                    </TypographySC>
-                  </BlockReviewSC>
-                  <ReviewerBlockSC>
-                    <ReviewerImageSC src={review.avatar} />
-                    <ReviewerInformationSC>
-                      <ReviewerNameSC>{review.name}</ReviewerNameSC>
                       <TypographySC
                         variant={VariantsTypography.subtitle}
                         color={Colors.WHITE}
@@ -161,7 +180,12 @@ export const Slider = ({ data }: IData) => {
                 <ReviewerBlockSC>
                   <ReviewerImageSC src={review.avatar} />
                   <ReviewerInformationSC>
-                    <ReviewerNameSC>{review.name}</ReviewerNameSC>
+                    <TypographySC
+                      variant={VariantsTypography.paragraphMediumBold}
+                      color={Colors.BLUE}
+                    >
+                      {review.name}
+                    </TypographySC>
                     <TypographySC
                       variant={VariantsTypography.subtitle}
                       color={Colors.WHITE}

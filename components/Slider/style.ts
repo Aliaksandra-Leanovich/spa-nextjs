@@ -23,6 +23,9 @@ export const BlockReviewSC = styled.div`
   border-bottom: 1px solid ${Colors.WHITE};
   margin-bottom: 60px;
 `;
+export const TextConteinerCommentSC = styled.div`
+  margin-bottom: 40px;
+`;
 
 export const ReviewSC = styled.div`
   padding: 60px 40px;
@@ -70,22 +73,8 @@ export const ReviewerImageSC = styled.img`
 export const ReviewerInformationSC = styled.div`
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   flex-direction: column;
-  ${media.TABLET} {
-    align-items: flex-start;
-  }
-`;
-export const ReviewerNameSC = styled.p`
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 36px;
-  color: ${Colors.BLUE};
-  ${media.TABLET} {
-    margin-bottom: 24px;
-  }
 `;
 
 export const ContainerMobileSC = styled.div`
