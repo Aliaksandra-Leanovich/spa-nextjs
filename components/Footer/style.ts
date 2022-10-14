@@ -2,14 +2,6 @@ import styled from "@emotion/styled";
 import { Colors } from "../../ui/colors";
 import { media } from "../../ui/media";
 
-interface IProps {
-  margin?: string;
-  mobileMargin?: string;
-  tabletMargin?: string;
-  laptopMargin?: string;
-  laptop2Margin?: string;
-}
-
 export const StyledFooterSC = styled.footer`
   width: 100%;
 
@@ -30,7 +22,6 @@ export const ContainerFooterSC = styled.div`
 
   border-bottom: 1px solid ${Colors.WHITE};
 
-  //!!! Tablet
   ${media.LAPTOP} {
     grid-template-columns: 1fr;
     row-gap: 100px;
@@ -52,8 +43,8 @@ export const BlockWithLinksSC = styled.div`
   row-gap: 15px;
 `;
 export const BlockWithButtonSC = styled.div`
-  display: grid;
-  row-gap: 23px;
+  display: flex;
+  flex-direction: column;
 `;
 export const LogoContainerSC = styled.img`
   height: 34px;
@@ -121,22 +112,43 @@ export const WorldImageSC = styled.img`
   height: 19px;
 `;
 
-export const SocialMediaImageSC = styled.img`
-  height: 17px;
+export const SocialMediaImageSC = styled.div`
+  &:hover {
+    path {
+      stroke: rgb(252, 133, 127);
+    }
+  }
 `;
-export const TextContainerSC = styled.div<IProps>`
-  margin: ${({ margin }) => margin};
 
-  ${media.DESKTOP} {
-    margin: ${({ laptop2Margin }) => laptop2Margin};
-  }
-  ${media.LAPTOP} {
-    margin: ${({ laptopMargin }) => laptopMargin};
-  }
+export const TextContainerFooterSC = styled.div`
+  margin: 0 60px 0 0;
   ${media.TABLET} {
-    margin: ${({ tabletMargin }) => tabletMargin};
+    margin: 0 0 20px 0;
   }
-  ${media.PHONE} {
-    margin: ${({ mobileMargin }) => mobileMargin};
+`;
+export const TextContainerButtonSC = styled.div`
+  margin: 24px 0;
+`;
+export const SubcategorydLinkSC = styled.a`
+  color: ${Colors.WHITE};
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  cursor: pointer;
+
+  &:hover {
+    color: ${Colors.YELLOW};
+  }
+`;
+export const CategoryLinkSC = styled.a`
+  font-family: "Inter";
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 30px;
+  cursor: pointer;
+  color: ${Colors.WHITE};
+  &:hover {
+    color: ${Colors.YELLOW};
   }
 `;
