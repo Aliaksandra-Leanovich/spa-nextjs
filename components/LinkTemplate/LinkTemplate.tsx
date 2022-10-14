@@ -5,32 +5,40 @@ import { Colors } from "../../ui/colors";
 import { typography } from "../../ui/typography";
 import ArrowRightIcon from "public/icons/arrow-right.svg";
 
-interface IButton {
+interface ILink {
   href: string;
   text: string;
+  padding?: string;
 }
 
-export const LinkTemplate = ({ href, text }: IButton) => {
+type LinkStyle = Pick<ILink, "padding">;
+
+export const LinkTemplate = ({ href, text, padding }: ILink) => {
   return (
     <Link href={href}>
-      <StyledLink>
+      <StyledLink padding={padding}>
         {text} <Arrow src={ArrowRightIcon.src} alt={"arrow"} />
       </StyledLink>
     </Link>
   );
 };
 
-const StyledLink = styled.a`
+const StyledLink = styled.a<LinkStyle>`
+  padding: ${({ padding }) => padding};
+  width: max-content;
+
+  border: none;
+  border-radius: 8px;
   background-color: ${Colors.LIGHTBLUE};
   color: ${Colors.WHITE};
   ${typography.button}
-  border: none;
-  border-radius: 8px;
-  padding: 18px;
+
   z-index: 1;
+
   cursor: pointer;
-  width: max-content;
+
   transition: background-color 0.5s ease-out;
+
   &:hover {
     background-color: ${Colors.YELLOW};
   }
