@@ -1,17 +1,16 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
-import { routes } from "../../routes/routes";
 import { app } from "../../utils/firebase";
 import { useRouter } from "next/router";
 import { Input } from "../Input/Input";
-import { Button, Varients } from "../Button/Button";
+import { Button, Variants } from "../Button/Button";
 import { LinkTemplate } from "../LinkTemplate/LinkTemplate";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as Yup from "yup";
 import { Colors } from "../../ui/colors";
-import { H3 } from "../../ui/typography";
 import { ContainerFormSC, StyledFormSC } from "./styles";
+import { TypographySC, VariantsTypography } from "../../ui/typography";
 
 interface IFormInput {
   name: string;
@@ -47,16 +46,16 @@ export const SignUpForm = () => {
     createUserWithEmailAndPassword(auth, data.email, data.password)
       .then(async (userCredential) => {
         const user = userCredential.user;
-        await router.push(routes.HOME);
+        await router.push("/");
       })
       .catch(console.error);
   };
 
   return (
     <ContainerFormSC>
-      <H3 color={Colors.WHITE}>
+      <TypographySC variant={VariantsTypography.h3} color={Colors.WHITE}>
         Get started for free. Add your whole team as your needs grow.{" "}
-      </H3>
+      </TypographySC>
       <StyledFormSC onSubmit={handleSubmit(onSubmit)}>
         <Input
           type="text"
@@ -79,7 +78,7 @@ export const SignUpForm = () => {
           register={register}
           placeholder="Enter your password"
         />
-        <Button type="submit" text="Sign Up" variant={Varients.secondary} />
+        <Button type="submit" text="Sign Up" variant={Variants.secondary} />
       </StyledFormSC>
       <LinkTemplate href="/signin" text="I already have an account." />
     </ContainerFormSC>
