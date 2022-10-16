@@ -11,7 +11,7 @@ import { app } from "../../utils/firebase";
 import { getAuth, signOut } from "firebase/auth";
 import Link from "next/link";
 import router from "next/router";
-import { LinkTemplate } from "../LinkTemplate/LinkTemplate";
+import { LinkTemplate, LinkVariants } from "../LinkTemplate/LinkTemplate";
 import { Burger } from "../Burger/Burger";
 import { Button, Variants } from "../Button/Button";
 
@@ -63,7 +63,7 @@ export const Navigation = () => {
         <LinkTemplate
           href="/whitepacefree"
           text="Try Whitepace free"
-          padding="18px 24px"
+          variant={LinkVariants.linkMedium}
         />
       </StyledNavigation>
 
@@ -83,7 +83,7 @@ export const Navigation = () => {
           <LinkTemplate
             href="/whitepacefree"
             text="Try Whitepace free"
-            padding="18px 24px"
+            variant={LinkVariants.linkMedium}
           />
         </ContainerButtons>
       </StyledRightNavigation>

@@ -1,5 +1,5 @@
 import React from "react";
-import { LinkTemplate } from "../LinkTemplate/LinkTemplate";
+import { LinkTemplate, LinkVariants } from "../LinkTemplate/LinkTemplate";
 import ImageWork from "/public/icons/worktogether.svg";
 import ImageWorkManag from "/public/icons/team-work4.webp";
 import managBackground from "/public/icons/managmentbackground.svg";
@@ -41,7 +41,7 @@ export const ManagementSection = () => {
           <LinkTemplate
             href="/whitepacefree"
             text="Get Started"
-            padding="20px 40px"
+            variant={LinkVariants.linkLarge}
           />
         </DescriptionContainerSC>
         <ImageContainerSC src={ImageWorkManag.src} alt={"work together"} />
@@ -68,7 +68,7 @@ export const ManagementSection = () => {
           <LinkTemplate
             href="/whitepacefree"
             text="Try it now"
-            padding="20px 40px"
+            variant={LinkVariants.linkLarge}
           />
         </DescriptionContainerSC>
       </ContainerSC>

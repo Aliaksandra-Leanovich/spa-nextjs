@@ -1,5 +1,5 @@
 import React from "react";
-import { LinkTemplate } from "../LinkTemplate/LinkTemplate";
+import { LinkTemplate, LinkVariants } from "../LinkTemplate/LinkTemplate";
 import {
   ArrowImageSC,
   BlockWithButtonSC,
@@ -93,7 +93,7 @@ export const Footer = () => (
         <LinkTemplate
           href="/whitepace"
           text="Start today"
-          padding="20px 40px"
+          variant={LinkVariants.linkLarge}
         />
       </BlockWithButtonSC>
     </ContainerFooterSC>

@@ -6,7 +6,7 @@ import { useRouter } from "next/router";
 import { ContainerFormSC, NoUserMessageSC, StyledFormSC } from "./styles";
 import { Input } from "../Input/Input";
 import { Button, Variants } from "../Button/Button";
-import { LinkTemplate } from "../LinkTemplate/LinkTemplate";
+import { LinkTemplate, LinkVariants } from "../LinkTemplate/LinkTemplate";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as Yup from "yup";
 import { Colors } from "../../ui/colors";
@@ -59,7 +59,7 @@ export const SignInForm = () => {
         Get started for free. Add your whole team as your needs grow.{" "}
       </TypographySC>
       <StyledFormSC onSubmit={handleSubmit(onSubmit)}>
-        <NoUserMessageSC>{noUser ? "No such user" : ""}</NoUserMessageSC>
+        {noUser && <NoUserMessageSC>{noUser}</NoUserMessageSC>}
         <Input
           type="email"
           label="email"
@@ -76,7 +76,11 @@ export const SignInForm = () => {
         />
         <Button type="submit" text="Sign In" variant={Variants.secondary} />
       </StyledFormSC>
-      <LinkTemplate href="/signup" text="I dont have an account" />
+      <LinkTemplate
+        href="/signup"
+        text="I dont have an account"
+        variant={LinkVariants.linkSmall}
+      />
     </ContainerFormSC>
   );
 };

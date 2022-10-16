@@ -1,6 +1,6 @@
 import React from "react";
 import { Colors } from "../../ui/colors";
-import { LinkTemplate } from "../LinkTemplate/LinkTemplate";
+import { LinkTemplate, LinkVariants } from "../LinkTemplate/LinkTemplate";
 import favoriteBackground from "/public/icons/favoriteBackground.svg";
 import {
   BackgroundImageContainerSC,
@@ -41,7 +41,7 @@ export const FavoriteSection = () => {
           <LinkTemplate
             href="/whitepacefree"
             text="Read more"
-            padding="20px 40px"
+            variant={LinkVariants.linkLarge}
           />
         </DescriptionContainerSC>
       </ContainerSC>

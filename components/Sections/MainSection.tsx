@@ -1,5 +1,5 @@
 import React from "react";
-import { LinkTemplate } from "../LinkTemplate/LinkTemplate";
+import { LinkTemplate, LinkVariants } from "../LinkTemplate/LinkTemplate";
 import ImageWork from "/public/icons/team-work1.webp";
 import background from "/public/icons/mainbackground.svg";
 import { Colors } from "../../ui/colors";
@@ -38,7 +38,7 @@ export const MainSection = () => {
           <LinkTemplate
             href="/whitepacefree"
             text="Try Whitepace free"
-            padding="20px"
+            variant={LinkVariants.linkSmall}
           />
         </DescriptionContainerSC>
         <ImageContainerSC src={ImageWork.src} alt={"work together"} />

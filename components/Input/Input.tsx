@@ -1,5 +1,5 @@
 import React, { InputHTMLAttributes } from "react";
-import { Path, UseFormRegister } from "react-hook-form";
+import { FieldError, Path, UseFormRegister } from "react-hook-form";
 import { ContainerSC, ErrorMessageSC, StyledInputSC } from "./style";
 
 interface IFormValues {
@@ -12,7 +12,7 @@ interface IFormValues {
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   label: Path<IFormValues>;
   register: UseFormRegister<any>;
-  errors: any;
+  errors: FieldError | undefined;
 }
 
 export const Input = ({
@@ -30,7 +30,7 @@ export const Input = ({
         {...register(label)}
       />
 
-      {errors ? <ErrorMessageSC>{errors.message}</ErrorMessageSC> : null}
+      {errors && <ErrorMessageSC>{errors.message}</ErrorMessageSC>}
     </ContainerSC>
   );
 };

@@ -1,7 +1,7 @@
 import React from "react";
 import { Colors } from "../../ui/colors";
 import { TypographySC, VariantsTypography } from "../../ui/typography";
-import { LinkTemplate } from "../LinkTemplate/LinkTemplate";
+import { LinkTemplate, LinkVariants } from "../LinkTemplate/LinkTemplate";
 import {
   BlueContainerSC,
   ContainerSC,
@@ -32,7 +32,7 @@ export const ExtensionSection = () => {
           <LinkTemplate
             href="/whitepacefree"
             text="Lets Go"
-            padding="20px 40px"
+            variant={LinkVariants.linkLarge}
           />
         </DescriptionContainerSC>
         <ImageContainerSC src={ImageWork.src} alt={"work together"} />

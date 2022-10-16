@@ -1,5 +1,5 @@
 import React from "react";
-import { LinkTemplate } from "../LinkTemplate/LinkTemplate";
+import { LinkTemplate, LinkVariants } from "../LinkTemplate/LinkTemplate";
 import { Colors } from "../../ui/colors";
 import managBackground from "/public/icons/everywhereBackground.svg";
 import {
@@ -37,7 +37,7 @@ export const EverywhereSection = () => {
         <LinkTemplate
           href="/whitepacefree"
           text="Try Taskey"
-          padding="20px 40px"
+          variant={LinkVariants.linkLarge}
         />
       </ContainerEverywhereSC>
     </BlueContainerSC>

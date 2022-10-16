@@ -5,7 +5,7 @@ import { app } from "../../utils/firebase";
 import { useRouter } from "next/router";
 import { Input } from "../Input/Input";
 import { Button, Variants } from "../Button/Button";
-import { LinkTemplate } from "../LinkTemplate/LinkTemplate";
+import { LinkTemplate, LinkVariants } from "../LinkTemplate/LinkTemplate";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as Yup from "yup";
 import { Colors } from "../../ui/colors";
@@ -80,7 +80,11 @@ export const SignUpForm = () => {
         />
         <Button type="submit" text="Sign Up" variant={Variants.secondary} />
       </StyledFormSC>
-      <LinkTemplate href="/signin" text="I already have an account." />
+      <LinkTemplate
+        href="/signin"
+        text="I already have an account."
+        variant={LinkVariants.linkSmall}
+      />
     </ContainerFormSC>
   );
 };

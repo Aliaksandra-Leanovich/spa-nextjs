@@ -1,5 +1,5 @@
 import React from "react";
-import { LinkTemplate } from "../LinkTemplate/LinkTemplate";
+import { LinkTemplate, LinkVariants } from "../LinkTemplate/LinkTemplate";
 import Apple from "/public/icons/apple-black-logo 2.svg";
 import Window from "/public/icons/windows-logo 1.svg";
 import Android from "/public/icons/android-logo 1.svg";
@@ -41,7 +41,7 @@ export const TodaySection = () => {
         <LinkTemplate
           href="/whitepace"
           text="Try Taskey free"
-          padding="20px 40px"
+          variant={LinkVariants.linkLarge}
         />
         <TextContainerTodaySecondSC>
           <TypographySC

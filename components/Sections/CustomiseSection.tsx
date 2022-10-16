@@ -1,5 +1,5 @@
 import React from "react";
-import { LinkTemplate } from "../LinkTemplate/LinkTemplate";
+import { LinkTemplate, LinkVariants } from "../LinkTemplate/LinkTemplate";
 import ImageWork from "/public/icons/team-work.webp";
 import {
   ContainerSC,
@@ -34,7 +34,7 @@ export const CustomiseSection = () => {
           <LinkTemplate
             href="/whitepacefree"
             text="Lets Go"
-            padding="20px 40px"
+            variant={LinkVariants.linkLarge}
           />
         </DescriptionContainerSC>
       </ContainerSC>
