@@ -37,16 +37,17 @@ export const ReviewSC = styled.div`
     padding: 20px;
   }
 
-  transition: background-color 0.5s ease-out, box-shadow 0.5s ease-out;
+  transition: background-color 0.5s ease-out, box-shadow 0.5s ease-out,
+    color 0.5s ease-out;
   &:hover {
     background-color: ${Colors.WHITE};
     box-shadow: 15px 10px 50px rgba(0, 0, 0, 0.1);
-  }
-  &:hover p {
-    color: ${Colors.BLACK};
-  }
-  &:hover ${BlockReviewSC} {
-    border-bottom-color: ${Colors.BLACK};
+    p {
+      color: ${Colors.BLACK};
+    }
+    ${BlockReviewSC} {
+      border-bottom-color: ${Colors.BLACK};
+    }
   }
 `;
 
@@ -94,8 +95,8 @@ export const SwiperCustomSC = styled(Swiper)`
     height: 12px;
 
     margin-right: 12px;
-  }
-  .swiper-pagination-bullet-active {
-    background-color: ${Colors.BLUE};
+    &-active {
+      background-color: ${Colors.BLUE};
+    }
   }
 `;
