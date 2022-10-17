@@ -13,7 +13,7 @@ import {
   ReviewerImageSC,
   ReviewerInformationSC,
   ReviewSC,
-  SwiperCustom,
+  SwiperCustomSC,
   TextConteinerCommentSC,
 } from "./style";
 import { Typography, VariantsTypography } from "../../ui/typography";
@@ -30,7 +30,7 @@ export const Slider = ({ data }: IData) => {
   return (
     <>
       <ContainerSC>
-        <SwiperCustom
+        <SwiperCustomSC
           effect={"coverflow"}
           grabCursor={true}
           centeredSlides={true}
@@ -152,7 +152,7 @@ export const Slider = ({ data }: IData) => {
               ))}
             </ContainerReviewsSC>
           </SwiperSlide>
-        </SwiperCustom>
+        </SwiperCustomSC>
       </ContainerSC>
       <ContainerMobileSC>
         <Swiper

@@ -85,7 +85,7 @@ export const ContainerMobileSC = styled.div`
     display: flex;
   }
 `;
-export const SwiperCustom = styled(Swiper)`
+export const SwiperCustomSC = styled(Swiper)`
   .swiper-pagination-bullet {
     background-color: ${Colors.LIGHTBLUE};
     opacity: 1;
