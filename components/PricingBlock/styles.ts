@@ -45,8 +45,8 @@ export const ContainerSliderSC = styled.div`
 `;
 export const Border = styled.div`
   position: absolute;
-  //////////////!!!!!!!!
-  transition: all 0.5s ease-out;
+  transition: background-color 0.5s ease-out, transform 0.5s ease-out,
+    color 0.5s ease-out;
   border: 1px solid ${Colors.YELLOW};
   border-radius: 10px;
   z-index: -1;
@@ -91,17 +91,17 @@ export const TabSC = styled.div`
         padding: 20px;
       }
     }
-    &:hover p {
+    p {
       color: ${Colors.WHITE};
     }
-
-    &:hover ${TabButtonSC} {
+    ${TabButtonSC} {
       color: ${Colors.WHITE};
       background-color: ${Colors.LIGHTBLUE};
       border: none;
     }
   }
 `;
+
 export const TextContainerDescriptionSC = styled.div`
   text-align: center;
   margin: 24px 0 124px;
