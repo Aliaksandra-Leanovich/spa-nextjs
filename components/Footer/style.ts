@@ -46,7 +46,7 @@ export const BlockWithButtonSC = styled.div`
   display: flex;
   flex-direction: column;
 `;
-export const LogoContainerSC = styled.img`
+export const LogoContainerSC = styled.div`
   height: 34px;
 `;
 
@@ -104,18 +104,19 @@ export const SocialMediaContainerSC = styled.div`
   }
 `;
 
-export const ArrowImageSC = styled.img`
+export const ArrowImageSC = styled.div`
   height: 10px;
 `;
 
-export const WorldImageSC = styled.img`
+export const WorldImageSC = styled.div`
   height: 20px;
 `;
 
 export const SocialMediaImageSC = styled.div`
   &:hover {
+    cursor: pointer;
     path {
-      stroke: rgb(252, 133, 127);
+      fill: ${Colors.YELLOW};
     }
   }
 `;

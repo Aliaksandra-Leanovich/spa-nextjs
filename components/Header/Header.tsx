@@ -8,7 +8,7 @@ export const Header = () => {
   return (
     <StyledHeaderSC>
       <LogoContainerSC>
-        <img src={Logo.src} alt={"logo"} />
+        <Logo />
       </LogoContainerSC>
       <Navigation />
     </StyledHeaderSC>

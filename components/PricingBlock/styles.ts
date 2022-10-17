@@ -53,13 +53,10 @@ export const Border = styled.div`
   inset: 0;
 `;
 
-export const PointSC = styled.img`
+export const PointSC = styled.div`
   height: 18px;
   margin-right: 20px;
-
-  &:hover path {
-    fill: ${Colors.YELLOW};
-  }
+  display: inline-block;
 `;
 
 export const TabButtonSC = styled.button`
@@ -99,9 +96,13 @@ export const TabSC = styled.div`
       background-color: ${Colors.LIGHTBLUE};
       border: none;
     }
+    svg {
+      path {
+        stroke: ${Colors.YELLOW};
+      }
+    }
   }
 `;
-
 export const TextContainerDescriptionSC = styled.div`
   text-align: center;
   margin: 24px 0 124px;

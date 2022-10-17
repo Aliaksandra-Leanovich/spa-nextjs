@@ -20,10 +20,18 @@ export const SponsorsSection = () => {
           Our sponsors
         </Typography>
         <SponsorsContainerSC>
-          <SponsorsImageSC src={ImageApple.src} alt={"apple"} />
-          <SponsorsImageSC src={ImageMicrosoft.src} alt={"microsoft"} />
-          <SponsorsImageSC src={ImageSlack.src} alt={"slack"} />
-          <SponsorsImageSC src={ImageGoogle.src} alt={"google"} />
+          <SponsorsImageSC>
+            <ImageApple />
+          </SponsorsImageSC>
+          <SponsorsImageSC>
+            <ImageMicrosoft />
+          </SponsorsImageSC>
+          <SponsorsImageSC>
+            <ImageSlack />
+          </SponsorsImageSC>
+          <SponsorsImageSC>
+            <ImageGoogle />
+          </SponsorsImageSC>
         </SponsorsContainerSC>
       </ClientsContainer>
     </WhiteContainerSC>

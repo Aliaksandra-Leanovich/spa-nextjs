@@ -79,9 +79,10 @@ export const LinkSC = styled.div`
   }
 `;
 
-export const Arrow = styled.img`
+export const Arrow = styled.div`
   width: 10px;
   margin-left: 10px;
+  align-self: center;
 `;
 export const ArrowClose = styled.img`
   width: 10px;
@@ -93,16 +94,15 @@ export const SubNavigation = styled.div`
   position: absolute;
 
   background-color: ${Colors.LIGHTBLUE};
-  border-radius: 10px;
 
   width: 200px;
-  padding: 10px 20px 0;
+  padding: 16px 24px 0;
 `;
 
 export const SubcategorydLinkSC = styled.a`
   color: ${Colors.WHITE};
   display: flex;
-  margin-bottom: 10px;
+  margin-bottom: 16px;
   transition: color 0.5s ease-out;
 
   &:hover {

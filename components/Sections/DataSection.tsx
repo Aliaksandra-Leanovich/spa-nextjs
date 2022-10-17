@@ -9,7 +9,7 @@ import {
   TextContainerSC,
   WhiteContainerSC,
 } from "./styles";
-import DataImg from "/public/icons/data.svg";
+import DataImg from "/public/icons/data.jpg";
 
 export const DataSection = () => {
   return (

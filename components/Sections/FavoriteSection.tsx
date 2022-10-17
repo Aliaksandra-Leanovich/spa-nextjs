@@ -1,9 +1,8 @@
 import React from "react";
 import { Colors } from "../../ui/colors";
 import { LinkTemplate, LinkVariants } from "../LinkTemplate/LinkTemplate";
-import favoriteBackground from "/public/icons/favoriteBackground.svg";
+import favoriteBackground from "/public/icons/favoriteBackground.png";
 import {
-  BackgroundImageContainerSC,
   BackgroundImageFavSC,
   BlueContainerSC,
   ContainerSC,
@@ -11,15 +10,13 @@ import {
   ImageContainerSC,
   TextContainerSC,
 } from "./styles";
-import ImageApps from "/public/icons/Apps.svg";
+import ImageApps from "/public/icons/Apps.png";
 import { Typography, VariantsTypography } from "../../ui/typography";
 
 export const FavoriteSection = () => {
   return (
     <BlueContainerSC>
-      <BackgroundImageContainerSC>
-        <BackgroundImageFavSC src={favoriteBackground.src} />
-      </BackgroundImageContainerSC>
+      <BackgroundImageFavSC src={favoriteBackground.src} />
 
       <ContainerSC>
         <ImageContainerSC src={ImageApps.src} alt={"work together"} />

@@ -52,9 +52,10 @@ const variantStyles = (variant = LinkVariants.linkSmall) =>
 export const LinkSC = styled.a<Pick<ILink, "variant">>`
   ${({ variant }) => variantStyles(variant)}
   display: flex;
+  align-items: center;
 `;
 
-export const Arrow = styled.img`
+export const Arrow = styled.div`
   width: 10px;
   margin-left: 10px;
 `;

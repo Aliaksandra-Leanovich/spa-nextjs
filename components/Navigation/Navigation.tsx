@@ -34,8 +34,16 @@ const config: ILinkNavigation[] = [
       { name: "Pricing", link: "#" },
       { name: "Customer Stories", link: "#" },
     ],
-    iconOpen: <ArrowClose src={IconOpen.src} alt={"arrow"} />,
-    iconClose: <Arrow src={IconOpen.src} alt={"arrow"} />,
+    iconOpen: (
+      <Arrow>
+        <IconOpen />
+      </Arrow>
+    ),
+    iconClose: (
+      <Arrow>
+        <IconOpen />
+      </Arrow>
+    ),
   },
   {
     href: "#solutions",
@@ -49,8 +57,16 @@ const config: ILinkNavigation[] = [
       { name: "Guides tutorials", link: "#" },
       { name: "Help center", link: "#" },
     ],
-    iconOpen: <ArrowClose src={IconOpen.src} alt={"arrow"} />,
-    iconClose: <Arrow src={IconOpen.src} alt={"arrow"} />,
+    iconOpen: (
+      <Arrow>
+        <IconOpen />
+      </Arrow>
+    ),
+    iconClose: (
+      <Arrow>
+        <IconOpen />
+      </Arrow>
+    ),
   },
   {
     href: "#pricing",

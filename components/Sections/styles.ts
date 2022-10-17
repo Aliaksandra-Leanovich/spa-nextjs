@@ -57,13 +57,30 @@ export const ImageContainerSC = styled.img`
     max-width: 286px;
   }
 `;
+export const SvgContainerSC = styled.div`
+  width: 100%;
+  max-width: 824px;
+
+  ${media.DESKTOP} {
+    max-width: 684px;
+  }
+  ${media.LAPTOP} {
+    max-width: 526px;
+  }
+  ${media.TABLET} {
+    max-width: 552px;
+  }
+  ${media.PHONE} {
+    max-width: 286px;
+  }
+`;
 
 export const AppsContainerSC = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 40px;
 `;
-export const AppImageSC = styled.img`
+export const AppImageSC = styled.div`
   height: 60px;
 `;
 
@@ -140,13 +157,22 @@ export const SponsorsContainerSC = styled.div`
   }
 `;
 
-export const SponsorsImageSC = styled.img`
+export const SponsorsImageSC = styled.div`
   height: 72px;
   ${media.LAPTOP} {
     margin-bottom: 100px;
   }
 `;
-export const BackgroundImageContainerSC = styled.div`
+
+export const MainBackgrounSC = styled.img`
+  position: absolute;
+  z-index: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0.3;
+`;
+export const BackgroundImageFavSC = styled.img`
   position: absolute;
   z-index: 0;
   bottom: 0;
@@ -182,13 +208,6 @@ export const BackgroundImageContainerEverywhSC = styled.div`
   ${media.PHONE} {
     display: none;
   }
-`;
-
-export const BackgroundImageSC = styled.img`
-  width: 100%;
-`;
-export const BackgroundImageFavSC = styled.img`
-  width: 100%;
 `;
 
 export const TextContainerSC = styled.div`

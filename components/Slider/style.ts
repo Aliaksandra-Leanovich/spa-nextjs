@@ -28,6 +28,12 @@ export const TextConteinerCommentSC = styled.div`
   margin-bottom: 40px;
 `;
 
+export const QuotesImageSC = styled.div`
+  width: 86px;
+  margin-bottom: 32px;
+  fill: ${Colors.WHITE};
+`;
+
 export const ReviewSC = styled.div`
   padding: 60px 40px;
   background-color: ${Colors.LIGHTBLUE};
@@ -48,12 +54,10 @@ export const ReviewSC = styled.div`
     ${BlockReviewSC} {
       border-bottom-color: ${Colors.BLACK};
     }
+    ${QuotesImageSC} {
+      fill: ${Colors.BLUE};
+    }
   }
-`;
-
-export const QuotesImageSC = styled.img`
-  width: 86px;
-  margin-bottom: 32px;
 `;
 
 export const ReviewerBlockSC = styled.div`
@@ -63,9 +67,9 @@ export const ReviewerBlockSC = styled.div`
     align-items: flex-start;
   }
 `;
-export const ReviewerImageSC = styled.img`
-  width: 95px;
-  height: 95px;
+export const ReviewerImageSC = styled.div`
+  width: 96px;
+  height: 96px;
   margin-right: 42px;
   ${media.TABLET} {
     margin-right: 0px;
@@ -95,6 +99,7 @@ export const SwiperCustomSC = styled(Swiper)`
     height: 12px;
 
     margin-right: 12px;
+
     &-active {
       background-color: ${Colors.BLUE};
     }

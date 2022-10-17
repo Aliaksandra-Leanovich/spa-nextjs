@@ -1,6 +1,6 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-
+import PointIcon from "/public/icons/Point.svg";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper";
@@ -21,7 +21,6 @@ export interface IPricePlans {
   price: string;
   description: string;
   advantages: string[];
-  icon: string;
 }
 interface IData {
   data: IPricePlans[];
@@ -76,7 +75,9 @@ export const SliderPricing = ({ data }: IData) => {
                         variant={VariantsTypography.paragraphXS}
                         color={Colors.WHITE}
                       >
-                        <PointSC src={tab.icon} />
+                        <PointSC>
+                          <PointIcon />
+                        </PointSC>
                         {advantage}
                       </Typography>
                     </TextContainerSC>

@@ -1,6 +1,6 @@
 import React from "react";
 import { LinkTemplate, LinkVariants } from "../LinkTemplate/LinkTemplate";
-import Apple from "/public/icons/apple-black-logo 2.svg";
+import AppleIcon from "/public/icons/apple-black-logo 2.svg";
 import Window from "/public/icons/windows-logo 1.svg";
 import Android from "/public/icons/android-logo 1.svg";
 import { Colors } from "../../ui/colors";
@@ -53,9 +53,15 @@ export const TodaySection = () => {
         </TextContainerTodaySecondSC>
 
         <AppsContainerSC>
-          <AppImageSC src={Apple.src} alt="apple" />
-          <AppImageSC src={Window.src} alt="window" />
-          <AppImageSC src={Android.src} alt="android" />
+          <AppImageSC>
+            <AppleIcon />
+          </AppImageSC>
+          <AppImageSC>
+            <Window />
+          </AppImageSC>
+          <AppImageSC>
+            <Android />
+          </AppImageSC>
         </AppsContainerSC>
       </TodayContainerSC>
     </BlueContainerSC>

@@ -39,7 +39,6 @@ const config = [
       "Connect primary Google Calendar account",
       "Add due dates, reminders, and notifications to your tasks",
     ],
-    icon: PointIcon.src,
   },
   {
     set: "Personal",
@@ -53,8 +52,6 @@ const config = [
       "Connect primary Google Calendar account",
       "Add due dates, reminders, and notifications to your tasks",
     ],
-
-    icon: PointIcon.src,
   },
   {
     set: "Organization",
@@ -68,7 +65,6 @@ const config = [
       "Connect primary Google Calendar account",
       "Add due dates, reminders, and notifications to your tasks",
     ],
-    icon: PointIcon.src,
   },
 ];
 
@@ -97,7 +93,7 @@ export const PricingBlock = () => {
             <TabTextContainerSC>
               <TextContainerSC>
                 <Typography
-                  variant={VariantsTypography.h2}
+                  variant={VariantsTypography.paragraphMedium}
                   color={Colors.BLACK}
                 >
                   {tab.set}
@@ -128,7 +124,9 @@ export const PricingBlock = () => {
                       variant={VariantsTypography.paragraphXS}
                       color={Colors.BLACK}
                     >
-                      <PointSC src={tab.icon} />
+                      <PointSC>
+                        <PointIcon />
+                      </PointSC>
                       {advantage}
                     </Typography>
                   </TextContainerSC>

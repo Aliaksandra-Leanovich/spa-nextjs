@@ -1,10 +1,9 @@
 import React from "react";
 import { LinkTemplate, LinkVariants } from "../LinkTemplate/LinkTemplate";
 import { Colors } from "../../ui/colors";
-import managBackground from "/public/icons/everywhereBackground.svg";
+import Background from "/public/icons/everywhereBackground.svg";
 import {
   BackgroundImageContainerEverywhSC,
-  BackgroundImageSC,
   BlueContainerSC,
   ContainerEverywhereSC,
   TextContainerSC,
@@ -15,7 +14,7 @@ export const EverywhereSection = () => {
   return (
     <BlueContainerSC>
       <BackgroundImageContainerEverywhSC>
-        <BackgroundImageSC src={managBackground.src} />
+        <Background />
       </BackgroundImageContainerEverywhSC>
 
       <ContainerEverywhereSC>

@@ -11,6 +11,7 @@ import {
   EnglishContainerSC,
   LogoContainerSC,
   SocialMediaContainerSC,
+  SocialMediaImageSC,
   StyledFooterSC,
   SubcategorydLinkSC,
   TextContainerButtonSC,
@@ -20,7 +21,11 @@ import {
 import Logo from "/public/icons/logo.svg";
 import Arrow from "/public/icons/arrow.svg";
 import World from "/public/icons/world.svg";
+import Linkedin from "/public/icons/Linkedin.svg";
+import Facebook from "/public/icons/Facebook.svg";
+import Twitter from "/public/icons/Twitter.svg";
 import { Colors } from "../../ui/colors";
+
 import Link from "next/link";
 import { Typography, VariantsTypography } from "../../ui/typography";
 
@@ -55,7 +60,9 @@ export const Footer = () => (
   <StyledFooterSC>
     <ContainerFooterSC>
       <BlockWithLinksSC>
-        <LogoContainerSC src={Logo.src} alt="logo" />
+        <LogoContainerSC>
+          <Logo />
+        </LogoContainerSC>
 
         <Typography
           variant={VariantsTypography.paragraphSmall}
@@ -99,14 +106,18 @@ export const Footer = () => (
     <BottomFooterContainerSC>
       <BottomFooterDecriptionSC>
         <EnglishContainerSC>
-          <WorldImageSC src={World.src} alt="world" />
+          <WorldImageSC>
+            <World />
+          </WorldImageSC>
           <Typography
             color={Colors.WHITE}
             variant={VariantsTypography.paragraphXS}
           >
             English
           </Typography>
-          <ArrowImageSC src={Arrow.src} alt="arrow" />
+          <ArrowImageSC>
+            <Arrow />
+          </ArrowImageSC>
         </EnglishContainerSC>
         <TextContainerFooterSC>
           <Typography
@@ -142,7 +153,18 @@ export const Footer = () => (
           ©2021 Whitepace LLC.
         </Typography>
       </BottomFooterDecriptionSC>
-      <SocialMediaContainerSC></SocialMediaContainerSC>
+      <SocialMediaContainerSC>
+        <SocialMediaImageSC>
+          <Facebook />
+        </SocialMediaImageSC>
+        <SocialMediaImageSC>
+          <Twitter />
+        </SocialMediaImageSC>
+
+        <SocialMediaImageSC>
+          <Linkedin />
+        </SocialMediaImageSC>
+      </SocialMediaContainerSC>
     </BottomFooterContainerSC>
   </StyledFooterSC>
 );

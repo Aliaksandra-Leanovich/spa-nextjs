@@ -18,7 +18,7 @@ export const TabSC = styled.div`
   margin-bottom: 85px;
 `;
 
-export const PointSC = styled.img`
+export const PointSC = styled.div`
   height: 18px;
   margin-right: 19px;
 `;

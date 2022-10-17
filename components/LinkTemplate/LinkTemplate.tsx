@@ -21,7 +21,9 @@ export const LinkTemplate = ({ href, text, variant }: ILink) => {
     <Link href={href}>
       <LinkSC variant={variant}>
         <Typography variant={VariantsTypography.button}>{text}</Typography>
-        <Arrow src={ArrowRightIcon.src} alt={"arrow"} />
+        <Arrow>
+          <ArrowRightIcon />
+        </Arrow>
       </LinkSC>
     </Link>
   );

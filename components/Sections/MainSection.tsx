@@ -1,15 +1,13 @@
 import React from "react";
-import { Header } from "../Header/Header";
 import { LinkTemplate, LinkVariants } from "../LinkTemplate/LinkTemplate";
 import ImageWork from "/public/icons/team-work1.webp";
-import background from "/public/icons/mainbackground.svg";
+import background from "/public/icons/mainbackground.png";
 import { Colors } from "../../ui/colors";
 import {
-  BackgroundImageContainerSC,
-  BackgroundImageSC,
   ContainerSC,
   DescriptionContainerSC,
   ImageContainerSC,
+  MainBackgrounSC,
   MainContainerSC,
   TextContainerSC,
 } from "./styles";
@@ -18,9 +16,7 @@ import { Typography, VariantsTypography } from "../../ui/typography";
 export const MainSection = () => {
   return (
     <MainContainerSC>
-      <BackgroundImageContainerSC>
-        <BackgroundImageSC src={background.src} />
-      </BackgroundImageContainerSC>
+      <MainBackgrounSC src={background.src} />
       <ContainerSC>
         <DescriptionContainerSC>
           <Typography variant={VariantsTypography.h2} color={Colors.WHITE}>

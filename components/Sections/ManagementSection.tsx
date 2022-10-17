@@ -1,14 +1,13 @@
 import React from "react";
 import { LinkTemplate, LinkVariants } from "../LinkTemplate/LinkTemplate";
-import ImageWork from "/public/icons/worktogether.svg";
+import ImageWork from "/public/icons/worktogether.jpg";
 import ImageWorkManag from "/public/icons/team-work4.webp";
-import managBackground from "/public/icons/managmentbackground.svg";
+import Background from "/public/icons/managmentbackground.svg";
 import {
   ContainerSC,
   DescriptionContainerSC,
   ImageContainerSC,
   BackgroundImageContainerManagSC,
-  BackgroundImageSC,
   TextContainerSC,
   WhiteContainerSC,
 } from "./styles";
@@ -19,7 +18,7 @@ export const ManagementSection = () => {
   return (
     <WhiteContainerSC>
       <BackgroundImageContainerManagSC>
-        <BackgroundImageSC src={managBackground.src} />
+        <Background />
       </BackgroundImageContainerManagSC>
 
       <ContainerSC id="products">

@@ -51,7 +51,7 @@ export const Slider = ({ data }: IData) => {
               {data.map((review, index) => (
                 <ReviewSC key={index}>
                   <BlockReviewSC>
-                    <QuotesImageSC src={review.icon} />
+                    <QuotesImageSC>{review.icon}</QuotesImageSC>
                     <TextConteinerCommentSC>
                       <Typography
                         variant={VariantsTypography.subtitle}
@@ -62,7 +62,7 @@ export const Slider = ({ data }: IData) => {
                     </TextConteinerCommentSC>
                   </BlockReviewSC>
                   <ReviewerBlockSC>
-                    <ReviewerImageSC src={review.avatar} />
+                    <ReviewerImageSC>{review.avatar}</ReviewerImageSC>
                     <ReviewerInformationSC>
                       <Typography
                         variant={VariantsTypography.paragraphMediumBold}
@@ -87,7 +87,7 @@ export const Slider = ({ data }: IData) => {
               {data.map((review, index) => (
                 <ReviewSC key={index}>
                   <BlockReviewSC>
-                    <QuotesImageSC src={review.icon} />
+                    <QuotesImageSC>{review.icon}</QuotesImageSC>
                     <TextConteinerCommentSC>
                       <Typography
                         variant={VariantsTypography.subtitle}
@@ -98,7 +98,7 @@ export const Slider = ({ data }: IData) => {
                     </TextConteinerCommentSC>
                   </BlockReviewSC>
                   <ReviewerBlockSC>
-                    <ReviewerImageSC src={review.avatar} />
+                    <ReviewerImageSC>{review.avatar}</ReviewerImageSC>
                     <ReviewerInformationSC>
                       <Typography
                         variant={VariantsTypography.paragraphMediumBold}
@@ -123,7 +123,7 @@ export const Slider = ({ data }: IData) => {
               {data.map((review, index) => (
                 <ReviewSC key={index}>
                   <BlockReviewSC>
-                    <QuotesImageSC src={review.icon} />
+                    <QuotesImageSC>{review.icon}</QuotesImageSC>
                     <Typography
                       variant={VariantsTypography.subtitle}
                       color={Colors.WHITE}
@@ -132,7 +132,7 @@ export const Slider = ({ data }: IData) => {
                     </Typography>
                   </BlockReviewSC>
                   <ReviewerBlockSC>
-                    <ReviewerImageSC src={review.avatar} />
+                    <ReviewerImageSC>{review.avatar}</ReviewerImageSC>
                     <ReviewerInformationSC>
                       <Typography
                         variant={VariantsTypography.paragraphMediumBold}
@@ -168,7 +168,7 @@ export const Slider = ({ data }: IData) => {
             <SwiperSlide key={index}>
               <ReviewSC>
                 <BlockReviewSC>
-                  <QuotesImageSC src={review.icon} />
+                  <QuotesImageSC>{review.icon}</QuotesImageSC>
                   <Typography
                     variant={VariantsTypography.subtitle}
                     color={Colors.WHITE}
@@ -177,7 +177,7 @@ export const Slider = ({ data }: IData) => {
                   </Typography>
                 </BlockReviewSC>
                 <ReviewerBlockSC>
-                  <ReviewerImageSC src={review.avatar} />
+                  <ReviewerImageSC>{review.avatar}</ReviewerImageSC>
                   <ReviewerInformationSC>
                     <Typography
                       variant={VariantsTypography.paragraphMediumBold}
