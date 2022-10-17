@@ -20,5 +20,5 @@ export const StyledHeaderSC = styled.header`
 `;
 
 export const LogoContainerSC = styled.div`
-  max-width: 191px;
+  max-width: 192px;
 `;

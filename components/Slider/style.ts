@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
 import { Colors } from "../../ui/colors";
 import { media } from "../../ui/media";
+import { Swiper } from "swiper/react";
 
 export const ContainerSC = styled.div`
   display: flex;
@@ -82,5 +83,19 @@ export const ContainerMobileSC = styled.div`
   width: 100%;
   ${media.TABLET} {
     display: flex;
+  }
+`;
+export const SwiperCustom = styled(Swiper)`
+  .swiper-pagination-bullet {
+    background-color: ${Colors.LIGHTBLUE};
+    opacity: 1;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+
+    margin-right: 12px;
+  }
+  .swiper-pagination-bullet-active {
+    background-color: ${Colors.BLUE};
   }
 `;

@@ -9,7 +9,7 @@ import {
   ContainerEverywhereSC,
   TextContainerSC,
 } from "./styles";
-import { TypographySC, VariantsTypography } from "../../ui/typography";
+import { Typography, VariantsTypography } from "../../ui/typography";
 
 export const EverywhereSection = () => {
   return (
@@ -19,11 +19,11 @@ export const EverywhereSection = () => {
       </BackgroundImageContainerEverywhSC>
 
       <ContainerEverywhereSC>
-        <TypographySC variant={VariantsTypography.h2} color={Colors.WHITE}>
+        <Typography variant={VariantsTypography.h2} color={Colors.WHITE}>
           Your work, everywhere you are
-        </TypographySC>
+        </Typography>
         <TextContainerSC>
-          <TypographySC
+          <Typography
             variant={VariantsTypography.paragraphSmall}
             color={Colors.WHITE}
           >
@@ -31,7 +31,7 @@ export const EverywhereSection = () => {
             synchronising with various services, including whitepace, Dropbox
             and OneDrive. The app is available on Windows, macOS, Linux, Android
             and iOS. A terminal app is also available!
-          </TypographySC>
+          </Typography>
         </TextContainerSC>
 
         <LinkTemplate

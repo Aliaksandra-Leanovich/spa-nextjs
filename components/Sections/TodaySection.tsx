@@ -13,7 +13,7 @@ import {
   TodayContainerSC,
   TodayTitleSC,
 } from "./styles";
-import { TypographySC, VariantsTypography } from "../../ui/typography";
+import { Typography, VariantsTypography } from "../../ui/typography";
 
 export const TodaySection = () => {
   return (
@@ -24,18 +24,18 @@ export const TodaySection = () => {
         </TodayTitleSC>
 
         <TextContainerTodaySC>
-          <TypographySC
+          <Typography
             variant={VariantsTypography.paragraphSmall}
             color={Colors.WHITE}
           >
             Get started for free.
-          </TypographySC>
-          <TypographySC
+          </Typography>
+          <Typography
             variant={VariantsTypography.paragraphSmall}
             color={Colors.WHITE}
           >
             Add your whole team as your needs grow.
-          </TypographySC>
+          </Typography>
         </TextContainerTodaySC>
 
         <LinkTemplate
@@ -44,12 +44,12 @@ export const TodaySection = () => {
           variant={LinkVariants.linkLarge}
         />
         <TextContainerTodaySecondSC>
-          <TypographySC
+          <Typography
             variant={VariantsTypography.paragraphSmall}
             color={Colors.WHITE}
           >
             On a big team? Contact sales
-          </TypographySC>
+          </Typography>
         </TextContainerTodaySecondSC>
 
         <AppsContainerSC>

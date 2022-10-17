@@ -8,13 +8,10 @@ export const ContainerMobileSC = styled.div`
   padding: 0 16px;
   ${media.TABLET} {
     display: flex;
-    /* justify-content: center;
-    align-items: center; */
   }
 `;
 
 export const TabSC = styled.div`
-  max-width: 289px;
   background-color: ${Colors.BLUE};
   padding: 20px;
   border-radius: 10px;

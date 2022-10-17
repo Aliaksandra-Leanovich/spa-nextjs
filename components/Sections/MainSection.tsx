@@ -1,4 +1,5 @@
 import React from "react";
+import { Header } from "../Header/Header";
 import { LinkTemplate, LinkVariants } from "../LinkTemplate/LinkTemplate";
 import ImageWork from "/public/icons/team-work1.webp";
 import background from "/public/icons/mainbackground.svg";
@@ -12,7 +13,7 @@ import {
   MainContainerSC,
   TextContainerSC,
 } from "./styles";
-import { TypographySC, VariantsTypography } from "../../ui/typography";
+import { Typography, VariantsTypography } from "../../ui/typography";
 
 export const MainSection = () => {
   return (
@@ -22,17 +23,17 @@ export const MainSection = () => {
       </BackgroundImageContainerSC>
       <ContainerSC>
         <DescriptionContainerSC>
-          <TypographySC variant={VariantsTypography.h2} color={Colors.WHITE}>
+          <Typography variant={VariantsTypography.h2} color={Colors.WHITE}>
             Get More Done with whitepace
-          </TypographySC>
+          </Typography>
           <TextContainerSC>
-            <TypographySC
+            <Typography
               variant={VariantsTypography.paragraphSmall}
               color={Colors.WHITE}
             >
               Project management software that enables your teams to
               collaborate, plan, analyze and manage everyday tasks
-            </TypographySC>
+            </Typography>
           </TextContainerSC>
 
           <LinkTemplate

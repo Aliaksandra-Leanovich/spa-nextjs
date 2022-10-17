@@ -40,7 +40,7 @@ export const ContainerFooterSC = styled.div`
 
 export const BlockWithLinksSC = styled.div`
   display: grid;
-  row-gap: 15px;
+  row-gap: 16px;
 `;
 export const BlockWithButtonSC = styled.div`
   display: flex;
@@ -109,7 +109,7 @@ export const ArrowImageSC = styled.img`
 `;
 
 export const WorldImageSC = styled.img`
-  height: 19px;
+  height: 20px;
 `;
 
 export const SocialMediaImageSC = styled.div`

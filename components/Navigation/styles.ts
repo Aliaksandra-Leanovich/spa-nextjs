@@ -6,7 +6,7 @@ interface IProps {
   open: boolean;
 }
 
-const StyledNavigation = styled.nav`
+export const StyledNavigation = styled.nav`
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -18,6 +18,7 @@ const StyledNavigation = styled.nav`
 
 export const StyledRightNavigation = styled.div<IProps>`
   background: ${Colors.BLACK};
+
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -55,23 +56,61 @@ export const ContainerButtons = styled.div`
   row-gap: 20px;
 `;
 
-const NavigationContainer = styled.div`
+export const NavigationContainer = styled.div`
   display: flex;
 `;
-export const HoverLinkSC = styled.a`
+export const HoverLinkSC = styled.div`
   color: ${Colors.WHITE};
-  font-family: "Inter";
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 30px;
-  letter-spacing: -0.02em;
-  margin: 0 40px 0 0;
+  display: flex;
+  transition: color 0.5s ease-out;
+
   &:hover {
     cursor: pointer;
     color: ${Colors.YELLOW};
   }
+`;
+export const LinkSC = styled.div`
+  margin: 0 40px 0 0;
+  position: relative;
+  display: inline-block;
+
   ${media.TABLET} {
-    margin: 30px 0 0;
+    margin: 0;
   }
 `;
-export { StyledNavigation, NavigationContainer };
+
+export const Arrow = styled.img`
+  width: 10px;
+  margin-left: 10px;
+`;
+export const ArrowClose = styled.img`
+  width: 10px;
+  margin-left: 10px;
+  transform: rotate(180deg);
+`;
+
+export const SubNavigation = styled.div`
+  position: absolute;
+
+  background-color: ${Colors.LIGHTBLUE};
+  border-radius: 10px;
+
+  width: 200px;
+  padding: 10px 20px 0;
+`;
+
+export const SubcategorydLinkSC = styled.a`
+  color: ${Colors.WHITE};
+  display: flex;
+  margin-bottom: 10px;
+  transition: color 0.5s ease-out;
+
+  &:hover {
+    cursor: pointer;
+    color: ${Colors.YELLOW};
+  }
+`;
+
+export const SubNavigationMobile = styled.div`
+  padding: 10px 20px 0;
+`;

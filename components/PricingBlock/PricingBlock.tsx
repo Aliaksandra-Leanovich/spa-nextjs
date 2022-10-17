@@ -16,7 +16,7 @@ import {
 } from "./styles";
 import { Colors } from "../../ui/colors";
 import { SliderPricing } from "../SliderPricing/SliderPricing";
-import { TypographySC, VariantsTypography } from "../../ui/typography";
+import { Typography, VariantsTypography } from "../../ui/typography";
 
 export interface IPricePlans {
   set: string;
@@ -76,18 +76,18 @@ export const PricingBlock = () => {
   return (
     <PricingContainerSC id="pricing">
       <TextContainerTitleSC>
-        <TypographySC variant={VariantsTypography.h2} color={Colors.BLACK}>
+        <Typography variant={VariantsTypography.h2} color={Colors.BLACK}>
           Choose Your Plan
-        </TypographySC>
+        </Typography>
       </TextContainerTitleSC>
       <TextContainerDescriptionSC>
-        <TypographySC
+        <Typography
           variant={VariantsTypography.paragraphMedium}
           color={Colors.BLACK}
         >
           Whether you want to get organized, keep your personal life on track,
           or boost workplace productivity, Evernote has the right plan for you.
-        </TypographySC>
+        </Typography>
       </TextContainerDescriptionSC>
 
       <BlockTabsSC>
@@ -96,46 +96,53 @@ export const PricingBlock = () => {
             <Border />
             <TabTextContainerSC>
               <TextContainerSC>
-                <TypographySC
+                <Typography
                   variant={VariantsTypography.h2}
                   color={Colors.BLACK}
                 >
                   {tab.set}
-                </TypographySC>
+                </Typography>
               </TextContainerSC>
               <TextContainerSC>
-                <TypographySC
+                <Typography
                   variant={VariantsTypography.h3}
                   color={Colors.BLACK}
                 >
                   {tab.price}
-                </TypographySC>
+                </Typography>
               </TextContainerSC>
 
               <TextContainerSC>
-                <TypographySC
+                <Typography
                   variant={VariantsTypography.paragraphMedium}
                   color={Colors.BLACK}
                 >
                   {tab.description}
-                </TypographySC>
+                </Typography>
               </TextContainerSC>
 
               <TabAdvantagesSC>
                 {tab.advantages.map((advantage, index) => (
                   <TextContainerSC key={index}>
-                    <TypographySC
+                    <Typography
                       variant={VariantsTypography.paragraphXS}
                       color={Colors.BLACK}
                     >
                       <PointSC src={tab.icon} />
                       {advantage}
-                    </TypographySC>
+                    </Typography>
                   </TextContainerSC>
                 ))}
               </TabAdvantagesSC>
 
-              <TabButtonSC>Get Started</TabButtonSC>
+              <TabButtonSC>
+                <Typography
+                  variant={VariantsTypography.button}
+                  color={Colors.BLACK}
+                >
+                  Get Started
+                </Typography>
+              </TabButtonSC>
             </TabTextContainerSC>
           </TabSC>
         ))}

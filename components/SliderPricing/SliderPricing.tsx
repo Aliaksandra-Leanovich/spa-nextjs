@@ -13,7 +13,7 @@ import {
   TabTextContainerSC,
   TextContainerSC,
 } from "./style";
-import { TypographySC, VariantsTypography } from "../../ui/typography";
+import { Typography, VariantsTypography } from "../../ui/typography";
 import { Colors } from "../../ui/colors";
 
 export interface IPricePlans {
@@ -44,41 +44,41 @@ export const SliderPricing = ({ data }: IData) => {
             <TabSC>
               <TabTextContainerSC>
                 <TextContainerSC>
-                  <TypographySC
+                  <Typography
                     variant={VariantsTypography.paragraphMedium}
                     color={Colors.WHITE}
                   >
                     {tab.set}
-                  </TypographySC>
+                  </Typography>
                 </TextContainerSC>
                 <TextContainerSC>
-                  <TypographySC
+                  <Typography
                     variant={VariantsTypography.h3}
                     color={Colors.WHITE}
                   >
                     {tab.price}
-                  </TypographySC>
+                  </Typography>
                 </TextContainerSC>
 
                 <TextContainerSC>
-                  <TypographySC
+                  <Typography
                     variant={VariantsTypography.paragraphMedium}
                     color={Colors.WHITE}
                   >
                     {tab.description}
-                  </TypographySC>
+                  </Typography>
                 </TextContainerSC>
 
                 <TabAdvantagesSC>
                   {tab.advantages.map((advantage, index) => (
                     <TextContainerSC key={index}>
-                      <TypographySC
+                      <Typography
                         variant={VariantsTypography.paragraphXS}
                         color={Colors.WHITE}
                       >
                         <PointSC src={tab.icon} />
                         {advantage}
-                      </TypographySC>
+                      </Typography>
                     </TextContainerSC>
                   ))}
                 </TabAdvantagesSC>

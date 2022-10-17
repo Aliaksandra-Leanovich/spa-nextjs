@@ -19,7 +19,7 @@ export const StyledInputSC = styled.input`
 
 export const ContainerSC = styled.div`
   grid-template-rows: repeat(2, 1fr);
-  row-gap: 15px;
+  row-gap: 16px;
 `;
 export const ErrorMessageSC = styled.p`
   position: absolute;

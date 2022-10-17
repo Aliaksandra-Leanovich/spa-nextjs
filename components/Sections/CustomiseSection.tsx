@@ -9,7 +9,7 @@ import {
   WhiteContainerSC,
 } from "./styles";
 import { Colors } from "../../ui/colors";
-import { TypographySC, VariantsTypography } from "../../ui/typography";
+import { Typography, VariantsTypography } from "../../ui/typography";
 
 export const CustomiseSection = () => {
   return (
@@ -17,18 +17,18 @@ export const CustomiseSection = () => {
       <ContainerSC id="resources">
         <ImageContainerSC src={ImageWork.src} alt={"work together"} />
         <DescriptionContainerSC>
-          <TypographySC variant={VariantsTypography.h2} color={Colors.BLACK}>
+          <Typography variant={VariantsTypography.h2} color={Colors.BLACK}>
             Customise it to your needs
-          </TypographySC>
+          </Typography>
           <TextContainerSC>
-            <TypographySC
+            <Typography
               variant={VariantsTypography.paragraphSmall}
               color={Colors.BLACK}
             >
               Customise the app with plugins, custom themes and multiple text
               editors (Rich Text or Markdown). Or create your own scripts and
               plugins using the Extension API.
-            </TypographySC>
+            </Typography>
           </TextContainerSC>
 
           <LinkTemplate

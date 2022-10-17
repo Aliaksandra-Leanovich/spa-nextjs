@@ -1,6 +1,6 @@
 import React from "react";
 import { Colors } from "../../ui/colors";
-import { TypographySC, VariantsTypography } from "../../ui/typography";
+import { Typography, VariantsTypography } from "../../ui/typography";
 import { LinkTemplate, LinkVariants } from "../LinkTemplate/LinkTemplate";
 import {
   BlueContainerSC,
@@ -16,17 +16,17 @@ export const ExtensionSection = () => {
     <BlueContainerSC>
       <ContainerSC id="solutions">
         <DescriptionContainerSC>
-          <TypographySC variant={VariantsTypography.h2} color={Colors.WHITE}>
+          <Typography variant={VariantsTypography.h2} color={Colors.WHITE}>
             Use as Extension
-          </TypographySC>
+          </Typography>
           <TextContainerSC>
-            <TypographySC
+            <Typography
               variant={VariantsTypography.paragraphSmall}
               color={Colors.WHITE}
             >
               Use the web clipper extension, available on Chrome and Firefox, to
               save web pages or take screenshots as notes.
-            </TypographySC>
+            </Typography>
           </TextContainerSC>
 
           <LinkTemplate

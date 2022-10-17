@@ -13,6 +13,7 @@ export enum VariantsTypography {
   paragraphMedium = "paragraphMedium",
   paragraphMediumBold = "paragraphMediumBold",
   subtitle = "subtitle",
+  button = "button",
 }
 
 interface ITypography {
@@ -86,7 +87,7 @@ const variantTypography = (variant = VariantsTypography.subtitle) =>
     `,
     paragraphMediumBold: css`
       font-family: "Inter";
-      font-weight: 600;
+      font-weight: 400;
       font-size: 24px;
       line-height: 36px;
     `,
@@ -96,35 +97,20 @@ const variantTypography = (variant = VariantsTypography.subtitle) =>
       font-size: 18px;
       line-height: 30px;
     `,
+    button: css`
+      font-family: "Inter";
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 23px;
+      ${media.PHONE} {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 30px;
+      }
+    `,
   }[variant]);
 
-export const TypographySC = styled.p<ITypography>`
+export const Typography = styled.p<ITypography>`
   ${({ variant }) => variantTypography(variant)}
   color: ${({ color }) => color};
 `;
-
-export const button = css`
-  font-family: "Inter";
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 23px;
-  ${media.PHONE} {
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 30px;
-  }
-`;
-export const ButtonTextSC = styled.p`
-  font-family: "Inter";
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 23px;
-  ${media.PHONE} {
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 30px;
-  }
-`;
-export const typography = {
-  button,
-};

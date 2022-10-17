@@ -12,7 +12,7 @@ import {
   TextContainerSC,
 } from "./styles";
 import ImageApps from "/public/icons/Apps.svg";
-import { TypographySC, VariantsTypography } from "../../ui/typography";
+import { Typography, VariantsTypography } from "../../ui/typography";
 
 export const FavoriteSection = () => {
   return (
@@ -24,18 +24,18 @@ export const FavoriteSection = () => {
       <ContainerSC>
         <ImageContainerSC src={ImageApps.src} alt={"work together"} />
         <DescriptionContainerSC>
-          <TypographySC variant={VariantsTypography.h2} color={Colors.WHITE}>
+          <Typography variant={VariantsTypography.h2} color={Colors.WHITE}>
             Work with Your Favorite Apps Using whitepace
-          </TypographySC>
+          </Typography>
           <TextContainerSC>
-            <TypographySC
+            <Typography
               variant={VariantsTypography.paragraphSmall}
               color={Colors.WHITE}
             >
               Whitepace teams up with your favorite software. Integrate with
               over 1000+ apps with Zapier to have all the tools you need for
               your project success.
-            </TypographySC>
+            </Typography>
           </TextContainerSC>
 
           <LinkTemplate

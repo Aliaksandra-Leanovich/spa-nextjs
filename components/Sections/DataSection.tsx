@@ -1,6 +1,6 @@
 import React from "react";
 import { Colors } from "../../ui/colors";
-import { TypographySC, VariantsTypography } from "../../ui/typography";
+import { Typography, VariantsTypography } from "../../ui/typography";
 import { LinkTemplate, LinkVariants } from "../LinkTemplate/LinkTemplate";
 import {
   ContainerSC,
@@ -16,11 +16,11 @@ export const DataSection = () => {
     <WhiteContainerSC>
       <ContainerSC>
         <DescriptionContainerSC>
-          <TypographySC variant={VariantsTypography.h2} color={Colors.BLACK}>
+          <Typography variant={VariantsTypography.h2} color={Colors.BLACK}>
             100% your data
-          </TypographySC>
+          </Typography>
           <TextContainerSC>
-            <TypographySC
+            <Typography
               variant={VariantsTypography.paragraphSmall}
               color={Colors.BLACK}
             >
@@ -28,7 +28,7 @@ export const DataSection = () => {
               so you will always have access to them. Uses End-To-End Encryption
               (E2EE) to secure your notes and ensure no-one but yourself can
               access them.
-            </TypographySC>
+            </Typography>
           </TextContainerSC>
 
           <LinkTemplate

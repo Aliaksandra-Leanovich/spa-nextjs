@@ -6,10 +6,10 @@ export const MainContainerSC = styled.section`
   margin: 0 auto;
   width: 100%;
   position: relative;
-  padding: 131px 220px 0;
+  padding: 132px 220px 0;
   background-color: ${Colors.BLUE};
   ${media.DESKTOP} {
-    padding: 131px 34px 0;
+    padding: 132px 34px 0;
   }
 `;
 
@@ -51,7 +51,7 @@ export const ImageContainerSC = styled.img`
     max-width: 526px;
   }
   ${media.TABLET} {
-    max-width: 551px;
+    max-width: 552px;
   }
   ${media.PHONE} {
     max-width: 286px;
@@ -141,7 +141,7 @@ export const SponsorsContainerSC = styled.div`
 `;
 
 export const SponsorsImageSC = styled.img`
-  height: 71px;
+  height: 72px;
   ${media.LAPTOP} {
     margin-bottom: 100px;
   }
@@ -205,12 +205,12 @@ export const TodayTitleSC = styled.h2`
   font-family: "Inter";
   font-weight: 700;
   font-size: 64px;
-  line-height: 77px;
+  line-height: 78px;
   letter-spacing: -0.02em;
 
   ${media.TABLET} {
     font-size: 54px;
-    line-height: 65px;
+    line-height: 66px;
   }
   ${media.PHONE} {
     font-size: 36px;

@@ -11,7 +11,6 @@ import {
   EnglishContainerSC,
   LogoContainerSC,
   SocialMediaContainerSC,
-  SocialMediaImageSC,
   StyledFooterSC,
   SubcategorydLinkSC,
   TextContainerButtonSC,
@@ -23,7 +22,7 @@ import Arrow from "/public/icons/arrow.svg";
 import World from "/public/icons/world.svg";
 import { Colors } from "../../ui/colors";
 import Link from "next/link";
-import { TypographySC, VariantsTypography } from "../../ui/typography";
+import { Typography, VariantsTypography } from "../../ui/typography";
 
 const config = [
   {
@@ -58,13 +57,13 @@ export const Footer = () => (
       <BlockWithLinksSC>
         <LogoContainerSC src={Logo.src} alt="logo" />
 
-        <TypographySC
+        <Typography
           variant={VariantsTypography.paragraphSmall}
           color={Colors.WHITE}
         >
           whitepace was created for the new ways we live and work. We make a
           better workspace around the world
-        </TypographySC>
+        </Typography>
       </BlockWithLinksSC>
       {config.map((category, index) => (
         <BlockWithLinksSC key={index}>
@@ -79,16 +78,16 @@ export const Footer = () => (
         </BlockWithLinksSC>
       ))}
       <BlockWithButtonSC>
-        <TypographySC color={Colors.WHITE} variant={VariantsTypography.h5}>
+        <Typography color={Colors.WHITE} variant={VariantsTypography.h5}>
           Try It Today
-        </TypographySC>
+        </Typography>
         <TextContainerButtonSC>
-          <TypographySC
+          <Typography
             color={Colors.WHITE}
             variant={VariantsTypography.paragraphXS}
           >
             Get started for free. Add your whole team as your needs grow.
-          </TypographySC>
+          </Typography>
         </TextContainerButtonSC>
         <LinkTemplate
           href="/whitepace"
@@ -101,51 +100,49 @@ export const Footer = () => (
       <BottomFooterDecriptionSC>
         <EnglishContainerSC>
           <WorldImageSC src={World.src} alt="world" />
-          <TypographySC
+          <Typography
             color={Colors.WHITE}
             variant={VariantsTypography.paragraphXS}
           >
             English
-          </TypographySC>
+          </Typography>
           <ArrowImageSC src={Arrow.src} alt="arrow" />
         </EnglishContainerSC>
         <TextContainerFooterSC>
-          <TypographySC
+          <Typography
             color={Colors.WHITE}
             variant={VariantsTypography.paragraphXS}
           >
             Tearms &amp; privacy
-          </TypographySC>
+          </Typography>
         </TextContainerFooterSC>
 
         <TextContainerFooterSC>
-          <TypographySC
+          <Typography
             color={Colors.WHITE}
             variant={VariantsTypography.paragraphXS}
           >
             Security
-          </TypographySC>
+          </Typography>
         </TextContainerFooterSC>
 
         <TextContainerFooterSC>
-          <TypographySC
+          <Typography
             color={Colors.WHITE}
             variant={VariantsTypography.paragraphXS}
           >
             Status
-          </TypographySC>
+          </Typography>
         </TextContainerFooterSC>
 
-        <TypographySC
+        <Typography
           color={Colors.WHITE}
           variant={VariantsTypography.paragraphXS}
         >
           ©2021 Whitepace LLC.
-        </TypographySC>
+        </Typography>
       </BottomFooterDecriptionSC>
-      <SocialMediaContainerSC>
-        <SocialMediaImageSC>{/* <Twitter /> */}</SocialMediaImageSC>
-      </SocialMediaContainerSC>
+      <SocialMediaContainerSC></SocialMediaContainerSC>
     </BottomFooterContainerSC>
   </StyledFooterSC>
 );

@@ -5,20 +5,37 @@ import {
   StyledRightNavigation,
   ContainerLinks,
   ContainerButtons,
-  HoverLinkSC,
+  Arrow,
+  ArrowClose,
 } from "./styles";
 import { app } from "../../utils/firebase";
 import { getAuth, signOut } from "firebase/auth";
-import Link from "next/link";
 import router from "next/router";
 import { LinkTemplate, LinkVariants } from "../LinkTemplate/LinkTemplate";
 import { Burger } from "../Burger/Burger";
-import { Button, Variants } from "../Button/Button";
+import { Button, ButtonVariants } from "../Button/Button";
+import IconOpen from "../../public/icons/arrow.svg";
+import { ILinkSubcategories, ItemNavigation } from "./ItemNavigation";
+import { ItemMobileNavigation } from "./ItemMobileNavigation";
 
-const config = [
+export interface ILinkNavigation {
+  href: string;
+  title: string;
+  subcategories?: ILinkSubcategories[];
+  iconOpen?: JSX.Element;
+  iconClose?: JSX.Element;
+}
+const config: ILinkNavigation[] = [
   {
     href: "#products",
     title: "Products",
+    subcategories: [
+      { name: "Overview", link: "#" },
+      { name: "Pricing", link: "#" },
+      { name: "Customer Stories", link: "#" },
+    ],
+    iconOpen: <ArrowClose src={IconOpen.src} alt={"arrow"} />,
+    iconClose: <Arrow src={IconOpen.src} alt={"arrow"} />,
   },
   {
     href: "#solutions",
@@ -27,6 +44,13 @@ const config = [
   {
     href: "#resources",
     title: "Resources",
+    subcategories: [
+      { name: "Blog", link: "#" },
+      { name: "Guides tutorials", link: "#" },
+      { name: "Help center", link: "#" },
+    ],
+    iconOpen: <ArrowClose src={IconOpen.src} alt={"arrow"} />,
+    iconClose: <Arrow src={IconOpen.src} alt={"arrow"} />,
   },
   {
     href: "#pricing",
@@ -41,9 +65,9 @@ export const Navigation = () => {
     event.preventDefault();
     const auth = getAuth(app);
     signOut(auth)
-      .then(() => {
+      .then(async () => {
         localStorage.removeItem("authUser");
-        router.push("/signin");
+        await router.push("/signin");
       })
       .catch((error) => {
         // An error happened.
@@ -53,12 +77,14 @@ export const Navigation = () => {
     <NavigationContainer>
       <StyledNavigation>
         {config.map((link, index) => (
-          <Link href={link.href} key={index}>
-            <HoverLinkSC>{link.title}</HoverLinkSC>
-          </Link>
+          <ItemNavigation {...link} key={index} />
         ))}
         <form onSubmit={handleSubmit}>
-          <Button type="submit" text="Logout" variant={Variants.primary} />
+          <Button
+            type="submit"
+            text="Logout"
+            variant={ButtonVariants.primary}
+          />
         </form>
         <LinkTemplate
           href="/whitepacefree"
@@ -71,14 +97,16 @@ export const Navigation = () => {
       <StyledRightNavigation open={open}>
         <ContainerLinks>
           {config.map((link, index) => (
-            <Link href={link.href} key={index}>
-              <HoverLinkSC>{link.title}</HoverLinkSC>
-            </Link>
+            <ItemMobileNavigation {...link} key={index} />
           ))}
         </ContainerLinks>
         <ContainerButtons>
           <form onSubmit={handleSubmit}>
-            <Button variant={Variants.primary} type="submit" text="Logout" />
+            <Button
+              variant={ButtonVariants.primary}
+              type="submit"
+              text="Logout"
+            />
           </form>
           <LinkTemplate
             href="/whitepacefree"

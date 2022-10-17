@@ -1,7 +1,7 @@
 import { css } from "@emotion/react";
 import styled from "@emotion/styled";
 import { Colors } from "../../ui/colors";
-import { IButton, Variants } from "./Button";
+import { IButton, ButtonVariants } from "./Button";
 
 export const theme = {
   primary: Colors.YELLOW,
@@ -9,7 +9,7 @@ export const theme = {
   black: Colors.BLACK,
 };
 
-const variantStyles = (variant = Variants.primary) =>
+const variantStyles = (variant = ButtonVariants.primary) =>
   ({
     primary: css`
       background: ${theme.primary};

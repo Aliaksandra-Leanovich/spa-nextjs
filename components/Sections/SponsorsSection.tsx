@@ -10,15 +10,15 @@ import {
   WhiteContainerSC,
 } from "./styles";
 import { Colors } from "../../ui/colors";
-import { TypographySC, VariantsTypography } from "../../ui/typography";
+import { Typography, VariantsTypography } from "../../ui/typography";
 
 export const SponsorsSection = () => {
   return (
     <WhiteContainerSC>
       <ClientsContainer>
-        <TypographySC variant={VariantsTypography.h2} color={Colors.BLACK}>
+        <Typography variant={VariantsTypography.h2} color={Colors.BLACK}>
           Our sponsors
-        </TypographySC>
+        </Typography>
         <SponsorsContainerSC>
           <SponsorsImageSC src={ImageApple.src} alt={"apple"} />
           <SponsorsImageSC src={ImageMicrosoft.src} alt={"microsoft"} />

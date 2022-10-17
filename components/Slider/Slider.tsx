@@ -1,6 +1,5 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-
 import "swiper/css";
 import "swiper/css/pagination";
 import SwiperCore, { EffectCoverflow, Pagination } from "swiper";
@@ -14,12 +13,12 @@ import {
   ReviewerImageSC,
   ReviewerInformationSC,
   ReviewSC,
+  SwiperCustom,
   TextConteinerCommentSC,
 } from "./style";
-import { TypographySC, VariantsTypography } from "../../ui/typography";
+import { Typography, VariantsTypography } from "../../ui/typography";
 import { Colors } from "../../ui/colors";
 import { IReviewers } from "../Sections/ClientsSection";
-import styled from "@emotion/styled";
 
 SwiperCore.use([EffectCoverflow, Pagination]);
 
@@ -54,29 +53,29 @@ export const Slider = ({ data }: IData) => {
                   <BlockReviewSC>
                     <QuotesImageSC src={review.icon} />
                     <TextConteinerCommentSC>
-                      <TypographySC
+                      <Typography
                         variant={VariantsTypography.subtitle}
                         color={Colors.WHITE}
                       >
                         {review.comment}
-                      </TypographySC>
+                      </Typography>
                     </TextConteinerCommentSC>
                   </BlockReviewSC>
                   <ReviewerBlockSC>
                     <ReviewerImageSC src={review.avatar} />
                     <ReviewerInformationSC>
-                      <TypographySC
+                      <Typography
                         variant={VariantsTypography.paragraphMediumBold}
                         color={Colors.BLUE}
                       >
                         {review.name}
-                      </TypographySC>
-                      <TypographySC
+                      </Typography>
+                      <Typography
                         variant={VariantsTypography.subtitle}
                         color={Colors.WHITE}
                       >
                         {review.position}
-                      </TypographySC>
+                      </Typography>
                     </ReviewerInformationSC>
                   </ReviewerBlockSC>
                 </ReviewSC>
@@ -90,29 +89,29 @@ export const Slider = ({ data }: IData) => {
                   <BlockReviewSC>
                     <QuotesImageSC src={review.icon} />
                     <TextConteinerCommentSC>
-                      <TypographySC
+                      <Typography
                         variant={VariantsTypography.subtitle}
                         color={Colors.WHITE}
                       >
                         {review.comment}
-                      </TypographySC>
+                      </Typography>
                     </TextConteinerCommentSC>
                   </BlockReviewSC>
                   <ReviewerBlockSC>
                     <ReviewerImageSC src={review.avatar} />
                     <ReviewerInformationSC>
-                      <TypographySC
+                      <Typography
                         variant={VariantsTypography.paragraphMediumBold}
                         color={Colors.BLUE}
                       >
                         {review.name}
-                      </TypographySC>
-                      <TypographySC
+                      </Typography>
+                      <Typography
                         variant={VariantsTypography.subtitle}
                         color={Colors.WHITE}
                       >
                         {review.position}
-                      </TypographySC>
+                      </Typography>
                     </ReviewerInformationSC>
                   </ReviewerBlockSC>
                 </ReviewSC>
@@ -125,28 +124,28 @@ export const Slider = ({ data }: IData) => {
                 <ReviewSC key={index}>
                   <BlockReviewSC>
                     <QuotesImageSC src={review.icon} />
-                    <TypographySC
+                    <Typography
                       variant={VariantsTypography.subtitle}
                       color={Colors.WHITE}
                     >
                       {review.comment}
-                    </TypographySC>
+                    </Typography>
                   </BlockReviewSC>
                   <ReviewerBlockSC>
                     <ReviewerImageSC src={review.avatar} />
                     <ReviewerInformationSC>
-                      <TypographySC
+                      <Typography
                         variant={VariantsTypography.paragraphMediumBold}
                         color={Colors.BLUE}
                       >
                         {review.name}
-                      </TypographySC>
-                      <TypographySC
+                      </Typography>
+                      <Typography
                         variant={VariantsTypography.subtitle}
                         color={Colors.WHITE}
                       >
                         {review.position}
-                      </TypographySC>
+                      </Typography>
                     </ReviewerInformationSC>
                   </ReviewerBlockSC>
                 </ReviewSC>
@@ -170,28 +169,28 @@ export const Slider = ({ data }: IData) => {
               <ReviewSC>
                 <BlockReviewSC>
                   <QuotesImageSC src={review.icon} />
-                  <TypographySC
+                  <Typography
                     variant={VariantsTypography.subtitle}
                     color={Colors.WHITE}
                   >
                     {review.comment}
-                  </TypographySC>
+                  </Typography>
                 </BlockReviewSC>
                 <ReviewerBlockSC>
                   <ReviewerImageSC src={review.avatar} />
                   <ReviewerInformationSC>
-                    <TypographySC
+                    <Typography
                       variant={VariantsTypography.paragraphMediumBold}
                       color={Colors.BLUE}
                     >
                       {review.name}
-                    </TypographySC>
-                    <TypographySC
+                    </Typography>
+                    <Typography
                       variant={VariantsTypography.subtitle}
                       color={Colors.WHITE}
                     >
                       {review.position}
-                    </TypographySC>
+                    </Typography>
                   </ReviewerInformationSC>
                 </ReviewerBlockSC>
               </ReviewSC>
@@ -202,18 +201,3 @@ export const Slider = ({ data }: IData) => {
     </>
   );
 };
-
-const SwiperCustom = styled(Swiper)`
-  .swiper-pagination-bullet {
-    background-color: ${Colors.LIGHTBLUE};
-    opacity: 1;
-    display: inline-block;
-    width: 12px;
-    height: 12px;
-
-    margin-right: 12px;
-  }
-  .swiper-pagination-bullet-active {
-    background-color: ${Colors.BLUE};
-  }
-`;

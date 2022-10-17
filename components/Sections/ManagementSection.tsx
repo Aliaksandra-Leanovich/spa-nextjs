@@ -13,7 +13,7 @@ import {
   WhiteContainerSC,
 } from "./styles";
 import { Colors } from "../../ui/colors";
-import { TypographySC, VariantsTypography } from "../../ui/typography";
+import { Typography, VariantsTypography } from "../../ui/typography";
 
 export const ManagementSection = () => {
   return (
@@ -24,18 +24,18 @@ export const ManagementSection = () => {
 
       <ContainerSC id="products">
         <DescriptionContainerSC>
-          <TypographySC variant={VariantsTypography.h2} color={Colors.BLACK}>
+          <Typography variant={VariantsTypography.h2} color={Colors.BLACK}>
             Project Management
-          </TypographySC>
+          </Typography>
           <TextContainerSC>
-            <TypographySC
+            <Typography
               variant={VariantsTypography.paragraphSmall}
               color={Colors.BLACK}
             >
               Images, videos, PDFs and audio files are supported. Create math
               expressions and diagrams directly from the app. Take photos with
               the mobile app and save them to a note.
-            </TypographySC>
+            </Typography>
           </TextContainerSC>
 
           <LinkTemplate
@@ -51,18 +51,18 @@ export const ManagementSection = () => {
         <ImageContainerSC src={ImageWork.src} alt={"work together"} />
 
         <DescriptionContainerSC>
-          <TypographySC variant={VariantsTypography.h2} color={Colors.BLACK}>
+          <Typography variant={VariantsTypography.h2} color={Colors.BLACK}>
             Work together
-          </TypographySC>
+          </Typography>
           <TextContainerSC>
-            <TypographySC
+            <Typography
               variant={VariantsTypography.paragraphSmall}
               color={Colors.BLACK}
             >
               With whitepace, share your notes with your colleagues and
               collaborate on them. You can also publish a note to the internet
               and share the URL with others.
-            </TypographySC>
+            </Typography>
           </TextContainerSC>
 
           <LinkTemplate

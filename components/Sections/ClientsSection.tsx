@@ -5,7 +5,7 @@ import quotesImage from "/public/icons/Quote.svg";
 import Avatar1 from "/public/icons/avatar1.svg";
 import Avatar2 from "/public/icons/avatar2.svg";
 import Avatar3 from "/public/icons/avatar3.svg";
-import { TypographySC, VariantsTypography } from "../../ui/typography";
+import { Typography, VariantsTypography } from "../../ui/typography";
 import {
   ClientsContainer,
   TextContainerSliderSC,
@@ -52,9 +52,9 @@ export const ClientsSection = () => {
     <WhiteContainerSC>
       <ClientsContainer>
         <TextContainerSliderSC>
-          <TypographySC variant={VariantsTypography.h2} color={Colors.BLACK}>
+          <Typography variant={VariantsTypography.h2} color={Colors.BLACK}>
             What Our Clients Says
-          </TypographySC>
+          </Typography>
         </TextContainerSliderSC>
 
         <Slider data={reviewersData} />

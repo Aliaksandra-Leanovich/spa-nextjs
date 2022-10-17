@@ -1,7 +1,6 @@
 import styled from "@emotion/styled";
 import { Colors } from "../../ui/colors";
 import { media } from "../../ui/media";
-import { typography } from "../../ui/typography";
 
 export const PricingContainerSC = styled.section`
   overflow-y: scroll;
@@ -46,6 +45,7 @@ export const ContainerSliderSC = styled.div`
 `;
 export const Border = styled.div`
   position: absolute;
+  //////////////!!!!!!!!
   transition: all 0.5s ease-out;
   border: 1px solid ${Colors.YELLOW};
   border-radius: 10px;
@@ -55,7 +55,7 @@ export const Border = styled.div`
 
 export const PointSC = styled.img`
   height: 18px;
-  margin-right: 19px;
+  margin-right: 20px;
 
   &:hover path {
     fill: ${Colors.YELLOW};
@@ -63,7 +63,6 @@ export const PointSC = styled.img`
 `;
 
 export const TabButtonSC = styled.button`
-  ${typography.button}
   border: 1px solid ${Colors.YELLOW};
   border-radius: 8px;
   padding: 16px 40px;
@@ -110,9 +109,9 @@ export const TextContainerDescriptionSC = styled.div`
     margin: 24px 0 114px;
   }
   ${media.LAPTOP} {
-    margin: 24px 0 135px;
+    margin: 24px 0 136px;
   }
   ${media.TABLET} {
-    margin: 24px 0 85px;
+    margin: 24px 0 86px;
   }
 `;

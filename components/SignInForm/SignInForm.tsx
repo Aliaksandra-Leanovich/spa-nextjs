@@ -5,12 +5,12 @@ import { app } from "../../utils/firebase";
 import { useRouter } from "next/router";
 import { ContainerFormSC, NoUserMessageSC, StyledFormSC } from "./styles";
 import { Input } from "../Input/Input";
-import { Button, Variants } from "../Button/Button";
+import { Button, ButtonVariants } from "../Button/Button";
 import { LinkTemplate, LinkVariants } from "../LinkTemplate/LinkTemplate";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as Yup from "yup";
 import { Colors } from "../../ui/colors";
-import { TypographySC, VariantsTypography } from "../../ui/typography";
+import { Typography, VariantsTypography } from "../../ui/typography";
 
 interface IUserForm {
   email: string;
@@ -55,9 +55,9 @@ export const SignInForm = () => {
 
   return (
     <ContainerFormSC>
-      <TypographySC variant={VariantsTypography.h3} color={Colors.WHITE}>
+      <Typography variant={VariantsTypography.h3} color={Colors.WHITE}>
         Get started for free. Add your whole team as your needs grow.{" "}
-      </TypographySC>
+      </Typography>
       <StyledFormSC onSubmit={handleSubmit(onSubmit)}>
         {noUser && <NoUserMessageSC>{noUser}</NoUserMessageSC>}
         <Input
@@ -74,7 +74,11 @@ export const SignInForm = () => {
           register={register}
           placeholder="Enter your password"
         />
-        <Button type="submit" text="Sign In" variant={Variants.secondary} />
+        <Button
+          type="submit"
+          text="Sign In"
+          variant={ButtonVariants.secondary}
+        />
       </StyledFormSC>
       <LinkTemplate
         href="/signup"
