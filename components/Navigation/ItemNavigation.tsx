@@ -27,16 +27,18 @@ export const ItemNavigation = ({
   const [open, setOpen] = useState<boolean>(false);
 
   const handleMouseEnter = () => {
+    setSubnav(!subnav);
     setOpen(true);
   };
   const handleMouseLeave = () => {
     setOpen(false);
   };
+
   return (
     <>
       <LinkSC onMouseLeave={handleMouseLeave}>
         <Link href={href}>
-          <HoverLinkSC onMouseEnter={handleMouseEnter}>
+          <HoverLinkSC onMouseEnter={subcategories && handleMouseEnter}>
             <Typography variant={VariantsTypography.subtitle}>
               {title}
             </Typography>
