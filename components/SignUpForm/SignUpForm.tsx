@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import { app } from "../../utils/firebase";
@@ -9,7 +9,7 @@ import { LinkTemplate, LinkVariants } from "../LinkTemplate/LinkTemplate";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as Yup from "yup";
 import { Colors } from "../../ui/colors";
-import { ContainerFormSC, StyledFormSC } from "./styles";
+import { ContainerFormSC, EmailInUseMessageSC, StyledFormSC } from "./styles";
 import { Typography, VariantsTypography } from "../../ui/typography";
 
 interface IFormInput {
@@ -32,6 +32,8 @@ const validationSchema = Yup.object().shape({
 
 export const SignUpForm = () => {
   const router = useRouter();
+  const [emailnUse, setEmailInUse] = useState<string>();
+
   const {
     register,
     handleSubmit,
@@ -48,7 +50,12 @@ export const SignUpForm = () => {
         const user = userCredential.user;
         await router.push("/");
       })
-      .catch(console.error);
+      .catch((error) => {
+        if (error.code == "auth/email-already-in-use") {
+          const errorMessage = "Email already in use";
+          setEmailInUse(errorMessage);
+        }
+      });
   };
 
   return (
@@ -57,6 +64,7 @@ export const SignUpForm = () => {
         Get started for free. Add your whole team as your needs grow.{" "}
       </Typography>
       <StyledFormSC onSubmit={handleSubmit(onSubmit)}>
+        {emailnUse && <EmailInUseMessageSC>{emailnUse}</EmailInUseMessageSC>}
         <Input
           type="text"
           label="name"

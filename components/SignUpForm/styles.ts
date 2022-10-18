@@ -25,3 +25,6 @@ export const ContainerFormSC = styled.section`
   background-color: ${Colors.BLUE};
   position: relative;
 `;
+export const EmailInUseMessageSC = styled.p`
+  color: #cd3232;
+`;
