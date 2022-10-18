@@ -23,4 +23,5 @@ export const ContainerSC = styled.div`
 `;
 export const ErrorMessageSC = styled.p`
   position: absolute;
+  color: #cd3232;
 `;
