@@ -66,9 +66,7 @@ export const Navigation = () => {
         localStorage.removeItem("authUser");
         await router.push("/signin");
       })
-      .catch((error) => {
-        // An error happened.
-      });
+      .catch((error) => {});
   };
   return (
     <NavigationContainer>

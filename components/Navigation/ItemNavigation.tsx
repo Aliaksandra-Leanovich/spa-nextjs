@@ -9,8 +9,6 @@ import {
   SubNavigation,
 } from "./styles";
 
-export interface ILinkItem {}
-
 export interface ILinkSubcategories {
   name: string;
   link: string;
