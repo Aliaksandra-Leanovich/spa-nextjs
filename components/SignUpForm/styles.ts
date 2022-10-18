@@ -13,6 +13,7 @@ export const StyledFormSC = styled.form`
 
   background-color: ${Colors.WHITE};
   border-radius: 15px;
+  position: relative;
 `;
 
 export const ContainerFormSC = styled.section`
@@ -23,8 +24,10 @@ export const ContainerFormSC = styled.section`
   width: 100%;
   height: 100vh;
   background-color: ${Colors.BLUE};
-  position: relative;
 `;
 export const EmailInUseMessageSC = styled.p`
   color: #cd3232;
+  position: absolute;
+  margin-left: 50px;
+  margin-top: 25px;
 `;
