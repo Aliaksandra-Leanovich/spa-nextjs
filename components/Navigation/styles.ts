@@ -96,11 +96,12 @@ export const ArrowClose = styled.img`
   transform: rotate(180deg);
 `;
 
-export const SubNavigation = styled.div`
+export const SubNavigation = styled.div<IProps>`
   position: absolute;
-
   background-color: ${Colors.LIGHTBLUE};
 
+  display: ${({ open }) => (open ? "flex" : "none")};
+  flex-direction: column;
   width: 200px;
   padding: 16px 24px 0;
 `;
