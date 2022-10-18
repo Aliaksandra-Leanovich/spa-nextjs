@@ -19,6 +19,7 @@ export const StyledHeaderSC = styled.header`
   }
 `;
 
-export const LogoContainerSC = styled.div`
+export const LogoContainerSC = styled.a`
   max-width: 192px;
+  cursor: pointer;
 `;
