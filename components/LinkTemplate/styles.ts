@@ -56,6 +56,7 @@ export const LinkSC = styled.a<Pick<ILink, "variant">>`
 `;
 
 export const Arrow = styled.div`
-  width: 10px;
   margin-left: 10px;
+  display: flex;
+  align-items: center;
 `;
