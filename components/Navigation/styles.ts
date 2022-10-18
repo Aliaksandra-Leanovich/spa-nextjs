@@ -46,6 +46,8 @@ export const ContainerLinks = styled.div`
 
   ${media.LAPTOP} {
     display: grid;
+    align-items: center;
+    justify-content: center;
     row-gap: 2rem;
   }
 `;
@@ -62,6 +64,8 @@ export const NavigationContainer = styled.div`
 export const HoverLinkSC = styled.div`
   color: ${Colors.WHITE};
   display: flex;
+  justify-content: center;
+  align-items: center;
   transition: color 0.5s ease-out;
 
   &:hover {
@@ -79,10 +83,9 @@ export const LinkSC = styled.div`
   }
 `;
 
-export const Arrow = styled.div`
+export const Arrow = styled.img`
   width: 10px;
   margin-left: 10px;
-  align-self: center;
 `;
 export const ArrowClose = styled.img`
   width: 10px;

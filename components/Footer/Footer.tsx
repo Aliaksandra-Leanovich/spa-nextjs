@@ -19,7 +19,7 @@ import {
   WorldImageSC,
 } from "./style";
 import Logo from "/public/icons/logo.svg";
-import Arrow from "/public/icons/arrow.svg";
+import Arrow from "/public/icons/arrow.png";
 import World from "/public/icons/world.svg";
 import Linkedin from "/public/icons/Linkedin.svg";
 import Facebook from "/public/icons/Facebook.svg";
@@ -116,7 +116,7 @@ export const Footer = () => (
             English
           </Typography>
           <ArrowImageSC>
-            <Arrow />
+            <img src={Arrow.src} alt="" />
           </ArrowImageSC>
         </EnglishContainerSC>
         <TextContainerFooterSC>

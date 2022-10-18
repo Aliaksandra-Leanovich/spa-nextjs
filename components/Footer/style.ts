@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { Breakpoint } from "../../ui/breakpoints";
 import { Colors } from "../../ui/colors";
 import { media } from "../../ui/media";
 
@@ -84,6 +85,7 @@ export const BottomFooterDecriptionSC = styled.div`
     padding-bottom: 20px;
     margin-bottom: 40px;
   }
+
   ${media.TABLET} {
     width: 100%;
     justify-content: center;
@@ -106,10 +108,13 @@ export const SocialMediaContainerSC = styled.div`
 
 export const ArrowImageSC = styled.div`
   height: 10px;
+  display: flex;
+  margin-left: 6px;
 `;
 
 export const WorldImageSC = styled.div`
   height: 20px;
+  margin-right: 6px;
 `;
 
 export const SocialMediaImageSC = styled.div`

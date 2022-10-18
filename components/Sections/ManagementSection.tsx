@@ -1,7 +1,7 @@
 import React from "react";
 import { LinkTemplate, LinkVariants } from "../LinkTemplate/LinkTemplate";
 import ImageWork from "/public/icons/worktogether.jpg";
-import ImageWorkManag from "/public/icons/team-work4.webp";
+import ImageWorkManag from "/public/icons/team-work3.png";
 import Background from "/public/icons/managmentbackground.svg";
 import {
   ContainerSC,

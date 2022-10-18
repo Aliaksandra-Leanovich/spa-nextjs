@@ -14,7 +14,7 @@ import router from "next/router";
 import { LinkTemplate, LinkVariants } from "../LinkTemplate/LinkTemplate";
 import { Burger } from "../Burger/Burger";
 import { Button, ButtonVariants } from "../Button/Button";
-import IconOpen from "../../public/icons/arrow.svg";
+import ArrowIcon from "../../public/icons/arrow.png";
 import { ILinkSubcategories, ItemNavigation } from "./ItemNavigation";
 import { ItemMobileNavigation } from "./ItemMobileNavigation";
 
@@ -34,16 +34,8 @@ const config: ILinkNavigation[] = [
       { name: "Pricing", link: "#" },
       { name: "Customer Stories", link: "#" },
     ],
-    iconOpen: (
-      <Arrow>
-        <IconOpen />
-      </Arrow>
-    ),
-    iconClose: (
-      <Arrow>
-        <IconOpen />
-      </Arrow>
-    ),
+    iconOpen: <Arrow src={ArrowIcon.src} />,
+    iconClose: <ArrowClose src={ArrowIcon.src} />,
   },
   {
     href: "#solutions",
@@ -57,16 +49,8 @@ const config: ILinkNavigation[] = [
       { name: "Guides tutorials", link: "#" },
       { name: "Help center", link: "#" },
     ],
-    iconOpen: (
-      <Arrow>
-        <IconOpen />
-      </Arrow>
-    ),
-    iconClose: (
-      <Arrow>
-        <IconOpen />
-      </Arrow>
-    ),
+    iconOpen: <Arrow src={ArrowIcon.src} />,
+    iconClose: <ArrowClose src={ArrowIcon.src} />,
   },
   {
     href: "#pricing",
