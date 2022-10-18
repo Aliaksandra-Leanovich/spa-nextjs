@@ -20,7 +20,6 @@ export const ItemNavigation = ({
   subcategories,
   title,
   href,
-  iconClose,
   iconOpen,
 }: ILinkNavigation) => {
   const [subnav, setSubnav] = useState<boolean>(false);
@@ -32,8 +31,8 @@ export const ItemNavigation = ({
   };
   const handleMouseLeave = () => {
     setOpen(false);
+    setSubnav(false);
   };
-
   return (
     <>
       <LinkSC onMouseLeave={handleMouseLeave}>
@@ -42,11 +41,8 @@ export const ItemNavigation = ({
             <Typography variant={VariantsTypography.subtitle}>
               {title}
             </Typography>
-            {subcategories && subnav
-              ? iconOpen
-              : subcategories
-              ? iconClose
-              : null}
+
+            {subcategories ? iconOpen : null}
           </HoverLinkSC>
         </Link>
         {subnav && (

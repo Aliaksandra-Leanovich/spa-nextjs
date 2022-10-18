@@ -9,6 +9,8 @@ import {
   SubNavigationMobile,
 } from "./styles";
 
+export interface ILinkItem {}
+
 export interface ILinkSubcategories {
   name: string;
   link: string;
@@ -18,29 +20,32 @@ export const ItemMobileNavigation = ({
   subcategories,
   title,
   href,
-  iconClose,
   iconOpen,
 }: ILinkNavigation) => {
   const [subnav, setSubnav] = useState<boolean>(false);
+  const [open, setOpen] = useState<boolean>(false);
+  const handleMouseEnter = () => {
+    setSubnav(!subnav);
+    setOpen(true);
+  };
+  const handleMouseLeave = () => {
+    setOpen(false);
+    setSubnav(false);
+  };
 
-  const showSubNav = () => setSubnav(!subnav);
   return (
     <>
-      <LinkSC onMouseEnter={subcategories && showSubNav}>
+      <LinkSC onMouseLeave={handleMouseLeave}>
         <Link href={href}>
-          <HoverLinkSC>
+          <HoverLinkSC onMouseEnter={subcategories && handleMouseEnter}>
             <Typography variant={VariantsTypography.subtitle}>
               {title}
             </Typography>
-            {subcategories && subnav
-              ? iconOpen
-              : subcategories
-              ? iconClose
-              : null}
+            {subcategories ? iconOpen : null}
           </HoverLinkSC>
         </Link>
         {subnav && (
-          <SubNavigationMobile>
+          <SubNavigationMobile open={open}>
             {subcategories?.map((item: ILinkSubcategories, index: number) => (
               <Link href={item.link} key={index}>
                 <SubcategorydLinkSC>{item.name}</SubcategorydLinkSC>

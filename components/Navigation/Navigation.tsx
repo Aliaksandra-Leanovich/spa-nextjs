@@ -6,7 +6,6 @@ import {
   ContainerLinks,
   ContainerButtons,
   Arrow,
-  ArrowClose,
 } from "./styles";
 import { app } from "../../utils/firebase";
 import { getAuth, signOut } from "firebase/auth";
@@ -23,8 +22,8 @@ export interface ILinkNavigation {
   title: string;
   subcategories?: ILinkSubcategories[];
   iconOpen?: JSX.Element;
-  iconClose?: JSX.Element;
 }
+
 const config: ILinkNavigation[] = [
   {
     href: "#products",
@@ -35,7 +34,6 @@ const config: ILinkNavigation[] = [
       { name: "Customer Stories", link: "#" },
     ],
     iconOpen: <Arrow src={ArrowIcon.src} />,
-    iconClose: <ArrowClose src={ArrowIcon.src} />,
   },
   {
     href: "#solutions",
@@ -50,7 +48,6 @@ const config: ILinkNavigation[] = [
       { name: "Help center", link: "#" },
     ],
     iconOpen: <Arrow src={ArrowIcon.src} />,
-    iconClose: <ArrowClose src={ArrowIcon.src} />,
   },
   {
     href: "#pricing",

@@ -1,5 +1,4 @@
 import styled from "@emotion/styled";
-import { ContainerSC } from "../../pages";
 import { Colors } from "../../ui/colors";
 import { media } from "../../ui/media";
 
@@ -23,9 +22,9 @@ export const StyledRightNavigation = styled.div<IProps>`
   height: 100vh;
   display: none;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
 
-  padding: 30px;
+  padding: 60px 30px;
   position: absolute;
   top: 0;
   right: 0;
@@ -38,7 +37,7 @@ export const StyledRightNavigation = styled.div<IProps>`
   ${media.PHONE} {
     width: 100%;
   }
-  body {
+  main {
     overflow: ${({ open }) => (open ? "hidden" : "auto")};
   }
 `;
@@ -49,8 +48,7 @@ export const ContainerLinks = styled.div`
 
   ${media.LAPTOP} {
     display: grid;
-    align-items: center;
-    justify-content: center;
+    width: 100%;
     row-gap: 2rem;
   }
 `;
@@ -67,7 +65,7 @@ export const NavigationContainer = styled.div`
 export const HoverLinkSC = styled.div`
   color: ${Colors.WHITE};
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   transition: color 0.5s ease-out;
 
@@ -81,7 +79,7 @@ export const LinkSC = styled.div`
   position: relative;
   display: inline-block;
 
-  ${media.TABLET} {
+  ${media.LAPTOP} {
     margin: 0;
   }
 `;
@@ -89,11 +87,6 @@ export const LinkSC = styled.div`
 export const Arrow = styled.img`
   width: 10px;
   margin-left: 10px;
-`;
-export const ArrowClose = styled.img`
-  width: 10px;
-  margin-left: 10px;
-  transform: rotate(180deg);
 `;
 
 export const SubNavigation = styled.div<IProps>`
@@ -118,6 +111,10 @@ export const SubcategorydLinkSC = styled.a`
   }
 `;
 
-export const SubNavigationMobile = styled.div`
+export const SubNavigationMobile = styled.div<IProps>`
   padding: 10px 20px 0;
+  flex-direction: column;
+
+  transition: display 0.5s ease-out;
+  display: ${({ open }) => (open ? "block" : "none")};
 `;
