@@ -9,7 +9,7 @@ import {
   ImageContainerSC,
   TextContainerSC,
 } from "./styles";
-import ImageWork from "/public/icons/team-work4.webp";
+import ImageWork from "/public/icons/team-work4.png";
 
 export const ExtensionSection = () => {
   return (

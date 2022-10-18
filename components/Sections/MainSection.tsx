@@ -1,6 +1,6 @@
 import React from "react";
 import { LinkTemplate, LinkVariants } from "../LinkTemplate/LinkTemplate";
-import ImageWork from "/public/icons/team-work1.webp";
+import ImageWork from "/public/icons/team-work1.png";
 import background from "/public/icons/mainbackground.png";
 import { Colors } from "../../ui/colors";
 import {

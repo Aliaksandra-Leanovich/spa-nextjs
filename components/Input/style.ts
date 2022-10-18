@@ -6,6 +6,7 @@ export const StyledInputSC = styled.input`
 
   padding: 16px;
   width: 100%;
+  margin-bottom: 5px;
   border: none;
   border-bottom: 2px solid black;
 
