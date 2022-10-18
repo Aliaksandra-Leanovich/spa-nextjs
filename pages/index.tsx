@@ -18,8 +18,8 @@ import { Header } from "../components/Header/Header";
 const Home: NextPage = () => {
   return (
     <>
-      <Container>
-        <Header />
+      <Header />
+      <ContainerSC>
         <MainSection />
         <ManagementSection />
         <ExtensionSection />
@@ -32,14 +32,14 @@ const Home: NextPage = () => {
         <ClientsSection />
         <TodaySection />
         <Footer />
-      </Container>
+      </ContainerSC>
     </>
   );
 };
 
 export default Home;
 
-export const Container = styled.div`
+export const ContainerSC = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;

@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { ContainerSC } from "../../pages";
 import { Colors } from "../../ui/colors";
 import { media } from "../../ui/media";
 
