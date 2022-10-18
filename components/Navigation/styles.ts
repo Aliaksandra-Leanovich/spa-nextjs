@@ -21,7 +21,7 @@ export const StyledRightNavigation = styled.div<IProps>`
   background: ${Colors.BLACK};
 
   height: 100vh;
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: space-around;
 
@@ -29,9 +29,11 @@ export const StyledRightNavigation = styled.div<IProps>`
   position: absolute;
   top: 0;
   right: 0;
-  transition: transform 0.3s ease-in-out;
+  transition: display 0.3s ease-in-out;
 
-  transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
+  ${media.LAPTOP} {
+    display: ${({ open }) => (open ? "flex" : "none")};
+  }
 
   ${media.PHONE} {
     width: 100%;
