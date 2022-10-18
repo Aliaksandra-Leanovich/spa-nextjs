@@ -13,9 +13,10 @@ import { ContainerFormSC, EmailInUseMessageSC, StyledFormSC } from "./styles";
 import { Typography, VariantsTypography } from "../../ui/typography";
 
 interface IFormInput {
-  name: string;
+  name?: string;
   email: string;
   password: string;
+  errors?: string;
 }
 
 const validationSchema = Yup.object().shape({
@@ -48,7 +49,7 @@ export const SignUpForm = () => {
     createUserWithEmailAndPassword(auth, data.email, data.password)
       .then(async (userCredential) => {
         const user = userCredential.user;
-        await router.push("/");
+        await router.push("/signin");
       })
       .catch((error) => {
         if (error.code == "auth/email-already-in-use") {

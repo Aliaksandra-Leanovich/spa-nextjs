@@ -18,9 +18,6 @@ interface IUserForm {
   errors?: string;
 }
 
-interface IUserLocal {
-  accessToken: string;
-}
 const validationSchema = Yup.object().shape({
   email: Yup.string().required("Email is required").email("Email is invalid"),
   password: Yup.string().required("Password is required"),
@@ -56,7 +53,7 @@ export const SignInForm = () => {
   return (
     <ContainerFormSC>
       <Typography variant={VariantsTypography.h3} color={Colors.WHITE}>
-        Get started for free. Add your whole team as your needs grow.{" "}
+        Get started for free. Add your whole team as your needs grow.
       </Typography>
       <StyledFormSC onSubmit={handleSubmit(onSubmit)}>
         {noUser && <NoUserMessageSC>{noUser}</NoUserMessageSC>}

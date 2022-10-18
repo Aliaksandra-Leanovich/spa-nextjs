@@ -1,5 +1,7 @@
+import styled from "@emotion/styled";
 import React, { InputHTMLAttributes } from "react";
-import { FieldError, Path, UseFormRegister } from "react-hook-form";
+import { FieldError, FieldValues } from "react-hook-form";
+import { Path, UseFormRegister } from "react-hook-form";
 import { ContainerSC, ErrorMessageSC, StyledInputSC } from "./style";
 
 interface IFormValues {
@@ -9,9 +11,11 @@ interface IFormValues {
   errors?: string;
 }
 
+interface IRegister extends FieldValues, IFormValues {}
+
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   label: Path<IFormValues>;
-  register: UseFormRegister<any>;
+  register: UseFormRegister<IRegister>;
   errors: FieldError | undefined;
 }
 
@@ -29,7 +33,6 @@ export const Input = ({
         placeholder={placeholder}
         {...register(label)}
       />
-
       {errors && <ErrorMessageSC>{errors.message}</ErrorMessageSC>}
     </ContainerSC>
   );
