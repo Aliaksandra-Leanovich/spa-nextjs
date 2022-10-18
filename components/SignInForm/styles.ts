@@ -3,7 +3,7 @@ import { Colors } from "../../ui/colors";
 
 export const StyledFormSC = styled.form`
   display: grid;
-  row-gap: 20px;
+  row-gap: 30px;
 
   margin: 20px 0;
   width: 100%;
