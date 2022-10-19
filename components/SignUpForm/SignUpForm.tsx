@@ -33,7 +33,7 @@ const validationSchema = Yup.object().shape({
 
 export const SignUpForm = () => {
   const router = useRouter();
-  const [emailnUse, setEmailInUse] = useState<string>();
+  const [emailInUse, setEmailInUse] = useState("");
 
   const {
     register,
@@ -65,7 +65,7 @@ export const SignUpForm = () => {
         Get started for free. Add your whole team as your needs grow.{" "}
       </Typography>
       <StyledFormSC onSubmit={handleSubmit(onSubmit)}>
-        {emailnUse && <EmailInUseMessageSC>{emailnUse}</EmailInUseMessageSC>}
+        {emailInUse && <EmailInUseMessageSC>{emailInUse}</EmailInUseMessageSC>}
         <Input
           type="text"
           label="name"
