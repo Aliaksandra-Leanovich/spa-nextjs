@@ -48,8 +48,6 @@ export const TextContainerSC = styled.div`
   display: flex;
 `;
 
-export const TabTextContainerSC = styled.div``;
-
 export const SwiperCustomSC = styled(Swiper)`
   .swiper-slide {
     display: flex;
