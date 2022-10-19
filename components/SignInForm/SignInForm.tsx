@@ -39,9 +39,9 @@ export const SignInForm = () => {
   const onSubmit = (data: IUserForm) => {
     const auth = getAuth(app);
     signInWithEmailAndPassword(auth, data.email, data.password)
-      .then(async (userCredential: any) => {
-        const user = userCredential.user.accessToken;
-        localStorage.setItem("authUser", JSON.stringify(user));
+      .then(async (userCredential) => {
+        const token = await userCredential.user.getIdToken();
+        localStorage.setItem("authUser", token);
         await router.push("/");
       })
       .catch((error) => {
