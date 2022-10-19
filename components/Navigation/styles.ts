@@ -28,7 +28,6 @@ export const StyledRightNavigation = styled.div<IProps>`
   position: absolute;
   top: 0;
   right: 0;
-  transition: display 0.3s ease-in-out;
 
   ${media.LAPTOP} {
     display: ${({ open }) => (open ? "flex" : "none")};
