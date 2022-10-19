@@ -1,5 +1,5 @@
 import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { SwiperSlide } from "swiper/react";
 import PointIcon from "/public/icons/Point.svg";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -7,11 +7,13 @@ import { Pagination } from "swiper";
 import {
   ContainerMobileSC,
   PointSC,
+  SwiperCustomSC,
   TabAdvantagesSC,
   TabButtonSC,
   TabSC,
   TabTextContainerSC,
   TextContainerSC,
+  TextPriceSC,
 } from "./style";
 import { Typography, VariantsTypography } from "../../ui/typography";
 import { Colors } from "../../ui/colors";
@@ -29,7 +31,7 @@ interface IData {
 export const SliderPricing = ({ data }: IData) => {
   return (
     <ContainerMobileSC>
-      <Swiper
+      <SwiperCustomSC
         slidesPerView={"auto"}
         spaceBetween={30}
         pagination={{
@@ -51,17 +53,17 @@ export const SliderPricing = ({ data }: IData) => {
                   </Typography>
                 </TextContainerSC>
                 <TextContainerSC>
-                  <Typography
+                  <TextPriceSC
                     variant={VariantsTypography.h3}
-                    color={Colors.WHITE}
+                    color={Colors.BLACK}
                   >
                     {tab.price}
-                  </Typography>
+                  </TextPriceSC>
                 </TextContainerSC>
 
                 <TextContainerSC>
                   <Typography
-                    variant={VariantsTypography.paragraphMedium}
+                    variant={VariantsTypography.paragraphXS}
                     color={Colors.WHITE}
                   >
                     {tab.description}
@@ -71,13 +73,13 @@ export const SliderPricing = ({ data }: IData) => {
                 <TabAdvantagesSC>
                   {tab.advantages.map((advantage, index) => (
                     <TextContainerSC key={index}>
+                      <PointSC>
+                        <PointIcon />
+                      </PointSC>
                       <Typography
                         variant={VariantsTypography.paragraphXS}
                         color={Colors.WHITE}
                       >
-                        <PointSC>
-                          <PointIcon />
-                        </PointSC>
                         {advantage}
                       </Typography>
                     </TextContainerSC>
@@ -89,7 +91,7 @@ export const SliderPricing = ({ data }: IData) => {
             </TabSC>
           </SwiperSlide>
         ))}
-      </Swiper>
+      </SwiperCustomSC>
     </ContainerMobileSC>
   );
 };

@@ -111,7 +111,7 @@ export const PricingBlock = () => {
 
               <TextContainerSC>
                 <Typography
-                  variant={VariantsTypography.paragraphMedium}
+                  variant={VariantsTypography.paragraphXS}
                   color={Colors.BLACK}
                 >
                   {tab.description}
