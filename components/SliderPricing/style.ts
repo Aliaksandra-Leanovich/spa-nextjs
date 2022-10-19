@@ -44,7 +44,7 @@ export const TabButtonSC = styled.button`
 `;
 
 export const TextContainerSC = styled.div`
-  margin: 0 0 24px 0;
+  margin-bottom: 24px;
   display: flex;
 `;
 
