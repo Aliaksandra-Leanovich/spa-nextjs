@@ -153,6 +153,7 @@ export const SponsorsContainerSC = styled.div`
   margin-top: 100px;
   ${media.LAPTOP} {
     flex-direction: column;
+    align-items: center;
     justify-content: center;
   }
 `;
