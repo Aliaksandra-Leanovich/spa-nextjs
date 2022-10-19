@@ -171,6 +171,7 @@ export const Slider = ({ data }: IData) => {
                 <ReviewSC>
                   <BlockReviewSC>
                     <QuotesImageSC>{review.icon}</QuotesImageSC>
+
                     <Typography
                       variant={VariantsTypography.subtitle}
                       color={Colors.WHITE}
