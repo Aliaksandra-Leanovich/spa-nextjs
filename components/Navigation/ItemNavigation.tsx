@@ -20,8 +20,8 @@ export const ItemNavigation = ({
   href,
   iconOpen,
 }: ILinkNavigation) => {
-  const [subnav, setSubnav] = useState<boolean>(false);
-  const [open, setOpen] = useState<boolean>(false);
+  const [subnav, setSubnav] = useState(false);
+  const [open, setOpen] = useState(false);
 
   const handleMouseEnter = () => {
     setSubnav(!subnav);
@@ -45,7 +45,7 @@ export const ItemNavigation = ({
         </Link>
         {subnav && (
           <SubNavigation open={open}>
-            {subcategories?.map((item: ILinkSubcategories, index: number) => (
+            {subcategories?.map((item, index) => (
               <Link href={item.link} key={index}>
                 <SubcategorydLinkSC>{item.name}</SubcategorydLinkSC>
               </Link>
