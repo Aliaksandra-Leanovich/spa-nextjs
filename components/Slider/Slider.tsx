@@ -5,6 +5,7 @@ import "swiper/css/pagination";
 import SwiperCore, { EffectCoverflow, Pagination } from "swiper";
 import {
   BlockReviewSC,
+  ContainerMobileReviewSC,
   ContainerMobileSC,
   ContainerReviewsSC,
   ContainerSC,
@@ -155,7 +156,7 @@ export const Slider = ({ data }: IData) => {
         </SwiperCustomSC>
       </ContainerSC>
       <ContainerMobileSC>
-        <Swiper
+        <SwiperCustomSC
           slidesPerView={"auto"}
           spaceBetween={30}
           pagination={{
@@ -166,37 +167,39 @@ export const Slider = ({ data }: IData) => {
         >
           {data.map((review, index) => (
             <SwiperSlide key={index}>
-              <ReviewSC>
-                <BlockReviewSC>
-                  <QuotesImageSC>{review.icon}</QuotesImageSC>
-                  <Typography
-                    variant={VariantsTypography.subtitle}
-                    color={Colors.WHITE}
-                  >
-                    {review.comment}
-                  </Typography>
-                </BlockReviewSC>
-                <ReviewerBlockSC>
-                  <ReviewerImageSC>{review.avatar}</ReviewerImageSC>
-                  <ReviewerInformationSC>
-                    <Typography
-                      variant={VariantsTypography.paragraphMediumBold}
-                      color={Colors.BLUE}
-                    >
-                      {review.name}
-                    </Typography>
+              <ContainerMobileReviewSC>
+                <ReviewSC>
+                  <BlockReviewSC>
+                    <QuotesImageSC>{review.icon}</QuotesImageSC>
                     <Typography
                       variant={VariantsTypography.subtitle}
                       color={Colors.WHITE}
                     >
-                      {review.position}
+                      {review.comment}
                     </Typography>
-                  </ReviewerInformationSC>
-                </ReviewerBlockSC>
-              </ReviewSC>
+                  </BlockReviewSC>
+                  <ReviewerBlockSC>
+                    <ReviewerImageSC>{review.avatar}</ReviewerImageSC>
+                    <ReviewerInformationSC>
+                      <Typography
+                        variant={VariantsTypography.paragraphMediumBold}
+                        color={Colors.BLUE}
+                      >
+                        {review.name}
+                      </Typography>
+                      <Typography
+                        variant={VariantsTypography.subtitle}
+                        color={Colors.WHITE}
+                      >
+                        {review.position}
+                      </Typography>
+                    </ReviewerInformationSC>
+                  </ReviewerBlockSC>
+                </ReviewSC>
+              </ContainerMobileReviewSC>
             </SwiperSlide>
           ))}
-        </Swiper>
+        </SwiperCustomSC>
       </ContainerMobileSC>
     </>
   );
