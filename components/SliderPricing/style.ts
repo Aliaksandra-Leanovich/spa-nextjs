@@ -43,8 +43,6 @@ export const TabButtonSC = styled.button`
   padding: 16px 40px;
 `;
 
-export const TabAdvantagesSC = styled.div``;
-
 export const TextContainerSC = styled.div`
   margin: 0 0 24px 0;
   display: flex;

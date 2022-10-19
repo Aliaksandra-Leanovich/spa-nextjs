@@ -8,7 +8,6 @@ import {
   ContainerMobileSC,
   PointSC,
   SwiperCustomSC,
-  TabAdvantagesSC,
   TabButtonSC,
   TabSC,
   TabTextContainerSC,
@@ -70,21 +69,19 @@ export const SliderPricing = ({ data }: IData) => {
                   </Typography>
                 </TextContainerSC>
 
-                <TabAdvantagesSC>
-                  {tab.advantages.map((advantage, index) => (
-                    <TextContainerSC key={index}>
-                      <PointSC>
-                        <PointIcon />
-                      </PointSC>
-                      <Typography
-                        variant={VariantsTypography.paragraphXS}
-                        color={Colors.WHITE}
-                      >
-                        {advantage}
-                      </Typography>
-                    </TextContainerSC>
-                  ))}
-                </TabAdvantagesSC>
+                {tab.advantages.map((advantage, index) => (
+                  <TextContainerSC key={index}>
+                    <PointSC>
+                      <PointIcon />
+                    </PointSC>
+                    <Typography
+                      variant={VariantsTypography.paragraphXS}
+                      color={Colors.WHITE}
+                    >
+                      {advantage}
+                    </Typography>
+                  </TextContainerSC>
+                ))}
 
                 <TabButtonSC>Get Started</TabButtonSC>
               </TabTextContainerSC>

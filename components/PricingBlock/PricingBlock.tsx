@@ -6,7 +6,6 @@ import {
   ContainerSliderSC,
   PointSC,
   PricingContainerSC,
-  TabAdvantagesSC,
   TabButtonSC,
   TabSC,
   TabTextContainerSC,
@@ -118,21 +117,19 @@ export const PricingBlock = () => {
                 </Typography>
               </TextContainerSC>
 
-              <TabAdvantagesSC>
-                {tab.advantages.map((advantage, index) => (
-                  <TextContainerSC key={index}>
-                    <PointSC>
-                      <PointIcon />
-                    </PointSC>
-                    <Typography
-                      variant={VariantsTypography.paragraphXS}
-                      color={Colors.BLACK}
-                    >
-                      {advantage}
-                    </Typography>
-                  </TextContainerSC>
-                ))}
-              </TabAdvantagesSC>
+              {tab.advantages.map((advantage, index) => (
+                <TextContainerSC key={index}>
+                  <PointSC>
+                    <PointIcon />
+                  </PointSC>
+                  <Typography
+                    variant={VariantsTypography.paragraphXS}
+                    color={Colors.BLACK}
+                  >
+                    {advantage}
+                  </Typography>
+                </TextContainerSC>
+              ))}
 
               <TabButtonSC>
                 <Typography
