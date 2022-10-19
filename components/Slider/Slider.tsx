@@ -163,7 +163,6 @@ export const Slider = ({ data }: IData) => {
             clickable: true,
           }}
           modules={[Pagination]}
-          className="mySwiper"
         >
           {data.map((review, index) => (
             <SwiperSlide key={index}>
