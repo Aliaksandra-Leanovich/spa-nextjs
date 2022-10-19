@@ -10,7 +10,6 @@ import {
   SwiperCustomSC,
   TabButtonSC,
   TabSC,
-  TabTextContainerSC,
   TextContainerSC,
   TextPriceSC,
 } from "./style";
@@ -37,54 +36,51 @@ export const SliderPricing = ({ data }: IData) => {
           clickable: true,
         }}
         modules={[Pagination]}
-        className="mySwiper"
       >
         {data.map((tab, index) => (
           <SwiperSlide key={index}>
             <TabSC>
-              <TabTextContainerSC>
-                <TextContainerSC>
-                  <Typography
-                    variant={VariantsTypography.paragraphMedium}
-                    color={Colors.WHITE}
-                  >
-                    {tab.set}
-                  </Typography>
-                </TextContainerSC>
-                <TextContainerSC>
-                  <TextPriceSC
-                    variant={VariantsTypography.h3}
-                    color={Colors.BLACK}
-                  >
-                    {tab.price}
-                  </TextPriceSC>
-                </TextContainerSC>
+              <TextContainerSC>
+                <Typography
+                  variant={VariantsTypography.paragraphMedium}
+                  color={Colors.WHITE}
+                >
+                  {tab.set}
+                </Typography>
+              </TextContainerSC>
+              <TextContainerSC>
+                <TextPriceSC
+                  variant={VariantsTypography.h3}
+                  color={Colors.BLACK}
+                >
+                  {tab.price}
+                </TextPriceSC>
+              </TextContainerSC>
 
-                <TextContainerSC>
+              <TextContainerSC>
+                <Typography
+                  variant={VariantsTypography.paragraphXS}
+                  color={Colors.WHITE}
+                >
+                  {tab.description}
+                </Typography>
+              </TextContainerSC>
+
+              {tab.advantages.map((advantage, index) => (
+                <TextContainerSC key={index}>
+                  <PointSC>
+                    <PointIcon />
+                  </PointSC>
                   <Typography
                     variant={VariantsTypography.paragraphXS}
                     color={Colors.WHITE}
                   >
-                    {tab.description}
+                    {advantage}
                   </Typography>
                 </TextContainerSC>
+              ))}
 
-                {tab.advantages.map((advantage, index) => (
-                  <TextContainerSC key={index}>
-                    <PointSC>
-                      <PointIcon />
-                    </PointSC>
-                    <Typography
-                      variant={VariantsTypography.paragraphXS}
-                      color={Colors.WHITE}
-                    >
-                      {advantage}
-                    </Typography>
-                  </TextContainerSC>
-                ))}
-
-                <TabButtonSC>Get Started</TabButtonSC>
-              </TabTextContainerSC>
+              <TabButtonSC>Get Started</TabButtonSC>
             </TabSC>
           </SwiperSlide>
         ))}
