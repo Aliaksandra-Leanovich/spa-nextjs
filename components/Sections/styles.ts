@@ -111,7 +111,6 @@ export const TextContainerSliderSC = styled.div`
 export const TodayContainerSC = styled.div`
   padding: 140px 32px;
   display: flex;
-  margin: 0 auto;
   justify-content: center;
   align-items: center;
   text-align: center;
