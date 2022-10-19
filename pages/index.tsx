@@ -1,4 +1,5 @@
 import type { NextPage } from "next";
+import { useRouter } from "next/router";
 import React from "react";
 import { PricingBlock } from "../components/PricingBlock/PricingBlock";
 import styled from "@emotion/styled";
@@ -16,30 +17,39 @@ import { TodaySection } from "../components/Sections/TodaySection";
 import { Header } from "../components/Header/Header";
 
 const Home: NextPage = () => {
-  return (
-    <>
-      <Header />
-      <ContainerSC>
-        <MainSection />
-        <ManagementSection />
-        <ExtensionSection />
-        <CustomiseSection />
-        <PricingBlock />
-        <EverywhereSection />
-        <DataSection />
-        <SponsorsSection />
-        <FavoriteSection />
-        <ClientsSection />
-        <TodaySection />
-        <Footer />
-      </ContainerSC>
-    </>
-  );
+  const router = useRouter();
+
+  const accessToken = localStorage.getItem("authUser");
+
+  if (!accessToken) {
+    router.replace("/signup");
+    return null;
+  } else {
+    return (
+      <>
+        <Header />
+        <MainSC>
+          <MainSection />
+          <ManagementSection />
+          <ExtensionSection />
+          <CustomiseSection />
+          <PricingBlock />
+          <EverywhereSection />
+          <DataSection />
+          <SponsorsSection />
+          <FavoriteSection />
+          <ClientsSection />
+          <TodaySection />
+          <Footer />
+        </MainSC>
+      </>
+    );
+  }
 };
 
 export default Home;
 
-export const ContainerSC = styled.div`
+export const MainSC = styled.main`
   display: flex;
   justify-content: center;
   align-items: center;
