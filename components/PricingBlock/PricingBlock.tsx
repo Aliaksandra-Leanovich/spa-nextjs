@@ -15,18 +15,10 @@ import {
   TextPriceSC,
 } from "./styles";
 import { Colors } from "../../ui/colors";
-import { SliderPricing } from "../SliderPricing/SliderPricing";
+import { IPricePlans, SliderPricing } from "../SliderPricing/SliderPricing";
 import { Typography, VariantsTypography } from "../../ui/typography";
 
-export interface IPricePlans {
-  set: string;
-  price: string;
-  description: string;
-  advantages: string[];
-  icon: string;
-}
-
-const config = [
+const config: IPricePlans[] = [
   {
     set: "Free",
     price: "$0",
