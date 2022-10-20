@@ -19,15 +19,11 @@ import {
 } from "./style";
 import { Typography, VariantsTypography } from "../../ui/typography";
 import { Colors } from "../../ui/colors";
-import { IReviewers } from "../Sections/ClientsSection";
+import { ISliderData } from "./types";
 
 SwiperCore.use([EffectCoverflow, Pagination]);
 
-interface IData {
-  data: IReviewers[];
-}
-
-export const Slider = ({ data }: IData) => {
+export const Slider = ({ data }: ISliderData) => {
   return (
     <>
       <ContainerSC>
