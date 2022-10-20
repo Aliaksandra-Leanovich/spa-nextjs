@@ -1,5 +1,5 @@
 import React from "react";
-import { LinkTemplate, LinkVariants } from "../LinkTemplate/LinkTemplate";
+import { LinkTemplate } from "../LinkTemplate/LinkTemplate";
 import AppleIcon from "/public/icons/apple-black-logo 2.svg";
 import Window from "/public/icons/windows-logo 1.svg";
 import Android from "/public/icons/android-logo 1.svg";
@@ -14,6 +14,7 @@ import {
   TodayTitleSC,
 } from "./styles";
 import { Typography, VariantsTypography } from "../../ui/typography";
+import { LinkVariants } from "../LinkTemplate/types";
 
 export const TodaySection = () => {
   return (
