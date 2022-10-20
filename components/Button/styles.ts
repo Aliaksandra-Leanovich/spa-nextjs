@@ -2,7 +2,7 @@ import { css } from "@emotion/react";
 import styled from "@emotion/styled";
 import { Colors } from "../../ui/colors";
 import { media } from "../../ui/media";
-import { IButton, ButtonVariants } from "./Button";
+import { ButtonVariants, IButton } from "./types";
 
 export const theme = {
   primary: Colors.YELLOW,

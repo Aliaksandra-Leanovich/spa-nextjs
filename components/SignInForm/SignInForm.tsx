@@ -5,12 +5,13 @@ import { app } from "../../utils/firebase";
 import { useRouter } from "next/router";
 import { ContainerFormSC, NoUserMessageSC, StyledFormSC } from "./styles";
 import { Input } from "../Input/Input";
-import { Button, ButtonVariants } from "../Button/Button";
+import { Button } from "../Button/Button";
 import { LinkTemplate, LinkVariants } from "../LinkTemplate/LinkTemplate";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as Yup from "yup";
 import { Colors } from "../../ui/colors";
 import { Typography, VariantsTypography } from "../../ui/typography";
+import { ButtonVariants } from "../Button/types";
 
 interface IUserForm {
   email: string;
@@ -18,9 +19,6 @@ interface IUserForm {
   errors?: string;
 }
 
-interface IUserLocal {
-  accessToken: string;
-}
 const validationSchema = Yup.object().shape({
   email: Yup.string().required("Email is required").email("Email is invalid"),
   password: Yup.string().required("Password is required"),

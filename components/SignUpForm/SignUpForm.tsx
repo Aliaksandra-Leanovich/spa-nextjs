@@ -4,13 +4,14 @@ import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import { app } from "../../utils/firebase";
 import { useRouter } from "next/router";
 import { Input } from "../Input/Input";
-import { Button, ButtonVariants } from "../Button/Button";
+import { Button } from "../Button/Button";
 import { LinkTemplate, LinkVariants } from "../LinkTemplate/LinkTemplate";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as Yup from "yup";
 import { Colors } from "../../ui/colors";
 import { ContainerFormSC, EmailInUseMessageSC, StyledFormSC } from "./styles";
 import { Typography, VariantsTypography } from "../../ui/typography";
+import { ButtonVariants } from "../Button/types";
 
 interface IFormInput {
   name: string;
