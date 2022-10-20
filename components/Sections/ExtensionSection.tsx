@@ -1,7 +1,8 @@
 import React from "react";
 import { Colors } from "../../ui/colors";
 import { Typography, VariantsTypography } from "../../ui/typography";
-import { LinkTemplate, LinkVariants } from "../LinkTemplate/LinkTemplate";
+import { LinkTemplate } from "../LinkTemplate/LinkTemplate";
+import { LinkVariants } from "../LinkTemplate/types";
 import {
   BlueContainerSC,
   ContainerSC,

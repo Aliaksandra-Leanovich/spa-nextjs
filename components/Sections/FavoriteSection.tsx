@@ -1,6 +1,6 @@
 import React from "react";
 import { Colors } from "../../ui/colors";
-import { LinkTemplate, LinkVariants } from "../LinkTemplate/LinkTemplate";
+import { LinkTemplate } from "../LinkTemplate/LinkTemplate";
 import favoriteBackground from "/public/icons/favoriteBackground.png";
 import {
   BackgroundImageFavSC,
@@ -12,6 +12,7 @@ import {
 } from "./styles";
 import ImageApps from "/public/icons/Apps.png";
 import { Typography, VariantsTypography } from "../../ui/typography";
+import { LinkVariants } from "../LinkTemplate/types";
 
 export const FavoriteSection = () => {
   return (

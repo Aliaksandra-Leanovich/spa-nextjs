@@ -11,12 +11,13 @@ import {
 import { app } from "../../utils/firebase";
 import { getAuth, signOut } from "firebase/auth";
 import router from "next/router";
-import { LinkTemplate, LinkVariants } from "../LinkTemplate/LinkTemplate";
+import { LinkTemplate } from "../LinkTemplate/LinkTemplate";
 import { Burger } from "../Burger/Burger";
 import { Button, ButtonVariants } from "../Button/Button";
 import ArrowIcon from "../../public/icons/arrow.png";
 import { ILinkSubcategories, ItemNavigation } from "./ItemNavigation";
 import { ItemMobileNavigation } from "./ItemMobileNavigation";
+import { LinkVariants } from "../LinkTemplate/types";
 
 export interface ILinkNavigation {
   href: string;

@@ -1,5 +1,5 @@
 import React from "react";
-import { LinkTemplate, LinkVariants } from "../LinkTemplate/LinkTemplate";
+import { LinkTemplate } from "../LinkTemplate/LinkTemplate";
 import {
   ArrowImageSC,
   BlockWithButtonSC,
@@ -28,6 +28,7 @@ import { Colors } from "../../ui/colors";
 
 import Link from "next/link";
 import { Typography, VariantsTypography } from "../../ui/typography";
+import { LinkVariants } from "../LinkTemplate/types";
 
 const config = [
   {

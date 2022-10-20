@@ -1,5 +1,5 @@
 import React from "react";
-import { LinkTemplate, LinkVariants } from "../LinkTemplate/LinkTemplate";
+import { LinkTemplate } from "../LinkTemplate/LinkTemplate";
 import ImageWork from "/public/icons/worktogether.jpg";
 import ImageWorkManag from "/public/icons/team-work3.png";
 import Background from "/public/icons/managmentbackground.svg";
@@ -13,6 +13,7 @@ import {
 } from "./styles";
 import { Colors } from "../../ui/colors";
 import { Typography, VariantsTypography } from "../../ui/typography";
+import { LinkVariants } from "../LinkTemplate/types";
 
 export const ManagementSection = () => {
   return (

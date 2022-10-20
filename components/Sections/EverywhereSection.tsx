@@ -1,5 +1,5 @@
 import React from "react";
-import { LinkTemplate, LinkVariants } from "../LinkTemplate/LinkTemplate";
+import { LinkTemplate } from "../LinkTemplate/LinkTemplate";
 import { Colors } from "../../ui/colors";
 import Background from "/public/icons/everywhereBackground.svg";
 import {
@@ -9,6 +9,7 @@ import {
   TextContainerSC,
 } from "./styles";
 import { Typography, VariantsTypography } from "../../ui/typography";
+import { LinkVariants } from "../LinkTemplate/types";
 
 export const EverywhereSection = () => {
   return (
