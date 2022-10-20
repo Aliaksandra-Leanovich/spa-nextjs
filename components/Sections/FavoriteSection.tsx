@@ -1,6 +1,5 @@
 import React from "react";
 import { Colors } from "../../ui/colors";
-import { LinkTemplate } from "../LinkTemplate/LinkTemplate";
 import favoriteBackground from "/public/icons/favoriteBackground.png";
 import {
   BackgroundImageFavSC,
@@ -12,7 +11,8 @@ import {
 } from "./styles";
 import ImageApps from "/public/icons/Apps.png";
 import { Typography, VariantsTypography } from "../../ui/typography";
-import { LinkVariants } from "../LinkTemplate/types";
+import { LinkVariants } from "../../enums/LinkVariants";
+import { Link } from "../Link/Link";
 
 export const FavoriteSection = () => {
   return (
@@ -36,7 +36,7 @@ export const FavoriteSection = () => {
             </Typography>
           </TextContainerSC>
 
-          <LinkTemplate
+          <Link
             href="/whitepacefree"
             text="Read more"
             variant={LinkVariants.linkLarge}

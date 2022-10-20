@@ -1,7 +1,8 @@
 import { css } from "@emotion/react";
 import styled from "@emotion/styled";
+import { LinkVariants } from "../../enums/LinkVariants";
 import { Colors } from "../../ui/colors";
-import { ILink, LinkVariants } from "./types";
+import { ILink } from "./types";
 
 const variantStyles = (variant = LinkVariants.linkSmall) =>
   ({
@@ -24,15 +25,11 @@ export const LinkSC = styled.a<Pick<ILink, "variant">>`
   width: max-content;
   border: none;
   border-radius: 8px;
-
   background-color: ${Colors.LIGHTBLUE};
   color: ${Colors.WHITE};
-
   z-index: 1;
   cursor: pointer;
-
   transition: background-color 0.5s ease-out;
-
   &:hover {
     background-color: ${Colors.YELLOW};
   }

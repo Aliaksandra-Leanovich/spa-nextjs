@@ -1,5 +1,4 @@
 import React from "react";
-import { LinkTemplate } from "../LinkTemplate/LinkTemplate";
 import { Colors } from "../../ui/colors";
 import Background from "/public/icons/everywhereBackground.svg";
 import {
@@ -9,7 +8,8 @@ import {
   TextContainerSC,
 } from "./styles";
 import { Typography, VariantsTypography } from "../../ui/typography";
-import { LinkVariants } from "../LinkTemplate/types";
+import { LinkVariants } from "../../enums/LinkVariants";
+import { Link } from "../Link/Link";
 
 export const EverywhereSection = () => {
   return (
@@ -34,7 +34,7 @@ export const EverywhereSection = () => {
           </Typography>
         </TextContainerSC>
 
-        <LinkTemplate
+        <Link
           href="/whitepacefree"
           text="Try Taskey"
           variant={LinkVariants.linkLarge}

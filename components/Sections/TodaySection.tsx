@@ -1,5 +1,4 @@
 import React from "react";
-import { LinkTemplate } from "../LinkTemplate/LinkTemplate";
 import AppleIcon from "/public/icons/apple-black-logo 2.svg";
 import Window from "/public/icons/windows-logo 1.svg";
 import Android from "/public/icons/android-logo 1.svg";
@@ -14,7 +13,8 @@ import {
   TodayTitleSC,
 } from "./styles";
 import { Typography, VariantsTypography } from "../../ui/typography";
-import { LinkVariants } from "../LinkTemplate/types";
+import { LinkVariants } from "../../enums/LinkVariants";
+import { Link } from "../Link/Link";
 
 export const TodaySection = () => {
   return (
@@ -39,7 +39,7 @@ export const TodaySection = () => {
           </Typography>
         </TextContainerTodaySC>
 
-        <LinkTemplate
+        <Link
           href="/whitepace"
           text="Try Taskey free"
           variant={LinkVariants.linkLarge}

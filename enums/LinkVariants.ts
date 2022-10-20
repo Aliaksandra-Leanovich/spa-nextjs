@@ -3,9 +3,3 @@ export enum LinkVariants {
   linkMedium = "linkMedium",
   linkLarge = "linkLarge",
 }
-
-export interface ILink {
-  href: string;
-  text: string;
-  variant: LinkVariants;
-}
