@@ -27,7 +27,7 @@ const validationSchema = Yup.object().shape({
 
 export const SignUpForm = () => {
   const router = useRouter();
-  const [emailInUse, setEmailInUse] = useState("");
+  const [errorAuth, setErroAuth] = useState("");
 
   const {
     register,
@@ -36,6 +36,19 @@ export const SignUpForm = () => {
   } = useForm<IFormInput>({
     resolver: yupResolver(validationSchema),
   });
+
+  const handleAuthErrors = (error: string) => {
+    switch (error) {
+      case "auth/email-already-in-use":
+        return setErroAuth("Email already in use.");
+      case "auth/invalid-email":
+        return setErroAuth("Password provided is not corrected.");
+      case "auth/weak-password":
+        return setErroAuth("The password is too weak.");
+      default:
+        return setErroAuth("An unexpected error occurred.");
+    }
+  };
 
   const onSubmit = (data: IFormInput) => {
     const auth = getAuth(app);
@@ -46,10 +59,8 @@ export const SignUpForm = () => {
         await router.push("/signin");
       })
       .catch((error) => {
-        if (error.code == "auth/email-already-in-use") {
-          const errorMessage = "Email already in use";
-          setEmailInUse(errorMessage);
-        }
+        const errorCode = error.code;
+        handleAuthErrors(errorCode);
       });
   };
 
@@ -59,7 +70,7 @@ export const SignUpForm = () => {
         Get started for free. Add your whole team as your needs grow.{" "}
       </Typography>
       <StyledFormSC onSubmit={handleSubmit(onSubmit)}>
-        {emailInUse && <EmailInUseMessageSC>{emailInUse}</EmailInUseMessageSC>}
+        {errorAuth && <EmailInUseMessageSC>{errorAuth}</EmailInUseMessageSC>}
         <Input
           type="text"
           label="name"
