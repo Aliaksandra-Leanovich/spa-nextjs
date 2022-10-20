@@ -6,6 +6,7 @@ import {
   ContainerLinks,
   ContainerButtons,
   Arrow,
+  ButtonWrapperSC,
   ArrowClose,
 } from "./styles";
 import { app } from "../../utils/firebase";
@@ -80,13 +81,15 @@ export const Navigation = () => {
         {config.map((link, index) => (
           <ItemNavigation {...link} key={index} />
         ))}
-        <form onSubmit={handleSubmit}>
-          <Button
-            type="submit"
-            text="Logout"
-            variant={ButtonVariants.primary}
-          />
-        </form>
+        <ButtonWrapperSC>
+          <form onSubmit={handleSubmit}>
+            <Button
+              variant={ButtonVariants.primary}
+              type="submit"
+              text="Logout"
+            />
+          </form>
+        </ButtonWrapperSC>
         <LinkTemplate
           href="/whitepacefree"
           text="Try Whitepace free"
@@ -102,13 +105,16 @@ export const Navigation = () => {
           ))}
         </ContainerLinks>
         <ContainerButtons>
-          <form onSubmit={handleSubmit}>
-            <Button
-              variant={ButtonVariants.primary}
-              type="submit"
-              text="Logout"
-            />
-          </form>
+          <ButtonWrapperSC>
+            <form onSubmit={handleSubmit}>
+              <Button
+                variant={ButtonVariants.primary}
+                type="submit"
+                text="Logout"
+              />
+            </form>
+          </ButtonWrapperSC>
+
           <LinkTemplate
             href="/whitepacefree"
             text="Try Whitepace free"

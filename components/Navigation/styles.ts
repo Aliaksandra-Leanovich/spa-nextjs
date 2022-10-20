@@ -121,3 +121,6 @@ export const SubcategorydLinkSC = styled.a`
 export const SubNavigationMobile = styled.div`
   padding: 10px 20px 0;
 `;
+export const ButtonWrapperSC = styled.div`
+  margin: 0 25px 0 50px;
+`;

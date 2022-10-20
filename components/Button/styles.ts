@@ -13,8 +13,7 @@ export const theme = {
 const variantStyles = (variant = ButtonVariants.primary) =>
   ({
     primary: css`
-      padding: 18px 40px;
-      margin: 0 25px 0 50px;
+      padding: 20px 40px;
     `,
     secondary: css`
       padding: 18px;
