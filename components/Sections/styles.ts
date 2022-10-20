@@ -84,7 +84,7 @@ export const AppImageSC = styled.div`
   height: 60px;
 `;
 
-export const ContainerEverywhereSC = styled.div`
+export const ContainerYourWorkSC = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -108,10 +108,9 @@ export const TextContainerSliderSC = styled.div`
   margin-bottom: 60px;
 `;
 
-export const TodayContainerSC = styled.div`
+export const FreeTrialContainerSC = styled.div`
   padding: 140px 32px;
   display: flex;
-  margin: 0 auto;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -172,7 +171,7 @@ export const MainBackgrounSC = styled.img`
   width: 100%;
   opacity: 0.3;
 `;
-export const BackgroundImageFavSC = styled.img`
+export const BackgroundImageAppsSC = styled.img`
   position: absolute;
   z-index: 0;
   bottom: 0;
@@ -189,7 +188,7 @@ export const BackgroundImageContainerManagSC = styled.div`
 
   opacity: 0.6;
 `;
-export const BackgroundImageContainerEverywhSC = styled.div`
+export const BackgroundImageContainerYourWorkSC = styled.div`
   position: absolute;
   z-index: 0;
   left: -100px;
@@ -213,10 +212,10 @@ export const BackgroundImageContainerEverywhSC = styled.div`
 export const TextContainerSC = styled.div`
   margin: 24px 0 60px 0;
 `;
-export const TextContainerTodaySC = styled.div`
+export const TextContainerFreeTrialSC = styled.div`
   margin: 24px 0 40px 0;
 `;
-export const TextContainerTodaySecondSC = styled.div`
+export const TextContainerFreeTrialSecondSC = styled.div`
   margin: 40px 0;
 `;
 export const TodayTitleSC = styled.h2`
