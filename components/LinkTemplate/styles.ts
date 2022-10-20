@@ -24,11 +24,15 @@ export const LinkSC = styled.a<Pick<ILink, "variant">>`
   width: max-content;
   border: none;
   border-radius: 8px;
+
   background-color: ${Colors.LIGHTBLUE};
   color: ${Colors.WHITE};
+
   z-index: 1;
   cursor: pointer;
+
   transition: background-color 0.5s ease-out;
+
   &:hover {
     background-color: ${Colors.YELLOW};
   }
