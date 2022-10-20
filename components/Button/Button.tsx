@@ -16,7 +16,7 @@ export interface IButton extends ButtonHTMLAttributes<HTMLButtonElement> {
 export const Button = ({ text, type, variant }: IButton) => {
   return (
     <ButtonSC variant={variant} type={type}>
-      <Typography variant={VariantsTypography.button}>{text}</Typography>
+      {text}
     </ButtonSC>
   );
 };

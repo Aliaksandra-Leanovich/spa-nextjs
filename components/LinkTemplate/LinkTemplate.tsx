@@ -20,7 +20,7 @@ export const LinkTemplate = ({ href, text, variant }: ILink) => {
   return (
     <Link href={href}>
       <LinkSC variant={variant}>
-        <Typography variant={VariantsTypography.button}>{text}</Typography>
+        <Typography variant={VariantsTypography.subtitle}>{text}</Typography>
         <Arrow>
           <ArrowRightIcon />
         </Arrow>
