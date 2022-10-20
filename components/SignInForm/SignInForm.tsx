@@ -19,6 +19,8 @@ const validationSchema = Yup.object().shape({
 });
 
 export const SignInForm = () => {
+  const router = useRouter();
+  const [errorAuth, setErroAuth] = useState("");
   const {
     register,
     handleSubmit,
@@ -27,7 +29,20 @@ export const SignInForm = () => {
     resolver: yupResolver(validationSchema),
   });
 
-  const router = useRouter();
+  const handleAuthErrors = (error: string) => {
+    switch (error) {
+      case "auth/user-not-found":
+        return setErroAuth("No user found with this email.");
+      case "auth/user-disabled":
+        return setErroAuth("User disabled.");
+      case "auth/invalid-email":
+        return setErroAuth(" Wrong email/password combination.");
+      case "auth/wrong-password":
+        return setErroAuth("Wrong email/password combination.");
+      default:
+        return setErroAuth("An unexpected error occurred.");
+    }
+  };
 
   const onSubmit = (data: IUserForm) => {
     const auth = getAuth(app);
@@ -37,7 +52,10 @@ export const SignInForm = () => {
         localStorage.setItem("authUser", token);
         await router.push("/");
       })
-      .catch((error) => {});
+      .catch((error) => {
+        const errorCode = error.code;
+        handleAuthErrors(errorCode);
+      });
   };
 
   return (
@@ -46,6 +64,7 @@ export const SignInForm = () => {
         Get started for free. Add your whole team as your needs grow.
       </Typography>
       <StyledFormSC onSubmit={handleSubmit(onSubmit)}>
+        {errorAuth && <NoUserMessageSC>{errorAuth}</NoUserMessageSC>}
         <Input
           type="email"
           label="email"
