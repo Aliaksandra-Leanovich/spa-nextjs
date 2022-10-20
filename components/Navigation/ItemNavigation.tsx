@@ -1,17 +1,14 @@
 import Link from "next/link";
 import React, { useState } from "react";
 import { Typography, VariantsTypography } from "../../ui/typography";
-import { ILinkNavigation, ILinkSubcategories } from "./Navigation";
+
 import {
   HoverLinkSC,
   LinkSC,
   SubcategorydLinkSC,
   SubNavigation,
 } from "./styles";
-
-interface ILink {
-  link: ILinkNavigation;
-}
+import { ILink, ILinkSubcategories } from "./types";
 
 export const ItemNavigation = ({ link }: ILink) => {
   const [subnav, setSubnav] = useState(false);

@@ -16,17 +16,7 @@ import { Button, ButtonVariants } from "../Button/Button";
 import ArrowIcon from "../../public/icons/arrow.png";
 import { ItemNavigation } from "./ItemNavigation";
 import { ItemMobileNavigation } from "./ItemMobileNavigation";
-
-export interface ILinkSubcategories {
-  name: string;
-  link: string;
-}
-export interface ILinkNavigation {
-  href: string;
-  title: string;
-  subcategories?: ILinkSubcategories[];
-  iconOpen?: JSX.Element;
-}
+import { ILinkNavigation } from "./types";
 
 const config: ILinkNavigation[] = [
   {
