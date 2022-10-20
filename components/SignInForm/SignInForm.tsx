@@ -19,8 +19,6 @@ const validationSchema = Yup.object().shape({
 });
 
 export const SignInForm = () => {
-  const [noUser, setNoUser] = useState();
-
   const {
     register,
     handleSubmit,
@@ -39,10 +37,7 @@ export const SignInForm = () => {
         localStorage.setItem("authUser", token);
         await router.push("/");
       })
-      .catch((error) => {
-        const errorMessage = error.message;
-        setNoUser(errorMessage);
-      });
+      .catch((error) => {});
   };
 
   return (
@@ -51,7 +46,6 @@ export const SignInForm = () => {
         Get started for free. Add your whole team as your needs grow.
       </Typography>
       <StyledFormSC onSubmit={handleSubmit(onSubmit)}>
-        {noUser && <NoUserMessageSC>{noUser}</NoUserMessageSC>}
         <Input
           type="email"
           label="email"
