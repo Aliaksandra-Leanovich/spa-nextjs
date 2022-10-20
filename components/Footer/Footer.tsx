@@ -25,11 +25,11 @@ import Linkedin from "/public/icons/Linkedin.svg";
 import Facebook from "/public/icons/Facebook.svg";
 import Twitter from "/public/icons/Twitter.svg";
 import { Colors } from "../../ui/colors";
-
 import Link from "next/link";
 import { Typography, VariantsTypography } from "../../ui/typography";
+import { IFooterData } from "./types";
 
-const config = [
+const config: IFooterData[] = [
   {
     category: "Product",
     link: "#",
