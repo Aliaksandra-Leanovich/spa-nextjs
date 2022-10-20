@@ -1,6 +1,4 @@
 import React, { ButtonHTMLAttributes } from "react";
-import { Typography, VariantsTypography } from "../../ui/typography";
-
 import { ButtonSC } from "./styles";
 
 export enum ButtonVariants {
