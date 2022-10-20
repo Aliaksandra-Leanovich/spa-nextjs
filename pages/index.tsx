@@ -8,7 +8,7 @@ import { MainSection } from "../components/Sections/MainSection";
 import { ManagementSection } from "../components/Sections/ManagementSection";
 import { ExtensionSection } from "../components/Sections/ExtensionSection";
 import { CustomiseSection } from "../components/Sections/CustomiseSection";
-import { EverywhereSection } from "../components/Sections/YourWork";
+import { YourWorkSection } from "../components/Sections/YourWork";
 import { YourDataSection } from "../components/Sections/YourDataSection";
 import { SponsorsSection } from "../components/Sections/SponsorsSection";
 import { AppsSection } from "../components/Sections/AppsSection";
@@ -34,7 +34,7 @@ const Home: NextPage = () => {
           <ExtensionSection />
           <CustomiseSection />
           <PricingBlock />
-          <EverywhereSection />
+          <YourWorkSection />
           <YourDataSection />
           <SponsorsSection />
           <AppsSection />
