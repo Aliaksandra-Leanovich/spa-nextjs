@@ -1,6 +1,6 @@
 import React from "react";
 import { ContainerSC, ErrorMessageSC, StyledInputSC } from "./style";
-import { InputProps } from "./types";
+import { IInputProps } from "./types";
 
 export const Input = ({
   type,
@@ -8,7 +8,7 @@ export const Input = ({
   errors,
   label,
   register,
-}: InputProps) => {
+}: IInputProps) => {
   return (
     <ContainerSC>
       <StyledInputSC

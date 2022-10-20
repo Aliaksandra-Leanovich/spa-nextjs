@@ -11,7 +11,7 @@ interface IFormValues {
 
 interface IRegister extends FieldValues, IFormValues {}
 
-export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
+export interface IInputProps extends InputHTMLAttributes<HTMLInputElement> {
   label: Path<IFormValues>;
   register: UseFormRegister<IRegister>;
   errors: FieldError | undefined;
