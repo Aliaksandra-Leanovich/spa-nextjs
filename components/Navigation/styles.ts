@@ -1,13 +1,13 @@
 import styled from "@emotion/styled";
+import { ContainerSC } from "../../pages";
 import { Colors } from "../../ui/colors";
-import { typography } from "../../ui/typography";
 import { media } from "../../ui/media";
 
 interface IProps {
   open: boolean;
 }
 
-const StyledNavigation = styled.nav`
+export const StyledNavigation = styled.nav`
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -16,38 +16,30 @@ const StyledNavigation = styled.nav`
     display: none;
   }
 `;
-const StyledLink = styled.span`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-right: 40px;
-`;
-const TextLink = styled.span`
-  ${typography.subtitle}
-  color: ${Colors.WHITE};
-  cursor: pointer;
-  &:hover {
-    color: ${Colors.YELLOW};
-  }
-`;
 
 export const StyledRightNavigation = styled.div<IProps>`
   background: ${Colors.BLACK};
+
   height: 100vh;
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: space-around;
 
-  padding: 2rem;
+  padding: 30px;
   position: absolute;
   top: 0;
   right: 0;
-  transition: transform 0.3s ease-in-out;
+  transition: display 0.3s ease-in-out;
 
-  transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
+  ${media.LAPTOP} {
+    display: ${({ open }) => (open ? "flex" : "none")};
+  }
 
   ${media.PHONE} {
     width: 100%;
+  }
+  body {
+    overflow: ${({ open }) => (open ? "hidden" : "auto")};
   }
 `;
 export const ContainerLinks = styled.div`
@@ -57,18 +49,75 @@ export const ContainerLinks = styled.div`
 
   ${media.LAPTOP} {
     display: grid;
+    align-items: center;
+    justify-content: center;
     row-gap: 2rem;
   }
 `;
 
 export const ContainerButtons = styled.div`
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  row-gap: 20px;
+`;
+
+export const NavigationContainer = styled.div`
   display: flex;
-  flex-direction: column;
+`;
+export const HoverLinkSC = styled.div`
+  color: ${Colors.WHITE};
+  display: flex;
+  justify-content: center;
   align-items: center;
+  transition: color 0.5s ease-out;
+
+  &:hover {
+    cursor: pointer;
+    color: ${Colors.YELLOW};
+  }
+`;
+export const LinkSC = styled.div`
+  margin: 0 40px 0 0;
+  position: relative;
+  display: inline-block;
+
+  ${media.TABLET} {
+    margin: 0;
+  }
 `;
 
-const NavigationContainer = styled.div`
+export const Arrow = styled.img`
+  width: 10px;
+  margin-left: 10px;
+`;
+export const ArrowClose = styled.img`
+  width: 10px;
+  margin-left: 10px;
+  transform: rotate(180deg);
+`;
+
+export const SubNavigation = styled.div<IProps>`
+  position: absolute;
+  background-color: ${Colors.LIGHTBLUE};
+
+  display: ${({ open }) => (open ? "flex" : "none")};
+  flex-direction: column;
+  width: 200px;
+  padding: 16px 24px 0;
+`;
+
+export const SubcategorydLinkSC = styled.a`
+  color: ${Colors.WHITE};
   display: flex;
+  margin-bottom: 16px;
+  transition: color 0.5s ease-out;
+
+  &:hover {
+    cursor: pointer;
+    color: ${Colors.YELLOW};
+  }
 `;
 
-export { StyledNavigation, StyledLink, TextLink, NavigationContainer };
+export const SubNavigationMobile = styled.div`
+  padding: 10px 20px 0;
+`;

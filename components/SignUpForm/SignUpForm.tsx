@@ -1,15 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
-import { routes } from "../../routes/routes";
 import { app } from "../../utils/firebase";
 import { useRouter } from "next/router";
-import { ContainerForm, FormTitle, StyledForm } from "./styles";
-import { InputTemplate } from "../InputTemplate/InputTemplate";
-import { ButtonTemplate } from "../ButtonTemplate/ButtonTemplate";
-import { LinkTemplate } from "../LinkTemplate/LinkTemplate";
+import { Input } from "../Input/Input";
+import { Button, ButtonVariants } from "../Button/Button";
+import { LinkTemplate, LinkVariants } from "../LinkTemplate/LinkTemplate";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as Yup from "yup";
+import { Colors } from "../../ui/colors";
+import { ContainerFormSC, EmailInUseMessageSC, StyledFormSC } from "./styles";
+import { Typography, VariantsTypography } from "../../ui/typography";
 
 interface IFormInput {
   name: string;
@@ -20,7 +21,7 @@ interface IFormInput {
 const validationSchema = Yup.object().shape({
   name: Yup.string()
     .required("Name is required")
-    .min(6, "Name must be at least 6 characters")
+    .min(2, "Name must be at least 2 characters")
     .max(20, "Name must not exceed 20 characters"),
   email: Yup.string().required("Email is required").email("Email is invalid"),
   password: Yup.string()
@@ -31,6 +32,8 @@ const validationSchema = Yup.object().shape({
 
 export const SignUpForm = () => {
   const router = useRouter();
+  const [emailnUse, setEmailInUse] = useState<string>();
+
   const {
     register,
     handleSubmit,
@@ -45,46 +48,55 @@ export const SignUpForm = () => {
     createUserWithEmailAndPassword(auth, data.email, data.password)
       .then(async (userCredential) => {
         const user = userCredential.user;
-        await router.push(routes.SIGNIN);
+        await router.push("/");
       })
-      .catch(console.error);
+      .catch((error) => {
+        if (error.code == "auth/email-already-in-use") {
+          const errorMessage = "Email already in use";
+          setEmailInUse(errorMessage);
+        }
+      });
   };
 
   return (
-    <ContainerForm>
-      <FormTitle>
+    <ContainerFormSC>
+      <Typography variant={VariantsTypography.h3} color={Colors.WHITE}>
         Get started for free. Add your whole team as your needs grow.{" "}
-      </FormTitle>
-      <StyledForm onSubmit={handleSubmit(onSubmit)}>
-        <InputTemplate
+      </Typography>
+      <StyledFormSC onSubmit={handleSubmit(onSubmit)}>
+        {emailnUse && <EmailInUseMessageSC>{emailnUse}</EmailInUseMessageSC>}
+        <Input
           type="text"
           label="name"
           errors={errors.name}
           register={register}
           placeholder="Enter your name"
         />
-        <InputTemplate
+        <Input
           type="email"
           label="email"
           errors={errors.email}
           register={register}
           placeholder="Enter your email"
         />
-        <InputTemplate
+        <Input
           type="password"
           label="password"
           errors={errors.password}
           register={register}
           placeholder="Enter your password"
         />
-        <ButtonTemplate
+        <Button
           type="submit"
           text="Sign Up"
-          color="blue"
-          background="yellow"
+          variant={ButtonVariants.secondary}
         />
-      </StyledForm>
-      <LinkTemplate href="/signin" text="I already have an account." />
-    </ContainerForm>
+      </StyledFormSC>
+      <LinkTemplate
+        href="/signin"
+        text="I already have an account."
+        variant={LinkVariants.linkSmall}
+      />
+    </ContainerFormSC>
   );
 };

@@ -1,20 +1,21 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
-import { routes } from "../../routes/routes";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { app } from "../../utils/firebase";
 import { useRouter } from "next/router";
-import { ContainerForm, FormTitle, NoUserMessage, StyledForm } from "./styles";
-import { InputTemplate } from "../InputTemplate/InputTemplate";
-import { ButtonTemplate } from "../ButtonTemplate/ButtonTemplate";
-import { LinkTemplate } from "../LinkTemplate/LinkTemplate";
+import { ContainerFormSC, NoUserMessageSC, StyledFormSC } from "./styles";
+import { Input } from "../Input/Input";
+import { Button, ButtonVariants } from "../Button/Button";
+import { LinkTemplate, LinkVariants } from "../LinkTemplate/LinkTemplate";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as Yup from "yup";
+import { Colors } from "../../ui/colors";
+import { Typography, VariantsTypography } from "../../ui/typography";
 
 interface IUserForm {
   email: string;
   password: string;
-  errors: string;
+  errors?: string;
 }
 
 interface IUserLocal {
@@ -22,6 +23,7 @@ interface IUserLocal {
 }
 const validationSchema = Yup.object().shape({
   email: Yup.string().required("Email is required").email("Email is invalid"),
+  password: Yup.string().required("Password is required"),
 });
 
 export const SignInForm = () => {
@@ -43,7 +45,7 @@ export const SignInForm = () => {
       .then(async (userCredential: any) => {
         const user = userCredential.user.accessToken;
         localStorage.setItem("authUser", JSON.stringify(user));
-        await router.push(routes.HOME);
+        await router.push("/");
       })
       .catch((error) => {
         const errorMessage = error.message;
@@ -52,34 +54,37 @@ export const SignInForm = () => {
   };
 
   return (
-    <ContainerForm>
-      <FormTitle>
+    <ContainerFormSC>
+      <Typography variant={VariantsTypography.h3} color={Colors.WHITE}>
         Get started for free. Add your whole team as your needs grow.{" "}
-      </FormTitle>
-      <StyledForm onSubmit={handleSubmit(onSubmit)}>
-        <NoUserMessage>{noUser ? "No such user" : ""}</NoUserMessage>
-        <InputTemplate
+      </Typography>
+      <StyledFormSC onSubmit={handleSubmit(onSubmit)}>
+        {noUser && <NoUserMessageSC>{noUser}</NoUserMessageSC>}
+        <Input
           type="email"
           label="email"
           errors={errors.email}
           register={register}
           placeholder="Enter your email"
         />
-        <InputTemplate
+        <Input
           type="password"
           label="password"
           errors={errors.password}
           register={register}
           placeholder="Enter your password"
         />
-        <ButtonTemplate
-          color="blue"
-          background="yellow"
+        <Button
           type="submit"
           text="Sign In"
+          variant={ButtonVariants.secondary}
         />
-      </StyledForm>
-      <LinkTemplate href="/signup" text="I dont have an account" />
-    </ContainerForm>
+      </StyledFormSC>
+      <LinkTemplate
+        href="/signup"
+        text="I dont have an account"
+        variant={LinkVariants.linkSmall}
+      />
+    </ContainerFormSC>
   );
 };

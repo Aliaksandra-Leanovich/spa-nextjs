@@ -1,141 +1,160 @@
 import React from "react";
-// Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-import quotesImage from "/public/Quote.svg";
-import Avatar1 from "/public/avatar1.svg";
-import Avatar2 from "/public/avatar2.svg";
-import Avatar3 from "/public/avatar3.svg";
 import "swiper/css";
 import "swiper/css/pagination";
 import SwiperCore, { EffectCoverflow, Pagination } from "swiper";
-
 import {
-  BlockReview,
-  ContainerReviews,
-  QuotesImage,
-  Review,
-  ReviewerBlock,
-  ReviewerImage,
-  ReviewerInformation,
-  ReviewerName,
-  ReviewerPosition,
-  TextReview,
-  Container,
-  ContainerMobile,
+  BlockReviewSC,
+  ContainerMobileSC,
+  ContainerReviewsSC,
+  ContainerSC,
+  QuotesImageSC,
+  ReviewerBlockSC,
+  ReviewerImageSC,
+  ReviewerInformationSC,
+  ReviewSC,
+  SwiperCustomSC,
+  TextConteinerCommentSC,
 } from "./style";
-
-const config = [
-  {
-    comment:
-      "Whitepate is designed as a collaboration tool for businesses that is a full project management solution.",
-    icon: quotesImage.src,
-    avatar: Avatar1.src,
-    name: "Oberon Shaw, MCH",
-    position: "Head of Talent Acquisition, North America",
-  },
-  {
-    comment:
-      "Whitepate is designed as a collaboration tool for businesses that is a full project management solution.",
-    icon: quotesImage.src,
-    avatar: Avatar2.src,
-    name: "Oberon Shaw, MCH",
-    position: "Head of Talent Acquisition, North America",
-  },
-  {
-    comment:
-      "Whitepate is designed as a collaboration tool for businesses that is a full project management solution.",
-    icon: quotesImage.src,
-    avatar: Avatar3.src,
-    name: "Oberon Shaw, MCH",
-    position: "Head of Talent Acquisition, North America",
-  },
-];
+import { Typography, VariantsTypography } from "../../ui/typography";
+import { Colors } from "../../ui/colors";
+import { IReviewers } from "../Sections/ClientsSection";
 
 SwiperCore.use([EffectCoverflow, Pagination]);
 
-export const Slider = () => {
+interface IData {
+  data: IReviewers[];
+}
+
+export const Slider = ({ data }: IData) => {
   return (
     <>
-      <Container>
-        <Swiper
+      <ContainerSC>
+        <SwiperCustomSC
           effect={"coverflow"}
           grabCursor={true}
           centeredSlides={true}
           slidesPerView={"auto"}
           coverflowEffect={{
-            rotate: 50,
             stretch: 0,
             depth: 100,
             modifier: 1,
             slideShadows: false,
           }}
-          spaceBetween={30}
           pagination={{
             clickable: true,
           }}
-          className="swiper"
           modules={[Pagination]}
         >
           <SwiperSlide>
-            <ContainerReviews>
-              {config.map((review, index) => (
-                <Review key={index}>
-                  <BlockReview>
-                    <QuotesImage src={review.icon} />
-                    <TextReview>{review.comment}</TextReview>
-                  </BlockReview>
-                  <ReviewerBlock>
-                    <ReviewerImage src={review.avatar} />
-                    <ReviewerInformation>
-                      <ReviewerName>{review.name}</ReviewerName>
-                      <ReviewerPosition>{review.position}</ReviewerPosition>
-                    </ReviewerInformation>
-                  </ReviewerBlock>
-                </Review>
+            <ContainerReviewsSC>
+              {data.map((review, index) => (
+                <ReviewSC key={index}>
+                  <BlockReviewSC>
+                    <QuotesImageSC>{review.icon}</QuotesImageSC>
+                    <TextConteinerCommentSC>
+                      <Typography
+                        variant={VariantsTypography.subtitle}
+                        color={Colors.WHITE}
+                      >
+                        {review.comment}
+                      </Typography>
+                    </TextConteinerCommentSC>
+                  </BlockReviewSC>
+                  <ReviewerBlockSC>
+                    <ReviewerImageSC>{review.avatar}</ReviewerImageSC>
+                    <ReviewerInformationSC>
+                      <Typography
+                        variant={VariantsTypography.paragraphMediumBold}
+                        color={Colors.BLUE}
+                      >
+                        {review.name}
+                      </Typography>
+                      <Typography
+                        variant={VariantsTypography.subtitle}
+                        color={Colors.WHITE}
+                      >
+                        {review.position}
+                      </Typography>
+                    </ReviewerInformationSC>
+                  </ReviewerBlockSC>
+                </ReviewSC>
               ))}
-            </ContainerReviews>
+            </ContainerReviewsSC>
           </SwiperSlide>
           <SwiperSlide>
-            <ContainerReviews>
-              {config.map((review, index) => (
-                <Review key={index}>
-                  <BlockReview>
-                    <QuotesImage src={review.icon} />
-                    <TextReview>{review.comment}</TextReview>
-                  </BlockReview>
-                  <ReviewerBlock>
-                    <ReviewerImage src={review.avatar} />
-                    <ReviewerInformation>
-                      <ReviewerName>{review.name}</ReviewerName>
-                      <ReviewerPosition>{review.position}</ReviewerPosition>
-                    </ReviewerInformation>
-                  </ReviewerBlock>
-                </Review>
+            <ContainerReviewsSC>
+              {data.map((review, index) => (
+                <ReviewSC key={index}>
+                  <BlockReviewSC>
+                    <QuotesImageSC>{review.icon}</QuotesImageSC>
+                    <TextConteinerCommentSC>
+                      <Typography
+                        variant={VariantsTypography.subtitle}
+                        color={Colors.WHITE}
+                      >
+                        {review.comment}
+                      </Typography>
+                    </TextConteinerCommentSC>
+                  </BlockReviewSC>
+                  <ReviewerBlockSC>
+                    <ReviewerImageSC>{review.avatar}</ReviewerImageSC>
+                    <ReviewerInformationSC>
+                      <Typography
+                        variant={VariantsTypography.paragraphMediumBold}
+                        color={Colors.BLUE}
+                      >
+                        {review.name}
+                      </Typography>
+                      <Typography
+                        variant={VariantsTypography.subtitle}
+                        color={Colors.WHITE}
+                      >
+                        {review.position}
+                      </Typography>
+                    </ReviewerInformationSC>
+                  </ReviewerBlockSC>
+                </ReviewSC>
               ))}
-            </ContainerReviews>
+            </ContainerReviewsSC>
           </SwiperSlide>
           <SwiperSlide>
-            <ContainerReviews>
-              {config.map((review, index) => (
-                <Review key={index}>
-                  <BlockReview>
-                    <QuotesImage src={review.icon} />
-                    <TextReview>{review.comment}</TextReview>
-                  </BlockReview>
-                  <ReviewerBlock>
-                    <ReviewerImage src={review.avatar} />
-                    <ReviewerInformation>
-                      <ReviewerName>{review.name}</ReviewerName>
-                      <ReviewerPosition>{review.position}</ReviewerPosition>
-                    </ReviewerInformation>
-                  </ReviewerBlock>
-                </Review>
+            <ContainerReviewsSC>
+              {data.map((review, index) => (
+                <ReviewSC key={index}>
+                  <BlockReviewSC>
+                    <QuotesImageSC>{review.icon}</QuotesImageSC>
+                    <Typography
+                      variant={VariantsTypography.subtitle}
+                      color={Colors.WHITE}
+                    >
+                      {review.comment}
+                    </Typography>
+                  </BlockReviewSC>
+                  <ReviewerBlockSC>
+                    <ReviewerImageSC>{review.avatar}</ReviewerImageSC>
+                    <ReviewerInformationSC>
+                      <Typography
+                        variant={VariantsTypography.paragraphMediumBold}
+                        color={Colors.BLUE}
+                      >
+                        {review.name}
+                      </Typography>
+                      <Typography
+                        variant={VariantsTypography.subtitle}
+                        color={Colors.WHITE}
+                      >
+                        {review.position}
+                      </Typography>
+                    </ReviewerInformationSC>
+                  </ReviewerBlockSC>
+                </ReviewSC>
               ))}
-            </ContainerReviews>
+            </ContainerReviewsSC>
           </SwiperSlide>
-        </Swiper>
-      </Container>
-      <ContainerMobile>
+        </SwiperCustomSC>
+      </ContainerSC>
+      <ContainerMobileSC>
         <Swiper
           slidesPerView={"auto"}
           spaceBetween={30}
@@ -145,25 +164,40 @@ export const Slider = () => {
           modules={[Pagination]}
           className="mySwiper"
         >
-          {config.map((review, index) => (
+          {data.map((review, index) => (
             <SwiperSlide key={index}>
-              <Review>
-                <BlockReview>
-                  <QuotesImage src={review.icon} />
-                  <TextReview>{review.comment}</TextReview>
-                </BlockReview>
-                <ReviewerBlock>
-                  <ReviewerImage src={review.avatar} />
-                  <ReviewerInformation>
-                    <ReviewerName>{review.name}</ReviewerName>
-                    <ReviewerPosition>{review.position}</ReviewerPosition>
-                  </ReviewerInformation>
-                </ReviewerBlock>
-              </Review>
+              <ReviewSC>
+                <BlockReviewSC>
+                  <QuotesImageSC>{review.icon}</QuotesImageSC>
+                  <Typography
+                    variant={VariantsTypography.subtitle}
+                    color={Colors.WHITE}
+                  >
+                    {review.comment}
+                  </Typography>
+                </BlockReviewSC>
+                <ReviewerBlockSC>
+                  <ReviewerImageSC>{review.avatar}</ReviewerImageSC>
+                  <ReviewerInformationSC>
+                    <Typography
+                      variant={VariantsTypography.paragraphMediumBold}
+                      color={Colors.BLUE}
+                    >
+                      {review.name}
+                    </Typography>
+                    <Typography
+                      variant={VariantsTypography.subtitle}
+                      color={Colors.WHITE}
+                    >
+                      {review.position}
+                    </Typography>
+                  </ReviewerInformationSC>
+                </ReviewerBlockSC>
+              </ReviewSC>
             </SwiperSlide>
           ))}
         </Swiper>
-      </ContainerMobile>
+      </ContainerMobileSC>
     </>
   );
 };

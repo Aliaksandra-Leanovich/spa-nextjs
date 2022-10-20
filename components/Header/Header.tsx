@@ -1,15 +1,15 @@
 import React from "react";
-import Logo from "/public/logo.svg";
+import Logo from "/public/icons/logo.svg";
 import { Navigation } from "../Navigation/Navigation";
-import { StyledHeader, LogoContainer } from "./style";
+import { StyledHeaderSC, LogoContainerSC } from "./style";
 
 export const Header = () => {
   return (
-    <StyledHeader>
-      <LogoContainer>
-        <img src={Logo.src} alt={"logo"} />
-      </LogoContainer>
+    <StyledHeaderSC>
+      <LogoContainerSC href="/">
+        <Logo />
+      </LogoContainerSC>
       <Navigation />
-    </StyledHeader>
+    </StyledHeaderSC>
   );
 };

@@ -1,26 +1,41 @@
 import React, { FormEvent, useState } from "react";
 import {
   StyledNavigation,
-  StyledLink,
-  TextLink,
   NavigationContainer,
   StyledRightNavigation,
   ContainerLinks,
   ContainerButtons,
+  Arrow,
+  ArrowClose,
 } from "./styles";
 import { app } from "../../utils/firebase";
 import { getAuth, signOut } from "firebase/auth";
-import Link from "next/link";
 import router from "next/router";
-import { routes } from "../../routes/routes";
-import { LinkTemplate } from "../LinkTemplate/LinkTemplate";
+import { LinkTemplate, LinkVariants } from "../LinkTemplate/LinkTemplate";
 import { Burger } from "../Burger/Burger";
-import { ButtonTemplate } from "../ButtonTemplate/ButtonTemplate";
+import { Button, ButtonVariants } from "../Button/Button";
+import ArrowIcon from "../../public/icons/arrow.png";
+import { ILinkSubcategories, ItemNavigation } from "./ItemNavigation";
+import { ItemMobileNavigation } from "./ItemMobileNavigation";
 
-const config = [
+export interface ILinkNavigation {
+  href: string;
+  title: string;
+  subcategories?: ILinkSubcategories[];
+  iconOpen?: JSX.Element;
+  iconClose?: JSX.Element;
+}
+const config: ILinkNavigation[] = [
   {
     href: "#products",
     title: "Products",
+    subcategories: [
+      { name: "Overview", link: "#" },
+      { name: "Pricing", link: "#" },
+      { name: "Customer Stories", link: "#" },
+    ],
+    iconOpen: <Arrow src={ArrowIcon.src} />,
+    iconClose: <ArrowClose src={ArrowIcon.src} />,
   },
   {
     href: "#solutions",
@@ -29,6 +44,13 @@ const config = [
   {
     href: "#resources",
     title: "Resources",
+    subcategories: [
+      { name: "Blog", link: "#" },
+      { name: "Guides tutorials", link: "#" },
+      { name: "Help center", link: "#" },
+    ],
+    iconOpen: <Arrow src={ArrowIcon.src} />,
+    iconClose: <ArrowClose src={ArrowIcon.src} />,
   },
   {
     href: "#pricing",
@@ -39,13 +61,13 @@ const config = [
 export const Navigation = () => {
   const [open, setOpen] = useState<boolean>(false);
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
     const auth = getAuth(app);
     signOut(auth)
-      .then(() => {
+      .then(async () => {
         localStorage.removeItem("authUser");
-        router.push(routes.SIGNIN);
+        await router.push("/signin");
       })
       .catch((error) => {
         // An error happened.
@@ -55,44 +77,42 @@ export const Navigation = () => {
     <NavigationContainer>
       <StyledNavigation>
         {config.map((link, index) => (
-          <Link href={link.href} key={index}>
-            <StyledLink>
-              <TextLink>{link.title}</TextLink>
-            </StyledLink>
-          </Link>
+          <ItemNavigation {...link} key={index} />
         ))}
         <form onSubmit={handleSubmit}>
-          <ButtonTemplate
-            color="lightblue"
+          <Button
             type="submit"
             text="Logout"
-            background="yellow"
+            variant={ButtonVariants.primary}
           />
         </form>
-        <LinkTemplate href="/whitepacefree" text="Try Whitepace free" />
+        <LinkTemplate
+          href="/whitepacefree"
+          text="Try Whitepace free"
+          variant={LinkVariants.linkMedium}
+        />
       </StyledNavigation>
 
       <Burger open={open} setOpen={setOpen} />
       <StyledRightNavigation open={open}>
         <ContainerLinks>
           {config.map((link, index) => (
-            <Link href={link.href} key={index}>
-              <StyledLink>
-                <TextLink>{link.title}</TextLink>
-              </StyledLink>
-            </Link>
+            <ItemMobileNavigation {...link} key={index} />
           ))}
         </ContainerLinks>
         <ContainerButtons>
           <form onSubmit={handleSubmit}>
-            <ButtonTemplate
-              color="lightblue"
+            <Button
+              variant={ButtonVariants.primary}
               type="submit"
               text="Logout"
-              background="yellow"
             />
           </form>
-          <LinkTemplate href="/whitepacefree" text="Try Whitepace free" />
+          <LinkTemplate
+            href="/whitepacefree"
+            text="Try Whitepace free"
+            variant={LinkVariants.linkMedium}
+          />
         </ContainerButtons>
       </StyledRightNavigation>
     </NavigationContainer>

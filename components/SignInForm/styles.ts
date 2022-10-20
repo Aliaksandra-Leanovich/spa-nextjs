@@ -1,9 +1,9 @@
 import styled from "@emotion/styled";
 import { Colors } from "../../ui/colors";
-import { typography } from "../../ui/typography";
-export const StyledForm = styled.form`
+
+export const StyledFormSC = styled.form`
   display: grid;
-  row-gap: 20px;
+  row-gap: 30px;
 
   margin: 20px 0;
   width: 100%;
@@ -15,7 +15,7 @@ export const StyledForm = styled.form`
   border-radius: 15px;
 `;
 
-export const ContainerForm = styled.section`
+export const ContainerFormSC = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -25,10 +25,6 @@ export const ContainerForm = styled.section`
   background-color: ${Colors.BLUE};
 `;
 
-export const FormTitle = styled.h3`
-  ${typography.H3}
-  color: ${Colors.WHITE};
-  text-align: center;
+export const NoUserMessageSC = styled.p`
+  color: #cd3232;
 `;
-
-export const NoUserMessage = styled.p``;

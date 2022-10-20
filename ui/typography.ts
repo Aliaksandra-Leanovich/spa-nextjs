@@ -1,97 +1,116 @@
 import { css } from "@emotion/react";
+import styled from "@emotion/styled";
 import { media } from "./media";
 
-const H1 = css`
-  font-family: "Inter";
-  font-weight: 700;
-  font-size: 56px;
-  line-height: 64px;
-  ${media.PHONE} {
-    font-size: 32px;
-    line-height: 44px;
-  }
-`;
+export enum VariantsTypography {
+  h1 = "h1",
+  h2 = "h2",
+  h3 = "h3",
+  h5 = "h5",
+  paragraphSmall = "paragraphSmall",
+  paragraphXS = "paragraphXS",
+  paragraphSmallBold = "paragraphSmallBold",
+  paragraphMedium = "paragraphMedium",
+  paragraphMediumBold = "paragraphMediumBold",
+  subtitle = "subtitle",
+  button = "button",
+}
 
-const H2 = css`
-  font-family: "Inter";
-  font-weight: 700;
-  font-size: 64px;
-  line-height: 77px;
-  letter-spacing: -0.02em;
-  ${media.PHONE} {
-    font-size: 36px;
-    line-height: 44px;
-  }
-`;
+interface ITypography {
+  color?: string;
+  variant: VariantsTypography;
+}
 
-const H3 = css`
-  font-family: "Inter";
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 44px;
-`;
-const H5 = css`
-  font-family: "Inter";
-  font-weight: 700;
-  font-size: 28px;
-  line-height: 36px;
-`;
+const variantTypography = (variant = VariantsTypography.subtitle) =>
+  ({
+    h1: css`
+      font-family: "Inter";
+      font-weight: 700;
+      font-size: 56px;
+      line-height: 64px;
+      ${media.PHONE} {
+        font-size: 32px;
+        line-height: 44px;
+      }
+    `,
+    h2: css`
+      font-family: "Inter";
+      font-weight: 700;
+      font-size: 64px;
+      line-height: 77px;
+      letter-spacing: -0.02em;
 
-const subtitle = css`
-  font-family: "Inter";
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 30px;
-  letter-spacing: -0.02em;
-`;
+      ${media.TABLET} {
+        font-size: 54px;
+        line-height: 65px;
+      }
+      ${media.PHONE} {
+        font-size: 36px;
+        line-height: 44px;
+      }
+    `,
+    h3: css`
+      font-family: "Inter";
+      font-weight: 700;
+      font-size: 36px;
+      line-height: 44px;
+    `,
+    h5: css`
+      font-family: "Inter";
+      font-weight: 700;
+      font-size: 28px;
+      line-height: 36px;
+    `,
+    paragraphSmall: css`
+      font-family: "Inter";
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 30px;
+    `,
+    paragraphXS: css`
+      font-family: "Inter";
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 20px;
+    `,
+    paragraphSmallBold: css`
+      font-family: "Inter";
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 30px;
+    `,
+    paragraphMedium: css`
+      font-family: "Inter";
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 36px;
+    `,
+    paragraphMediumBold: css`
+      font-family: "Inter";
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 36px;
+    `,
+    subtitle: css`
+      font-family: "Inter";
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 30px;
+    `,
+    button: css`
+      font-family: "Inter";
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 23px;
+      ${media.PHONE} {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 30px;
+      }
+    `,
+  }[variant]);
 
-const bodytext = css`
-  font-family: "Inter";
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 20px;
-  letter-spacing: -0.02em;
+export const Typography = styled.p<ITypography>`
+  ${({ variant }) => variantTypography(variant)}
+  color: ${({ color }) => color};
 `;
-const paragraph1 = css`
-  font-family: "Inter";
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 36px;
-`;
-const paragraph2 = css`
-  font-family: "Inter";
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 23px;
-`;
-const paragraph3 = css`
-  font-family: "Inter";
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 20px;
-`;
-
-const button = css`
-  font-family: "Inter";
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 23px;
-  ${media.PHONE} {
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 30px;
-  }
-`;
-
-export const typography = {
-  H1,
-  H2,
-  H3,
-  H5,
-  subtitle,
-  bodytext,
-  paragraph1,
-  paragraph2,
-  paragraph3,
-  button,
-};

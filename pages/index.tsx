@@ -1,42 +1,45 @@
 import type { NextPage } from "next";
 import React from "react";
 import { PricingBlock } from "../components/PricingBlock/PricingBlock";
-import { CustomiseBlock } from "../components/TemplateBlocks/CustomiseBlock";
-import { ExtensionBlock } from "../components/TemplateBlocks/ExtensionBlock";
-import { ManagementBlock } from "../components/TemplateBlocks/ManagementBlock";
-import { MainBlock } from "../components/TemplateBlocks/MainBlock";
 import styled from "@emotion/styled";
-import { EveryWhereBlock } from "../components/EverywhereBlock/EveryWhereBlock";
-import { DataBlock } from "../components/TemplateBlocks/DataBlock";
-import { FavoriteBlock } from "../components/TemplateBlocks/FavoriteBlock";
-import { SponsorsBlock } from "../components/SponsorsBlock/SponsorsBlock";
-import { ClientsBlock } from "../components/TemplateBlocks/ClientsBlock";
-import { TodayBlock } from "../components/TemplateBlocks/TodayBlock";
 import { Footer } from "../components/Footer/Footer";
-import { media } from "../ui/media";
+import { MainSection } from "../components/Sections/MainSection";
+import { ManagementSection } from "../components/Sections/ManagementSection";
+import { ExtensionSection } from "../components/Sections/ExtensionSection";
+import { CustomiseSection } from "../components/Sections/CustomiseSection";
+import { EverywhereSection } from "../components/Sections/EverywhereSection";
+import { DataSection } from "../components/Sections/DataSection";
+import { SponsorsSection } from "../components/Sections/SponsorsSection";
+import { FavoriteSection } from "../components/Sections/FavoriteSection";
+import { ClientsSection } from "../components/Sections/ClientsSection";
+import { TodaySection } from "../components/Sections/TodaySection";
+import { Header } from "../components/Header/Header";
 
 const Home: NextPage = () => {
   return (
-    <Container>
-      <MainBlock />
-      <ManagementBlock />
-      <ExtensionBlock />
-      <CustomiseBlock />
-      <PricingBlock />
-      <EveryWhereBlock />
-      <DataBlock />
-      <SponsorsBlock />
-      <FavoriteBlock />
-      <ClientsBlock />
-      <TodayBlock />
-      <Footer />
-    </Container>
+    <>
+      <Header />
+      <ContainerSC>
+        <MainSection />
+        <ManagementSection />
+        <ExtensionSection />
+        <CustomiseSection />
+        <PricingBlock />
+        <EverywhereSection />
+        <DataSection />
+        <SponsorsSection />
+        <FavoriteSection />
+        <ClientsSection />
+        <TodaySection />
+        <Footer />
+      </ContainerSC>
+    </>
   );
 };
 
 export default Home;
 
-const Container = styled.div`
+export const ContainerSC = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;

@@ -2,12 +2,11 @@ import styled from "@emotion/styled";
 import { Colors } from "../../ui/colors";
 import { media } from "../../ui/media";
 
-const StyledHeader = styled.header`
+export const StyledHeaderSC = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 16px 220px;
-
   width: 100%;
   z-index: 2;
   top: 0;
@@ -15,13 +14,12 @@ const StyledHeader = styled.header`
   position: fixed;
   background-color: ${Colors.BLUE};
 
-  ${media.LAPTOP2} {
+  ${media.DESKTOP} {
     padding: 16px 34px;
   }
 `;
 
-export const LogoContainer = styled.div`
-  max-width: 191px;
+export const LogoContainerSC = styled.a`
+  max-width: 192px;
+  cursor: pointer;
 `;
-
-export { StyledHeader };
