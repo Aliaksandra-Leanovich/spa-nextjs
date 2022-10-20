@@ -50,7 +50,7 @@ const config: ILinkNavigation[] = [
 ];
 
 export const Navigation = () => {
-  const [open, setOpen] = useState<boolean>(false);
+  const [open, setOpen] = useState(false);
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
