@@ -11,13 +11,7 @@ import * as Yup from "yup";
 import { Colors } from "../../ui/colors";
 import { ContainerFormSC, EmailInUseMessageSC, StyledFormSC } from "./styles";
 import { Typography, VariantsTypography } from "../../ui/typography";
-
-interface IFormInput {
-  name?: string;
-  email: string;
-  password: string;
-  errors?: string;
-}
+import { IFormInput } from "./types";
 
 const validationSchema = Yup.object().shape({
   name: Yup.string()
