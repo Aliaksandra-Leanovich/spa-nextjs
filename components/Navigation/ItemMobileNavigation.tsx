@@ -21,9 +21,12 @@ export const ItemMobileNavigation = ({ link }: ILink) => {
 
   return (
     <>
-      <LinkSC onMouseLeave={handleMouseLeave}>
+      <LinkSC
+        onMouseLeave={handleMouseLeave}
+        onMouseEnter={link.subcategories && handleMouseEnter}
+      >
         <Link href={link.href}>
-          <HoverLinkSC onMouseEnter={link.subcategories && handleMouseEnter}>
+          <HoverLinkSC>
             <Typography variant={VariantsTypography.subtitle}>
               {link.title}
             </Typography>
