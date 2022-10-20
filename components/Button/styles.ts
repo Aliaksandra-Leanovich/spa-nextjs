@@ -12,22 +12,20 @@ export const theme = {
 const variantStyles = (variant = ButtonVariants.primary) =>
   ({
     primary: css`
-      background: ${theme.primary};
-      border: none;
       padding: 18px 40px;
       margin: 0 25px 0 50px;
-      border-radius: 8px;
     `,
     secondary: css`
-      background: ${theme.primary};
-      border: none;
-      border-radius: 8px;
       padding: 18px;
     `,
   }[variant]);
 
 export const ButtonSC = styled.button<Pick<IButton, "variant">>`
   ${({ variant }) => variantStyles(variant)}
+
+  background: ${theme.primary};
+  border: none;
+  border-radius: 8px;
 
   transition: background-color 0.5s ease-out;
 
