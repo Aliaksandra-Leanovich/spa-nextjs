@@ -2,12 +2,12 @@ export interface ILinkSubcategories {
   name: string;
   link: string;
 }
-export interface ILinkNavigation {
+export interface ILinkNavigationProps {
   href: string;
   title: string;
   subcategories?: ILinkSubcategories[];
   iconOpen?: JSX.Element;
 }
 export interface ILink {
-  link: ILinkNavigation;
+  link: ILinkNavigationProps;
 }

@@ -16,9 +16,9 @@ import { Button, ButtonVariants } from "../Button/Button";
 import ArrowIcon from "../../public/icons/arrow.png";
 import { ItemNavigation } from "./ItemNavigation";
 import { ItemMobileNavigation } from "./ItemMobileNavigation";
-import { ILinkNavigation } from "./types";
+import { ILinkNavigationProps } from "./types";
 
-const config: ILinkNavigation[] = [
+const config: ILinkNavigationProps[] = [
   {
     href: "#products",
     title: "Products",
