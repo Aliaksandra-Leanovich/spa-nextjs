@@ -8,12 +8,12 @@ import { MainSection } from "../components/Sections/MainSection";
 import { ManagementSection } from "../components/Sections/ManagementSection";
 import { ExtensionSection } from "../components/Sections/ExtensionSection";
 import { CustomiseSection } from "../components/Sections/CustomiseSection";
-import { EverywhereSection } from "../components/Sections/EverywhereSection";
+import { EverywhereSection } from "../components/Sections/YourWork";
 import { YourDataSection } from "../components/Sections/YourDataSection";
 import { SponsorsSection } from "../components/Sections/SponsorsSection";
-import { FavoriteSection } from "../components/Sections/FavoriteSection";
+import { AppsSection } from "../components/Sections/AppsSection";
 import { ClientsSection } from "../components/Sections/ClientsSection";
-import { TodaySection } from "../components/Sections/TodaySection";
+import { FreeTrialSection } from "../components/Sections/FreeTrialSection";
 import { Header } from "../components/Header/Header";
 
 const Home: NextPage = () => {
@@ -37,9 +37,9 @@ const Home: NextPage = () => {
           <EverywhereSection />
           <YourDataSection />
           <SponsorsSection />
-          <FavoriteSection />
+          <AppsSection />
           <ClientsSection />
-          <TodaySection />
+          <FreeTrialSection />
           <Footer />
         </MainSC>
       </>
