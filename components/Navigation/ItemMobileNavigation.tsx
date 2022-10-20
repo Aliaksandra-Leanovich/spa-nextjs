@@ -27,7 +27,7 @@ export const ItemMobileNavigation = ({ link }: ILink) => {
             <Typography variant={VariantsTypography.subtitle}>
               {link.title}
             </Typography>
-            {link.subcategories ? link.iconOpen : null}
+            {link.subcategories && link.iconOpen}
           </HoverLinkSC>
         </Link>
         {open && (
