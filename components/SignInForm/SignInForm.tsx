@@ -11,12 +11,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as Yup from "yup";
 import { Colors } from "../../ui/colors";
 import { Typography, VariantsTypography } from "../../ui/typography";
-
-interface IUserForm {
-  email: string;
-  password: string;
-  errors?: string;
-}
+import { IUserForm } from "./types";
 
 const validationSchema = Yup.object().shape({
   email: Yup.string().required("Email is required").email("Email is invalid"),
