@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React, { useState } from "react";
 import { Typography, VariantsTypography } from "../../ui/typography";
-import { ILinkNavigation } from "./Navigation";
+import { ILinkNavigation, ILinkSubcategories } from "./Navigation";
 import {
   HoverLinkSC,
   LinkSC,
@@ -9,17 +9,11 @@ import {
   SubNavigation,
 } from "./styles";
 
-export interface ILinkSubcategories {
-  name: string;
-  link: string;
+interface ILink {
+  link: ILinkNavigation;
 }
 
-export const ItemNavigation = ({
-  subcategories,
-  title,
-  href,
-  iconOpen,
-}: ILinkNavigation) => {
+export const ItemNavigation = ({ link }: ILink) => {
   const [subnav, setSubnav] = useState(false);
   const [open, setOpen] = useState(false);
 
@@ -34,22 +28,24 @@ export const ItemNavigation = ({
   return (
     <>
       <LinkSC onMouseLeave={handleMouseLeave}>
-        <Link href={href}>
-          <HoverLinkSC onMouseEnter={subcategories && handleMouseEnter}>
+        <Link href={link.href}>
+          <HoverLinkSC onMouseEnter={link.subcategories && handleMouseEnter}>
             <Typography variant={VariantsTypography.subtitle}>
-              {title}
+              {link.title}
             </Typography>
 
-            {subcategories ? iconOpen : null}
+            {link.subcategories ? link.iconOpen : null}
           </HoverLinkSC>
         </Link>
         {subnav && (
           <SubNavigation open={open}>
-            {subcategories?.map((item, index) => (
-              <Link href={item.link} key={index}>
-                <SubcategorydLinkSC>{item.name}</SubcategorydLinkSC>
-              </Link>
-            ))}
+            {link.subcategories?.map(
+              (item: ILinkSubcategories, index: number) => (
+                <Link href={item.link} key={index}>
+                  <SubcategorydLinkSC>{item.name}</SubcategorydLinkSC>
+                </Link>
+              )
+            )}
           </SubNavigation>
         )}
       </LinkSC>

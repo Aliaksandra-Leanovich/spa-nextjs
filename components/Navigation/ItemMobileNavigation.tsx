@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React, { useState } from "react";
 import { Typography, VariantsTypography } from "../../ui/typography";
-import { ILinkNavigation } from "./Navigation";
+import { ILinkNavigation, ILinkSubcategories } from "./Navigation";
 import {
   HoverLinkSC,
   LinkSC,
@@ -9,16 +9,15 @@ import {
   SubNavigationMobile,
 } from "./styles";
 
-export const ItemMobileNavigation = ({
-  subcategories,
-  title,
-  href,
-  iconOpen,
-}: ILinkNavigation) => {
+interface ILink {
+  link: ILinkNavigation;
+}
+
+export const ItemMobileNavigation = ({ link }: ILink) => {
   const [subnav, setSubnav] = useState(false);
   const [open, setOpen] = useState(false);
   const handleMouseEnter = () => {
-    setSubnav(!subnav);
+    setSubnav(true);
     setOpen(true);
   };
   const handleMouseLeave = () => {
@@ -29,21 +28,23 @@ export const ItemMobileNavigation = ({
   return (
     <>
       <LinkSC onMouseLeave={handleMouseLeave}>
-        <Link href={href}>
-          <HoverLinkSC onMouseEnter={subcategories && handleMouseEnter}>
+        <Link href={link.href}>
+          <HoverLinkSC onMouseEnter={link.subcategories && handleMouseEnter}>
             <Typography variant={VariantsTypography.subtitle}>
-              {title}
+              {link.title}
             </Typography>
-            {subcategories ? iconOpen : null}
+            {link.subcategories ? link.iconOpen : null}
           </HoverLinkSC>
         </Link>
         {subnav && (
           <SubNavigationMobile open={open}>
-            {subcategories?.map((item, index) => (
-              <Link href={item.link} key={index}>
-                <SubcategorydLinkSC>{item.name}</SubcategorydLinkSC>
-              </Link>
-            ))}
+            {link.subcategories?.map(
+              (item: ILinkSubcategories, index: number) => (
+                <Link href={item.link} key={index}>
+                  <SubcategorydLinkSC>{item.name}</SubcategorydLinkSC>
+                </Link>
+              )
+            )}
           </SubNavigationMobile>
         )}
       </LinkSC>

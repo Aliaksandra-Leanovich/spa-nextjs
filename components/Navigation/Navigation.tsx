@@ -14,9 +14,13 @@ import { LinkTemplate, LinkVariants } from "../LinkTemplate/LinkTemplate";
 import { Burger } from "../Burger/Burger";
 import { Button, ButtonVariants } from "../Button/Button";
 import ArrowIcon from "../../public/icons/arrow.png";
-import { ILinkSubcategories, ItemNavigation } from "./ItemNavigation";
+import { ItemNavigation } from "./ItemNavigation";
 import { ItemMobileNavigation } from "./ItemMobileNavigation";
 
+export interface ILinkSubcategories {
+  name: string;
+  link: string;
+}
 export interface ILinkNavigation {
   href: string;
   title: string;
@@ -56,7 +60,7 @@ const config: ILinkNavigation[] = [
 ];
 
 export const Navigation = () => {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState<boolean>(false);
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -71,9 +75,9 @@ export const Navigation = () => {
   return (
     <NavigationContainer>
       <StyledNavigation>
-        {config.map((link, index) => (
-          <ItemNavigation {...link} key={index} />
-        ))}
+        {config.map((link, index) => {
+          return <ItemNavigation link={link} key={index} />;
+        })}
         <form onSubmit={handleSubmit}>
           <Button
             type="submit"
@@ -91,9 +95,9 @@ export const Navigation = () => {
       <Burger open={open} setOpen={setOpen} />
       <StyledRightNavigation open={open}>
         <ContainerLinks>
-          {config.map((link, index) => (
-            <ItemMobileNavigation {...link} key={index} />
-          ))}
+          {config.map((link, index) => {
+            return <ItemMobileNavigation link={link} key={index} />;
+          })}
         </ContainerLinks>
         <ContainerButtons>
           <form onSubmit={handleSubmit}>
