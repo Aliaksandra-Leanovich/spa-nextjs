@@ -9,7 +9,7 @@ import { ManagementSection } from "../components/Sections/ManagementSection";
 import { ExtensionSection } from "../components/Sections/ExtensionSection";
 import { CustomiseSection } from "../components/Sections/CustomiseSection";
 import { EverywhereSection } from "../components/Sections/EverywhereSection";
-import { DataSection } from "../components/Sections/DataSection";
+import { YourDataSection } from "../components/Sections/YourDataSection";
 import { SponsorsSection } from "../components/Sections/SponsorsSection";
 import { FavoriteSection } from "../components/Sections/FavoriteSection";
 import { ClientsSection } from "../components/Sections/ClientsSection";
@@ -35,7 +35,7 @@ const Home: NextPage = () => {
           <CustomiseSection />
           <PricingBlock />
           <EverywhereSection />
-          <DataSection />
+          <YourDataSection />
           <SponsorsSection />
           <FavoriteSection />
           <ClientsSection />

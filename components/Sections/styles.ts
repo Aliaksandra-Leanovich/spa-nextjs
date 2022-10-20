@@ -22,10 +22,10 @@ export const ContainerSC = styled.div`
   align-items: center;
 
   ${media.TABLET} {
-    display: flex;
     justify-content: center;
-    flex-direction: column;
     align-items: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
     row-gap: 100px;
     padding: 80px 0 30px;
   }
@@ -111,6 +111,7 @@ export const TextContainerSliderSC = styled.div`
 export const TodayContainerSC = styled.div`
   padding: 140px 32px;
   display: flex;
+  margin: 0 auto;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -152,7 +153,6 @@ export const SponsorsContainerSC = styled.div`
   margin-top: 100px;
   ${media.LAPTOP} {
     flex-direction: column;
-    align-items: center;
     justify-content: center;
   }
 `;

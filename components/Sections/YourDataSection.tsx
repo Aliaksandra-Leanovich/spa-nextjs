@@ -11,7 +11,7 @@ import {
 } from "./styles";
 import DataImg from "/public/icons/data.jpg";
 
-export const DataSection = () => {
+export const YourDataSection = () => {
   return (
     <WhiteContainerSC>
       <ContainerSC>
