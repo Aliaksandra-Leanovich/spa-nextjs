@@ -8,22 +8,22 @@ import {
   AppImageSC,
   AppsContainerSC,
   BlueContainerSC,
-  TextContainerTodaySC,
-  TextContainerTodaySecondSC,
-  TodayContainerSC,
-  TodayTitleSC,
+  FreeTrialContainerSC,
+  FreeTrialTitleSC,
+  TextContainerFreeTrialSC,
+  TextContainerFreeTrialSecondSC,
 } from "./styles";
 import { Typography, VariantsTypography } from "../../ui/typography";
 
-export const TodaySection = () => {
+export const FreeTrialSection = () => {
   return (
     <BlueContainerSC>
-      <TodayContainerSC>
-        <TodayTitleSC>
+      <FreeTrialContainerSC>
+        <FreeTrialTitleSC>
           Try Whitepace <span>today</span>
-        </TodayTitleSC>
+        </FreeTrialTitleSC>
 
-        <TextContainerTodaySC>
+        <TextContainerFreeTrialSC>
           <Typography
             variant={VariantsTypography.paragraphSmall}
             color={Colors.WHITE}
@@ -36,21 +36,21 @@ export const TodaySection = () => {
           >
             Add your whole team as your needs grow.
           </Typography>
-        </TextContainerTodaySC>
+        </TextContainerFreeTrialSC>
 
         <LinkTemplate
           href="/whitepace"
           text="Try Taskey free"
           variant={LinkVariants.linkLarge}
         />
-        <TextContainerTodaySecondSC>
+        <TextContainerFreeTrialSecondSC>
           <Typography
             variant={VariantsTypography.paragraphSmall}
             color={Colors.WHITE}
           >
             On a big team? Contact sales
           </Typography>
-        </TextContainerTodaySecondSC>
+        </TextContainerFreeTrialSecondSC>
 
         <AppsContainerSC>
           <AppImageSC>
@@ -63,7 +63,7 @@ export const TodaySection = () => {
             <Android />
           </AppImageSC>
         </AppsContainerSC>
-      </TodayContainerSC>
+      </FreeTrialContainerSC>
     </BlueContainerSC>
   );
 };

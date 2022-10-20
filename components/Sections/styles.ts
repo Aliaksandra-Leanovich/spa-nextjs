@@ -218,7 +218,7 @@ export const TextContainerFreeTrialSC = styled.div`
 export const TextContainerFreeTrialSecondSC = styled.div`
   margin: 40px 0;
 `;
-export const TodayTitleSC = styled.h2`
+export const FreeTrialTitleSC = styled.h2`
   color: ${Colors.WHITE};
   font-family: "Inter";
   font-weight: 700;

@@ -3,7 +3,7 @@ import { Colors } from "../../ui/colors";
 import { LinkTemplate, LinkVariants } from "../LinkTemplate/LinkTemplate";
 import favoriteBackground from "/public/icons/favoriteBackground.png";
 import {
-  BackgroundImageFavSC,
+  BackgroundImageAppsSC,
   BlueContainerSC,
   ContainerSC,
   DescriptionContainerSC,
@@ -13,10 +13,10 @@ import {
 import ImageApps from "/public/icons/Apps.png";
 import { Typography, VariantsTypography } from "../../ui/typography";
 
-export const FavoriteSection = () => {
+export const AppsSection = () => {
   return (
     <BlueContainerSC>
-      <BackgroundImageFavSC src={favoriteBackground.src} />
+      <BackgroundImageAppsSC src={favoriteBackground.src} />
 
       <ContainerSC>
         <ImageContainerSC src={ImageApps.src} alt={"work together"} />

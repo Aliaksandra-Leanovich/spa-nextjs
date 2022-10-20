@@ -3,21 +3,21 @@ import { LinkTemplate, LinkVariants } from "../LinkTemplate/LinkTemplate";
 import { Colors } from "../../ui/colors";
 import Background from "/public/icons/everywhereBackground.svg";
 import {
-  BackgroundImageContainerEverywhSC,
+  BackgroundImageContainerYourWorkSC,
   BlueContainerSC,
-  ContainerEverywhereSC,
+  ContainerYourWorkSC,
   TextContainerSC,
 } from "./styles";
 import { Typography, VariantsTypography } from "../../ui/typography";
 
-export const EverywhereSection = () => {
+export const YourWorkSection = () => {
   return (
     <BlueContainerSC>
-      <BackgroundImageContainerEverywhSC>
+      <BackgroundImageContainerYourWorkSC>
         <Background />
-      </BackgroundImageContainerEverywhSC>
+      </BackgroundImageContainerYourWorkSC>
 
-      <ContainerEverywhereSC>
+      <ContainerYourWorkSC>
         <Typography variant={VariantsTypography.h2} color={Colors.WHITE}>
           Your work, everywhere you are
         </Typography>
@@ -38,7 +38,7 @@ export const EverywhereSection = () => {
           text="Try Taskey"
           variant={LinkVariants.linkLarge}
         />
-      </ContainerEverywhereSC>
+      </ContainerYourWorkSC>
     </BlueContainerSC>
   );
 };
