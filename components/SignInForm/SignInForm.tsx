@@ -18,9 +18,24 @@ const validationSchema = Yup.object().shape({
   password: Yup.string().required("Password is required"),
 });
 
+const getAuthError = (error: string) => {
+  switch (error) {
+    case "auth/user-not-found":
+      return "No user found with this email.";
+    case "auth/user-disabled":
+      return "User disabled.";
+    case "auth/invalid-email":
+      return " Wrong email/password combination.";
+    case "auth/wrong-password":
+      return "Wrong email/password combination.";
+    default:
+      return "An unexpected error occurred.";
+  }
+};
+
 export const SignInForm = () => {
   const router = useRouter();
-  const [errorAuth, setErroAuth] = useState("");
+  const [error, setError] = useState("");
   const {
     register,
     handleSubmit,
@@ -28,21 +43,6 @@ export const SignInForm = () => {
   } = useForm<IUserForm>({
     resolver: yupResolver(validationSchema),
   });
-
-  const handleAuthErrors = (error: string) => {
-    switch (error) {
-      case "auth/user-not-found":
-        return setErroAuth("No user found with this email.");
-      case "auth/user-disabled":
-        return setErroAuth("User disabled.");
-      case "auth/invalid-email":
-        return setErroAuth(" Wrong email/password combination.");
-      case "auth/wrong-password":
-        return setErroAuth("Wrong email/password combination.");
-      default:
-        return setErroAuth("An unexpected error occurred.");
-    }
-  };
 
   const onSubmit = (data: IUserForm) => {
     const auth = getAuth(app);
@@ -53,8 +53,7 @@ export const SignInForm = () => {
         await router.push("/");
       })
       .catch((error) => {
-        const errorCode = error.code;
-        handleAuthErrors(errorCode);
+        setError(getAuthError(error.code));
       });
   };
 
@@ -64,7 +63,7 @@ export const SignInForm = () => {
         Get started for free. Add your whole team as your needs grow.
       </Typography>
       <StyledFormSC onSubmit={handleSubmit(onSubmit)}>
-        {errorAuth && <NoUserMessageSC>{errorAuth}</NoUserMessageSC>}
+        {error && <NoUserMessageSC>{error}</NoUserMessageSC>}
         <Input
           type="email"
           label="email"

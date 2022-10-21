@@ -25,9 +25,22 @@ const validationSchema = Yup.object().shape({
     .max(40, "Password must not exceed 40 characters"),
 });
 
+const getAuthError = (error: string) => {
+  switch (error) {
+    case "auth/email-already-in-use":
+      return "Email already in use.";
+    case "auth/invalid-email":
+      return "Password provided is not corrected.";
+    case "auth/weak-password":
+      return "The password is too weak.";
+    default:
+      return "An unexpected error occurred.";
+  }
+};
+
 export const SignUpForm = () => {
   const router = useRouter();
-  const [errorAuth, setErroAuth] = useState("");
+  const [error, setError] = useState("");
 
   const {
     register,
@@ -36,19 +49,6 @@ export const SignUpForm = () => {
   } = useForm<IFormInput>({
     resolver: yupResolver(validationSchema),
   });
-
-  const handleAuthErrors = (error: string) => {
-    switch (error) {
-      case "auth/email-already-in-use":
-        return setErroAuth("Email already in use.");
-      case "auth/invalid-email":
-        return setErroAuth("Password provided is not corrected.");
-      case "auth/weak-password":
-        return setErroAuth("The password is too weak.");
-      default:
-        return setErroAuth("An unexpected error occurred.");
-    }
-  };
 
   const onSubmit = (data: IFormInput) => {
     const auth = getAuth(app);
@@ -59,8 +59,7 @@ export const SignUpForm = () => {
         await router.push("/signin");
       })
       .catch((error) => {
-        const errorCode = error.code;
-        handleAuthErrors(errorCode);
+        setError(getAuthError(error.code));
       });
   };
 
@@ -70,7 +69,7 @@ export const SignUpForm = () => {
         Get started for free. Add your whole team as your needs grow.{" "}
       </Typography>
       <StyledFormSC onSubmit={handleSubmit(onSubmit)}>
-        {errorAuth && <EmailInUseMessageSC>{errorAuth}</EmailInUseMessageSC>}
+        {error && <EmailInUseMessageSC>{error}</EmailInUseMessageSC>}
         <Input
           type="text"
           label="name"
