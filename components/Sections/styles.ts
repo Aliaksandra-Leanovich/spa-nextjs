@@ -241,3 +241,8 @@ export const FreeTrialTitleSC = styled.h2`
     }
   }
 `;
+export const WrapperSC = styled.div`
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
+`;
