@@ -11,6 +11,7 @@ import {
   TextContainerSC,
   WhiteContainerSC,
   WrapperSC,
+  ImageSC,
 } from "./styles";
 import { Colors } from "../../ui/colors";
 import { Typography, VariantsTypography } from "../../ui/typography";
@@ -45,11 +46,15 @@ export const ManagementSection = () => {
               variant={LinkVariants.linkLarge}
             />
           </DescriptionContainerSC>
-          <ImageContainerSC src={ImageWorkManag.src} alt={"work together"} />
+          <ImageContainerSC>
+            <ImageSC src={ImageWorkManag.src} alt={"work together"} />
+          </ImageContainerSC>
         </ContainerSC>
 
         <ContainerSC>
-          <ImageContainerSC src={ImageWork.src} alt={"work together"} />
+          <ImageContainerSC>
+            <ImageSC src={ImageWork.src} alt={"work together"} />
+          </ImageContainerSC>
 
           <DescriptionContainerSC>
             <Typography variant={VariantsTypography.h2} color={Colors.BLACK}>

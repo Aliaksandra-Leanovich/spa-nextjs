@@ -40,8 +40,20 @@ export const DescriptionContainerSC = styled.div`
   }
 `;
 
-export const ImageContainerSC = styled.img`
+export const ImageContainerSC = styled.div`
+  position: relative;
+  background-color: white;
+  padding-top: 64%;
+`;
+export const ImageSC = styled.img`
   width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  object-fit: contain;
   max-width: 824px;
 
   ${media.DESKTOP} {

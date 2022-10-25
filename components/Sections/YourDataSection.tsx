@@ -6,6 +6,7 @@ import {
   ContainerSC,
   DescriptionContainerSC,
   ImageContainerSC,
+  ImageSC,
   TextContainerSC,
   WhiteContainerSC,
   WrapperSC,
@@ -39,7 +40,9 @@ export const YourDataSection = () => {
               variant={LinkVariants.linkLarge}
             />
           </DescriptionContainerSC>
-          <ImageContainerSC src={DataImg.src} alt={"work together"} />
+          <ImageContainerSC>
+            <ImageSC src={DataImg.src} alt={"work together"} />
+          </ImageContainerSC>
         </ContainerSC>
       </WrapperSC>
     </WhiteContainerSC>

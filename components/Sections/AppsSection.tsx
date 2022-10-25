@@ -8,6 +8,7 @@ import {
   ContainerSC,
   DescriptionContainerSC,
   ImageContainerSC,
+  ImageSC,
   TextContainerSC,
   WrapperSC,
 } from "./styles";
@@ -20,7 +21,9 @@ export const AppsSection = () => {
       <BackgroundImageAppsSC src={favoriteBackground.src} />
       <WrapperSC>
         <ContainerSC>
-          <ImageContainerSC src={ImageApps.src} alt={"work together"} />
+          <ImageContainerSC>
+            <ImageSC src={ImageApps.src} alt={"work together"} />
+          </ImageContainerSC>
           <DescriptionContainerSC>
             <Typography variant={VariantsTypography.h2} color={Colors.WHITE}>
               Work with Your Favorite Apps Using whitepace

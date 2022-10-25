@@ -7,6 +7,7 @@ import {
   ContainerSC,
   DescriptionContainerSC,
   ImageContainerSC,
+  ImageSC,
   MainBackgrounSC,
   MainContainerSC,
   TextContainerSC,
@@ -40,7 +41,9 @@ export const MainSection = () => {
               variant={LinkVariants.linkSmall}
             />
           </DescriptionContainerSC>
-          <ImageContainerSC src={ImageWork.src} alt={"work together"} />
+          <ImageContainerSC>
+            <ImageSC src={ImageWork.src} alt={"work together"} />
+          </ImageContainerSC>
         </ContainerSC>
       </WrapperSC>
     </MainContainerSC>

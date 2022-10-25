@@ -8,6 +8,7 @@ import {
   TextContainerSC,
   WhiteContainerSC,
   WrapperSC,
+  ImageSC,
 } from "./styles";
 import { Colors } from "../../ui/colors";
 import { Typography, VariantsTypography } from "../../ui/typography";
@@ -17,7 +18,9 @@ export const CustomiseSection = () => {
     <WhiteContainerSC>
       <WrapperSC>
         <ContainerSC id="resources">
-          <ImageContainerSC src={ImageWork.src} alt={"work together"} />
+          <ImageContainerSC>
+            <ImageSC src={ImageWork.src} alt={"work together"} />
+          </ImageContainerSC>
           <DescriptionContainerSC>
             <Typography variant={VariantsTypography.h2} color={Colors.BLACK}>
               Customise it to your needs

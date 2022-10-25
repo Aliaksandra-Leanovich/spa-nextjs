@@ -7,6 +7,7 @@ import {
   ContainerSC,
   DescriptionContainerSC,
   ImageContainerSC,
+  ImageSC,
   TextContainerSC,
   WrapperSC,
 } from "./styles";
@@ -37,7 +38,9 @@ export const ExtensionSection = () => {
               variant={LinkVariants.linkLarge}
             />
           </DescriptionContainerSC>
-          <ImageContainerSC src={ImageWork.src} alt={"work together"} />
+          <ImageContainerSC>
+            <ImageSC src={ImageWork.src} alt={"work together"} />
+          </ImageContainerSC>
         </ContainerSC>
       </WrapperSC>
     </BlueContainerSC>
