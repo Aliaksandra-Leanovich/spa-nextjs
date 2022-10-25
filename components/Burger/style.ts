@@ -1,9 +1,9 @@
 import styled from "@emotion/styled";
 import { Colors } from "../../ui/colors";
 import { media } from "../../ui/media";
-import { IProps } from "./types";
+import { IStylesProps } from "./types";
 
-export const StyledBurger = styled.button<IProps>`
+export const StyledBurger = styled.button<IStylesProps>`
   display: none;
   ${media.LAPTOP} {
     position: absolute;

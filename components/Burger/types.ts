@@ -1,8 +1,8 @@
-export interface IOpen {
+export interface IBurgerProps {
   isOpen: boolean;
   setOpen: (value: boolean) => void;
 }
 
-export interface IProps {
+export interface IStylesProps {
   isOpen: boolean;
 }

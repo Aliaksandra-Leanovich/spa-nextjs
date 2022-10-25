@@ -1,10 +1,10 @@
 import React from "react";
 import { StyledBurger } from "./style";
-import { IOpen } from "./types";
+import { IBurgerProps } from "./types";
 
-export const Burger = ({ isOpen, setOpen }: IOpen) => {
+export const Burger = ({ isOpen, setOpen }: IBurgerProps) => {
   return (
-    <StyledBurger isOpen={isOpen} onClick={() => setOpen(!open)}>
+    <StyledBurger isOpen={isOpen} onClick={() => setOpen(!isOpen)}>
       <div />
       <div />
       <div />
