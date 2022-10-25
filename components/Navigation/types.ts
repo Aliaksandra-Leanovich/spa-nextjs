@@ -11,3 +11,7 @@ export interface ILinkNavigationProps {
 export interface ILink {
   link: ILinkNavigationProps;
 }
+
+export interface IStylesProps {
+  isOpen: boolean;
+}

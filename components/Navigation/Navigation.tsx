@@ -60,7 +60,9 @@ export const Navigation = () => {
         localStorage.removeItem("authUser");
         await router.push("/signin");
       })
-      .catch((error) => {});
+      .catch((error) => {
+        console.log(error);
+      });
   };
   return (
     <NavigationContainer>

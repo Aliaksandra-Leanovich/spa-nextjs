@@ -1,10 +1,7 @@
 import styled from "@emotion/styled";
 import { Colors } from "../../ui/colors";
 import { media } from "../../ui/media";
-
-interface IProps {
-  isOpen: boolean;
-}
+import { IStylesProps } from "./types";
 
 export const StyledNavigation = styled.nav`
   display: flex;
@@ -16,7 +13,7 @@ export const StyledNavigation = styled.nav`
   }
 `;
 
-export const StyledRightNavigation = styled.div<IProps>`
+export const StyledRightNavigation = styled.div<IStylesProps>`
   background: ${Colors.BLACK};
 
   height: 100vh;
@@ -88,7 +85,7 @@ export const Arrow = styled.img`
   margin-left: 10px;
 `;
 
-export const SubNavigation = styled.div<IProps>`
+export const SubNavigation = styled.div<IStylesProps>`
   position: absolute;
   background-color: ${Colors.LIGHTBLUE};
 
@@ -110,7 +107,7 @@ export const SubcategorydLinkSC = styled.a`
   }
 `;
 
-export const SubNavigationMobile = styled.div<IProps>`
+export const SubNavigationMobile = styled.div<IStylesProps>`
   padding: 10px 20px 0;
   flex-direction: column;
   display: ${({ isOpen }) => (isOpen ? "block" : "none")};
