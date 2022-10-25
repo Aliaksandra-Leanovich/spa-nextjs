@@ -10,13 +10,14 @@ import {
 import { app } from "../../utils/firebase";
 import { getAuth, signOut } from "firebase/auth";
 import router from "next/router";
-import { LinkTemplate, LinkVariants } from "../LinkTemplate/LinkTemplate";
 import { Burger } from "../Burger/Burger";
 import { Button, ButtonVariants } from "../Button/Button";
 import ArrowIcon from "../../public/icons/arrow.png";
 import { ItemNavigation } from "./ItemNavigation";
 import { ItemMobileNavigation } from "./ItemMobileNavigation";
 import { ILinkNavigationProps } from "./types";
+import { Link } from "../Link/Link";
+import { LinkVariants } from "../../enums/LinkVariants";
 
 const config: ILinkNavigationProps[] = [
   {
@@ -77,7 +78,7 @@ export const Navigation = () => {
             variant={ButtonVariants.primary}
           />
         </form>
-        <LinkTemplate
+        <Link
           href="/whitepacefree"
           text="Try Whitepace free"
           variant={LinkVariants.linkMedium}
@@ -99,7 +100,7 @@ export const Navigation = () => {
               text="Logout"
             />
           </form>
-          <LinkTemplate
+          <Link
             href="/whitepacefree"
             text="Try Whitepace free"
             variant={LinkVariants.linkMedium}
