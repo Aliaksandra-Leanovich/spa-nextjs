@@ -1,4 +1,4 @@
-import { LinkVariants } from "./LinkTemplate";
+import { LinkVariants } from "../../enums/LinkVariants";
 
 export interface ILink {
   href: string;

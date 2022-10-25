@@ -24,15 +24,16 @@ import Linkedin from "/public/icons/Linkedin.svg";
 import Facebook from "/public/icons/Facebook.svg";
 import Twitter from "/public/icons/Twitter.svg";
 import { Colors } from "../../ui/colors";
-
 import { Typography, VariantsTypography } from "../../ui/typography";
 import { default as NextLink } from "next/link";
 import { Link } from "../Link/Link";
 import { LinkVariants } from "../../enums/LinkVariants";
+import { IFooterData } from "./types";
 
-const config = [
+const config: IFooterData[] = [
   {
     category: "Product",
+    link: "#",
     subcategories: [
       { name: "Overview", link: "#" },
       { name: "Pricing", link: "#" },
@@ -41,6 +42,7 @@ const config = [
   },
   {
     category: "Resources",
+    link: "#",
     subcategories: [
       { name: "Blog", link: "#" },
       { name: "Guides tutorials", link: "#" },
@@ -49,6 +51,7 @@ const config = [
   },
   {
     category: "Company",
+    link: "#",
     subcategories: [
       { name: "About us", link: "#" },
       { name: "Careers", link: "#" },
@@ -75,7 +78,7 @@ export const Footer = () => (
       </BlockWithLinksSC>
       {config.map((category, index) => (
         <BlockWithLinksSC key={index}>
-          <NextLink href="#" key={index}>
+          <NextLink href={category.link} key={index}>
             <CategoryLinkSC>{category.category}</CategoryLinkSC>
           </NextLink>
           {category.subcategories.map((subcategory, index) => (
