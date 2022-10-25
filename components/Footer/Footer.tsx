@@ -16,6 +16,7 @@ import {
   TextContainerButtonSC,
   TextContainerFooterSC,
   WorldImageSC,
+  WrapperSC,
 } from "./style";
 import Logo from "/public/icons/logo.svg";
 import Arrow from "/public/icons/arrow.png";
@@ -62,113 +63,115 @@ const config: IFooterData[] = [
 
 export const Footer = () => (
   <StyledFooterSC>
-    <ContainerFooterSC>
-      <BlockWithLinksSC>
-        <LogoContainerSC>
-          <Logo />
-        </LogoContainerSC>
+    <WrapperSC>
+      <ContainerFooterSC>
+        <BlockWithLinksSC>
+          <LogoContainerSC>
+            <Logo />
+          </LogoContainerSC>
 
-        <Typography
-          variant={VariantsTypography.paragraphSmall}
-          color={Colors.WHITE}
-        >
-          whitepace was created for the new ways we live and work. We make a
-          better workspace around the world
-        </Typography>
-      </BlockWithLinksSC>
-      {config.map((category, index) => (
-        <BlockWithLinksSC key={index}>
-          <NextLink href={category.link} key={index}>
-            <CategoryLinkSC>{category.category}</CategoryLinkSC>
-          </NextLink>
-          {category.subcategories.map((subcategory, index) => (
-            <NextLink href={subcategory.link} key={index}>
-              <SubcategorydLinkSC>{subcategory.name}</SubcategorydLinkSC>
-            </NextLink>
-          ))}
+          <Typography
+            variant={VariantsTypography.paragraphSmall}
+            color={Colors.WHITE}
+          >
+            whitepace was created for the new ways we live and work. We make a
+            better workspace around the world
+          </Typography>
         </BlockWithLinksSC>
-      ))}
-      <BlockWithButtonSC>
-        <Typography color={Colors.WHITE} variant={VariantsTypography.h5}>
-          Try It Today
-        </Typography>
-        <TextContainerButtonSC>
-          <Typography
-            color={Colors.WHITE}
-            variant={VariantsTypography.paragraphXS}
-          >
-            Get started for free. Add your whole team as your needs grow.
+        {config.map((category, index) => (
+          <BlockWithLinksSC key={index}>
+            <NextLink href={category.link} key={index}>
+              <CategoryLinkSC>{category.category}</CategoryLinkSC>
+            </NextLink>
+            {category.subcategories.map((subcategory, index) => (
+              <NextLink href={subcategory.link} key={index}>
+                <SubcategorydLinkSC>{subcategory.name}</SubcategorydLinkSC>
+              </NextLink>
+            ))}
+          </BlockWithLinksSC>
+        ))}
+        <BlockWithButtonSC>
+          <Typography color={Colors.WHITE} variant={VariantsTypography.h5}>
+            Try It Today
           </Typography>
-        </TextContainerButtonSC>
-        <Link
-          href="/whitepace"
-          text="Start today"
-          variant={LinkVariants.linkLarge}
-        />
-      </BlockWithButtonSC>
-    </ContainerFooterSC>
-    <BottomFooterContainerSC>
-      <BottomFooterDecriptionSC>
-        <EnglishContainerSC>
-          <WorldImageSC>
-            <World />
-          </WorldImageSC>
-          <Typography
-            color={Colors.WHITE}
-            variant={VariantsTypography.paragraphXS}
-          >
-            English
-          </Typography>
-          <ArrowImageSC>
-            <img src={Arrow.src} alt="" />
-          </ArrowImageSC>
-        </EnglishContainerSC>
-        <TextContainerFooterSC>
-          <Typography
-            color={Colors.WHITE}
-            variant={VariantsTypography.paragraphXS}
-          >
-            Tearms &amp; privacy
-          </Typography>
-        </TextContainerFooterSC>
+          <TextContainerButtonSC>
+            <Typography
+              color={Colors.WHITE}
+              variant={VariantsTypography.paragraphXS}
+            >
+              Get started for free. Add your whole team as your needs grow.
+            </Typography>
+          </TextContainerButtonSC>
+          <Link
+            href="/whitepace"
+            text="Start today"
+            variant={LinkVariants.linkLarge}
+          />
+        </BlockWithButtonSC>
+      </ContainerFooterSC>
+      <BottomFooterContainerSC>
+        <BottomFooterDecriptionSC>
+          <EnglishContainerSC>
+            <WorldImageSC>
+              <World />
+            </WorldImageSC>
+            <Typography
+              color={Colors.WHITE}
+              variant={VariantsTypography.paragraphXS}
+            >
+              English
+            </Typography>
+            <ArrowImageSC>
+              <img src={Arrow.src} alt="" />
+            </ArrowImageSC>
+          </EnglishContainerSC>
+          <TextContainerFooterSC>
+            <Typography
+              color={Colors.WHITE}
+              variant={VariantsTypography.paragraphXS}
+            >
+              Tearms &amp; privacy
+            </Typography>
+          </TextContainerFooterSC>
 
-        <TextContainerFooterSC>
+          <TextContainerFooterSC>
+            <Typography
+              color={Colors.WHITE}
+              variant={VariantsTypography.paragraphXS}
+            >
+              Security
+            </Typography>
+          </TextContainerFooterSC>
+
+          <TextContainerFooterSC>
+            <Typography
+              color={Colors.WHITE}
+              variant={VariantsTypography.paragraphXS}
+            >
+              Status
+            </Typography>
+          </TextContainerFooterSC>
+
           <Typography
             color={Colors.WHITE}
             variant={VariantsTypography.paragraphXS}
           >
-            Security
+            ©2021 Whitepace LLC.
           </Typography>
-        </TextContainerFooterSC>
+        </BottomFooterDecriptionSC>
+        <SocialMediaContainerSC>
+          <SocialMediaImageSC>
+            <Facebook />
+          </SocialMediaImageSC>
+          <SocialMediaImageSC>
+            <Twitter />
+          </SocialMediaImageSC>
 
-        <TextContainerFooterSC>
-          <Typography
-            color={Colors.WHITE}
-            variant={VariantsTypography.paragraphXS}
-          >
-            Status
-          </Typography>
-        </TextContainerFooterSC>
-
-        <Typography
-          color={Colors.WHITE}
-          variant={VariantsTypography.paragraphXS}
-        >
-          ©2021 Whitepace LLC.
-        </Typography>
-      </BottomFooterDecriptionSC>
-      <SocialMediaContainerSC>
-        <SocialMediaImageSC>
-          <Facebook />
-        </SocialMediaImageSC>
-        <SocialMediaImageSC>
-          <Twitter />
-        </SocialMediaImageSC>
-
-        <SocialMediaImageSC>
-          <Linkedin />
-        </SocialMediaImageSC>
-      </SocialMediaContainerSC>
-    </BottomFooterContainerSC>
+          <SocialMediaImageSC>
+            <Linkedin />
+          </SocialMediaImageSC>
+        </SocialMediaContainerSC>
+      </BottomFooterContainerSC>
+    </WrapperSC>
   </StyledFooterSC>
 );

@@ -7,7 +7,12 @@ export const StyledFooterSC = styled.footer`
   width: 100%;
 
   background-color: ${Colors.BLUE};
+`;
 
+export const WrapperSC = styled.div`
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
   padding: 140px 220px 34px;
   ${media.DESKTOP} {
     padding: 140px 34px 34px;
