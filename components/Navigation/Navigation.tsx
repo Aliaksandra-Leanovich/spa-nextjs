@@ -67,9 +67,9 @@ export const Navigation = () => {
   return (
     <NavigationContainer>
       <StyledNavigation>
-        {config.map((link, index) => {
-          return <ItemNavigation link={link} key={index} />;
-        })}
+        {config.map((link, index) => (
+          <ItemNavigation link={link} key={index} />
+        ))}
         <form onSubmit={handleSubmit}>
           <Button
             type="submit"
