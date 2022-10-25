@@ -87,9 +87,9 @@ export const Navigation = () => {
       <Burger isOpen={isOpen} setOpen={setOpen} />
       <StyledRightNavigation isOpen={isOpen}>
         <ContainerLinks>
-          {config.map((link, index) => {
-            return <ItemMobileNavigation link={link} key={index} />;
-          })}
+          {config.map((link, index) => (
+            <ItemMobileNavigation link={link} key={index} />
+          ))}
         </ContainerLinks>
         <ContainerButtons>
           <form onSubmit={handleSubmit}>
