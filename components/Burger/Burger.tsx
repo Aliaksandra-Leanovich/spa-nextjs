@@ -3,12 +3,12 @@ import { StyledBurger } from "./style";
 
 interface IOpen {
   open: boolean;
-  setOpen: (value: boolean) => void;
+  isOpen: (value: boolean) => void;
 }
 
-export const Burger = ({ open, setOpen }: IOpen) => {
+export const Burger = ({ open, isOpen }: IOpen) => {
   return (
-    <StyledBurger open={open} onClick={() => setOpen(!open)}>
+    <StyledBurger open={open} onClick={() => isOpen(!open)}>
       <div />
       <div />
       <div />
