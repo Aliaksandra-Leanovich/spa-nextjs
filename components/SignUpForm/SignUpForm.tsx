@@ -87,11 +87,9 @@ export const SignUpForm = () => {
           register={register}
           placeholder="Enter your password"
         />
-        <Button
-          type="submit"
-          text="Sign Up"
-          variant={ButtonVariants.secondary}
-        />
+        <Button type="submit" variant={ButtonVariants.secondary}>
+          Sign Up
+        </Button>
       </StyledFormSC>
       <LinkTemplate
         href="/signin"

@@ -83,11 +83,9 @@ export const Navigation = () => {
         ))}
         <ButtonWrapperSC>
           <form onSubmit={handleSubmit}>
-            <Button
-              variant={ButtonVariants.primary}
-              type="submit"
-              text="Logout"
-            />
+            <Button variant={ButtonVariants.primary} type="submit">
+              Log out
+            </Button>
           </form>
         </ButtonWrapperSC>
         <LinkTemplate
@@ -107,11 +105,9 @@ export const Navigation = () => {
         <ContainerButtons>
           <ButtonWrapperSC>
             <form onSubmit={handleSubmit}>
-              <Button
-                variant={ButtonVariants.primary}
-                type="submit"
-                text="Logout"
-              />
+              <Button variant={ButtonVariants.primary} type="submit">
+                Log out
+              </Button>
             </form>
           </ButtonWrapperSC>
 
