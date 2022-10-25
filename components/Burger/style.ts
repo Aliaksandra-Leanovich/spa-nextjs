@@ -1,10 +1,8 @@
 import styled from "@emotion/styled";
 import { Colors } from "../../ui/colors";
 import { media } from "../../ui/media";
+import { IProps } from "./types";
 
-interface IProps {
-  isOpen: boolean;
-}
 export const StyledBurger = styled.button<IProps>`
   display: none;
   ${media.LAPTOP} {
