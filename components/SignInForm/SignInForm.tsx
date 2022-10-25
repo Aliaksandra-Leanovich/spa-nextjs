@@ -6,12 +6,13 @@ import { useRouter } from "next/router";
 import { ContainerFormSC, NoUserMessageSC, StyledFormSC } from "./styles";
 import { Input } from "../Input/Input";
 import { Button, ButtonVariants } from "../Button/Button";
-import { LinkTemplate, LinkVariants } from "../LinkTemplate/LinkTemplate";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as Yup from "yup";
 import { Colors } from "../../ui/colors";
 import { Typography, VariantsTypography } from "../../ui/typography";
 import { IUserForm } from "./types";
+import { LinkVariants } from "../../enums/LinkVariants";
+import { Link } from "../Link/Link";
 
 const validationSchema = Yup.object().shape({
   email: Yup.string().required("Email is required").email("Email is invalid"),
@@ -53,7 +54,8 @@ export const SignInForm = () => {
         await router.push("/");
       })
       .catch((error) => {
-        setError(getAuthError(error.code));
+        const errorCode = error.code;
+        setError(getAuthError(errorCode));
       });
   };
 
@@ -84,7 +86,7 @@ export const SignInForm = () => {
           variant={ButtonVariants.secondary}
         />
       </StyledFormSC>
-      <LinkTemplate
+      <Link
         href="/signup"
         text="I dont have an account"
         variant={LinkVariants.linkSmall}

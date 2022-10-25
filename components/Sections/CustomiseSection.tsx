@@ -1,5 +1,4 @@
 import React from "react";
-import { LinkTemplate, LinkVariants } from "../LinkTemplate/LinkTemplate";
 import ImageWork from "/public/icons/team-work.webp";
 import {
   ContainerSC,
@@ -10,6 +9,8 @@ import {
 } from "./styles";
 import { Colors } from "../../ui/colors";
 import { Typography, VariantsTypography } from "../../ui/typography";
+import { LinkVariants } from "../../enums/LinkVariants";
+import { Link } from "../Link/Link";
 
 export const CustomiseSection = () => {
   return (
@@ -31,7 +32,7 @@ export const CustomiseSection = () => {
             </Typography>
           </TextContainerSC>
 
-          <LinkTemplate
+          <Link
             href="/whitepacefree"
             text="Lets Go"
             variant={LinkVariants.linkLarge}

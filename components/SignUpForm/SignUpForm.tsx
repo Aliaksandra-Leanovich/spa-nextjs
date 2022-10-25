@@ -5,13 +5,14 @@ import { app } from "../../utils/firebase";
 import { useRouter } from "next/router";
 import { Input } from "../Input/Input";
 import { Button, ButtonVariants } from "../Button/Button";
-import { LinkTemplate, LinkVariants } from "../LinkTemplate/LinkTemplate";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as Yup from "yup";
 import { Colors } from "../../ui/colors";
 import { ContainerFormSC, EmailInUseMessageSC, StyledFormSC } from "./styles";
-import { Typography, VariantsTypography } from "../../ui/typography";
 import { IFormInput } from "./types";
+import { Typography, VariantsTypography } from "../../ui/typography";
+import { LinkVariants } from "../../enums/LinkVariants";
+import { Link } from "../Link/Link";
 
 const validationSchema = Yup.object().shape({
   name: Yup.string()
@@ -97,7 +98,7 @@ export const SignUpForm = () => {
           variant={ButtonVariants.secondary}
         />
       </StyledFormSC>
-      <LinkTemplate
+      <Link
         href="/signin"
         text="I already have an account."
         variant={LinkVariants.linkSmall}

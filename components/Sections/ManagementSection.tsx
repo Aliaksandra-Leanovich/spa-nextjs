@@ -1,5 +1,4 @@
 import React from "react";
-import { LinkTemplate, LinkVariants } from "../LinkTemplate/LinkTemplate";
 import ImageWork from "/public/icons/worktogether.jpg";
 import ImageWorkManag from "/public/icons/team-work3.png";
 import Background from "/public/icons/managmentbackground.svg";
@@ -13,6 +12,8 @@ import {
 } from "./styles";
 import { Colors } from "../../ui/colors";
 import { Typography, VariantsTypography } from "../../ui/typography";
+import { LinkVariants } from "../../enums/LinkVariants";
+import { Link } from "../Link/Link";
 
 export const ManagementSection = () => {
   return (
@@ -37,7 +38,7 @@ export const ManagementSection = () => {
             </Typography>
           </TextContainerSC>
 
-          <LinkTemplate
+          <Link
             href="/whitepacefree"
             text="Get Started"
             variant={LinkVariants.linkLarge}
@@ -64,7 +65,7 @@ export const ManagementSection = () => {
             </Typography>
           </TextContainerSC>
 
-          <LinkTemplate
+          <Link
             href="/whitepacefree"
             text="Try it now"
             variant={LinkVariants.linkLarge}
