@@ -22,7 +22,7 @@ export const ItemNavigation = ({ link }: ILink) => {
   return (
     <>
       <LinkSC
-        onMouseLeave={handleMouseLeave}
+        onMouseLeave={link.subcategories && handleMouseLeave}
         onMouseEnter={link.subcategories && handleMouseEnter}
       >
         <Link href={link.href}>
