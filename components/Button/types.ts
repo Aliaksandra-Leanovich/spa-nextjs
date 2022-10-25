@@ -1,9 +1,5 @@
 import { ButtonHTMLAttributes } from "react";
-
-export enum ButtonVariants {
-  primary = "primary",
-  secondary = "secondary",
-}
+import { ButtonVariants } from "../../enums/ButtonVariants";
 
 export interface IButton extends ButtonHTMLAttributes<HTMLButtonElement> {
   text: string;
