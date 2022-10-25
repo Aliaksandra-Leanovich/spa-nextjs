@@ -1,6 +1,5 @@
 import React from "react";
 import { Colors } from "../../ui/colors";
-import { LinkTemplate, LinkVariants } from "../LinkTemplate/LinkTemplate";
 import favoriteBackground from "/public/icons/favoriteBackground.png";
 import {
   BackgroundImageAppsSC,
@@ -12,6 +11,8 @@ import {
 } from "./styles";
 import ImageApps from "/public/icons/Apps.png";
 import { Typography, VariantsTypography } from "../../ui/typography";
+import { LinkVariants } from "../../enums/LinkVariants";
+import { Link } from "../Link/Link";
 
 export const AppsSection = () => {
   return (
@@ -35,7 +36,7 @@ export const AppsSection = () => {
             </Typography>
           </TextContainerSC>
 
-          <LinkTemplate
+          <Link
             href="/whitepacefree"
             text="Read more"
             variant={LinkVariants.linkLarge}

@@ -38,7 +38,6 @@ export const SliderPricing = ({ data }: IData) => {
           clickable: true,
         }}
         modules={[Pagination]}
-        className="mySwiper"
       >
         {data.map((tab, index) => (
           <SwiperSlide key={index}>

@@ -35,6 +35,7 @@ export const QuotesImageSC = styled.div`
 `;
 
 export const ReviewSC = styled.div`
+  max-width: 424px;
   padding: 60px 40px;
   background-color: ${Colors.LIGHTBLUE};
   border-radius: 10px;
@@ -90,6 +91,10 @@ export const ContainerMobileSC = styled.div`
     display: flex;
   }
 `;
+export const ContainerMobileReviewSC = styled.div`
+  margin-bottom: 60px;
+`;
+
 export const SwiperCustomSC = styled(Swiper)`
   .swiper-pagination-bullet {
     background-color: ${Colors.LIGHTBLUE};
@@ -103,5 +108,10 @@ export const SwiperCustomSC = styled(Swiper)`
     &-active {
       background-color: ${Colors.BLUE};
     }
+  }
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 `;

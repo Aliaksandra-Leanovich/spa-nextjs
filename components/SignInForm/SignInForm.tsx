@@ -6,26 +6,37 @@ import { useRouter } from "next/router";
 import { ContainerFormSC, NoUserMessageSC, StyledFormSC } from "./styles";
 import { Input } from "../Input/Input";
 import { Button, ButtonVariants } from "../Button/Button";
-import { LinkTemplate, LinkVariants } from "../LinkTemplate/LinkTemplate";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as Yup from "yup";
 import { Colors } from "../../ui/colors";
 import { Typography, VariantsTypography } from "../../ui/typography";
-
-interface IUserForm {
-  email: string;
-  password: string;
-  errors?: string;
-}
+import { IUserForm } from "./types";
+import { LinkVariants } from "../../enums/LinkVariants";
+import { Link } from "../Link/Link";
 
 const validationSchema = Yup.object().shape({
   email: Yup.string().required("Email is required").email("Email is invalid"),
   password: Yup.string().required("Password is required"),
 });
 
-export const SignInForm = () => {
-  const [noUser, setNoUser] = useState();
+const getAuthError = (error: string) => {
+  switch (error) {
+    case "auth/user-not-found":
+      return "No user found with this email.";
+    case "auth/user-disabled":
+      return "User disabled.";
+    case "auth/invalid-email":
+      return " Wrong email/password combination.";
+    case "auth/wrong-password":
+      return "Wrong email/password combination.";
+    default:
+      return "An unexpected error occurred.";
+  }
+};
 
+export const SignInForm = () => {
+  const router = useRouter();
+  const [error, setError] = useState("");
   const {
     register,
     handleSubmit,
@@ -34,19 +45,17 @@ export const SignInForm = () => {
     resolver: yupResolver(validationSchema),
   });
 
-  const router = useRouter();
-
   const onSubmit = (data: IUserForm) => {
     const auth = getAuth(app);
     signInWithEmailAndPassword(auth, data.email, data.password)
-      .then(async (userCredential: any) => {
-        const user = userCredential.user.accessToken;
-        localStorage.setItem("authUser", JSON.stringify(user));
+      .then(async (userCredential) => {
+        const token = await userCredential.user.getIdToken();
+        localStorage.setItem("authUser", token);
         await router.push("/");
       })
       .catch((error) => {
-        const errorMessage = error.message;
-        setNoUser(errorMessage);
+        const errorCode = error.code;
+        setError(getAuthError(errorCode));
       });
   };
 
@@ -56,7 +65,7 @@ export const SignInForm = () => {
         Get started for free. Add your whole team as your needs grow.
       </Typography>
       <StyledFormSC onSubmit={handleSubmit(onSubmit)}>
-        {noUser && <NoUserMessageSC>{noUser}</NoUserMessageSC>}
+        {error && <NoUserMessageSC>{error}</NoUserMessageSC>}
         <Input
           type="email"
           label="email"
@@ -77,7 +86,7 @@ export const SignInForm = () => {
           variant={ButtonVariants.secondary}
         />
       </StyledFormSC>
-      <LinkTemplate
+      <Link
         href="/signup"
         text="I dont have an account"
         variant={LinkVariants.linkSmall}

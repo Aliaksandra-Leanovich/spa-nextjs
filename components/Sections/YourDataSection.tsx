@@ -1,7 +1,8 @@
 import React from "react";
 import { Colors } from "../../ui/colors";
 import { Typography, VariantsTypography } from "../../ui/typography";
-import { LinkTemplate, LinkVariants } from "../LinkTemplate/LinkTemplate";
+import { LinkVariants } from "../../enums/LinkVariants";
+import { Link } from "../Link/Link";
 import {
   ContainerSC,
   DescriptionContainerSC,
@@ -31,7 +32,7 @@ export const YourDataSection = () => {
             </Typography>
           </TextContainerSC>
 
-          <LinkTemplate
+          <Link
             href="/whitepacefree"
             text="Read more"
             variant={LinkVariants.linkLarge}
