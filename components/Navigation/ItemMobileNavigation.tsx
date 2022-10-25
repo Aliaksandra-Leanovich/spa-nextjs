@@ -7,7 +7,7 @@ import {
   SubcategorydLinkSC,
   SubNavigationMobile,
 } from "./styles";
-import { ILink, ILinkSubcategories } from "./types";
+import { ILink } from "./types";
 
 export const ItemMobileNavigation = ({ link }: ILink) => {
   const [isOpen, setOpen] = useState(false);

@@ -1,14 +1,13 @@
 import Link from "next/link";
 import React, { useState } from "react";
 import { Typography, VariantsTypography } from "../../ui/typography";
-
 import {
   HoverLinkSC,
   LinkSC,
   SubcategorydLinkSC,
   SubNavigation,
 } from "./styles";
-import { ILink, ILinkSubcategories } from "./types";
+import { ILink } from "./types";
 
 export const ItemNavigation = ({ link }: ILink) => {
   const [isOpen, setOpen] = useState(false);
