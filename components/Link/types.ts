@@ -1,6 +1,6 @@
 import { LinkVariants } from "../../enums/LinkVariants";
 
-export interface ILink {
+export interface ILinkProps {
   href: string;
   text: string;
   variant: LinkVariants;

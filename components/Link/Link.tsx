@@ -3,9 +3,9 @@ import React from "react";
 import ArrowRightIcon from "public/icons/arrow-right.svg";
 import { Arrow, LinkSC } from "./styles";
 import { Typography, VariantsTypography } from "../../ui/typography";
-import { ILink } from "./types";
+import { ILinkProps } from "./types";
 
-export const Link = ({ href, text, variant }: ILink) => {
+export const Link = ({ href, text, variant }: ILinkProps) => {
   return (
     <NextLink href={href}>
       <LinkSC variant={variant}>
