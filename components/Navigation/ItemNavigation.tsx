@@ -36,13 +36,11 @@ export const ItemNavigation = ({ link }: ILink) => {
         </Link>
         {isOpen && (
           <SubNavigation isOpen={isOpen}>
-            {link.subcategories?.map(
-              (item: ILinkSubcategories, index: number) => (
-                <Link href={item.link} key={index}>
-                  <SubcategorydLinkSC>{item.name}</SubcategorydLinkSC>
-                </Link>
-              )
-            )}
+            {link.subcategories?.map((item, index) => (
+              <Link href={item.link} key={index}>
+                <SubcategorydLinkSC>{item.name}</SubcategorydLinkSC>
+              </Link>
+            ))}
           </SubNavigation>
         )}
       </LinkSC>

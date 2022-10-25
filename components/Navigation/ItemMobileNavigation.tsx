@@ -35,13 +35,11 @@ export const ItemMobileNavigation = ({ link }: ILink) => {
         </Link>
         {isOpen && (
           <SubNavigationMobile isOpen={isOpen}>
-            {link.subcategories?.map(
-              (item: ILinkSubcategories, index: number) => (
-                <Link href={item.link} key={index}>
-                  <SubcategorydLinkSC>{item.name}</SubcategorydLinkSC>
-                </Link>
-              )
-            )}
+            {link.subcategories?.map((item, index) => (
+              <Link href={item.link} key={index}>
+                <SubcategorydLinkSC>{item.name}</SubcategorydLinkSC>
+              </Link>
+            ))}
           </SubNavigationMobile>
         )}
       </LinkSC>
