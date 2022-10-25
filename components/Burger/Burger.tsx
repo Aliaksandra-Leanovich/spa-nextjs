@@ -2,13 +2,13 @@ import React from "react";
 import { StyledBurger } from "./style";
 
 interface IOpen {
-  open: boolean;
-  isOpen: (value: boolean) => void;
+  isOpen: boolean;
+  setOpen: (value: boolean) => void;
 }
 
-export const Burger = ({ open, isOpen }: IOpen) => {
+export const Burger = ({ isOpen, setOpen }: IOpen) => {
   return (
-    <StyledBurger open={open} onClick={() => isOpen(!open)}>
+    <StyledBurger isOpen={isOpen} onClick={() => setOpen(!open)}>
       <div />
       <div />
       <div />

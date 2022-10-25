@@ -3,7 +3,7 @@ import { Colors } from "../../ui/colors";
 import { media } from "../../ui/media";
 
 interface IProps {
-  open: boolean;
+  isOpen: boolean;
 }
 export const StyledBurger = styled.button<IProps>`
   display: none;
@@ -36,17 +36,17 @@ export const StyledBurger = styled.button<IProps>`
       transform-origin: 1px;
 
       :first-child {
-        transform: ${({ open }) => (open ? "rotate(45deg)" : "rotate(0)")};
+        transform: ${({ isOpen }) => (isOpen ? "rotate(45deg)" : "rotate(0)")};
       }
 
       :nth-child(2) {
-        opacity: ${({ open }) => (open ? "0" : "1")};
-        transform: ${({ open }) =>
-          open ? "translateX(20px)" : "translateX(0)"};
+        opacity: ${({ isOpen }) => (isOpen ? "0" : "1")};
+        transform: ${({ isOpen }) =>
+          isOpen ? "translateX(20px)" : "translateX(0)"};
       }
 
       :nth-child(3) {
-        transform: ${({ open }) => (open ? "rotate(-45deg)" : "rotate(0)")};
+        transform: ${({ isOpen }) => (isOpen ? "rotate(-45deg)" : "rotate(0)")};
       }
     }
   }

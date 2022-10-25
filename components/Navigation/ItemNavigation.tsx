@@ -11,13 +11,13 @@ import {
 import { ILink, ILinkSubcategories } from "./types";
 
 export const ItemNavigation = ({ link }: ILink) => {
-  const [open, isOpen] = useState(false);
+  const [isOpen, setOpen] = useState(false);
 
   const handleMouseEnter = () => {
-    isOpen(true);
+    setOpen(true);
   };
   const handleMouseLeave = () => {
-    isOpen(false);
+    setOpen(false);
   };
   return (
     <>
@@ -34,8 +34,8 @@ export const ItemNavigation = ({ link }: ILink) => {
             {link.subcategories && link.iconOpen}
           </HoverLinkSC>
         </Link>
-        {open && (
-          <SubNavigation open={open}>
+        {isOpen && (
+          <SubNavigation isOpen={isOpen}>
             {link.subcategories?.map(
               (item: ILinkSubcategories, index: number) => (
                 <Link href={item.link} key={index}>

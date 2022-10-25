@@ -50,7 +50,7 @@ const config: ILinkNavigationProps[] = [
 ];
 
 export const Navigation = () => {
-  const [open, isOpen] = useState(false);
+  const [isOpen, setOpen] = useState(false);
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -82,8 +82,8 @@ export const Navigation = () => {
         />
       </StyledNavigation>
 
-      <Burger open={open} isOpen={isOpen} />
-      <StyledRightNavigation open={open}>
+      <Burger isOpen={isOpen} setOpen={setOpen} />
+      <StyledRightNavigation isOpen={isOpen}>
         <ContainerLinks>
           {config.map((link, index) => {
             return <ItemMobileNavigation link={link} key={index} />;

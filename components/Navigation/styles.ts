@@ -3,7 +3,7 @@ import { Colors } from "../../ui/colors";
 import { media } from "../../ui/media";
 
 interface IProps {
-  open: boolean;
+  isOpen: boolean;
 }
 
 export const StyledNavigation = styled.nav`
@@ -30,14 +30,14 @@ export const StyledRightNavigation = styled.div<IProps>`
   right: 0;
 
   ${media.LAPTOP} {
-    display: ${({ open }) => (open ? "flex" : "none")};
+    display: ${({ isOpen }) => (isOpen ? "flex" : "none")};
   }
 
   ${media.PHONE} {
     width: 100%;
   }
   main {
-    overflow: ${({ open }) => (open ? "hidden" : "auto")};
+    overflow: ${({ isOpen }) => (isOpen ? "hidden" : "auto")};
   }
 `;
 export const ContainerLinks = styled.div`
@@ -92,7 +92,7 @@ export const SubNavigation = styled.div<IProps>`
   position: absolute;
   background-color: ${Colors.LIGHTBLUE};
 
-  display: ${({ open }) => (open ? "flex" : "none")};
+  display: ${({ isOpen }) => (isOpen ? "flex" : "none")};
   flex-direction: column;
   width: 200px;
   padding: 16px 24px 0;
@@ -113,7 +113,5 @@ export const SubcategorydLinkSC = styled.a`
 export const SubNavigationMobile = styled.div<IProps>`
   padding: 10px 20px 0;
   flex-direction: column;
-
-  transition: display 0.5s ease-out;
-  display: ${({ open }) => (open ? "block" : "none")};
+  display: ${({ isOpen }) => (isOpen ? "block" : "none")};
 `;
