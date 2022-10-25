@@ -13,7 +13,8 @@ import {
   TodayContainerSC,
   TodayTitleSC,
 } from "./styles";
-import { Typography, VariantsTypography } from "../../ui/typography";
+import { Typography } from "../../ui/typography";
+import { VariantsTypography } from "../../enums/TypographyVariants";
 
 export const TodaySection = () => {
   return (

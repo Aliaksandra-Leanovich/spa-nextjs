@@ -11,7 +11,8 @@ import {
   TextContainerSC,
 } from "./styles";
 import ImageApps from "/public/icons/Apps.png";
-import { Typography, VariantsTypography } from "../../ui/typography";
+import { Typography } from "../../ui/typography";
+import { VariantsTypography } from "../../enums/TypographyVariants";
 
 export const FavoriteSection = () => {
   return (

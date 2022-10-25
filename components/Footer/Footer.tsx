@@ -26,7 +26,8 @@ import Facebook from "/public/icons/Facebook.svg";
 import Twitter from "/public/icons/Twitter.svg";
 import { Colors } from "../../ui/colors";
 import Link from "next/link";
-import { Typography, VariantsTypography } from "../../ui/typography";
+import { Typography } from "../../ui/typography";
+import { VariantsTypography } from "../../enums/TypographyVariants";
 import { IFooterData } from "./types";
 
 const config: IFooterData[] = [

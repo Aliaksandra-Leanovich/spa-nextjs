@@ -10,8 +10,9 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as Yup from "yup";
 import { Colors } from "../../ui/colors";
 import { ContainerFormSC, EmailInUseMessageSC, StyledFormSC } from "./styles";
-import { Typography, VariantsTypography } from "../../ui/typography";
+import { Typography } from "../../ui/typography";
 import { IFormInput } from "./types";
+import { VariantsTypography } from "../../enums/TypographyVariants";
 
 const validationSchema = Yup.object().shape({
   name: Yup.string()

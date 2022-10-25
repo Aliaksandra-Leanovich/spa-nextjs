@@ -1,20 +1,7 @@
 import { css } from "@emotion/react";
 import styled from "@emotion/styled";
+import { VariantsTypography } from "../enums/TypographyVariants";
 import { media } from "./media";
-
-export enum VariantsTypography {
-  h1 = "h1",
-  h2 = "h2",
-  h3 = "h3",
-  h5 = "h5",
-  paragraphSmall = "paragraphSmall",
-  paragraphXS = "paragraphXS",
-  paragraphSmallBold = "paragraphSmallBold",
-  paragraphMedium = "paragraphMedium",
-  paragraphMediumBold = "paragraphMediumBold",
-  subtitle = "subtitle",
-  button = "button",
-}
 
 interface ITypography {
   color?: string;

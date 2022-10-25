@@ -16,9 +16,10 @@ import {
   SwiperCustomSC,
   TextConteinerCommentSC,
 } from "./style";
-import { Typography, VariantsTypography } from "../../ui/typography";
+import { Typography } from "../../ui/typography";
 import { Colors } from "../../ui/colors";
 import { IReviewers } from "../Sections/ClientsSection";
+import { VariantsTypography } from "../../enums/TypographyVariants";
 
 SwiperCore.use([EffectCoverflow, Pagination]);
 

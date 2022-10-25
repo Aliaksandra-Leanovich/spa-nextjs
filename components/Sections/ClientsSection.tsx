@@ -5,12 +5,13 @@ import QuotesImage from "/public/icons/Quote.svg";
 import Avatar1 from "/public/icons/avatar1.svg";
 import Avatar2 from "/public/icons/avatar2.svg";
 import Avatar3 from "/public/icons/avatar3.svg";
-import { Typography, VariantsTypography } from "../../ui/typography";
+import { Typography } from "../../ui/typography";
 import {
   ClientsContainer,
   TextContainerSliderSC,
   WhiteContainerSC,
 } from "./styles";
+import { VariantsTypography } from "../../enums/TypographyVariants";
 
 export interface IReviewers {
   comment: string;
