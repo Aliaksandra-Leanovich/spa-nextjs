@@ -48,6 +48,14 @@ export const ContainerLinks = styled.div`
     row-gap: 2rem;
   }
 `;
+export const ContainerButtonsSC = styled.div`
+  margin-right: 20px;
+
+  ${media.LAPTOP} {
+    display: grid;
+    row-gap: 15px;
+  }
+`;
 
 export const ContainerButtons = styled.div`
   display: grid;

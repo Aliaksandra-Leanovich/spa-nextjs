@@ -6,6 +6,7 @@ import {
   ContainerLinks,
   ContainerButtons,
   Arrow,
+  ContainerButtonsSC,
 } from "./styles";
 import { app } from "../../utils/firebase";
 import { getAuth, signOut } from "firebase/auth";
@@ -71,13 +72,15 @@ export const Navigation = () => {
         {config.map((link, index) => (
           <ItemNavigation link={link} key={index} />
         ))}
-        <form onSubmit={handleSubmit}>
-          <Button
-            type="submit"
-            text="Logout"
-            variant={ButtonVariants.primary}
-          />
-        </form>
+        <ContainerButtonsSC>
+          <form onSubmit={handleSubmit}>
+            <Button
+              type="submit"
+              variant={ButtonVariants.primary}
+              text="Logout"
+            />
+          </form>
+        </ContainerButtonsSC>
         <Link
           href="/whitepacefree"
           text="Try Whitepace free"
@@ -92,20 +95,21 @@ export const Navigation = () => {
             <ItemMobileNavigation link={link} key={index} />
           ))}
         </ContainerLinks>
-        <ContainerButtons>
+        <ContainerButtonsSC>
           <form onSubmit={handleSubmit}>
             <Button
-              variant={ButtonVariants.primary}
               type="submit"
+              variant={ButtonVariants.primary}
               text="Logout"
             />
           </form>
+
           <Link
             href="/whitepacefree"
             text="Try Whitepace free"
             variant={LinkVariants.linkMedium}
           />
-        </ContainerButtons>
+        </ContainerButtonsSC>
       </StyledRightNavigation>
     </NavigationContainer>
   );
