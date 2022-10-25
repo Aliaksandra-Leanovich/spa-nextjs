@@ -1,5 +1,4 @@
 import React from "react";
-import { LinkTemplate, LinkVariants } from "../LinkTemplate/LinkTemplate";
 import {
   ArrowImageSC,
   BlockWithButtonSC,
@@ -25,13 +24,16 @@ import Linkedin from "/public/icons/Linkedin.svg";
 import Facebook from "/public/icons/Facebook.svg";
 import Twitter from "/public/icons/Twitter.svg";
 import { Colors } from "../../ui/colors";
-
-import Link from "next/link";
 import { Typography, VariantsTypography } from "../../ui/typography";
+import { default as NextLink } from "next/link";
+import { Link } from "../Link/Link";
+import { LinkVariants } from "../../enums/LinkVariants";
+import { IFooterData } from "./types";
 
-const config = [
+const config: IFooterData[] = [
   {
     category: "Product",
+    link: "#",
     subcategories: [
       { name: "Overview", link: "#" },
       { name: "Pricing", link: "#" },
@@ -40,6 +42,7 @@ const config = [
   },
   {
     category: "Resources",
+    link: "#",
     subcategories: [
       { name: "Blog", link: "#" },
       { name: "Guides tutorials", link: "#" },
@@ -48,6 +51,7 @@ const config = [
   },
   {
     category: "Company",
+    link: "#",
     subcategories: [
       { name: "About us", link: "#" },
       { name: "Careers", link: "#" },
@@ -74,13 +78,13 @@ export const Footer = () => (
       </BlockWithLinksSC>
       {config.map((category, index) => (
         <BlockWithLinksSC key={index}>
-          <Link href="#" key={index}>
+          <NextLink href={category.link} key={index}>
             <CategoryLinkSC>{category.category}</CategoryLinkSC>
-          </Link>
+          </NextLink>
           {category.subcategories.map((subcategory, index) => (
-            <Link href={subcategory.link} key={index}>
+            <NextLink href={subcategory.link} key={index}>
               <SubcategorydLinkSC>{subcategory.name}</SubcategorydLinkSC>
-            </Link>
+            </NextLink>
           ))}
         </BlockWithLinksSC>
       ))}
@@ -96,7 +100,7 @@ export const Footer = () => (
             Get started for free. Add your whole team as your needs grow.
           </Typography>
         </TextContainerButtonSC>
-        <LinkTemplate
+        <Link
           href="/whitepace"
           text="Start today"
           variant={LinkVariants.linkLarge}

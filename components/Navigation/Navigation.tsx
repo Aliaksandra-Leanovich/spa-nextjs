@@ -10,12 +10,13 @@ import {
 import { app } from "../../utils/firebase";
 import { getAuth, signOut } from "firebase/auth";
 import router from "next/router";
-import { LinkTemplate, LinkVariants } from "../LinkTemplate/LinkTemplate";
 import { Burger } from "../Burger/Burger";
 import { Button, ButtonVariants } from "../Button/Button";
 import ArrowIcon from "../../public/icons/arrow.png";
 import { ILinkSubcategories, ItemNavigation } from "./ItemNavigation";
 import { ItemMobileNavigation } from "./ItemMobileNavigation";
+import { LinkVariants } from "../../enums/LinkVariants";
+import { Link } from "../Link/Link";
 
 export interface ILinkNavigation {
   href: string;
@@ -83,7 +84,7 @@ export const Navigation = () => {
             variant={ButtonVariants.primary}
           />
         </form>
-        <LinkTemplate
+        <Link
           href="/whitepacefree"
           text="Try Whitepace free"
           variant={LinkVariants.linkMedium}
@@ -105,7 +106,7 @@ export const Navigation = () => {
               text="Logout"
             />
           </form>
-          <LinkTemplate
+          <Link
             href="/whitepacefree"
             text="Try Whitepace free"
             variant={LinkVariants.linkMedium}
