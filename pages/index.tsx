@@ -24,27 +24,27 @@ const Home: NextPage = () => {
   if (!accessToken) {
     router.replace("/signup");
     return null;
-  } else {
-    return (
-      <>
-        <Header />
-        <MainSC>
-          <MainSection />
-          <ManagementSection />
-          <ExtensionSection />
-          <CustomiseSection />
-          <PricingBlock />
-          <YourWorkSection />
-          <YourDataSection />
-          <SponsorsSection />
-          <AppsSection />
-          <ClientsSection />
-          <FreeTrialSection />
-          <Footer />
-        </MainSC>
-      </>
-    );
   }
+
+  return (
+    <>
+      <Header />
+      <MainSC>
+        <MainSection />
+        <ManagementSection />
+        <ExtensionSection />
+        <CustomiseSection />
+        <PricingBlock />
+        <YourWorkSection />
+        <YourDataSection />
+        <SponsorsSection />
+        <AppsSection />
+        <ClientsSection />
+        <FreeTrialSection />
+        <Footer />
+      </MainSC>
+    </>
+  );
 };
 
 export default Home;

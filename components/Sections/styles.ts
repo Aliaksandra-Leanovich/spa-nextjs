@@ -49,10 +49,7 @@ export const ImageSC = styled.img`
   width: 100%;
   height: auto;
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  inset: 0;
   object-fit: contain;
   max-width: 824px;
 
