@@ -18,7 +18,7 @@ import { Button } from "../Button/Button";
 import ArrowIcon from "../../public/icons/arrow.png";
 import { ILinkSubcategories, ItemNavigation } from "./ItemNavigation";
 import { ItemMobileNavigation } from "./ItemMobileNavigation";
-import { ButtonVariants } from "../Button/types";
+import { ButtonVariants } from "../../enums/ButtonVariants";
 
 export interface ILinkNavigation {
   href: string;

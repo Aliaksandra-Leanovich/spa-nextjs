@@ -11,7 +11,7 @@ import * as Yup from "yup";
 import { Colors } from "../../ui/colors";
 import { ContainerFormSC, EmailInUseMessageSC, StyledFormSC } from "./styles";
 import { Typography, VariantsTypography } from "../../ui/typography";
-import { ButtonVariants } from "../Button/types";
+import { ButtonVariants } from "../../enums/ButtonVariants";
 
 interface IFormInput {
   name: string;

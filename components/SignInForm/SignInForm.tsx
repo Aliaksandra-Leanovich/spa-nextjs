@@ -11,7 +11,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as Yup from "yup";
 import { Colors } from "../../ui/colors";
 import { Typography, VariantsTypography } from "../../ui/typography";
-import { ButtonVariants } from "../Button/types";
+import { ButtonVariants } from "../../enums/ButtonVariants";
 
 interface IUserForm {
   email: string;
