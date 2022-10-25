@@ -1,5 +1,4 @@
 import React from "react";
-import { LinkTemplate, LinkVariants } from "../LinkTemplate/LinkTemplate";
 import ImageWork from "/public/icons/worktogether.jpg";
 import ImageWorkManag from "/public/icons/team-work3.png";
 import Background from "/public/icons/managmentbackground.svg";
@@ -10,11 +9,13 @@ import {
   BackgroundImageContainerManagSC,
   TextContainerSC,
   WhiteContainerSC,
-  WrapperSC,
   ImageSC,
+  WrapperSC,
 } from "./styles";
 import { Colors } from "../../ui/colors";
 import { Typography, VariantsTypography } from "../../ui/typography";
+import { LinkVariants } from "../../enums/LinkVariants";
+import { Link } from "../Link/Link";
 
 export const ManagementSection = () => {
   return (
@@ -22,13 +23,13 @@ export const ManagementSection = () => {
       <BackgroundImageContainerManagSC>
         <Background />
       </BackgroundImageContainerManagSC>
-
       <WrapperSC>
         <ContainerSC id="products">
           <DescriptionContainerSC>
             <Typography variant={VariantsTypography.h2} color={Colors.BLACK}>
               Project Management
             </Typography>
+
             <TextContainerSC>
               <Typography
                 variant={VariantsTypography.paragraphSmall}
@@ -40,7 +41,7 @@ export const ManagementSection = () => {
               </Typography>
             </TextContainerSC>
 
-            <LinkTemplate
+            <Link
               href="/whitepacefree"
               text="Get Started"
               variant={LinkVariants.linkLarge}
@@ -71,7 +72,7 @@ export const ManagementSection = () => {
               </Typography>
             </TextContainerSC>
 
-            <LinkTemplate
+            <Link
               href="/whitepacefree"
               text="Try it now"
               variant={LinkVariants.linkLarge}

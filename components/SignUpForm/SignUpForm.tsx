@@ -5,19 +5,14 @@ import { app } from "../../utils/firebase";
 import { useRouter } from "next/router";
 import { Input } from "../Input/Input";
 import { Button, ButtonVariants } from "../Button/Button";
-import { LinkTemplate, LinkVariants } from "../LinkTemplate/LinkTemplate";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as Yup from "yup";
 import { Colors } from "../../ui/colors";
 import { ContainerFormSC, EmailInUseMessageSC, StyledFormSC } from "./styles";
+import { IFormInput } from "./types";
 import { Typography, VariantsTypography } from "../../ui/typography";
-
-interface IFormInput {
-  name?: string;
-  email: string;
-  password: string;
-  errors?: string;
-}
+import { LinkVariants } from "../../enums/LinkVariants";
+import { Link } from "../Link/Link";
 
 const validationSchema = Yup.object().shape({
   name: Yup.string()
@@ -31,9 +26,22 @@ const validationSchema = Yup.object().shape({
     .max(40, "Password must not exceed 40 characters"),
 });
 
+const getAuthError = (error: string) => {
+  switch (error) {
+    case "auth/email-already-in-use":
+      return "Email already in use.";
+    case "auth/invalid-email":
+      return "Password provided is not corrected.";
+    case "auth/weak-password":
+      return "The password is too weak.";
+    default:
+      return "An unexpected error occurred.";
+  }
+};
+
 export const SignUpForm = () => {
   const router = useRouter();
-  const [emailnUse, setEmailInUse] = useState<string>();
+  const [error, setError] = useState("");
 
   const {
     register,
@@ -52,10 +60,7 @@ export const SignUpForm = () => {
         await router.push("/signin");
       })
       .catch((error) => {
-        if (error.code == "auth/email-already-in-use") {
-          const errorMessage = "Email already in use";
-          setEmailInUse(errorMessage);
-        }
+        setError(getAuthError(error.code));
       });
   };
 
@@ -65,7 +70,7 @@ export const SignUpForm = () => {
         Get started for free. Add your whole team as your needs grow.{" "}
       </Typography>
       <StyledFormSC onSubmit={handleSubmit(onSubmit)}>
-        {emailnUse && <EmailInUseMessageSC>{emailnUse}</EmailInUseMessageSC>}
+        {error && <EmailInUseMessageSC>{error}</EmailInUseMessageSC>}
         <Input
           type="text"
           label="name"
@@ -93,7 +98,7 @@ export const SignUpForm = () => {
           variant={ButtonVariants.secondary}
         />
       </StyledFormSC>
-      <LinkTemplate
+      <Link
         href="/signin"
         text="I already have an account."
         variant={LinkVariants.linkSmall}

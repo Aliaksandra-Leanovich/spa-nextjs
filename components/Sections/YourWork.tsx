@@ -1,5 +1,4 @@
 import React from "react";
-import { LinkTemplate, LinkVariants } from "../LinkTemplate/LinkTemplate";
 import { Colors } from "../../ui/colors";
 import Background from "/public/icons/everywhereBackground.svg";
 import {
@@ -10,6 +9,8 @@ import {
   WrapperSC,
 } from "./styles";
 import { Typography, VariantsTypography } from "../../ui/typography";
+import { Link } from "../Link/Link";
+import { LinkVariants } from "../../enums/LinkVariants";
 
 export const YourWorkSection = () => {
   return (
@@ -17,7 +18,6 @@ export const YourWorkSection = () => {
       <BackgroundImageContainerYourWorkSC>
         <Background />
       </BackgroundImageContainerYourWorkSC>
-
       <WrapperSC>
         <ContainerYourWorkSC>
           <Typography variant={VariantsTypography.h2} color={Colors.WHITE}>
@@ -35,7 +35,7 @@ export const YourWorkSection = () => {
             </Typography>
           </TextContainerSC>
 
-          <LinkTemplate
+          <Link
             href="/whitepacefree"
             text="Try Taskey"
             variant={LinkVariants.linkLarge}

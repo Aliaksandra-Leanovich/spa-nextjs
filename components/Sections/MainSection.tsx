@@ -1,5 +1,5 @@
 import React from "react";
-import { LinkTemplate, LinkVariants } from "../LinkTemplate/LinkTemplate";
+import { Link } from "../Link/Link";
 import ImageWork from "/public/icons/team-work1.png";
 import background from "/public/icons/mainbackground.png";
 import { Colors } from "../../ui/colors";
@@ -14,6 +14,7 @@ import {
   WrapperSC,
 } from "./styles";
 import { Typography, VariantsTypography } from "../../ui/typography";
+import { LinkVariants } from "../../enums/LinkVariants";
 
 export const MainSection = () => {
   return (
@@ -35,7 +36,7 @@ export const MainSection = () => {
               </Typography>
             </TextContainerSC>
 
-            <LinkTemplate
+            <Link
               href="/whitepacefree"
               text="Try Whitepace free"
               variant={LinkVariants.linkSmall}
