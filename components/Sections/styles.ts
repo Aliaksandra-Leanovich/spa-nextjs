@@ -51,6 +51,7 @@ export const ImageContainerSC = styled.div`
   width: 100%;
 `;
 export const ImageSC = styled.img`
+  margin: 0 auto;
   width: 100%;
   height: auto;
   position: absolute;
