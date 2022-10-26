@@ -21,8 +21,7 @@ export const PricingContainerSC = styled.section`
   }
   ${media.TABLET} {
     display: block;
-
-    padding: 60px 16px;
+    padding: 60px 0;
   }
 `;
 

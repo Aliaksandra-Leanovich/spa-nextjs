@@ -15,18 +15,9 @@ import {
 } from "./style";
 import { Typography, VariantsTypography } from "../../ui/typography";
 import { Colors } from "../../ui/colors";
+import { IPropsSlider } from "./types";
 
-export interface IPricePlans {
-  set: string;
-  price: string;
-  description: string;
-  advantages: string[];
-}
-interface IData {
-  data: IPricePlans[];
-}
-
-export const SliderPricing = ({ data }: IData) => {
+export const SliderPricing = ({ data }: IPropsSlider) => {
   return (
     <ContainerMobileSC>
       <SwiperCustomSC

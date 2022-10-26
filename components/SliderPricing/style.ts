@@ -6,9 +6,9 @@ import { Typography, VariantsTypography } from "../../ui/typography";
 
 export const ContainerMobileSC = styled.div`
   display: none;
-  width: 100%;
-  padding: 0 16px;
+
   ${media.TABLET} {
+    width: 100%;
     display: block;
   }
 `;
@@ -22,6 +22,7 @@ export const TabSC = styled.div`
   padding: 20px;
   border-radius: 10px;
   margin-bottom: 85px;
+
   max-width: 472px;
 `;
 
@@ -53,5 +54,7 @@ export const SwiperCustomSC = styled(Swiper)`
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-right: 20px;
+    padding-left: 20px;
   }
 `;
