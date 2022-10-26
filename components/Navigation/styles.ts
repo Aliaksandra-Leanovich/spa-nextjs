@@ -53,7 +53,7 @@ export const ContainerButtonsSC = styled.div`
 
   ${media.LAPTOP} {
     display: grid;
-    row-gap: 15px;
+    row-gap: 16px;
   }
 `;
 
