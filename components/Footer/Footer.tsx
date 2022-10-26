@@ -19,11 +19,11 @@ import {
   WrapperSC,
 } from "./style";
 import Logo from "/public/icons/logo.svg";
-import Arrow from "/public/icons/arrow.png";
-import World from "/public/icons/world.svg";
-import Linkedin from "/public/icons/Linkedin.svg";
-import Facebook from "/public/icons/Facebook.svg";
-import Twitter from "/public/icons/Twitter.svg";
+import ArrowIcon from "/public/icons/arrow.png";
+import WorldIcon from "/public/icons/world.svg";
+import LinkedinIcon from "/public/icons/Linkedin.svg";
+import FacebookIcon from "/public/icons/Facebook.svg";
+import TwitterIcon from "/public/icons/Twitter.svg";
 import { Colors } from "../../ui/colors";
 import { Typography, VariantsTypography } from "../../ui/typography";
 import { default as NextLink } from "next/link";
@@ -113,7 +113,7 @@ export const Footer = () => (
         <BottomFooterDecriptionSC>
           <EnglishContainerSC>
             <WorldImageSC>
-              <World />
+              <WorldIcon />
             </WorldImageSC>
             <Typography
               color={Colors.WHITE}
@@ -122,7 +122,7 @@ export const Footer = () => (
               English
             </Typography>
             <ArrowImageSC>
-              <img src={Arrow.src} alt="" />
+              <img src={ArrowIcon.src} alt="" />
             </ArrowImageSC>
           </EnglishContainerSC>
           <TextContainerFooterSC>
@@ -161,14 +161,14 @@ export const Footer = () => (
         </BottomFooterDecriptionSC>
         <SocialMediaContainerSC>
           <SocialMediaImageSC>
-            <Facebook />
+            <FacebookIcon />
           </SocialMediaImageSC>
           <SocialMediaImageSC>
-            <Twitter />
+            <TwitterIcon />
           </SocialMediaImageSC>
 
           <SocialMediaImageSC>
-            <Linkedin />
+            <LinkedinIcon />
           </SocialMediaImageSC>
         </SocialMediaContainerSC>
       </BottomFooterContainerSC>

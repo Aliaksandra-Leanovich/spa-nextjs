@@ -1,7 +1,7 @@
 import React from "react";
 import AppleIcon from "/public/icons/apple-black-logo 2.svg";
-import Window from "/public/icons/windows-logo 1.svg";
-import Android from "/public/icons/android-logo 1.svg";
+import WindowIcon from "/public/icons/windows-logo 1.svg";
+import AndroidIcon from "/public/icons/android-logo 1.svg";
 import { Colors } from "../../ui/colors";
 import {
   AppImageSC,
@@ -60,10 +60,10 @@ export const FreeTrialSection = () => {
               <AppleIcon />
             </AppImageSC>
             <AppImageSC>
-              <Window />
+              <WindowIcon />
             </AppImageSC>
             <AppImageSC>
-              <Android />
+              <AndroidIcon />
             </AppImageSC>
           </AppsContainerSC>
         </FreeTrialContainerSC>
