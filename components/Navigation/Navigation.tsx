@@ -2,9 +2,6 @@ import React, { FormEvent, useState } from "react";
 import {
   StyledNavigation,
   NavigationContainer,
-  StyledRightNavigation,
-  ContainerLinks,
-  ContainerButtons,
   Arrow,
   ContainerButtonsSC,
 } from "./styles";
@@ -15,10 +12,10 @@ import { Burger } from "../Burger/Burger";
 import { Button, ButtonVariants } from "../Button/Button";
 import ArrowIcon from "../../public/icons/arrow.png";
 import { ItemNavigation } from "./ItemNavigation";
-import { ItemMobileNavigation } from "./ItemMobileNavigation";
 import { ILinkNavigationProps } from "./types";
 import { Link } from "../Link/Link";
 import { LinkVariants } from "../../enums/LinkVariants";
+import { RightNavigation } from "./RightNavigation";
 
 const config: ILinkNavigationProps[] = [
   {
@@ -54,8 +51,7 @@ const config: ILinkNavigationProps[] = [
 export const Navigation = () => {
   const [isOpen, setOpen] = useState(false);
 
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
+  const handleClick = () => {
     const auth = getAuth(app);
     signOut(auth)
       .then(async () => {
@@ -73,13 +69,12 @@ export const Navigation = () => {
           <ItemNavigation link={link} key={index} />
         ))}
         <ContainerButtonsSC>
-          <form onSubmit={handleSubmit}>
-            <Button
-              type="submit"
-              variant={ButtonVariants.primary}
-              text="Logout"
-            />
-          </form>
+          <Button
+            handleClick={handleClick}
+            type="submit"
+            variant={ButtonVariants.primary}
+            text="Logout"
+          />
         </ContainerButtonsSC>
         <Link
           href="/whitepacefree"
@@ -89,28 +84,7 @@ export const Navigation = () => {
       </StyledNavigation>
 
       <Burger isOpen={isOpen} setOpen={setOpen} />
-      <StyledRightNavigation isOpen={isOpen}>
-        <ContainerLinks>
-          {config.map((link, index) => (
-            <ItemMobileNavigation link={link} key={index} />
-          ))}
-        </ContainerLinks>
-        <ContainerButtonsSC>
-          <form onSubmit={handleSubmit}>
-            <Button
-              type="submit"
-              variant={ButtonVariants.primary}
-              text="Logout"
-            />
-          </form>
-
-          <Link
-            href="/whitepacefree"
-            text="Try Whitepace free"
-            variant={LinkVariants.linkMedium}
-          />
-        </ContainerButtonsSC>
-      </StyledRightNavigation>
+      <RightNavigation isOpen={isOpen} data={config} />
     </NavigationContainer>
   );
 };

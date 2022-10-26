@@ -15,3 +15,7 @@ export interface ILink {
 export interface IStylesProps {
   isOpen: boolean;
 }
+export interface IRightNavigationProps {
+  isOpen: boolean;
+  data: ILinkNavigationProps[];
+}
