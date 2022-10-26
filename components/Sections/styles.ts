@@ -209,7 +209,19 @@ export const BackgroundImageContainerEverywhSC = styled.div`
     display: none;
   }
 `;
+export const SliderContainerSC = styled.div`
+  background-color: ${Colors.WHITE};
+  padding: 140px 220px;
+  position: relative;
+  width: 100%;
 
+  ${media.DESKTOP} {
+    padding: 140px 34px;
+  }
+  ${media.TABLET} {
+    padding: 90px 0;
+  }
+`;
 export const TextContainerSC = styled.div`
   margin: 24px 0 60px 0;
 `;

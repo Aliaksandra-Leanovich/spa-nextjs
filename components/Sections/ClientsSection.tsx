@@ -9,7 +9,7 @@ import { Typography, VariantsTypography } from "../../ui/typography";
 import {
   ClientsContainer,
   TextContainerSliderSC,
-  WhiteContainerSC,
+  SliderContainerSC,
 } from "./styles";
 
 export interface IReviewers {
@@ -49,7 +49,7 @@ const reviewersData = [
 
 export const ClientsSection = () => {
   return (
-    <WhiteContainerSC>
+    <SliderContainerSC>
       <ClientsContainer>
         <TextContainerSliderSC>
           <Typography variant={VariantsTypography.h2} color={Colors.BLACK}>
@@ -58,6 +58,6 @@ export const ClientsSection = () => {
         </TextContainerSliderSC>
         <Slider data={reviewersData} />
       </ClientsContainer>
-    </WhiteContainerSC>
+    </SliderContainerSC>
   );
 };
