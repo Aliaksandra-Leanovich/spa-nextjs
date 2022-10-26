@@ -47,18 +47,16 @@ export const DescriptionContainerSC = styled.div`
 export const ImageContainerSC = styled.div`
   position: relative;
   background-color: inherit;
-  padding-top: 64%;
+  padding-top: 75%;
   width: 100%;
 `;
 export const ImageSC = styled.img`
   margin: 0 auto;
-  width: 100%;
-  height: auto;
   position: absolute;
   inset: 0;
   object-fit: contain;
   max-width: 824px;
-  max-height: 480px;
+  height: 100%;
 
   ${media.DESKTOP} {
     max-width: 684px;
