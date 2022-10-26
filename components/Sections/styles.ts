@@ -8,8 +8,12 @@ export const MainContainerSC = styled.section`
   position: relative;
   padding: 132px 220px 0;
   background-color: ${Colors.BLUE};
+
   ${media.DESKTOP} {
     padding: 132px 34px 0;
+  }
+  ${media.PHONE} {
+    padding: 0;
   }
 `;
 
@@ -44,6 +48,7 @@ export const ImageContainerSC = styled.div`
   position: relative;
   background-color: inherit;
   padding-top: 64%;
+  width: 100%;
 `;
 export const ImageSC = styled.img`
   width: 100%;
