@@ -166,13 +166,14 @@ export const Slider = ({ data }: ISliderData) => {
                 <ReviewSC>
                   <BlockReviewSC>
                     <QuotesImageSC>{review.icon}</QuotesImageSC>
-
-                    <Typography
-                      variant={VariantsTypography.subtitle}
-                      color={Colors.WHITE}
-                    >
-                      {review.comment}
-                    </Typography>
+                    <TextConteinerCommentSC>
+                      <Typography
+                        variant={VariantsTypography.subtitle}
+                        color={Colors.WHITE}
+                      >
+                        {review.comment}
+                      </Typography>
+                    </TextConteinerCommentSC>
                   </BlockReviewSC>
                   <ReviewerBlockSC>
                     <ReviewerImageSC>{review.avatar}</ReviewerImageSC>

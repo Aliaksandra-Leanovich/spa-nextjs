@@ -8,8 +8,12 @@ export const MainContainerSC = styled.section`
   position: relative;
   padding: 132px 220px 0;
   background-color: ${Colors.BLUE};
+
   ${media.DESKTOP} {
     padding: 132px 34px 0;
+  }
+  ${media.PHONE} {
+    padding: 0;
   }
 `;
 
@@ -40,9 +44,19 @@ export const DescriptionContainerSC = styled.div`
   }
 `;
 
-export const ImageContainerSC = styled.img`
+export const ImageContainerSC = styled.div`
+  position: relative;
+  background-color: inherit;
+  padding-top: 75%;
   width: 100%;
+`;
+export const ImageSC = styled.img`
+  margin: 0 auto;
+  position: absolute;
+  inset: 0;
+  object-fit: contain;
   max-width: 824px;
+  height: 100%;
 
   ${media.DESKTOP} {
     max-width: 684px;
@@ -177,6 +191,7 @@ export const BackgroundImageAppsSC = styled.img`
   bottom: 0;
   left: 0;
   width: 100%;
+  height: 100%;
   opacity: 0.3;
 `;
 
@@ -208,7 +223,19 @@ export const BackgroundImageContainerYourWorkSC = styled.div`
     display: none;
   }
 `;
+export const SliderContainerSC = styled.div`
+  background-color: ${Colors.WHITE};
+  padding: 140px 220px;
+  position: relative;
+  width: 100%;
 
+  ${media.DESKTOP} {
+    padding: 140px 34px;
+  }
+  ${media.TABLET} {
+    padding: 90px 0;
+  }
+`;
 export const TextContainerSC = styled.div`
   margin: 24px 0 60px 0;
 `;
@@ -240,4 +267,9 @@ export const FreeTrialTitleSC = styled.h2`
       display: block;
     }
   }
+`;
+export const WrapperSC = styled.div`
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
 `;

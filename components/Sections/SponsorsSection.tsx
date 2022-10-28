@@ -8,6 +8,7 @@ import {
   SponsorsContainerSC,
   SponsorsImageSC,
   WhiteContainerSC,
+  WrapperSC,
 } from "./styles";
 import { Colors } from "../../ui/colors";
 import { Typography, VariantsTypography } from "../../ui/typography";
@@ -15,25 +16,27 @@ import { Typography, VariantsTypography } from "../../ui/typography";
 export const SponsorsSection = () => {
   return (
     <WhiteContainerSC>
-      <ClientsContainer>
-        <Typography variant={VariantsTypography.h2} color={Colors.BLACK}>
-          Our sponsors
-        </Typography>
-        <SponsorsContainerSC>
-          <SponsorsImageSC>
-            <ImageApple />
-          </SponsorsImageSC>
-          <SponsorsImageSC>
-            <ImageMicrosoft />
-          </SponsorsImageSC>
-          <SponsorsImageSC>
-            <ImageSlack />
-          </SponsorsImageSC>
-          <SponsorsImageSC>
-            <ImageGoogle />
-          </SponsorsImageSC>
-        </SponsorsContainerSC>
-      </ClientsContainer>
+      <WrapperSC>
+        <ClientsContainer>
+          <Typography variant={VariantsTypography.h2} color={Colors.BLACK}>
+            Our sponsors
+          </Typography>
+          <SponsorsContainerSC>
+            <SponsorsImageSC>
+              <ImageApple />
+            </SponsorsImageSC>
+            <SponsorsImageSC>
+              <ImageMicrosoft />
+            </SponsorsImageSC>
+            <SponsorsImageSC>
+              <ImageSlack />
+            </SponsorsImageSC>
+            <SponsorsImageSC>
+              <ImageGoogle />
+            </SponsorsImageSC>
+          </SponsorsContainerSC>
+        </ClientsContainer>
+      </WrapperSC>
     </WhiteContainerSC>
   );
 };

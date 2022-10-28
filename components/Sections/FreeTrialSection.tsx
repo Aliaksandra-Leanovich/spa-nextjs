@@ -1,7 +1,7 @@
 import React from "react";
 import AppleIcon from "/public/icons/apple-black-logo 2.svg";
-import Window from "/public/icons/windows-logo 1.svg";
-import Android from "/public/icons/android-logo 1.svg";
+import WindowIcon from "/public/icons/windows-logo 1.svg";
+import AndroidIcon from "/public/icons/android-logo 1.svg";
 import { Colors } from "../../ui/colors";
 import {
   AppImageSC,
@@ -11,60 +11,63 @@ import {
   FreeTrialTitleSC,
   TextContainerFreeTrialSC,
   TextContainerFreeTrialSecondSC,
+  WrapperSC,
 } from "./styles";
 import { Typography, VariantsTypography } from "../../ui/typography";
-import { LinkVariants } from "../../enums/LinkVariants";
 import { Link } from "../Link/Link";
+import { LinkVariants } from "../../enums/LinkVariants";
 
 export const FreeTrialSection = () => {
   return (
     <BlueContainerSC>
-      <FreeTrialContainerSC>
-        <FreeTrialTitleSC>
-          Try Whitepace <span>today</span>
-        </FreeTrialTitleSC>
+      <WrapperSC>
+        <FreeTrialContainerSC>
+          <FreeTrialTitleSC>
+            Try Whitepace <span>today</span>
+          </FreeTrialTitleSC>
 
-        <TextContainerFreeTrialSC>
-          <Typography
-            variant={VariantsTypography.paragraphSmall}
-            color={Colors.WHITE}
-          >
-            Get started for free.
-          </Typography>
-          <Typography
-            variant={VariantsTypography.paragraphSmall}
-            color={Colors.WHITE}
-          >
-            Add your whole team as your needs grow.
-          </Typography>
-        </TextContainerFreeTrialSC>
+          <TextContainerFreeTrialSC>
+            <Typography
+              variant={VariantsTypography.paragraphSmall}
+              color={Colors.WHITE}
+            >
+              Get started for free.
+            </Typography>
+            <Typography
+              variant={VariantsTypography.paragraphSmall}
+              color={Colors.WHITE}
+            >
+              Add your whole team as your needs grow.
+            </Typography>
+          </TextContainerFreeTrialSC>
 
-        <Link
-          href="/whitepace"
-          text="Try Taskey free"
-          variant={LinkVariants.linkLarge}
-        />
-        <TextContainerFreeTrialSecondSC>
-          <Typography
-            variant={VariantsTypography.paragraphSmall}
-            color={Colors.WHITE}
-          >
-            On a big team? Contact sales
-          </Typography>
-        </TextContainerFreeTrialSecondSC>
+          <Link
+            href="/whitepace"
+            text="Try Taskey free"
+            variant={LinkVariants.linkLarge}
+          />
+          <TextContainerFreeTrialSecondSC>
+            <Typography
+              variant={VariantsTypography.paragraphSmall}
+              color={Colors.WHITE}
+            >
+              On a big team? Contact sales
+            </Typography>
+          </TextContainerFreeTrialSecondSC>
 
-        <AppsContainerSC>
-          <AppImageSC>
-            <AppleIcon />
-          </AppImageSC>
-          <AppImageSC>
-            <Window />
-          </AppImageSC>
-          <AppImageSC>
-            <Android />
-          </AppImageSC>
-        </AppsContainerSC>
-      </FreeTrialContainerSC>
+          <AppsContainerSC>
+            <AppImageSC>
+              <AppleIcon />
+            </AppImageSC>
+            <AppImageSC>
+              <WindowIcon />
+            </AppImageSC>
+            <AppImageSC>
+              <AndroidIcon />
+            </AppImageSC>
+          </AppsContainerSC>
+        </FreeTrialContainerSC>
+      </WrapperSC>
     </BlueContainerSC>
   );
 };

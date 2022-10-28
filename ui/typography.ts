@@ -13,7 +13,6 @@ export enum VariantsTypography {
   paragraphMedium = "paragraphMedium",
   paragraphMediumBold = "paragraphMediumBold",
   subtitle = "subtitle",
-  button = "button",
 }
 
 interface ITypography {
@@ -96,17 +95,6 @@ const variantTypography = (variant = VariantsTypography.subtitle) =>
       font-weight: 400;
       font-size: 18px;
       line-height: 30px;
-    `,
-    button: css`
-      font-family: "Inter";
-      font-weight: 500;
-      font-size: 18px;
-      line-height: 23px;
-      ${media.PHONE} {
-        font-weight: 400;
-        font-size: 18px;
-        line-height: 30px;
-      }
     `,
   }[variant]);
 
