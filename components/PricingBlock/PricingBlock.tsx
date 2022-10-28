@@ -13,6 +13,7 @@ import {
   TextContainerDescriptionSC,
   TextContainerSC,
   TextContainerTitleSC,
+  TextPriceSC,
 } from "./styles";
 import { Colors } from "../../ui/colors";
 import { SliderPricing } from "../SliderPricing/SliderPricing";
@@ -100,12 +101,12 @@ export const PricingBlock = () => {
                 </Typography>
               </TextContainerSC>
               <TextContainerSC>
-                <Typography
+                <TextPriceSC
                   variant={VariantsTypography.h3}
                   color={Colors.BLACK}
                 >
                   {tab.price}
-                </Typography>
+                </TextPriceSC>
               </TextContainerSC>
 
               <TextContainerSC>

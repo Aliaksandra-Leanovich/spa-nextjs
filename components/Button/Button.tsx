@@ -1,22 +1,16 @@
-import React, { ButtonHTMLAttributes } from "react";
-import { Typography, VariantsTypography } from "../../ui/typography";
-
+import React from "react";
 import { ButtonSC } from "./styles";
+import { IButton } from "./types";
 
-export enum ButtonVariants {
-  primary = "primary",
-  secondary = "secondary",
-}
-
-export interface IButton extends ButtonHTMLAttributes<HTMLButtonElement> {
-  text: string;
-  variant: ButtonVariants;
-}
-
-export const Button = ({ text, type, variant }: IButton) => {
+export const Button = ({
+  children,
+  type,
+  variant,
+  handleClick,
+}: React.PropsWithChildren<IButton>) => {
   return (
-    <ButtonSC variant={variant} type={type}>
-      <Typography variant={VariantsTypography.button}>{text}</Typography>
+    <ButtonSC variant={variant} type={type} onClick={handleClick}>
+      {children}
     </ButtonSC>
   );
 };
