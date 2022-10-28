@@ -1,10 +1,7 @@
 import styled from "@emotion/styled";
 import { Colors } from "../../ui/colors";
 import { media } from "../../ui/media";
-
-interface IProps {
-  open: boolean;
-}
+import { IStylesProps } from "./types";
 
 export const StyledNavigation = styled.nav`
   display: flex;
@@ -16,7 +13,7 @@ export const StyledNavigation = styled.nav`
   }
 `;
 
-export const StyledRightNavigation = styled.div<IProps>`
+export const StyledRightNavigation = styled.div<IStylesProps>`
   background: ${Colors.BLACK};
 
   height: 100vh;
@@ -28,17 +25,16 @@ export const StyledRightNavigation = styled.div<IProps>`
   position: absolute;
   top: 0;
   right: 0;
-  transition: display 0.3s ease-in-out;
 
   ${media.LAPTOP} {
-    display: ${({ open }) => (open ? "flex" : "none")};
+    display: ${({ isOpen }) => (isOpen ? "flex" : "none")};
   }
 
   ${media.PHONE} {
     width: 100%;
   }
   main {
-    overflow: ${({ open }) => (open ? "hidden" : "auto")};
+    overflow: ${({ isOpen }) => (isOpen ? "hidden" : "auto")};
   }
 `;
 export const ContainerLinks = styled.div`
@@ -50,6 +46,14 @@ export const ContainerLinks = styled.div`
     display: grid;
     width: 100%;
     row-gap: 2rem;
+  }
+`;
+export const ContainerButtonsSC = styled.div`
+  margin-right: 20px;
+
+  ${media.LAPTOP} {
+    display: grid;
+    row-gap: 16px;
   }
 `;
 
@@ -89,11 +93,11 @@ export const Arrow = styled.img`
   margin-left: 10px;
 `;
 
-export const SubNavigation = styled.div<IProps>`
+export const SubNavigation = styled.div<IStylesProps>`
   position: absolute;
   background-color: ${Colors.LIGHTBLUE};
 
-  display: ${({ open }) => (open ? "flex" : "none")};
+  display: ${({ isOpen }) => (isOpen ? "flex" : "none")};
   flex-direction: column;
   width: 200px;
   padding: 16px 24px 0;
@@ -111,10 +115,8 @@ export const SubcategorydLinkSC = styled.a`
   }
 `;
 
-export const SubNavigationMobile = styled.div<IProps>`
+export const SubNavigationMobile = styled.div<IStylesProps>`
   padding: 10px 20px 0;
   flex-direction: column;
-
-  transition: display 0.5s ease-out;
-  display: ${({ open }) => (open ? "block" : "none")};
+  display: ${({ isOpen }) => (isOpen ? "block" : "none")};
 `;
