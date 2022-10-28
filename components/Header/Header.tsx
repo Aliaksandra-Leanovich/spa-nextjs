@@ -1,15 +1,24 @@
 import React from "react";
 import Logo from "/public/icons/logo.svg";
 import { Navigation } from "../Navigation/Navigation";
-import { StyledHeaderSC, LogoContainerSC } from "./style";
+import {
+  StyledHeaderSC,
+  LogoContainerSC,
+  WrapperSC,
+  ContainerSC,
+} from "./style";
 
 export const Header = () => {
   return (
     <StyledHeaderSC>
-      <LogoContainerSC href="/">
-        <Logo />
-      </LogoContainerSC>
-      <Navigation />
+      <WrapperSC>
+        <ContainerSC>
+          <LogoContainerSC href="/">
+            <Logo />
+          </LogoContainerSC>
+          <Navigation />
+        </ContainerSC>
+      </WrapperSC>
     </StyledHeaderSC>
   );
 };

@@ -1,52 +1,53 @@
 import React from "react";
-import { Link } from "../Link/Link";
-import ImageWork from "/public/icons/team-work1.png";
-import background from "/public/icons/mainbackground.png";
 import { Colors } from "../../ui/colors";
+import favoriteBackground from "/public/icons/favoriteBackground.png";
 import {
+  BackgroundImageAppsSC,
+  BlueContainerSC,
   ContainerSC,
   DescriptionContainerSC,
   ImageContainerSC,
   ImageSC,
-  MainBackgrounSC,
-  MainContainerSC,
   TextContainerSC,
   WrapperSC,
 } from "./styles";
+import ImageApps from "/public/icons/Apps.png";
 import { Typography, VariantsTypography } from "../../ui/typography";
+import { Link } from "../Link/Link";
 import { LinkVariants } from "../../enums/LinkVariants";
 
-export const MainSection = () => {
+export const AppsSection = () => {
   return (
-    <MainContainerSC>
-      <MainBackgrounSC src={background.src} />
+    <BlueContainerSC>
+      <BackgroundImageAppsSC src={favoriteBackground.src} />
       <WrapperSC>
         <ContainerSC>
+          <ImageContainerSC>
+            <ImageSC src={ImageApps.src} alt={"work together"} />
+          </ImageContainerSC>
           <DescriptionContainerSC>
             <Typography variant={VariantsTypography.h2} color={Colors.WHITE}>
-              Get More Done with whitepace
+              Work with Your Favorite Apps Using whitepace
             </Typography>
             <TextContainerSC>
               <Typography
                 variant={VariantsTypography.paragraphSmall}
                 color={Colors.WHITE}
               >
-                Project management software that enables your teams to
-                collaborate, plan, analyze and manage everyday tasks
+                Whitepace teams up with your favorite software. Integrate with
+                over 1000+ apps with Zapier to have all the tools you need for
+                your project success.
               </Typography>
             </TextContainerSC>
 
             <Link
               href="/whitepacefree"
-              text="Try Whitepace free"
-              variant={LinkVariants.linkSmall}
+              text="Read more"
+              variant={LinkVariants.linkLarge}
             />
           </DescriptionContainerSC>
-          <ImageContainerSC>
-            <ImageSC src={ImageWork.src} alt={"work together"} />
-          </ImageContainerSC>
         </ContainerSC>
       </WrapperSC>
-    </MainContainerSC>
+    </BlueContainerSC>
   );
 };

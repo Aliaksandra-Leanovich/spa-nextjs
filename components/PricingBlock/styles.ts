@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
 import { Colors } from "../../ui/colors";
 import { media } from "../../ui/media";
+import { Typography, VariantsTypography } from "../../ui/typography";
 
 export const PricingContainerSC = styled.section`
   overflow-y: scroll;
@@ -69,12 +70,16 @@ export const TabAdvantagesSC = styled.div``;
 
 export const TextContainerSC = styled.div`
   margin: 0 0 24px 0;
+  display: flex;
 `;
 
 export const TabTextContainerSC = styled.div`
   padding: 40px 44px;
 `;
-
+export const TextPriceSC = styled(Typography)`
+  ${VariantsTypography.h3};
+  color: ${Colors.BLACK};
+`;
 export const TabSC = styled.div`
   position: relative;
   height: max-content;
@@ -90,6 +95,9 @@ export const TabSC = styled.div`
     }
     p {
       color: ${Colors.WHITE};
+    }
+    ${TextPriceSC} {
+      color: ${Colors.YELLOW};
     }
     ${TabButtonSC} {
       color: ${Colors.WHITE};

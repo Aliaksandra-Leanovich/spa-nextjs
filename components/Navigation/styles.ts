@@ -1,11 +1,7 @@
 import styled from "@emotion/styled";
-import { ContainerSC } from "../../pages";
 import { Colors } from "../../ui/colors";
 import { media } from "../../ui/media";
-
-interface IProps {
-  open: boolean;
-}
+import { IStylesProps } from "./types";
 
 export const StyledNavigation = styled.nav`
   display: flex;
@@ -17,29 +13,28 @@ export const StyledNavigation = styled.nav`
   }
 `;
 
-export const StyledRightNavigation = styled.div<IProps>`
+export const StyledRightNavigation = styled.div<IStylesProps>`
   background: ${Colors.BLACK};
 
   height: 100vh;
   display: none;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
 
-  padding: 30px;
+  padding: 60px 30px;
   position: absolute;
   top: 0;
   right: 0;
-  transition: display 0.3s ease-in-out;
 
   ${media.LAPTOP} {
-    display: ${({ open }) => (open ? "flex" : "none")};
+    display: ${({ isOpen }) => (isOpen ? "flex" : "none")};
   }
 
   ${media.PHONE} {
     width: 100%;
   }
-  body {
-    overflow: ${({ open }) => (open ? "hidden" : "auto")};
+  main {
+    overflow: ${({ isOpen }) => (isOpen ? "hidden" : "auto")};
   }
 `;
 export const ContainerLinks = styled.div`
@@ -49,9 +44,16 @@ export const ContainerLinks = styled.div`
 
   ${media.LAPTOP} {
     display: grid;
-    align-items: center;
-    justify-content: center;
+    width: 100%;
     row-gap: 2rem;
+  }
+`;
+export const ContainerButtonsSC = styled.div`
+  margin-right: 20px;
+
+  ${media.LAPTOP} {
+    display: grid;
+    row-gap: 16px;
   }
 `;
 
@@ -67,7 +69,7 @@ export const NavigationContainer = styled.div`
 export const HoverLinkSC = styled.div`
   color: ${Colors.WHITE};
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   transition: color 0.5s ease-out;
 
@@ -81,7 +83,7 @@ export const LinkSC = styled.div`
   position: relative;
   display: inline-block;
 
-  ${media.TABLET} {
+  ${media.LAPTOP} {
     margin: 0;
   }
 `;
@@ -90,17 +92,12 @@ export const Arrow = styled.img`
   width: 10px;
   margin-left: 10px;
 `;
-export const ArrowClose = styled.img`
-  width: 10px;
-  margin-left: 10px;
-  transform: rotate(180deg);
-`;
 
-export const SubNavigation = styled.div<IProps>`
+export const SubNavigation = styled.div<IStylesProps>`
   position: absolute;
   background-color: ${Colors.LIGHTBLUE};
 
-  display: ${({ open }) => (open ? "flex" : "none")};
+  display: ${({ isOpen }) => (isOpen ? "flex" : "none")};
   flex-direction: column;
   width: 200px;
   padding: 16px 24px 0;
@@ -118,8 +115,10 @@ export const SubcategorydLinkSC = styled.a`
   }
 `;
 
-export const SubNavigationMobile = styled.div`
+export const SubNavigationMobile = styled.div<IStylesProps>`
   padding: 10px 20px 0;
+  flex-direction: column;
+  display: ${({ isOpen }) => (isOpen ? "block" : "none")};
 `;
 export const ButtonWrapperSC = styled.div`
   margin: 0 25px 0 50px;

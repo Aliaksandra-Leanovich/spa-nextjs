@@ -1,47 +1,41 @@
 import Link from "next/link";
 import React, { useState } from "react";
 import { Typography, VariantsTypography } from "../../ui/typography";
-import { ILinkNavigation } from "./Navigation";
 import {
   HoverLinkSC,
   LinkSC,
   SubcategorydLinkSC,
   SubNavigationMobile,
 } from "./styles";
+import { ILink } from "./types";
 
-export interface ILinkSubcategories {
-  name: string;
-  link: string;
-}
+export const ItemMobileNavigation = ({ link }: ILink) => {
+  const [isOpen, setOpen] = useState(false);
 
-export const ItemMobileNavigation = ({
-  subcategories,
-  title,
-  href,
-  iconClose,
-  iconOpen,
-}: ILinkNavigation) => {
-  const [subnav, setSubnav] = useState<boolean>(false);
+  const handleMouseEnter = () => {
+    setOpen(true);
+  };
+  const handleMouseLeave = () => {
+    setOpen(false);
+  };
 
-  const showSubNav = () => setSubnav(!subnav);
   return (
     <>
-      <LinkSC onMouseEnter={subcategories && showSubNav}>
-        <Link href={href}>
+      <LinkSC
+        onMouseLeave={link.subcategories && handleMouseLeave}
+        onMouseEnter={link.subcategories && handleMouseEnter}
+      >
+        <Link href={link.href}>
           <HoverLinkSC>
             <Typography variant={VariantsTypography.subtitle}>
-              {title}
+              {link.title}
             </Typography>
-            {subcategories && subnav
-              ? iconOpen
-              : subcategories
-              ? iconClose
-              : null}
+            {link.subcategories && link.iconOpen}
           </HoverLinkSC>
         </Link>
-        {subnav && (
-          <SubNavigationMobile>
-            {subcategories?.map((item: ILinkSubcategories, index: number) => (
+        {isOpen && (
+          <SubNavigationMobile isOpen={isOpen}>
+            {link.subcategories?.map((item, index) => (
               <Link href={item.link} key={index}>
                 <SubcategorydLinkSC>{item.name}</SubcategorydLinkSC>
               </Link>

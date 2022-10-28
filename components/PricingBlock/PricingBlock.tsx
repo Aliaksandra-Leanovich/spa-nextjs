@@ -13,6 +13,7 @@ import {
   TextContainerDescriptionSC,
   TextContainerSC,
   TextContainerTitleSC,
+  TextPriceSC,
 } from "./styles";
 import { Colors } from "../../ui/colors";
 import { SliderPricing } from "../SliderPricing/SliderPricing";
@@ -100,17 +101,17 @@ export const PricingBlock = () => {
                 </Typography>
               </TextContainerSC>
               <TextContainerSC>
-                <Typography
+                <TextPriceSC
                   variant={VariantsTypography.h3}
                   color={Colors.BLACK}
                 >
                   {tab.price}
-                </Typography>
+                </TextPriceSC>
               </TextContainerSC>
 
               <TextContainerSC>
                 <Typography
-                  variant={VariantsTypography.paragraphMedium}
+                  variant={VariantsTypography.paragraphXS}
                   color={Colors.BLACK}
                 >
                   {tab.description}
@@ -120,13 +121,13 @@ export const PricingBlock = () => {
               <TabAdvantagesSC>
                 {tab.advantages.map((advantage, index) => (
                   <TextContainerSC key={index}>
+                    <PointSC>
+                      <PointIcon />
+                    </PointSC>
                     <Typography
                       variant={VariantsTypography.paragraphXS}
                       color={Colors.BLACK}
                     >
-                      <PointSC>
-                        <PointIcon />
-                      </PointSC>
                       {advantage}
                     </Typography>
                   </TextContainerSC>
