@@ -10,6 +10,7 @@ import {
   ClientsContainer,
   TextContainerSliderSC,
   SliderContainerSC,
+  WrapperSC,
 } from "./styles";
 
 export interface IReviewers {
@@ -50,14 +51,16 @@ const reviewersData = [
 export const ClientsSection = () => {
   return (
     <SliderContainerSC>
-      <ClientsContainer>
-        <TextContainerSliderSC>
-          <Typography variant={VariantsTypography.h2} color={Colors.BLACK}>
-            What Our Clients Says
-          </Typography>
-        </TextContainerSliderSC>
-        <Slider data={reviewersData} />
-      </ClientsContainer>
+      <WrapperSC>
+        <ClientsContainer>
+          <TextContainerSliderSC>
+            <Typography variant={VariantsTypography.h2} color={Colors.BLACK}>
+              What Our Clients Says
+            </Typography>
+          </TextContainerSliderSC>
+          <Slider data={reviewersData} />
+        </ClientsContainer>
+      </WrapperSC>
     </SliderContainerSC>
   );
 };

@@ -8,8 +8,12 @@ export const MainContainerSC = styled.section`
   position: relative;
   padding: 132px 220px 0;
   background-color: ${Colors.BLUE};
+
   ${media.DESKTOP} {
     padding: 132px 34px 0;
+  }
+  ${media.PHONE} {
+    padding: 0;
   }
 `;
 
@@ -40,9 +44,19 @@ export const DescriptionContainerSC = styled.div`
   }
 `;
 
-export const ImageContainerSC = styled.img`
+export const ImageContainerSC = styled.div`
+  position: relative;
+  background-color: inherit;
+  padding-top: 75%;
   width: 100%;
+`;
+export const ImageSC = styled.img`
+  margin: 0 auto;
+  position: absolute;
+  inset: 0;
+  object-fit: contain;
   max-width: 824px;
+  height: 100%;
 
   ${media.DESKTOP} {
     max-width: 684px;
@@ -84,7 +98,7 @@ export const AppImageSC = styled.div`
   height: 60px;
 `;
 
-export const ContainerEverywhereSC = styled.div`
+export const ContainerYourWorkSC = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -108,10 +122,9 @@ export const TextContainerSliderSC = styled.div`
   margin-bottom: 60px;
 `;
 
-export const TodayContainerSC = styled.div`
+export const FreeTrialContainerSC = styled.div`
   padding: 140px 32px;
   display: flex;
-  margin: 0 auto;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -172,12 +185,13 @@ export const MainBackgrounSC = styled.img`
   width: 100%;
   opacity: 0.3;
 `;
-export const BackgroundImageFavSC = styled.img`
+export const BackgroundImageAppsSC = styled.img`
   position: absolute;
   z-index: 0;
   bottom: 0;
   left: 0;
   width: 100%;
+  height: 100%;
   opacity: 0.3;
 `;
 
@@ -189,7 +203,7 @@ export const BackgroundImageContainerManagSC = styled.div`
 
   opacity: 0.6;
 `;
-export const BackgroundImageContainerEverywhSC = styled.div`
+export const BackgroundImageContainerYourWorkSC = styled.div`
   position: absolute;
   z-index: 0;
   left: -100px;
@@ -225,13 +239,13 @@ export const SliderContainerSC = styled.div`
 export const TextContainerSC = styled.div`
   margin: 24px 0 60px 0;
 `;
-export const TextContainerTodaySC = styled.div`
+export const TextContainerFreeTrialSC = styled.div`
   margin: 24px 0 40px 0;
 `;
-export const TextContainerTodaySecondSC = styled.div`
+export const TextContainerFreeTrialSecondSC = styled.div`
   margin: 40px 0;
 `;
-export const TodayTitleSC = styled.h2`
+export const FreeTrialTitleSC = styled.h2`
   color: ${Colors.WHITE};
   font-family: "Inter";
   font-weight: 700;
@@ -253,4 +267,9 @@ export const TodayTitleSC = styled.h2`
       display: block;
     }
   }
+`;
+export const WrapperSC = styled.div`
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
 `;
