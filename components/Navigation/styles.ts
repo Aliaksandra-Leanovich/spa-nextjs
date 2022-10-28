@@ -120,3 +120,6 @@ export const SubNavigationMobile = styled.div<IStylesProps>`
   flex-direction: column;
   display: ${({ isOpen }) => (isOpen ? "block" : "none")};
 `;
+export const ButtonWrapperSC = styled.div`
+  margin: 0 25px 0 50px;
+`;
