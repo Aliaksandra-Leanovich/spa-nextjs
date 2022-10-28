@@ -1,9 +1,10 @@
 import { getAuth, signOut } from "firebase/auth";
 import router from "next/router";
 import React from "react";
+import { ButtonVariants } from "../../enums/ButtonVariants";
 import { LinkVariants } from "../../enums/LinkVariants";
 import { app } from "../../utils/firebase";
-import { Button, ButtonVariants } from "../Button/Button";
+import { Button } from "../Button/Button";
 import { Link } from "../Link/Link";
 import { ItemMobileNavigation } from "./ItemMobileNavigation";
 import {
@@ -38,8 +39,9 @@ export const RightNavigation = ({ isOpen, data }: IRightNavigationProps) => {
           handleClick={handleClick}
           type="submit"
           variant={ButtonVariants.primary}
-          text="Logout"
-        />
+        >
+          Logout
+        </Button>
 
         <Link
           href="/whitepacefree"
