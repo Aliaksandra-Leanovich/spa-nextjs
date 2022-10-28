@@ -125,7 +125,7 @@ export const PricingBlock = () => {
 
               <TabButtonSC>
                 <Typography
-                  variant={VariantsTypography.button}
+                  variant={VariantsTypography.subtitle}
                   color={Colors.BLACK}
                 >
                   Get Started

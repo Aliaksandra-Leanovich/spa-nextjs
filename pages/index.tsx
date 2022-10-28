@@ -1,47 +1,50 @@
 import type { NextPage } from "next";
+import { useRouter } from "next/router";
 import React from "react";
 import { PricingBlock } from "../components/PricingBlock/PricingBlock";
-import styled from "@emotion/styled";
 import { Footer } from "../components/Footer/Footer";
 import { MainSection } from "../components/Sections/MainSection";
 import { ManagementSection } from "../components/Sections/ManagementSection";
 import { ExtensionSection } from "../components/Sections/ExtensionSection";
 import { CustomiseSection } from "../components/Sections/CustomiseSection";
-import { EverywhereSection } from "../components/Sections/EverywhereSection";
-import { DataSection } from "../components/Sections/DataSection";
+import { YourWorkSection } from "../components/Sections/YourWork";
+import { YourDataSection } from "../components/Sections/YourDataSection";
 import { SponsorsSection } from "../components/Sections/SponsorsSection";
-import { FavoriteSection } from "../components/Sections/FavoriteSection";
+import { AppsSection } from "../components/Sections/AppsSection";
 import { ClientsSection } from "../components/Sections/ClientsSection";
-import { TodaySection } from "../components/Sections/TodaySection";
+import { FreeTrialSection } from "../components/Sections/FreeTrialSection";
 import { Header } from "../components/Header/Header";
+import { MainSC } from "./style";
 
 const Home: NextPage = () => {
+  const router = useRouter();
+
+  const accessToken = localStorage.getItem("authUser");
+
+  if (!accessToken) {
+    router.replace("/signup");
+    return null;
+  }
+
   return (
     <>
       <Header />
-      <ContainerSC>
+      <MainSC>
         <MainSection />
         <ManagementSection />
         <ExtensionSection />
         <CustomiseSection />
         <PricingBlock />
-        <EverywhereSection />
-        <DataSection />
+        <YourWorkSection />
+        <YourDataSection />
         <SponsorsSection />
-        <FavoriteSection />
+        <AppsSection />
         <ClientsSection />
-        <TodaySection />
+        <FreeTrialSection />
         <Footer />
-      </ContainerSC>
+      </MainSC>
     </>
   );
 };
 
 export default Home;
-
-export const ContainerSC = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-`;

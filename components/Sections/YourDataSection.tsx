@@ -1,49 +1,53 @@
 import React from "react";
+import { LinkVariants } from "../../enums/LinkVariants";
 import { Colors } from "../../ui/colors";
 import { Typography, VariantsTypography } from "../../ui/typography";
-import { LinkVariants } from "../../enums/LinkVariants";
 import { Link } from "../Link/Link";
+
 import {
-  BlueContainerSC,
   ContainerSC,
   DescriptionContainerSC,
   ImageContainerSC,
   ImageSC,
   TextContainerSC,
+  WhiteContainerSC,
   WrapperSC,
 } from "./styles";
-import ImageWork from "/public/icons/team-work4.png";
+import DataImg from "/public/icons/data.jpg";
 
-export const ExtensionSection = () => {
+export const YourDataSection = () => {
   return (
-    <BlueContainerSC>
+    <WhiteContainerSC>
       <WrapperSC>
-        <ContainerSC id="solutions">
+        <ContainerSC>
           <DescriptionContainerSC>
-            <Typography variant={VariantsTypography.h2} color={Colors.WHITE}>
-              Use as Extension
+            <Typography variant={VariantsTypography.h2} color={Colors.BLACK}>
+              100% your data
             </Typography>
             <TextContainerSC>
               <Typography
                 variant={VariantsTypography.paragraphSmall}
-                color={Colors.WHITE}
+                color={Colors.BLACK}
               >
-                Use the web clipper extension, available on Chrome and Firefox,
-                to save web pages or take screenshots as notes.
+                The app is open source and your notes are saved to an open
+                format, so you will always have access to them. Uses End-To-End
+                Encryption (E2EE) to secure your notes and ensure no-one but
+                yourself can access them.
               </Typography>
             </TextContainerSC>
 
             <Link
               href="/whitepacefree"
-              text="Lets Go"
+              text="Read more"
               variant={LinkVariants.linkLarge}
             />
           </DescriptionContainerSC>
+
           <ImageContainerSC>
-            <ImageSC src={ImageWork.src} alt={"work together"} />
+            <ImageSC src={DataImg.src} alt={"work together"} />
           </ImageContainerSC>
         </ContainerSC>
       </WrapperSC>
-    </BlueContainerSC>
+    </WhiteContainerSC>
   );
 };
