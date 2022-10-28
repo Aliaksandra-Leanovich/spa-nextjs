@@ -9,7 +9,7 @@ import { Typography, VariantsTypography } from "../../ui/typography";
 import {
   ClientsContainer,
   TextContainerSliderSC,
-  WhiteContainerSC,
+  SliderContainerSC,
   WrapperSC,
 } from "./styles";
 
@@ -50,7 +50,7 @@ const reviewersData = [
 
 export const ClientsSection = () => {
   return (
-    <WhiteContainerSC>
+    <SliderContainerSC>
       <WrapperSC>
         <ClientsContainer>
           <TextContainerSliderSC>
@@ -61,6 +61,6 @@ export const ClientsSection = () => {
           <Slider data={reviewersData} />
         </ClientsContainer>
       </WrapperSC>
-    </WhiteContainerSC>
+    </SliderContainerSC>
   );
 };
