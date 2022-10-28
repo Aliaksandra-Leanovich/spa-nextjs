@@ -111,7 +111,7 @@ export const PricingBlock = () => {
 
               <TextContainerSC>
                 <Typography
-                  variant={VariantsTypography.paragraphMedium}
+                  variant={VariantsTypography.paragraphXS}
                   color={Colors.BLACK}
                 >
                   {tab.description}
@@ -121,13 +121,13 @@ export const PricingBlock = () => {
               <TabAdvantagesSC>
                 {tab.advantages.map((advantage, index) => (
                   <TextContainerSC key={index}>
+                    <PointSC>
+                      <PointIcon />
+                    </PointSC>
                     <Typography
                       variant={VariantsTypography.paragraphXS}
                       color={Colors.BLACK}
                     >
-                      <PointSC>
-                        <PointIcon />
-                      </PointSC>
                       {advantage}
                     </Typography>
                   </TextContainerSC>

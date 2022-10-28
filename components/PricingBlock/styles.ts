@@ -70,6 +70,7 @@ export const TabAdvantagesSC = styled.div``;
 
 export const TextContainerSC = styled.div`
   margin: 0 0 24px 0;
+  display: flex;
 `;
 
 export const TabTextContainerSC = styled.div`
