@@ -1,52 +1,41 @@
 import Link from "next/link";
 import React, { useState } from "react";
 import { Typography, VariantsTypography } from "../../ui/typography";
-import { ILinkNavigation } from "./Navigation";
 import {
   HoverLinkSC,
   LinkSC,
   SubcategorydLinkSC,
   SubNavigationMobile,
 } from "./styles";
+import { ILink } from "./types";
 
-export interface ILinkItem {}
+export const ItemMobileNavigation = ({ link }: ILink) => {
+  const [isOpen, setOpen] = useState(false);
 
-export interface ILinkSubcategories {
-  name: string;
-  link: string;
-}
-
-export const ItemMobileNavigation = ({
-  subcategories,
-  title,
-  href,
-  iconOpen,
-}: ILinkNavigation) => {
-  const [subnav, setSubnav] = useState<boolean>(false);
-  const [open, setOpen] = useState<boolean>(false);
   const handleMouseEnter = () => {
-    setSubnav(!subnav);
     setOpen(true);
   };
   const handleMouseLeave = () => {
     setOpen(false);
-    setSubnav(false);
   };
 
   return (
     <>
-      <LinkSC onMouseLeave={handleMouseLeave}>
-        <Link href={href}>
-          <HoverLinkSC onMouseEnter={subcategories && handleMouseEnter}>
+      <LinkSC
+        onMouseLeave={link.subcategories && handleMouseLeave}
+        onMouseEnter={link.subcategories && handleMouseEnter}
+      >
+        <Link href={link.href}>
+          <HoverLinkSC>
             <Typography variant={VariantsTypography.subtitle}>
-              {title}
+              {link.title}
             </Typography>
-            {subcategories ? iconOpen : null}
+            {link.subcategories && link.iconOpen}
           </HoverLinkSC>
         </Link>
-        {subnav && (
-          <SubNavigationMobile open={open}>
-            {subcategories?.map((item: ILinkSubcategories, index: number) => (
+        {isOpen && (
+          <SubNavigationMobile isOpen={isOpen}>
+            {link.subcategories?.map((item, index) => (
               <Link href={item.link} key={index}>
                 <SubcategorydLinkSC>{item.name}</SubcategorydLinkSC>
               </Link>
