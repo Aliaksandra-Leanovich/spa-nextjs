@@ -20,7 +20,7 @@ export const TabSC = styled.div`
   background-color: ${Colors.BLUE};
   padding: 20px;
   border-radius: 10px;
-  margin-bottom: 85px;
+  margin-bottom: 86px;
   max-width: 472px;
 `;
 
