@@ -1,6 +1,7 @@
 import { css } from "@emotion/react";
 import styled from "@emotion/styled";
 import { VariantsTypography } from "../enums/TypographyVariants";
+
 import { media } from "./media";
 
 interface ITypography {
@@ -83,17 +84,6 @@ const variantTypography = (variant = VariantsTypography.subtitle) =>
       font-weight: 400;
       font-size: 18px;
       line-height: 30px;
-    `,
-    button: css`
-      font-family: "Inter";
-      font-weight: 500;
-      font-size: 18px;
-      line-height: 23px;
-      ${media.PHONE} {
-        font-weight: 400;
-        font-size: 18px;
-        line-height: 30px;
-      }
     `,
   }[variant]);
 

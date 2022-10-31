@@ -5,14 +5,16 @@ import { app } from "../../utils/firebase";
 import { useRouter } from "next/router";
 import { ContainerFormSC, NoUserMessageSC, StyledFormSC } from "./styles";
 import { Input } from "../Input/Input";
-import { Button, ButtonVariants } from "../Button/Button";
-import { LinkTemplate, LinkVariants } from "../LinkTemplate/LinkTemplate";
+import { Button } from "../Button/Button";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as Yup from "yup";
 import { Colors } from "../../ui/colors";
 import { Typography } from "../../ui/typography";
 import { IUserForm } from "./types";
 import { VariantsTypography } from "../../enums/TypographyVariants";
+import { ButtonVariants } from "../../enums/ButtonVariants";
+import { Link } from "../Link/Link";
+import { LinkVariants } from "../../enums/LinkVariants";
 
 const validationSchema = Yup.object().shape({
   email: Yup.string().required("Email is required").email("Email is invalid"),
@@ -54,7 +56,8 @@ export const SignInForm = () => {
         await router.push("/");
       })
       .catch((error) => {
-        setError(getAuthError(error.code));
+        const errorCode = error.code;
+        setError(getAuthError(errorCode));
       });
   };
 
@@ -79,13 +82,11 @@ export const SignInForm = () => {
           register={register}
           placeholder="Enter your password"
         />
-        <Button
-          type="submit"
-          text="Sign In"
-          variant={ButtonVariants.secondary}
-        />
+        <Button type="submit" variant={ButtonVariants.secondary}>
+          Sign in
+        </Button>
       </StyledFormSC>
-      <LinkTemplate
+      <Link
         href="/signup"
         text="I dont have an account"
         variant={LinkVariants.linkSmall}

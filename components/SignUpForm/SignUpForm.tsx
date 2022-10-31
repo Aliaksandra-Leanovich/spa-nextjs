@@ -4,8 +4,6 @@ import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import { app } from "../../utils/firebase";
 import { useRouter } from "next/router";
 import { Input } from "../Input/Input";
-import { Button, ButtonVariants } from "../Button/Button";
-import { LinkTemplate, LinkVariants } from "../LinkTemplate/LinkTemplate";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as Yup from "yup";
 import { Colors } from "../../ui/colors";
@@ -13,6 +11,10 @@ import { ContainerFormSC, EmailInUseMessageSC, StyledFormSC } from "./styles";
 import { Typography } from "../../ui/typography";
 import { IFormInput } from "./types";
 import { VariantsTypography } from "../../enums/TypographyVariants";
+import { LinkVariants } from "../../enums/LinkVariants";
+import { Link } from "../Link/Link";
+import { ButtonVariants } from "../../enums/ButtonVariants";
+import { Button } from "../Button/Button";
 
 const validationSchema = Yup.object().shape({
   name: Yup.string()
@@ -41,7 +43,7 @@ const getAuthError = (error: string) => {
 
 export const SignUpForm = () => {
   const router = useRouter();
-  const [error, setError] = useState("");
+  const [error, setError] = useState(getAuthError(""));
 
   const {
     register,
@@ -92,13 +94,11 @@ export const SignUpForm = () => {
           register={register}
           placeholder="Enter your password"
         />
-        <Button
-          type="submit"
-          text="Sign Up"
-          variant={ButtonVariants.secondary}
-        />
+        <Button type="submit" variant={ButtonVariants.secondary}>
+          Sign Up
+        </Button>
       </StyledFormSC>
-      <LinkTemplate
+      <Link
         href="/signin"
         text="I already have an account."
         variant={LinkVariants.linkSmall}

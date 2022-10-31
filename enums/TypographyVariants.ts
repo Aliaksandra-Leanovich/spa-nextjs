@@ -9,5 +9,4 @@ export enum VariantsTypography {
   paragraphMedium = "paragraphMedium",
   paragraphMediumBold = "paragraphMediumBold",
   subtitle = "subtitle",
-  button = "button",
 }

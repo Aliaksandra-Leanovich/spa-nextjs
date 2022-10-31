@@ -31,10 +31,13 @@ export const TextConteinerCommentSC = styled.div`
 export const QuotesImageSC = styled.div`
   width: 86px;
   margin-bottom: 32px;
+
   fill: ${Colors.WHITE};
 `;
 
 export const ReviewSC = styled.div`
+  max-width: 424px;
+  width: 100%;
   padding: 60px 40px;
   background-color: ${Colors.LIGHTBLUE};
   border-radius: 10px;
@@ -45,6 +48,7 @@ export const ReviewSC = styled.div`
 
   transition: background-color 0.5s ease-out, box-shadow 0.5s ease-out,
     color 0.5s ease-out;
+
   &:hover {
     background-color: ${Colors.WHITE};
     box-shadow: 15px 10px 50px rgba(0, 0, 0, 0.1);
@@ -68,10 +72,13 @@ export const ReviewerBlockSC = styled.div`
   }
 `;
 export const ReviewerImageSC = styled.div`
-  width: 96px;
+  max-width: 96px;
+  width: 100%;
   height: 96px;
   margin-right: 42px;
   ${media.TABLET} {
+    max-width: 96px;
+    width: 100%;
     margin-right: 0px;
     margin-bottom: 24px;
   }
@@ -85,11 +92,16 @@ export const ReviewerInformationSC = styled.div`
 
 export const ContainerMobileSC = styled.div`
   display: none;
-  width: 100%;
+
   ${media.TABLET} {
     display: flex;
+    width: 100%;
   }
 `;
+export const ContainerMobileReviewSC = styled.div`
+  margin-bottom: 60px;
+`;
+
 export const SwiperCustomSC = styled(Swiper)`
   .swiper-pagination-bullet {
     background-color: ${Colors.LIGHTBLUE};
@@ -103,5 +115,11 @@ export const SwiperCustomSC = styled(Swiper)`
     &-active {
       background-color: ${Colors.BLUE};
     }
+  }
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
   }
 `;
