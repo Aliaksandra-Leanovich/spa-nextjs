@@ -3,23 +3,6 @@ import { Colors } from "../../ui/colors";
 import { media } from "../../ui/media";
 import { Swiper } from "swiper/react";
 
-export const ContainerSC = styled.div`
-  display: flex;
-  margin-top: 60px;
-  width: 100%;
-  ${media.TABLET} {
-    display: none;
-  }
-`;
-export const ContainerReviewsSC = styled.div`
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  column-gap: 32px;
-  justify-content: center;
-  align-items: center;
-
-  margin-bottom: 60px;
-`;
 export const BlockReviewSC = styled.div`
   border-bottom: 1px solid ${Colors.WHITE};
   margin-bottom: 60px;
@@ -77,8 +60,6 @@ export const ReviewerImageSC = styled.div`
   height: 96px;
   margin-right: 42px;
   ${media.TABLET} {
-    max-width: 96px;
-    width: 100%;
     margin-right: 0px;
     margin-bottom: 24px;
   }
@@ -91,12 +72,8 @@ export const ReviewerInformationSC = styled.div`
 `;
 
 export const ContainerMobileSC = styled.div`
-  display: none;
-
-  ${media.TABLET} {
-    display: flex;
-    width: 100%;
-  }
+  display: flex;
+  width: 100%;
 `;
 export const ContainerMobileReviewSC = styled.div`
   margin-bottom: 60px;
