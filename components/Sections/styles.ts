@@ -56,7 +56,8 @@ export const ImageSC = styled.img`
   inset: 0;
   object-fit: contain;
   max-width: 824px;
-  height: 100%;
+  width: 100%;
+  height: 480px;
 
   ${media.DESKTOP} {
     max-width: 684px;
