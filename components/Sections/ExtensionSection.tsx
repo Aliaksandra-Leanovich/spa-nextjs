@@ -1,14 +1,10 @@
 import React from "react";
 import { Colors } from "../../ui/colors";
-<<<<<<< HEAD
 import { Typography } from "../../ui/typography";
 import { VariantsTypography } from "../../enums/TypographyVariants";
-import { LinkTemplate, LinkVariants } from "../LinkTemplate/LinkTemplate";
-=======
-import { Typography, VariantsTypography } from "../../ui/typography";
 import { LinkVariants } from "../../enums/LinkVariants";
 import { Link } from "../Link/Link";
->>>>>>> 3cc03b2f252476d29918b90ece12a4260990ff6e
+
 import {
   BlueContainerSC,
   ContainerSC,

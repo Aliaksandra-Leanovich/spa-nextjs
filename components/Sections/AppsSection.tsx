@@ -12,9 +12,10 @@ import {
   WrapperSC,
 } from "./styles";
 import ImageApps from "/public/icons/Apps.png";
-import { Typography, VariantsTypography } from "../../ui/typography";
+import { Typography } from "../../ui/typography";
 import { Link } from "../Link/Link";
 import { LinkVariants } from "../../enums/LinkVariants";
+import { VariantsTypography } from "../../enums/TypographyVariants";
 
 export const AppsSection = () => {
   return (
