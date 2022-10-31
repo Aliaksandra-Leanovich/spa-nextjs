@@ -17,7 +17,8 @@ import {
 } from "./styles";
 import { Colors } from "../../ui/colors";
 import { SliderPricing } from "../SliderPricing/SliderPricing";
-import { Typography, VariantsTypography } from "../../ui/typography";
+import { Typography } from "../../ui/typography";
+import { VariantsTypography } from "../../enums/TypographyVariants";
 
 export interface IPricePlans {
   set: string;

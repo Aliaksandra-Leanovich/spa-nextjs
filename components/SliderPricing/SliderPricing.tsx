@@ -15,7 +15,8 @@ import {
   TextContainerSC,
   TextPriceSC,
 } from "./style";
-import { Typography, VariantsTypography } from "../../ui/typography";
+import { Typography } from "../../ui/typography";
+import { VariantsTypography } from "../../enums/TypographyVariants";
 import { Colors } from "../../ui/colors";
 
 export interface IPricePlans {
