@@ -17,10 +17,35 @@ export enum VariantsTypography {
 
 interface ITypography {
   color?: string;
-  variant: VariantsTypography;
+  variant: string;
 }
 
-const variantTypography = (variant = VariantsTypography.subtitle) =>
+interface IObjectKeys {
+  [key: string]: string;
+}
+
+export const test: IObjectKeys = {
+  h1: "h1",
+  h2: "h2",
+  h3: "h3",
+  h4: "h4",
+  h5: "h5",
+  h6: "h6",
+  paragraphSmall: "p",
+  paragraphXS: "p",
+  paragraphSmallBold: "p",
+  paragraphMedium: "p",
+  paragraphMediumBold: "p",
+  subtitle: "p",
+};
+
+export interface IProps {
+  variant: string;
+  color: string;
+  children: string;
+}
+
+const variantTypography = (variant = test.subtitle) =>
   ({
     h1: css`
       font-family: "Inter";
@@ -98,7 +123,19 @@ const variantTypography = (variant = VariantsTypography.subtitle) =>
     `,
   }[variant]);
 
-export const Typography = styled.p<ITypography>`
+export const TypographyRoot = styled("p")<ITypography>`
   ${({ variant }) => variantTypography(variant)}
   color: ${({ color }) => color};
 `;
+
+export const Typography = ({ variant, color, children }: IProps) => {
+  const Component: any = variant ? test[variant] : "p";
+
+  return (
+    <TypographyRoot as={Component} color={color} variant={variant}>
+      {children}
+    </TypographyRoot>
+  );
+};
+
+export default Typography;
