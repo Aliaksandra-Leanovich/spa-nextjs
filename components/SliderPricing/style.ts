@@ -2,18 +2,17 @@ import styled from "@emotion/styled";
 import { Colors } from "../../ui/colors";
 import { media } from "../../ui/media";
 import { Swiper } from "swiper/react";
-import { Typography, VariantsTypography } from "../../ui/typography";
+import { Typography } from "../../ui/typography";
 
 export const ContainerMobileSC = styled.div`
   display: none;
-  width: 100%;
-  padding: 0 16px;
+
   ${media.TABLET} {
+    width: 100%;
     display: block;
   }
 `;
 export const TextPriceSC = styled(Typography)`
-  ${VariantsTypography.h3};
   color: ${Colors.YELLOW};
 `;
 
@@ -21,13 +20,13 @@ export const TabSC = styled.div`
   background-color: ${Colors.BLUE};
   padding: 20px;
   border-radius: 10px;
-  margin-bottom: 85px;
+  margin-bottom: 86px;
   max-width: 472px;
 `;
 
 export const PointSC = styled.div`
   height: 18px;
-  margin-right: 19px;
+  margin-right: 20px;
   svg {
     path {
       stroke: ${Colors.YELLOW};
@@ -43,19 +42,16 @@ export const TabButtonSC = styled.button`
   padding: 16px 40px;
 `;
 
-export const TabAdvantagesSC = styled.div``;
-
 export const TextContainerSC = styled.div`
-  margin: 0 0 24px 0;
+  margin-bottom: 24px;
   display: flex;
 `;
-
-export const TabTextContainerSC = styled.div``;
 
 export const SwiperCustomSC = styled(Swiper)`
   .swiper-slide {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0 20px;
   }
 `;
