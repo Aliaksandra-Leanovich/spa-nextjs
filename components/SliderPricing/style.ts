@@ -21,7 +21,7 @@ export const TabSC = styled.div`
   background-color: ${Colors.BLUE};
   padding: 20px;
   border-radius: 10px;
-  margin-bottom: 85px;
+  margin-bottom: 86px;
 
   max-width: 472px;
 `;
@@ -54,7 +54,6 @@ export const SwiperCustomSC = styled(Swiper)`
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-right: 20px;
-    padding-left: 20px;
+    padding: 0 20px;
   }
 `;
