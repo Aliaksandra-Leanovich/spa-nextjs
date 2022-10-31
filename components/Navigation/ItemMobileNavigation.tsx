@@ -13,19 +13,13 @@ import { ILink } from "./types";
 export const ItemMobileNavigation = ({ link }: ILink) => {
   const [isOpen, setOpen] = useState(false);
 
-  const handleMouseEnter = () => {
-    setOpen(true);
-  };
-  const handleMouseLeave = () => {
-    setOpen(false);
+  const handleTouch = () => {
+    isOpen ? setOpen(true) : setOpen(false);
   };
 
   return (
     <>
-      <LinkSC
-        onMouseLeave={link.subcategories && handleMouseLeave}
-        onMouseEnter={link.subcategories && handleMouseEnter}
-      >
+      <LinkSC onTouchEnd={link.subcategories && handleTouch}>
         <Link href={link.href}>
           <HoverLinkSC>
             <Typography variant={VariantsTypography.subtitle}>
