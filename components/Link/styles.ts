@@ -2,7 +2,7 @@ import { css } from "@emotion/react";
 import styled from "@emotion/styled";
 import { LinkVariants } from "../../enums/LinkVariants";
 import { Colors } from "../../ui/colors";
-import { ILink } from "./types";
+import { ILinkProps } from "./types";
 
 const variantStyles = (variant = LinkVariants.linkSmall) =>
   ({
@@ -17,7 +17,7 @@ const variantStyles = (variant = LinkVariants.linkSmall) =>
     `,
   }[variant]);
 
-export const LinkSC = styled.a<Pick<ILink, "variant">>`
+export const LinkSC = styled.a<Pick<ILinkProps, "variant">>`
   ${({ variant }) => variantStyles(variant)}
 
   display: flex;

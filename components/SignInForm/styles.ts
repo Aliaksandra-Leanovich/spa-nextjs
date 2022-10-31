@@ -12,7 +12,7 @@ export const StyledFormSC = styled.form`
   padding: 50px;
 
   background-color: ${Colors.WHITE};
-  border-radius: 15px;
+  border-radius: 16px;
 `;
 
 export const ContainerFormSC = styled.section`
