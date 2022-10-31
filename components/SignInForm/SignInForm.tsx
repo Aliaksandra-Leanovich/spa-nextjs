@@ -9,7 +9,7 @@ import { Button } from "../Button/Button";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as Yup from "yup";
 import { Colors } from "../../ui/colors";
-import { Typography } from "../../ui/typography";
+import { Typography } from "../../ui/Typography";
 import { IUserForm } from "./types";
 import { VariantsTypography } from "../../enums/TypographyVariants";
 import { ButtonVariants } from "../../enums/ButtonVariants";

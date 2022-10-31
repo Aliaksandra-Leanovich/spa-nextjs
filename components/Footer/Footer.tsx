@@ -25,7 +25,7 @@ import LinkedinIcon from "/public/icons/Linkedin.svg";
 import FacebookIcon from "/public/icons/Facebook.svg";
 import TwitterIcon from "/public/icons/Twitter.svg";
 import { Colors } from "../../ui/colors";
-import { Typography } from "../../ui/typography";
+import { Typography } from "../../ui/Typography";
 import { VariantsTypography } from "../../enums/TypographyVariants";
 import { default as NextLink } from "next/link";
 import { Link } from "../Link/Link";

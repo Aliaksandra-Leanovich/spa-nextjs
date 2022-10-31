@@ -5,7 +5,7 @@ import { VariantsTypography } from "../enums/TypographyVariants";
 
 export interface IProps {
   variant: VariantsTypography;
-  color: string;
+  color?: string;
   children: string;
 }
 interface ITypography {

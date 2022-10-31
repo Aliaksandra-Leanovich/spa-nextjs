@@ -13,7 +13,7 @@ import {
   TextContainerSC,
   TextPriceSC,
 } from "./style";
-import { Typography } from "../../ui/typography";
+import { Typography } from "../../ui/Typography";
 import { VariantsTypography } from "../../enums/TypographyVariants";
 import { Colors } from "../../ui/colors";
 import { IPropsSlider } from "./types";

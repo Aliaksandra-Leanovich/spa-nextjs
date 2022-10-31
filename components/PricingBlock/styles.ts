@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import { Colors } from "../../ui/colors";
 import { media } from "../../ui/media";
-import { Typography } from "../../ui/typography";
+import { Typography } from "../../ui/Typography";
 
 export const PricingContainerSC = styled.section`
   overflow-y: scroll;
