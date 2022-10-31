@@ -51,7 +51,7 @@ export const ReviewSC = styled.div`
 
   &:hover {
     background-color: ${Colors.WHITE};
-    box-shadow: 15px 10px 50px rgba(0, 0, 0, 0.1);
+    box-shadow: 16px 10px 50px rgba(0, 0, 0, 0.1);
     p {
       color: ${Colors.BLACK};
     }

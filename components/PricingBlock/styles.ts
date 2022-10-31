@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import { Colors } from "../../ui/colors";
 import { media } from "../../ui/media";
-import { Typography, VariantsTypography } from "../../ui/typography";
+import { Typography } from "../../ui/typography";
 
 export const PricingContainerSC = styled.section`
   overflow-y: scroll;
@@ -21,8 +21,7 @@ export const PricingContainerSC = styled.section`
   }
   ${media.TABLET} {
     display: block;
-
-    padding: 60px 16px;
+    padding: 60px 0;
   }
 `;
 
@@ -66,10 +65,8 @@ export const TabButtonSC = styled.button`
   padding: 16px 40px;
 `;
 
-export const TabAdvantagesSC = styled.div``;
-
 export const TextContainerSC = styled.div`
-  margin: 0 0 24px 0;
+  margin-bottom: 24px;
   display: flex;
 `;
 
@@ -77,7 +74,6 @@ export const TabTextContainerSC = styled.div`
   padding: 40px 44px;
 `;
 export const TextPriceSC = styled(Typography)`
-  ${VariantsTypography.h3};
   color: ${Colors.BLACK};
 `;
 export const TabSC = styled.div`

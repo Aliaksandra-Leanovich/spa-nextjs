@@ -12,7 +12,7 @@ export const StyledFormSC = styled.form`
   padding: 50px;
 
   background-color: ${Colors.WHITE};
-  border-radius: 15px;
+  border-radius: 16px;
   position: relative;
 `;
 
@@ -29,5 +29,5 @@ export const EmailInUseMessageSC = styled.p`
   color: #cd3232;
   position: absolute;
   margin-left: 50px;
-  margin-top: 25px;
+  margin-top: 26px;
 `;

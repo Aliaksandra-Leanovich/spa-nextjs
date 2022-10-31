@@ -9,11 +9,12 @@ import { Button } from "../Button/Button";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as Yup from "yup";
 import { Colors } from "../../ui/colors";
-import { Typography, VariantsTypography } from "../../ui/typography";
+import { Typography } from "../../ui/typography";
 import { IUserForm } from "./types";
-import { LinkVariants } from "../../enums/LinkVariants";
-import { Link } from "../Link/Link";
+import { VariantsTypography } from "../../enums/TypographyVariants";
 import { ButtonVariants } from "../../enums/ButtonVariants";
+import { Link } from "../Link/Link";
+import { LinkVariants } from "../../enums/LinkVariants";
 
 const validationSchema = Yup.object().shape({
   email: Yup.string().required("Email is required").email("Email is invalid"),
