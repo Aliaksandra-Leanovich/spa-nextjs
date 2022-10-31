@@ -121,5 +121,5 @@ export const SubNavigationMobile = styled.div<IStylesProps>`
   display: ${({ isOpen }) => (isOpen ? "block" : "none")};
 `;
 export const ButtonWrapperSC = styled.div`
-  margin: 0 25px 0 50px;
+  margin: 0 26px 0 50px;
 `;
