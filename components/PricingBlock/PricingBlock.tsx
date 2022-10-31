@@ -15,8 +15,10 @@ import {
   TextPriceSC,
 } from "./styles";
 import { Colors } from "../../ui/colors";
-import { IPricePlans, SliderPricing } from "../SliderPricing/SliderPricing";
-import { Typography, VariantsTypography } from "../../ui/typography";
+import { IPricePlans } from "./types";
+import { VariantsTypography } from "../../enums/TypographyVariants";
+import { Typography } from "../../ui/typography";
+import { SliderPricing } from "../SliderPricing/SliderPricing";
 
 const config: IPricePlans[] = [
   {

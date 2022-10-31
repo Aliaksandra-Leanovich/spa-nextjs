@@ -13,7 +13,8 @@ import {
   TextContainerSC,
   WrapperSC,
 } from "./styles";
-import { Typography, VariantsTypography } from "../../ui/typography";
+import { Typography } from "../../ui/typography";
+import { VariantsTypography } from "../../enums/TypographyVariants";
 import { LinkVariants } from "../../enums/LinkVariants";
 
 export const MainSection = () => {

@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import { Colors } from "../../ui/colors";
 import { media } from "../../ui/media";
 import { Swiper } from "swiper/react";
-import { Typography, VariantsTypography } from "../../ui/typography";
+import { Typography } from "../../ui/typography";
 
 export const ContainerMobileSC = styled.div`
   display: none;
@@ -13,7 +13,6 @@ export const ContainerMobileSC = styled.div`
   }
 `;
 export const TextPriceSC = styled(Typography)`
-  ${VariantsTypography.h3};
   color: ${Colors.YELLOW};
 `;
 
