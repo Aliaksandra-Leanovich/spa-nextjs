@@ -27,26 +27,14 @@ export const Slider = ({ data }: ISliderData) => {
     <>
       <ContainerMobileSC>
         <SwiperCustomSC
-          effect={"coverflow"}
-          grabCursor={true}
-          centeredSlides={true}
-          coverflowEffect={{
-            stretch: 0,
-            depth: 100,
-            modifier: 1,
-            slideShadows: false,
-          }}
           pagination={{
             clickable: true,
           }}
+          slidesPerView={1}
+          spaceBetween={30}
           modules={[Pagination]}
           breakpoints={{
-            320: {
-              slidesPerView: 1,
-              spaceBetween: 30,
-            },
-
-            768: {
+            1152: {
               slidesPerView: 3,
               spaceBetween: 30,
             },
