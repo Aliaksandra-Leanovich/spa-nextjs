@@ -8,28 +8,17 @@ import {
   ContainerMobileSC,
   PointSC,
   SwiperCustomSC,
-  TabAdvantagesSC,
   TabButtonSC,
   TabSC,
-  TabTextContainerSC,
   TextContainerSC,
   TextPriceSC,
 } from "./style";
 import { Typography } from "../../ui/typography";
 import { VariantsTypography } from "../../enums/TypographyVariants";
 import { Colors } from "../../ui/colors";
+import { IPropsSlider } from "./types";
 
-export interface IPricePlans {
-  set: string;
-  price: string;
-  description: string;
-  advantages: string[];
-}
-interface IData {
-  data: IPricePlans[];
-}
-
-export const SliderPricing = ({ data }: IData) => {
+export const SliderPricing = ({ data }: IPropsSlider) => {
   return (
     <ContainerMobileSC>
       <SwiperCustomSC
@@ -43,51 +32,47 @@ export const SliderPricing = ({ data }: IData) => {
         {data.map((tab, index) => (
           <SwiperSlide key={index}>
             <TabSC>
-              <TabTextContainerSC>
-                <TextContainerSC>
-                  <Typography
-                    variant={VariantsTypography.paragraphMedium}
-                    color={Colors.WHITE}
-                  >
-                    {tab.set}
-                  </Typography>
-                </TextContainerSC>
-                <TextContainerSC>
-                  <TextPriceSC
-                    variant={VariantsTypography.h3}
-                    color={Colors.BLACK}
-                  >
-                    {tab.price}
-                  </TextPriceSC>
-                </TextContainerSC>
+              <TextContainerSC>
+                <Typography
+                  variant={VariantsTypography.paragraphMedium}
+                  color={Colors.WHITE}
+                >
+                  {tab.set}
+                </Typography>
+              </TextContainerSC>
+              <TextContainerSC>
+                <TextPriceSC
+                  variant={VariantsTypography.h3}
+                  color={Colors.BLACK}
+                >
+                  {tab.price}
+                </TextPriceSC>
+              </TextContainerSC>
 
-                <TextContainerSC>
+              <TextContainerSC>
+                <Typography
+                  variant={VariantsTypography.paragraphXS}
+                  color={Colors.WHITE}
+                >
+                  {tab.description}
+                </Typography>
+              </TextContainerSC>
+
+              {tab.advantages.map((advantage, index) => (
+                <TextContainerSC key={index}>
+                  <PointSC>
+                    <PointIcon />
+                  </PointSC>
                   <Typography
                     variant={VariantsTypography.paragraphXS}
                     color={Colors.WHITE}
                   >
-                    {tab.description}
+                    {advantage}
                   </Typography>
                 </TextContainerSC>
+              ))}
 
-                <TabAdvantagesSC>
-                  {tab.advantages.map((advantage, index) => (
-                    <TextContainerSC key={index}>
-                      <PointSC>
-                        <PointIcon />
-                      </PointSC>
-                      <Typography
-                        variant={VariantsTypography.paragraphXS}
-                        color={Colors.WHITE}
-                      >
-                        {advantage}
-                      </Typography>
-                    </TextContainerSC>
-                  ))}
-                </TabAdvantagesSC>
-
-                <TabButtonSC>Get Started</TabButtonSC>
-              </TabTextContainerSC>
+              <TabButtonSC>Get Started</TabButtonSC>
             </TabSC>
           </SwiperSlide>
         ))}
