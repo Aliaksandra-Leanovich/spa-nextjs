@@ -14,6 +14,7 @@ import { LinkVariants } from "../../enums/LinkVariants";
 import { Link } from "../Link/Link";
 import { ButtonVariants } from "../../enums/ButtonVariants";
 import { Button } from "../Button/Button";
+import Typography from "../../ui/typography";
 
 const validationSchema = Yup.object().shape({
   name: Yup.string()
