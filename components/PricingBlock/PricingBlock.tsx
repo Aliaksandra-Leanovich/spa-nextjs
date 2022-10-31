@@ -6,7 +6,6 @@ import {
   ContainerSliderSC,
   PointSC,
   PricingContainerSC,
-  TabAdvantagesSC,
   TabButtonSC,
   TabSC,
   TabTextContainerSC,
@@ -16,19 +15,12 @@ import {
   TextPriceSC,
 } from "./styles";
 import { Colors } from "../../ui/colors";
-import { SliderPricing } from "../SliderPricing/SliderPricing";
-import { Typography } from "../../ui/typography";
+import { IPricePlans } from "./types";
 import { VariantsTypography } from "../../enums/TypographyVariants";
+import { Typography } from "../../ui/typography";
+import { SliderPricing } from "../SliderPricing/SliderPricing";
 
-export interface IPricePlans {
-  set: string;
-  price: string;
-  description: string;
-  advantages: string[];
-  icon: string;
-}
-
-const config = [
+const config: IPricePlans[] = [
   {
     set: "Free",
     price: "$0",
@@ -119,21 +111,19 @@ export const PricingBlock = () => {
                 </Typography>
               </TextContainerSC>
 
-              <TabAdvantagesSC>
-                {tab.advantages.map((advantage, index) => (
-                  <TextContainerSC key={index}>
-                    <PointSC>
-                      <PointIcon />
-                    </PointSC>
-                    <Typography
-                      variant={VariantsTypography.paragraphXS}
-                      color={Colors.BLACK}
-                    >
-                      {advantage}
-                    </Typography>
-                  </TextContainerSC>
-                ))}
-              </TabAdvantagesSC>
+              {tab.advantages.map((advantage, index) => (
+                <TextContainerSC key={index}>
+                  <PointSC>
+                    <PointIcon />
+                  </PointSC>
+                  <Typography
+                    variant={VariantsTypography.paragraphXS}
+                    color={Colors.BLACK}
+                  >
+                    {advantage}
+                  </Typography>
+                </TextContainerSC>
+              ))}
 
               <TabButtonSC>
                 <Typography

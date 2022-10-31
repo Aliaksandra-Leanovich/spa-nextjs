@@ -21,8 +21,7 @@ export const PricingContainerSC = styled.section`
   }
   ${media.TABLET} {
     display: block;
-
-    padding: 60px 16px;
+    padding: 60px 0;
   }
 `;
 
@@ -66,10 +65,8 @@ export const TabButtonSC = styled.button`
   padding: 16px 40px;
 `;
 
-export const TabAdvantagesSC = styled.div``;
-
 export const TextContainerSC = styled.div`
-  margin: 0 0 24px 0;
+  margin-bottom: 24px;
   display: flex;
 `;
 

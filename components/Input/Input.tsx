@@ -1,22 +1,6 @@
-import React, { InputHTMLAttributes } from "react";
-import { FieldError, FieldValues } from "react-hook-form";
-import { Path, UseFormRegister } from "react-hook-form";
+import React from "react";
 import { ContainerSC, ErrorMessageSC, StyledInputSC } from "./style";
-
-interface IFormValues {
-  email: string;
-  password: string;
-  name?: string;
-  errors?: string;
-}
-
-interface IRegister extends FieldValues, IFormValues {}
-
-interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
-  label: Path<IFormValues>;
-  register: UseFormRegister<IRegister>;
-  errors: FieldError | undefined;
-}
+import { IInputProps } from "./types";
 
 export const Input = ({
   type,
@@ -24,7 +8,7 @@ export const Input = ({
   errors,
   label,
   register,
-}: InputProps) => {
+}: IInputProps) => {
   return (
     <ContainerSC>
       <StyledInputSC

@@ -26,12 +26,15 @@ export const ContainerSC = styled.div`
   align-items: center;
 
   ${media.TABLET} {
-    justify-content: center;
-    align-items: center;
-    grid-template-columns: 1fr;
+    display: grid;
     grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
     row-gap: 100px;
+    column-gap: 0;
     padding: 80px 0 30px;
+  }
+  ${media.PHONE} {
+    row-gap: 80px;
   }
 `;
 
@@ -56,7 +59,8 @@ export const ImageSC = styled.img`
   inset: 0;
   object-fit: contain;
   max-width: 824px;
-  height: 100%;
+  width: 100%;
+  height: 480px;
 
   ${media.DESKTOP} {
     max-width: 684px;
