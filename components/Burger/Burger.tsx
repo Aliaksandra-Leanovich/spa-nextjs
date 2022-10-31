@@ -5,11 +5,8 @@ import { IBurgerProps } from "./types";
 export const Burger = ({ isOpen, setOpen }: IBurgerProps) => {
   const handleClick = () => {
     setOpen(!isOpen);
-    if (!isOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
-    }
+
+    document.body.style.overflow = !isOpen ? "hidden" : "auto";
   };
   return (
     <StyledBurger isOpen={isOpen} onClick={handleClick}>
