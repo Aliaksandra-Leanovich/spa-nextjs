@@ -22,13 +22,12 @@ export const TabSC = styled.div`
   padding: 20px;
   border-radius: 10px;
   margin-bottom: 86px;
-
   max-width: 472px;
 `;
 
 export const PointSC = styled.div`
   height: 18px;
-  margin-right: 19px;
+  margin-right: 20px;
   svg {
     path {
       stroke: ${Colors.YELLOW};
