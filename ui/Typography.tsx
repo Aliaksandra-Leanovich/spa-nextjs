@@ -1,19 +1,16 @@
 import { css } from "@emotion/react";
 import styled from "@emotion/styled";
-import { VariantsTypography } from "../enums/TypographyVariants";
 
-import { media } from "./media";
-
-interface ITypography {
+export interface ITypography {
   color?: string;
   variant: string;
 }
 
-interface IObjectKeys {
+export interface IObjectKeys {
   [key: string]: string;
 }
 
-export const test: IObjectKeys = {
+export const TypesTypography: IObjectKeys = {
   h1: "h1",
   h2: "h2",
   h3: "h3",
@@ -34,7 +31,9 @@ export interface IProps {
   children: string;
 }
 
-const variantTypography = (variant = test.subtitle) =>
+import { media } from "./media";
+
+const variantTypography = (variant = TypesTypography.subtitle) =>
   ({
     h1: css`
       font-family: "Inter";
@@ -118,7 +117,7 @@ export const TypographyRoot = styled("p")<ITypography>`
 `;
 
 export const Typography = ({ variant, color, children }: IProps) => {
-  const Component: any = variant ? test[variant] : "p";
+  const Component: any = variant ? TypesTypography[variant] : "p";
 
   return (
     <TypographyRoot as={Component} color={color} variant={variant}>
