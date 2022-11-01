@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import { Colors } from "../../ui/colors";
 import { media } from "../../ui/media";
-import { Typography } from "../../ui/Typography";
+import { Typography, TypographyRoot } from "../../ui/Typography";
 
 export const PricingContainerSC = styled.section`
   overflow-y: scroll;
@@ -73,7 +73,7 @@ export const TextContainerSC = styled.div`
 export const TabTextContainerSC = styled.div`
   padding: 40px 44px;
 `;
-export const TextPriceSC = styled(Typography)`
+export const TextPriceSC = styled(TypographyRoot)`
   color: ${Colors.BLACK};
 `;
 export const TabSC = styled.div`
