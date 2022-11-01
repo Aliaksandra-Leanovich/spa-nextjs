@@ -169,7 +169,15 @@ export const SponsorsContainerSC = styled.div`
   justify-content: space-between;
   margin-top: 100px;
   ${media.LAPTOP} {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-content: center;
+  }
+  ${media.TABLET} {
+    display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: center;
   }
 `;
@@ -177,6 +185,9 @@ export const SponsorsContainerSC = styled.div`
 export const SponsorsImageSC = styled.div`
   height: 72px;
   ${media.LAPTOP} {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-bottom: 100px;
   }
 `;
