@@ -18,7 +18,7 @@ import { VariantsTypography } from "../../enums/TypographyVariants";
 import { LinkVariants } from "../../enums/LinkVariants";
 import { Link } from "../Link/Link";
 import UnderlinedTitle from "../Underline/Underline";
-import underline from "/public/icons/underline.png";
+import underlineIcon from "/public/icons/underline.png";
 
 export const ManagementSection = () => {
   return (
@@ -30,7 +30,7 @@ export const ManagementSection = () => {
         <ContainerSC id="products">
           <DescriptionContainerSC>
             <UnderlinedTitle
-              img={underline.src}
+              img={underlineIcon.src}
               color={Colors.BLACK}
               css={{
                 width: "70%",
@@ -79,7 +79,7 @@ export const ManagementSection = () => {
 
           <DescriptionContainerSC>
             <UnderlinedTitle
-              img={underline.src}
+              img={underlineIcon.src}
               color={Colors.BLACK}
               css={{
                 width: "60%",

@@ -16,7 +16,7 @@ import {
 } from "./styles";
 import ImageWork from "/public/icons/team-work4.png";
 import UnderlinedTitle from "../Underline/Underline";
-import underline from "/public/icons/underline.png";
+import underlineIcon from "/public/icons/underline.png";
 
 export const ExtensionSection = () => {
   return (
@@ -25,7 +25,7 @@ export const ExtensionSection = () => {
         <ContainerSC id="solutions">
           <DescriptionContainerSC>
             <UnderlinedTitle
-              img={underline.src}
+              img={underlineIcon.src}
               color={Colors.WHITE}
               css={{
                 width: "60%",
