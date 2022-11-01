@@ -1,6 +1,6 @@
 import React from "react";
 import { VariantsTypography } from "../../enums/TypographyVariants";
-import { TitleContainerSC, TitleTextSC, UnderlinerImageSC } from "./style";
+import { TitleContainerSC, TitleTextSC, UnderlineImageSC } from "./style";
 import { IUnderlineProps } from "./types";
 
 const UnderlinedTitle = ({
@@ -15,7 +15,7 @@ const UnderlinedTitle = ({
         <TitleTextSC variant={VariantsTypography.h1} color={color}>
           {children}
         </TitleTextSC>
-        <UnderlinerImageSC css={css} src={img} />
+        <UnderlineImageSC css={css} src={img} />
       </TitleContainerSC>
     </div>
   );

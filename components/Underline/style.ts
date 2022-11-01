@@ -14,7 +14,7 @@ export const TitleContainerSC = styled.div`
     }
   }
 `;
-export const UnderlinerImageSC = styled.img<Pick<IUnderlineProps, "css">>`
+export const UnderlineImageSC = styled.img<Pick<IUnderlineProps, "css">>`
   ${({ css }) => css}
   z-index: 0;
   position: absolute;
