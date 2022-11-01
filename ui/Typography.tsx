@@ -7,7 +7,6 @@ import { media } from "./media";
 export interface IProps {
   variant: VariantsTypography;
   color?: string;
-  children: string | ReactNode;
 }
 interface ITypography {
   color?: string;
@@ -105,7 +104,11 @@ export const TypographyRoot = styled("p")<ITypography>`
   color: ${({ color }) => color};
 `;
 
-export const Typography = ({ variant, color, children }: IProps) => {
+export const Typography = ({
+  variant,
+  color,
+  children,
+}: React.PropsWithChildren<IProps>) => {
   const Component = variant
     ? TypographyTypes[variant]
     : ("p" as React.ElementType<any>);
