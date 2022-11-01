@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import { Colors } from "../../ui/colors";
 import { media } from "../../ui/media";
 import { Swiper } from "swiper/react";
-import { Typography } from "../../ui/typography";
+import { Typography } from "../../ui/Typography";
 
 export const ContainerMobileSC = styled.div`
   display: none;
