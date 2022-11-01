@@ -1,6 +1,6 @@
 import { css } from "@emotion/react";
 import styled from "@emotion/styled";
-import React, { ReactNode } from "react";
+import React from "react";
 import { VariantsTypography } from "../enums/TypographyVariants";
 import { media } from "./media";
 
