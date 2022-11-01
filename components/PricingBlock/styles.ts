@@ -34,7 +34,9 @@ export const BlockTabsSC = styled.div`
   }
 `;
 export const TextContainerTitleSC = styled.div`
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 export const ContainerSliderSC = styled.div`
   display: none;
