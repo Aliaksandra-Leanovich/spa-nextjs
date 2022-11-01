@@ -36,7 +36,6 @@ export const Slider = ({ data }: ISliderData) => {
           breakpoints={{
             1152: {
               slidesPerView: 3,
-              spaceBetween: 30,
             },
           }}
         >
