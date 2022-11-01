@@ -55,7 +55,7 @@ export const ClientsSection = () => {
       <WrapperSC>
         <ClientsContainer>
           <TextContainerSliderSC>
-            <Typography variant={VariantsTypography.h2} color={Colors.BLACK}>
+            <Typography variant={VariantsTypography.h1} color={Colors.BLACK}>
               What Our Clients Says
             </Typography>
           </TextContainerSliderSC>

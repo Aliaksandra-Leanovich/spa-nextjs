@@ -24,7 +24,7 @@ export const MainSection = () => {
       <WrapperSC>
         <ContainerSC>
           <DescriptionContainerSC>
-            <Typography variant={VariantsTypography.h2} color={Colors.WHITE}>
+            <Typography variant={VariantsTypography.h1} color={Colors.WHITE}>
               Get More Done with whitepace
             </Typography>
             <TextContainerSC>

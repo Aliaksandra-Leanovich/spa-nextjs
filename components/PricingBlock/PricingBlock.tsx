@@ -19,6 +19,7 @@ import { IPricePlans } from "./types";
 import { VariantsTypography } from "../../enums/TypographyVariants";
 import { Typography } from "../../ui/Typography";
 import { SliderPricing } from "../SliderPricing/SliderPricing";
+import UnderlinedTitle from "../Underline/Underline";
 
 const config: IPricePlans[] = [
   {
@@ -66,9 +67,7 @@ export const PricingBlock = () => {
   return (
     <PricingContainerSC id="pricing">
       <TextContainerTitleSC>
-        <Typography variant={VariantsTypography.h2} color={Colors.BLACK}>
-          Choose Your Plan
-        </Typography>
+        <UnderlinedTitle color={Colors.BLACK}>Choose Your Plan</UnderlinedTitle>
       </TextContainerTitleSC>
       <TextContainerDescriptionSC>
         <Typography

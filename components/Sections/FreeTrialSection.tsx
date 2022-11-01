@@ -23,7 +23,7 @@ export const FreeTrialSection = () => {
     <BlueContainerSC>
       <WrapperSC>
         <FreeTrialContainerSC>
-          <FreeTrialTitleSC>
+          <FreeTrialTitleSC variant={VariantsTypography.h1}>
             Try Whitepace <span>today</span>
           </FreeTrialTitleSC>
 

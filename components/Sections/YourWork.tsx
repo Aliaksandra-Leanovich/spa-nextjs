@@ -21,7 +21,7 @@ export const YourWorkSection = () => {
       </BackgroundImageContainerYourWorkSC>
       <WrapperSC>
         <ContainerYourWorkSC>
-          <Typography variant={VariantsTypography.h2} color={Colors.WHITE}>
+          <Typography variant={VariantsTypography.h1} color={Colors.WHITE}>
             Your work, everywhere you are
           </Typography>
           <TextContainerSC>

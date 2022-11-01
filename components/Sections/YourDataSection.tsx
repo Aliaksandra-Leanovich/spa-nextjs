@@ -22,7 +22,7 @@ export const YourDataSection = () => {
       <WrapperSC>
         <ContainerSC>
           <DescriptionContainerSC>
-            <Typography variant={VariantsTypography.h2} color={Colors.BLACK}>
+            <Typography variant={VariantsTypography.h1} color={Colors.BLACK}>
               100% your data
             </Typography>
             <TextContainerSC>

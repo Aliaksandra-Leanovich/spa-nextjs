@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
 import { Colors } from "../../ui/colors";
 import { media } from "../../ui/media";
+import { TypographyRoot } from "../../ui/Typography";
 
 export const MainContainerSC = styled.section`
   margin: 0 auto;
@@ -215,8 +216,10 @@ export const BackgroundImageContainerManagSC = styled.div`
   z-index: 0;
   left: -80px;
   top: 160px;
-
   opacity: 0.6;
+  ${media.PHONE} {
+    display: none;
+  }
 `;
 export const BackgroundImageContainerYourWorkSC = styled.div`
   position: absolute;
@@ -260,22 +263,8 @@ export const TextContainerFreeTrialSC = styled.div`
 export const TextContainerFreeTrialSecondSC = styled.div`
   margin: 40px 0;
 `;
-export const FreeTrialTitleSC = styled.h2`
+export const FreeTrialTitleSC = styled(TypographyRoot)`
   color: ${Colors.WHITE};
-  font-family: "Inter";
-  font-weight: 700;
-  font-size: 64px;
-  line-height: 78px;
-  letter-spacing: -0.02em;
-
-  ${media.TABLET} {
-    font-size: 54px;
-    line-height: 66px;
-  }
-  ${media.PHONE} {
-    font-size: 36px;
-    line-height: 44px;
-  }
 
   & span {
     ${media.DESKTOP} {

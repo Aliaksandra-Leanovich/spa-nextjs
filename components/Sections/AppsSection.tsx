@@ -27,7 +27,7 @@ export const AppsSection = () => {
             <ImageSC src={ImageApps.src} alt={"work together"} />
           </ImageContainerSC>
           <DescriptionContainerSC>
-            <Typography variant={VariantsTypography.h2} color={Colors.WHITE}>
+            <Typography variant={VariantsTypography.h1} color={Colors.WHITE}>
               Work with Your Favorite Apps Using whitepace
             </Typography>
             <TextContainerSC>

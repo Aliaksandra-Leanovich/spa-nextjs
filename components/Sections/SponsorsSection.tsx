@@ -19,7 +19,7 @@ export const SponsorsSection = () => {
     <WhiteContainerSC>
       <WrapperSC>
         <ClientsContainer>
-          <Typography variant={VariantsTypography.h2} color={Colors.BLACK}>
+          <Typography variant={VariantsTypography.h1} color={Colors.BLACK}>
             Our sponsors
           </Typography>
           <SponsorsContainerSC>

@@ -17,6 +17,8 @@ import { Typography } from "../../ui/Typography";
 import { VariantsTypography } from "../../enums/TypographyVariants";
 import { LinkVariants } from "../../enums/LinkVariants";
 import { Link } from "../Link/Link";
+import UnderlinedTitle from "../Underline/Underline";
+import underline from "/public/icons/underline.png";
 
 export const ManagementSection = () => {
   return (
@@ -27,9 +29,26 @@ export const ManagementSection = () => {
       <WrapperSC>
         <ContainerSC id="products">
           <DescriptionContainerSC>
-            <Typography variant={VariantsTypography.h2} color={Colors.BLACK}>
+            <UnderlinedTitle
+              img={underline.src}
+              color={Colors.BLACK}
+              css={{
+                width: "70%",
+                height: "30px",
+                left: "0%",
+                top: "82%",
+                "@media (max-width: 768px)": {
+                  left: "34%",
+                },
+                "@media (max-width: 541px)": {
+                  width: "90%",
+                  left: "8%",
+                  top: "82%",
+                },
+              }}
+            >
               Project Management
-            </Typography>
+            </UnderlinedTitle>
 
             <TextContainerSC>
               <Typography
@@ -59,9 +78,38 @@ export const ManagementSection = () => {
           </ImageContainerSC>
 
           <DescriptionContainerSC>
-            <Typography variant={VariantsTypography.h2} color={Colors.BLACK}>
+            <UnderlinedTitle
+              img={underline.src}
+              color={Colors.BLACK}
+              css={{
+                width: "60%",
+                height: "28px",
+                left: "42%",
+                top: "66%",
+                "@media (max-width: 1037px ) ": {
+                  left: "0%",
+                  top: "86%",
+                },
+                "@media (max-width: 768px)": {
+                  left: "42%",
+                  top: "66%",
+                },
+                "@media (max-width: 382px) ": {
+                  left: "28%",
+                  top: "86%",
+                },
+                "@media (max-width: 365px)": {
+                  left: "42%",
+                  top: "66%",
+                },
+                "@media (max-width: 265px)": {
+                  left: "28%",
+                  top: "76%",
+                },
+              }}
+            >
               Work together
-            </Typography>
+            </UnderlinedTitle>
             <TextContainerSC>
               <Typography
                 variant={VariantsTypography.paragraphSmall}

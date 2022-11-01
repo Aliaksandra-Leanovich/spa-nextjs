@@ -24,7 +24,7 @@ export const CustomiseSection = () => {
             <ImageSC src={ImageWork.src} alt={"work together"} />
           </ImageContainerSC>
           <DescriptionContainerSC>
-            <Typography variant={VariantsTypography.h2} color={Colors.BLACK}>
+            <Typography variant={VariantsTypography.h1} color={Colors.BLACK}>
               Customise it to your needs
             </Typography>
             <TextContainerSC>
