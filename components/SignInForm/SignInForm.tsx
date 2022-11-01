@@ -56,8 +56,7 @@ export const SignInForm = () => {
         await router.push("/");
       })
       .catch((error) => {
-        const errorCode = error.code;
-        setError(getAuthError(errorCode));
+        setError(getAuthError(error.code));
       });
   };
 
