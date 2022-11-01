@@ -50,9 +50,15 @@ export const DescriptionContainerSC = styled.div`
 
 export const ImageContainerSC = styled.div`
   position: relative;
+
   background-color: inherit;
+
   padding-top: 75%;
   width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 export const ImageSC = styled.img`
   margin: 0 auto;
