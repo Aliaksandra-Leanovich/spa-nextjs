@@ -42,8 +42,8 @@ export const SliderPricing = ({ data }: IPropsSlider) => {
               </TextContainerSC>
               <TextContainerSC>
                 <TextPriceSC
+                  color={Colors.YELLOW}
                   variant={VariantsTypography.h3}
-                  color={Colors.BLACK}
                 >
                   {tab.price}
                 </TextPriceSC>
