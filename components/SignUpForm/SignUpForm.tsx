@@ -8,13 +8,13 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as Yup from "yup";
 import { Colors } from "../../ui/colors";
 import { ContainerFormSC, EmailInUseMessageSC, StyledFormSC } from "./styles";
-import { Typography } from "../../ui/typography";
 import { IFormInput } from "./types";
 import { VariantsTypography } from "../../enums/TypographyVariants";
 import { LinkVariants } from "../../enums/LinkVariants";
 import { Link } from "../Link/Link";
 import { ButtonVariants } from "../../enums/ButtonVariants";
 import { Button } from "../Button/Button";
+import Typography from "../../ui/Typography";
 
 const validationSchema = Yup.object().shape({
   name: Yup.string()
@@ -69,7 +69,7 @@ export const SignUpForm = () => {
   return (
     <ContainerFormSC>
       <Typography variant={VariantsTypography.h3} color={Colors.WHITE}>
-        Get started for free. Add your whole team as your needs grow.{" "}
+        Get started for free. Add your whole team as your needs grow.
       </Typography>
       <StyledFormSC onSubmit={handleSubmit(onSubmit)}>
         {error && <EmailInUseMessageSC>{error}</EmailInUseMessageSC>}

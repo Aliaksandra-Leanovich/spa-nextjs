@@ -13,7 +13,7 @@ import {
   TextContainerFreeTrialSecondSC,
   WrapperSC,
 } from "./styles";
-import { Typography } from "../../ui/typography";
+import { Typography } from "../../ui/Typography";
 import { Link } from "../Link/Link";
 import { LinkVariants } from "../../enums/LinkVariants";
 import { VariantsTypography } from "../../enums/TypographyVariants";

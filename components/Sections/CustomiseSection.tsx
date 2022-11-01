@@ -11,7 +11,7 @@ import {
 } from "./styles";
 import { Colors } from "../../ui/colors";
 import { VariantsTypography } from "../../enums/TypographyVariants";
-import { Typography } from "../../ui/typography";
+import { Typography } from "../../ui/Typography";
 import { LinkVariants } from "../../enums/LinkVariants";
 import { Link } from "../Link/Link";
 

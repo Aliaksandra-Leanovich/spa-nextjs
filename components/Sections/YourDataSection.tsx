@@ -2,7 +2,7 @@ import React from "react";
 import { LinkVariants } from "../../enums/LinkVariants";
 import { VariantsTypography } from "../../enums/TypographyVariants";
 import { Colors } from "../../ui/colors";
-import { Typography } from "../../ui/typography";
+import { Typography } from "../../ui/Typography";
 import { Link } from "../Link/Link";
 
 import {

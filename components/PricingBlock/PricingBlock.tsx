@@ -17,7 +17,7 @@ import {
 import { Colors } from "../../ui/colors";
 import { IPricePlans } from "./types";
 import { VariantsTypography } from "../../enums/TypographyVariants";
-import { Typography } from "../../ui/typography";
+import { Typography } from "../../ui/Typography";
 import { SliderPricing } from "../SliderPricing/SliderPricing";
 
 const config: IPricePlans[] = [
