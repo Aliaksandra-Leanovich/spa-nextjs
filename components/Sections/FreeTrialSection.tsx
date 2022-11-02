@@ -2,7 +2,7 @@ import { LinkVariants, VariantsTypography } from "../../enums";
 import { AndroidIcon, AppleIcon, WindowIcon } from "../../public/icons";
 import { Typography } from "../../ui";
 import { Colors } from "../../ui/colors";
-import { Link } from "../Link/Link";
+import { Link } from "../Link";
 import {
   AppImageSC,
   AppsContainerSC,
