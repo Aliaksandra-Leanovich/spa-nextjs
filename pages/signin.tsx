@@ -1,7 +1,7 @@
 import { SignInForm } from "../components/SignInForm";
 
-const signin = () => {
+const Signin = () => {
   return <SignInForm />;
 };
 
-export default signin;
+export default Signin;
