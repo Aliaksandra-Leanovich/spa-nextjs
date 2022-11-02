@@ -1,11 +1,10 @@
 import styled from "@emotion/styled";
 import { media } from "../../ui/media";
-import { TypographyRoot } from "../../ui/Typography";
 import { IUnderlineProps } from "./types";
 
 export const TitleContainerSC = styled.div`
+  z-index: 1;
   position: relative;
-  width: fit-content;
 
   span {
     display: inline;
@@ -14,12 +13,14 @@ export const TitleContainerSC = styled.div`
     }
   }
 `;
-export const UnderlineImageSC = styled.img<Pick<IUnderlineProps, "css">>`
+export const UnderlinerImageSC = styled.img<Pick<IUnderlineProps, "css">>`
   ${({ css }) => css}
   z-index: 0;
   position: absolute;
 `;
-export const TitleTextSC = styled(TypographyRoot)`
-  z-index: 1;
+
+export const ContainerSC = styled.div`
   position: relative;
+  width: fit-content;
+  z-index: 1;
 `;

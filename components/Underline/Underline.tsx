@@ -1,6 +1,7 @@
 import React from "react";
 import { VariantsTypography } from "../../enums/TypographyVariants";
-import { TitleContainerSC, TitleTextSC, UnderlineImageSC } from "./style";
+import Typography from "../../ui/Typography";
+import { ContainerSC, TitleContainerSC, UnderlinerImageSC } from "./style";
 import { IUnderlineProps } from "./types";
 
 const UnderlinedTitle = ({
@@ -10,14 +11,14 @@ const UnderlinedTitle = ({
   img,
 }: React.PropsWithChildren<IUnderlineProps>) => {
   return (
-    <div>
+    <ContainerSC>
       <TitleContainerSC>
-        <TitleTextSC variant={VariantsTypography.h1} color={color}>
+        <Typography variant={VariantsTypography.h1} color={color}>
           {children}
-        </TitleTextSC>
-        <UnderlineImageSC css={css} src={img} />
+        </Typography>
       </TitleContainerSC>
-    </div>
+      <UnderlinerImageSC css={css} src={img} />
+    </ContainerSC>
   );
 };
 
