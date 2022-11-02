@@ -3,7 +3,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { SwiperSlide } from "swiper/react";
 import { VariantsTypography } from "../../enums";
-import { PointIcon } from "../../public/icons";
+import PointIcon from "/public/icons/Point.svg";
 import { Colors, Typography } from "../../ui";
 import {
   ContainerMobileSC,

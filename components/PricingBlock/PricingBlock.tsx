@@ -1,5 +1,5 @@
 import { VariantsTypography } from "../../enums";
-import { PointIcon } from "../../public/icons";
+import PointIcon from "/public/icons/Point.svg";
 import { Colors, Typography } from "../../ui";
 import { SliderPricing } from "../SliderPricing";
 import { UnderlinedTitle } from "../Underline";

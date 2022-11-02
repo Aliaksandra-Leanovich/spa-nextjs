@@ -1,5 +1,4 @@
 import { LinkVariants, VariantsTypography } from "../../enums";
-import { ImageWorkSecond } from "../../public/icons";
 import { Colors, Typography } from "../../ui";
 import { Link } from "../Link";
 import {
@@ -11,6 +10,7 @@ import {
   WhiteContainerSC,
   WrapperSC,
 } from "./styles";
+import ImageWorkSecond from "/public/icons/team-work.webp";
 
 export const CustomiseSection = () => {
   return (

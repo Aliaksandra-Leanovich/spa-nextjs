@@ -1,13 +1,5 @@
 import { default as NextLink } from "next/link";
 import { LinkVariants, VariantsTypography } from "../../enums";
-import {
-  ArrowIcon,
-  FacebookIcon,
-  LinkedinIcon,
-  Logo,
-  TwitterIcon,
-  WorldIcon,
-} from "../../public/icons";
 import { Colors, Typography } from "../../ui";
 import { Link } from "../Link";
 import {
@@ -30,6 +22,12 @@ import {
   WrapperSC,
 } from "./style";
 import { IFooterData } from "./types";
+import ArrowIcon from "/public/icons/arrow.png";
+import FacebookIcon from "/public/icons/Facebook.svg";
+import LinkedinIcon from "/public/icons/Linkedin.svg";
+import Logo from "/public/icons/logo.svg";
+import TwitterIcon from "/public/icons/Twitter.svg";
+import WorldIcon from "/public/icons/world.svg";
 
 const config: IFooterData[] = [
   {

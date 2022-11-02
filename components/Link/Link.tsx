@@ -1,6 +1,6 @@
 import { default as NextLink } from "next/link";
 import { VariantsTypography } from "../../enums";
-import { ArrowRightIcon } from "../../public/icons/";
+import ArrowRightIcon from "public/icons/arrow-right.svg";
 import { Typography } from "../../ui";
 import { Arrow, LinkSC } from "./styles";
 import { ILinkProps } from "./types";

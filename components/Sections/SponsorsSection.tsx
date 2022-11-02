@@ -1,10 +1,4 @@
 import { VariantsTypography } from "../../enums";
-import {
-  ImageApple,
-  ImageGoogle,
-  ImageMicrosoft,
-  ImageSlack,
-} from "../../public/icons";
 import { Colors, Typography } from "../../ui";
 import {
   ClientsContainer,
@@ -13,6 +7,10 @@ import {
   WhiteContainerSC,
   WrapperSC,
 } from "./styles";
+import ImageApple from "/public/icons/Apple.svg";
+import ImageGoogle from "/public/icons/Google.svg";
+import ImageMicrosoft from "/public/icons/Microsoft.svg";
+import ImageSlack from "/public/icons/Slack.svg";
 
 export const SponsorsSection = () => {
   return (

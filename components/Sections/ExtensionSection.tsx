@@ -1,5 +1,4 @@
 import { LinkVariants, VariantsTypography } from "../../enums";
-import { ImageWork, underlineIcon } from "../../public/icons";
 import { Colors, Typography } from "../../ui";
 import { Link } from "../Link";
 import { UnderlinedTitle } from "../Underline";
@@ -12,6 +11,8 @@ import {
   TextContainerSC,
   WrapperSC,
 } from "./styles";
+import ImageWork from "/public/icons/team-work4.png";
+import underlineIcon from "/public/icons/underline.png";
 
 export const ExtensionSection = () => {
   return (

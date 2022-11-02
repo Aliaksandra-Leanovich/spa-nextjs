@@ -1,5 +1,4 @@
 import { LinkVariants, VariantsTypography } from "../../enums";
-import { favoriteBackground, ImageApps } from "../../public/icons";
 import { Colors, Typography } from "../../ui";
 import { Link } from "../Link";
 import {
@@ -12,6 +11,8 @@ import {
   TextContainerSC,
   WrapperSC,
 } from "./styles";
+import ImageApps from "/public/icons/Apps.png";
+import favoriteBackground from "/public/icons/favoriteBackground.png";
 
 export const AppsSection = () => {
   return (

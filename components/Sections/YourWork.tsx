@@ -1,5 +1,4 @@
 import { LinkVariants, VariantsTypography } from "../../enums";
-import { YourWorkBackground } from "../../public/icons";
 import { Colors, Typography } from "../../ui";
 import { Link } from "../Link/Link";
 import {
@@ -9,6 +8,7 @@ import {
   TextContainerSC,
   WrapperSC,
 } from "./styles";
+import YourWorkBackground from "/public/icons/everywhereBackground.svg";
 
 export const YourWorkSection = () => {
   return (

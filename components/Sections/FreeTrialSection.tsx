@@ -1,5 +1,4 @@
 import { LinkVariants, VariantsTypography } from "../../enums";
-import { AndroidIcon, AppleIcon, WindowIcon } from "../../public/icons";
 import { Typography } from "../../ui";
 import { Colors } from "../../ui/colors";
 import { Link } from "../Link";
@@ -13,6 +12,9 @@ import {
   TextContainerFreeTrialSecondSC,
   WrapperSC,
 } from "./styles";
+import AndroidIcon from "/public/icons/android-logo 1.svg";
+import AppleIcon from "/public/icons/apple-black-logo 2.svg";
+import WindowIcon from "/public/icons/windows-logo 1.svg";
 
 export const FreeTrialSection = () => {
   return (

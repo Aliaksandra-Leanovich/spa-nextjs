@@ -1,10 +1,4 @@
 import { LinkVariants, VariantsTypography } from "../../enums";
-import {
-  BackgroundImageManagment,
-  ImageWorkFifth,
-  ImageWorkFourth,
-  underlineIcon,
-} from "../../public/icons";
 import { Colors, Typography } from "../../ui";
 import { Link } from "../Link";
 import { UnderlinedTitle } from "../Underline";
@@ -18,6 +12,10 @@ import {
   WhiteContainerSC,
   WrapperSC,
 } from "./styles";
+import BackgroundImageManagment from "/public/icons/managmentbackground.svg";
+import ImageWorkFifth from "/public/icons/team-work3.png";
+import underlineIcon from "/public/icons/underline.png";
+import ImageWorkFourth from "/public/icons/worktogether.jpg";
 
 export const ManagementSection = () => {
   return (

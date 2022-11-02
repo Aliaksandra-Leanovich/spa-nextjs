@@ -1,5 +1,4 @@
 import { LinkVariants, VariantsTypography } from "../../enums";
-import { backgroundImage, ImageWork } from "../../public/icons";
 import { Colors, Typography } from "../../ui";
 import { Link } from "../Link";
 import {
@@ -12,6 +11,8 @@ import {
   TextContainerSC,
   WrapperSC,
 } from "./styles";
+import backgroundImage from "/public/icons/mainbackground.png";
+import ImageWork from "/public/icons/team-work1.png";
 
 export const MainSection = () => {
   return (

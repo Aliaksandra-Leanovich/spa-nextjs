@@ -2,7 +2,7 @@ import { getAuth, signOut } from "firebase/auth";
 import router from "next/router";
 import { useState } from "react";
 import { ButtonVariants, LinkVariants } from "../../enums";
-import { ArrowIcon } from "../../public/icons";
+import ArrowIcon from "../../public/icons/arrow.png";
 import { app } from "../../utils/firebase";
 import { Burger } from "../Burger";
 import { Button } from "../Button";

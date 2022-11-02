@@ -1,7 +1,6 @@
 import { LinkVariants, VariantsTypography } from "../../enums";
 import { Colors, Typography } from "../../ui";
 import { Link } from "../Link";
-import { DataImage } from "../../public/icons";
 import {
   ContainerSC,
   DescriptionContainerSC,
@@ -11,6 +10,7 @@ import {
   WhiteContainerSC,
   WrapperSC,
 } from "./styles";
+import DataImage from "/public/icons/data.jpg";
 
 export const YourDataSection = () => {
   return (

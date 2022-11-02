@@ -1,5 +1,5 @@
 import React from "react";
-import { Logo } from "../../public/icons";
+import Logo from "/public/icons/logo.svg";
 import { Navigation } from "../Navigation";
 import {
   StyledHeaderSC,

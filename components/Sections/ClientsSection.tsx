@@ -1,5 +1,4 @@
 import { VariantsTypography } from "../../enums";
-import { Avatar1, Avatar2, Avatar3, QuotesImage } from "../../public/icons";
 import { Colors, Typography } from "../../ui";
 import { Slider } from "../Slider";
 import {
@@ -8,6 +7,10 @@ import {
   TextContainerSliderSC,
   WrapperSC,
 } from "./styles";
+import Avatar1 from "/public/icons/avatar1.svg";
+import Avatar2 from "/public/icons/avatar2.svg";
+import Avatar3 from "/public/icons/avatar3.svg";
+import QuotesImage from "/public/icons/Quote.svg";
 
 export interface IReviewers {
   comment: string;
