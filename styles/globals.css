@@ -1,7 +1,8 @@
 @import "normalize.css";
 @font-face {
   font-family: "Inter";
-  src: local("Custom Font"), url("/static/Inter-Regular.ttf") format("opentype");
+  src: local("Custom Font"),
+    url("/static/Inter-Regular.woff") format("opentype");
   font-style: normal;
 }
 * {
