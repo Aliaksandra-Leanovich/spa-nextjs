@@ -2,7 +2,7 @@
 @font-face {
   font-family: "Inter";
   src: local("Custom Font"),
-    url("/static/Inter-Regular.woff") format("opentype");
+    url("/static/Inter-Regular.woff2") format("opentype");
   font-style: normal;
 }
 * {
