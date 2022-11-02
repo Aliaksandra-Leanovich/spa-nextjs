@@ -1,10 +1,9 @@
 import { default as NextLink } from "next/link";
-import React from "react";
-import ArrowRightIcon from "public/icons/arrow-right.svg";
+import { VariantsTypography } from "../../enums";
+import { ArrowRightIcon } from "../../public/icons/";
+import { Typography } from "../../ui";
 import { Arrow, LinkSC } from "./styles";
-import { Typography } from "../../ui/Typography";
 import { ILinkProps } from "./types";
-import { VariantsTypography } from "../../enums/TypographyVariants";
 
 export const Link = ({ href, text, variant }: ILinkProps) => {
   return (

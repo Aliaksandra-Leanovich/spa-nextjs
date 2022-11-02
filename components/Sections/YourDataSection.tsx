@@ -1,10 +1,7 @@
-import React from "react";
-import { LinkVariants } from "../../enums/LinkVariants";
-import { VariantsTypography } from "../../enums/TypographyVariants";
-import { Colors } from "../../ui/colors";
-import { Typography } from "../../ui/Typography";
-import { Link } from "../Link/Link";
-
+import { LinkVariants, VariantsTypography } from "../../enums";
+import { Colors, Typography } from "../../ui";
+import { Link } from "../Link";
+import { DataImage } from "../../public/icons";
 import {
   ContainerSC,
   DescriptionContainerSC,
@@ -14,7 +11,6 @@ import {
   WhiteContainerSC,
   WrapperSC,
 } from "./styles";
-import DataImg from "/public/icons/data.jpg";
 
 export const YourDataSection = () => {
   return (
@@ -45,7 +41,7 @@ export const YourDataSection = () => {
           </DescriptionContainerSC>
 
           <ImageContainerSC>
-            <ImageSC src={DataImg.src} alt={"work together"} />
+            <ImageSC src={DataImage.src} alt={"work together"} />
           </ImageContainerSC>
         </ContainerSC>
       </WrapperSC>

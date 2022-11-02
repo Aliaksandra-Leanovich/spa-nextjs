@@ -1,10 +1,10 @@
 import React from "react";
-import { VariantsTypography } from "../../enums/TypographyVariants";
-import Typography from "../../ui/Typography";
+import { VariantsTypography } from "../../enums";
+import { Typography } from "../../ui";
 import { ContainerSC, TitleContainerSC, UnderlinerImageSC } from "./style";
 import { IUnderlineProps } from "./types";
 
-const UnderlinedTitle = ({
+export const UnderlinedTitle = ({
   children,
   color,
   css,
@@ -21,5 +21,3 @@ const UnderlinedTitle = ({
     </ContainerSC>
   );
 };
-
-export default UnderlinedTitle;

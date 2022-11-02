@@ -1,8 +1,9 @@
-import React from "react";
-import { SwiperSlide } from "swiper/react";
+import SwiperCore, { EffectCoverflow, Pagination } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
-import SwiperCore, { EffectCoverflow, Pagination } from "swiper";
+import { SwiperSlide } from "swiper/react";
+import { VariantsTypography } from "../../enums";
+import { Colors, Typography } from "../../ui";
 import {
   BlockReviewSC,
   ContainerMobileReviewSC,
@@ -15,10 +16,7 @@ import {
   SwiperCustomSC,
   TextConteinerCommentSC,
 } from "./style";
-import { Typography } from "../../ui/Typography";
-import { Colors } from "../../ui/colors";
 import { ISliderData } from "./types";
-import { VariantsTypography } from "../../enums/TypographyVariants";
 
 SwiperCore.use([EffectCoverflow, Pagination]);
 

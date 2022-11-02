@@ -1,4 +1,15 @@
-import React from "react";
+import { default as NextLink } from "next/link";
+import { LinkVariants, VariantsTypography } from "../../enums";
+import {
+  ArrowIcon,
+  FacebookIcon,
+  LinkedinIcon,
+  Logo,
+  TwitterIcon,
+  WorldIcon,
+} from "../../public/icons";
+import { Colors, Typography } from "../../ui";
+import { Link } from "../Link";
 import {
   ArrowImageSC,
   BlockWithButtonSC,
@@ -18,19 +29,6 @@ import {
   WorldImageSC,
   WrapperSC,
 } from "./style";
-import Logo from "/public/icons/logo.svg";
-import ArrowIcon from "/public/icons/arrow.png";
-import WorldIcon from "/public/icons/world.svg";
-import LinkedinIcon from "/public/icons/Linkedin.svg";
-import FacebookIcon from "/public/icons/Facebook.svg";
-import TwitterIcon from "/public/icons/Twitter.svg";
-import { Colors } from "../../ui/colors";
-import { Typography } from "../../ui/Typography";
-import { VariantsTypography } from "../../enums/TypographyVariants";
-import { default as NextLink } from "next/link";
-import { Link } from "../Link/Link";
-import { LinkVariants } from "../../enums/LinkVariants";
-
 import { IFooterData } from "./types";
 
 const config: IFooterData[] = [

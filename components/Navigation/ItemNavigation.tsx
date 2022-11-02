@@ -1,7 +1,7 @@
 import Link from "next/link";
-import React, { useState } from "react";
-import { VariantsTypography } from "../../enums/TypographyVariants";
-import Typography from "../../ui/Typography";
+import { useState } from "react";
+import { VariantsTypography } from "../../enums";
+import { Typography } from "../../ui";
 import {
   HoverLinkSC,
   LinkSC,

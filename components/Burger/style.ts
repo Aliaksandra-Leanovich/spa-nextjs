@@ -1,6 +1,5 @@
 import styled from "@emotion/styled";
-import { Colors } from "../../ui/colors";
-import { media } from "../../ui/media";
+import { Colors, media } from "../../ui";
 import { IStylesProps } from "./types";
 
 export const StyledBurger = styled.button<IStylesProps>`

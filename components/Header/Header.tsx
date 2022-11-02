@@ -1,6 +1,6 @@
 import React from "react";
-import Logo from "/public/icons/logo.svg";
-import { Navigation } from "../Navigation/Navigation";
+import { Logo } from "../../public/icons";
+import { Navigation } from "../Navigation";
 import {
   StyledHeaderSC,
   LogoContainerSC,

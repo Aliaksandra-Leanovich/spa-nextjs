@@ -1,7 +1,5 @@
 import styled from "@emotion/styled";
-import { Breakpoint } from "../../ui/breakpoints";
-import { Colors } from "../../ui/colors";
-import { media } from "../../ui/media";
+import { Colors, media } from "../../ui";
 
 export const StyledFooterSC = styled.footer`
   width: 100%;

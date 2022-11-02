@@ -1,30 +1,29 @@
-import React from "react";
-import ImageWork from "/public/icons/worktogether.jpg";
-import ImageWorkManag from "/public/icons/team-work3.png";
-import Background from "/public/icons/managmentbackground.svg";
+import { LinkVariants, VariantsTypography } from "../../enums";
 import {
+  BackgroundImageManagment,
+  ImageWorkFifth,
+  ImageWorkFourth,
+  underlineIcon,
+} from "../../public/icons";
+import { Colors, Typography } from "../../ui";
+import { Link } from "../Link";
+import { UnderlinedTitle } from "../Underline";
+import {
+  BackgroundImageContainerManagSC,
   ContainerSC,
   DescriptionContainerSC,
   ImageContainerSC,
-  BackgroundImageContainerManagSC,
+  ImageSC,
   TextContainerSC,
   WhiteContainerSC,
-  ImageSC,
   WrapperSC,
 } from "./styles";
-import { Colors } from "../../ui/colors";
-import { Typography } from "../../ui/Typography";
-import { VariantsTypography } from "../../enums/TypographyVariants";
-import { LinkVariants } from "../../enums/LinkVariants";
-import { Link } from "../Link/Link";
-import UnderlinedTitle from "../Underline/Underline";
-import underlineIcon from "/public/icons/underline.png";
 
 export const ManagementSection = () => {
   return (
     <WhiteContainerSC>
       <BackgroundImageContainerManagSC>
-        <Background />
+        <BackgroundImageManagment />
       </BackgroundImageContainerManagSC>
       <WrapperSC>
         <ContainerSC id="products">
@@ -68,13 +67,13 @@ export const ManagementSection = () => {
             />
           </DescriptionContainerSC>
           <ImageContainerSC>
-            <ImageSC src={ImageWorkManag.src} alt={"work together"} />
+            <ImageSC src={ImageWorkFourth.src} alt={"work together"} />
           </ImageContainerSC>
         </ContainerSC>
 
         <ContainerSC>
           <ImageContainerSC>
-            <ImageSC src={ImageWork.src} alt={"work together"} />
+            <ImageSC src={ImageWorkFifth.src} alt={"work together"} />
           </ImageContainerSC>
 
           <DescriptionContainerSC>

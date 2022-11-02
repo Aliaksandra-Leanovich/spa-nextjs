@@ -1,8 +1,8 @@
-import React from "react";
-import AppleIcon from "/public/icons/apple-black-logo 2.svg";
-import WindowIcon from "/public/icons/windows-logo 1.svg";
-import AndroidIcon from "/public/icons/android-logo 1.svg";
+import { LinkVariants, VariantsTypography } from "../../enums";
+import { AndroidIcon, AppleIcon, WindowIcon } from "../../public/icons";
+import { Typography } from "../../ui";
 import { Colors } from "../../ui/colors";
+import { Link } from "../Link/Link";
 import {
   AppImageSC,
   AppsContainerSC,
@@ -13,10 +13,6 @@ import {
   TextContainerFreeTrialSecondSC,
   WrapperSC,
 } from "./styles";
-import { Typography } from "../../ui/Typography";
-import { Link } from "../Link/Link";
-import { LinkVariants } from "../../enums/LinkVariants";
-import { VariantsTypography } from "../../enums/TypographyVariants";
 
 export const FreeTrialSection = () => {
   return (

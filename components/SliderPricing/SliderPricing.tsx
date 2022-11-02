@@ -1,9 +1,10 @@
-import React from "react";
-import { SwiperSlide } from "swiper/react";
-import PointIcon from "/public/icons/Point.svg";
+import { Pagination } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
-import { Pagination } from "swiper";
+import { SwiperSlide } from "swiper/react";
+import { VariantsTypography } from "../../enums";
+import { PointIcon } from "../../public/icons";
+import { Colors, Typography } from "../../ui";
 import {
   ContainerMobileSC,
   PointSC,
@@ -13,9 +14,6 @@ import {
   TextContainerSC,
   TextPriceSC,
 } from "./style";
-import { Typography } from "../../ui/Typography";
-import { VariantsTypography } from "../../enums/TypographyVariants";
-import { Colors } from "../../ui/colors";
 import { IPropsSlider } from "./types";
 
 export const SliderPricing = ({ data }: IPropsSlider) => {

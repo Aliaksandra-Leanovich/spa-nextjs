@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { Colors } from "../../ui/colors";
+import { Colors } from "../../ui";
 
 export const StyledFormSC = styled.form`
   display: grid;

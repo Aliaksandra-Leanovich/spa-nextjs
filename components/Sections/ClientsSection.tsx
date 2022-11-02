@@ -1,18 +1,13 @@
-import React from "react";
-import { Colors } from "../../ui/colors";
-import { Slider } from "../Slider/Slider";
-import QuotesImage from "/public/icons/Quote.svg";
-import Avatar1 from "/public/icons/avatar1.svg";
-import Avatar2 from "/public/icons/avatar2.svg";
-import Avatar3 from "/public/icons/avatar3.svg";
-import { Typography } from "../../ui/Typography";
+import { VariantsTypography } from "../../enums";
+import { Avatar1, Avatar2, Avatar3, QuotesImage } from "../../public/icons";
+import { Colors, Typography } from "../../ui";
+import { Slider } from "../Slider";
 import {
   ClientsContainer,
-  TextContainerSliderSC,
   SliderContainerSC,
+  TextContainerSliderSC,
   WrapperSC,
 } from "./styles";
-import { VariantsTypography } from "../../enums/TypographyVariants";
 
 export interface IReviewers {
   comment: string;

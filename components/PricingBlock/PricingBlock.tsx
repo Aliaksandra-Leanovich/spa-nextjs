@@ -1,5 +1,8 @@
-import React from "react";
-import PointIcon from "/public/icons/Point.svg";
+import { VariantsTypography } from "../../enums";
+import { PointIcon } from "../../public/icons";
+import { Colors, Typography } from "../../ui";
+import { SliderPricing } from "../SliderPricing";
+import { UnderlinedTitle } from "../Underline";
 import {
   BlockTabsSC,
   Border,
@@ -14,12 +17,7 @@ import {
   TextContainerTitleSC,
   TextPriceSC,
 } from "./styles";
-import { Colors } from "../../ui/colors";
 import { IPricePlans } from "./types";
-import { VariantsTypography } from "../../enums/TypographyVariants";
-import { Typography } from "../../ui/Typography";
-import { SliderPricing } from "../SliderPricing/SliderPricing";
-import UnderlinedTitle from "../Underline/Underline";
 
 const config: IPricePlans[] = [
   {

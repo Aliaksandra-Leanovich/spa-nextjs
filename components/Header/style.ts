@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
-import { Colors } from "../../ui/colors";
-import { media } from "../../ui/media";
+import { Colors } from "../../ui";
+import { media } from "../../ui";
 
 export const StyledHeaderSC = styled.header`
   width: 100%;

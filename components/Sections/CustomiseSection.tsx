@@ -1,19 +1,16 @@
-import React from "react";
-import ImageWork from "/public/icons/team-work.webp";
+import { LinkVariants, VariantsTypography } from "../../enums";
+import { ImageWorkSecond } from "../../public/icons";
+import { Colors, Typography } from "../../ui";
+import { Link } from "../Link";
 import {
   ContainerSC,
-  ImageContainerSC,
   DescriptionContainerSC,
+  ImageContainerSC,
+  ImageSC,
   TextContainerSC,
   WhiteContainerSC,
   WrapperSC,
-  ImageSC,
 } from "./styles";
-import { Colors } from "../../ui/colors";
-import { VariantsTypography } from "../../enums/TypographyVariants";
-import { Typography } from "../../ui/Typography";
-import { LinkVariants } from "../../enums/LinkVariants";
-import { Link } from "../Link/Link";
 
 export const CustomiseSection = () => {
   return (
@@ -21,7 +18,7 @@ export const CustomiseSection = () => {
       <WrapperSC>
         <ContainerSC id="resources">
           <ImageContainerSC>
-            <ImageSC src={ImageWork.src} alt={"work together"} />
+            <ImageSC src={ImageWorkSecond.src} alt={"work together"} />
           </ImageContainerSC>
           <DescriptionContainerSC>
             <Typography variant={VariantsTypography.h1} color={Colors.BLACK}>
