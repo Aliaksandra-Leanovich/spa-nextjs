@@ -36,14 +36,14 @@ export const ManagementSection = () => {
                 width: "70%",
                 height: "30px",
                 left: "0%",
-                top: "82%",
+                top: "72%",
                 "@media (max-width: 768px)": {
                   left: "34%",
                 },
                 "@media (max-width: 541px)": {
                   width: "90%",
                   left: "8%",
-                  top: "82%",
+                  top: "72%",
                 },
               }}
             >
