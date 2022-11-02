@@ -67,13 +67,13 @@ export const ManagementSection = () => {
             />
           </DescriptionContainerSC>
           <ImageContainerSC>
-            <ImageSC src={ImageWorkFourth.src} alt={"work together"} />
+            <ImageSC src={ImageWorkFifth.src} alt={"work together"} />
           </ImageContainerSC>
         </ContainerSC>
 
         <ContainerSC>
           <ImageContainerSC>
-            <ImageSC src={ImageWorkFifth.src} alt={"work together"} />
+            <ImageSC src={ImageWorkFourth.src} alt={"work together"} />
           </ImageContainerSC>
 
           <DescriptionContainerSC>
