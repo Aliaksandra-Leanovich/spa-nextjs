@@ -1,20 +1,17 @@
-import React, { useState } from "react";
-import { useForm } from "react-hook-form";
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
-import { app } from "../../utils/firebase";
-import { useRouter } from "next/router";
-import { ContainerFormSC, NoUserMessageSC, StyledFormSC } from "./styles";
-import { Input } from "../Input/Input";
-import { Button } from "../Button/Button";
 import { yupResolver } from "@hookform/resolvers/yup";
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { useRouter } from "next/router";
+import { useState } from "react";
+import { useForm } from "react-hook-form";
 import * as Yup from "yup";
-import { Colors } from "../../ui/colors";
-import { Typography } from "../../ui/Typography";
+import { ButtonVariants, LinkVariants, VariantsTypography } from "../../enums";
+import { Colors, Typography } from "../../ui";
+import { app } from "../../utils/firebase";
+import { Button } from "../Button";
+import { Input } from "../Input";
+import { Link } from "../Link";
+import { ContainerFormSC, NoUserMessageSC, StyledFormSC } from "./styles";
 import { IUserForm } from "./types";
-import { VariantsTypography } from "../../enums/TypographyVariants";
-import { ButtonVariants } from "../../enums/ButtonVariants";
-import { Link } from "../Link/Link";
-import { LinkVariants } from "../../enums/LinkVariants";
 
 const validationSchema = Yup.object().shape({
   email: Yup.string().required("Email is required").email("Email is invalid"),
@@ -56,8 +53,7 @@ export const SignInForm = () => {
         await router.push("/");
       })
       .catch((error) => {
-        const errorCode = error.code;
-        setError(getAuthError(errorCode));
+        setError(getAuthError(error.code));
       });
   };
 

@@ -1,6 +1,6 @@
-import React from "react";
-import { Colors } from "../../ui/colors";
-import Background from "/public/icons/everywhereBackground.svg";
+import { LinkVariants, VariantsTypography } from "../../enums";
+import { Colors, Typography } from "../../ui";
+import { Link } from "../Link/Link";
 import {
   BackgroundImageContainerYourWorkSC,
   BlueContainerSC,
@@ -8,16 +8,13 @@ import {
   TextContainerSC,
   WrapperSC,
 } from "./styles";
-import { Typography } from "../../ui/Typography";
-import { Link } from "../Link/Link";
-import { LinkVariants } from "../../enums/LinkVariants";
-import { VariantsTypography } from "../../enums/TypographyVariants";
+import YourWorkBackground from "/public/icons/everywhereBackground.svg";
 
 export const YourWorkSection = () => {
   return (
     <BlueContainerSC>
       <BackgroundImageContainerYourWorkSC>
-        <Background />
+        <YourWorkBackground />
       </BackgroundImageContainerYourWorkSC>
       <WrapperSC>
         <ContainerYourWorkSC>

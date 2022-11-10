@@ -1,7 +1,5 @@
 import styled from "@emotion/styled";
-import { Colors } from "../../ui/colors";
-import { media } from "../../ui/media";
-import { TypographyRoot } from "../../ui/Typography";
+import { Colors, media, TypographyRoot } from "../../ui";
 
 export const MainContainerSC = styled.section`
   margin: 0 auto;

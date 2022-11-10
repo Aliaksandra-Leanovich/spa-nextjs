@@ -1,8 +1,6 @@
-import React from "react";
-import { Link } from "../Link/Link";
-import ImageWork from "/public/icons/team-work1.png";
-import background from "/public/icons/mainbackground.png";
-import { Colors } from "../../ui/colors";
+import { LinkVariants, VariantsTypography } from "../../enums";
+import { Colors, Typography } from "../../ui";
+import { Link } from "../Link";
 import {
   ContainerSC,
   DescriptionContainerSC,
@@ -13,14 +11,13 @@ import {
   TextContainerSC,
   WrapperSC,
 } from "./styles";
-import { Typography } from "../../ui/Typography";
-import { VariantsTypography } from "../../enums/TypographyVariants";
-import { LinkVariants } from "../../enums/LinkVariants";
+import backgroundImage from "/public/icons/mainbackground.png";
+import ImageWork from "/public/icons/team-work1.png";
 
 export const MainSection = () => {
   return (
     <MainContainerSC>
-      <MainBackgrounSC src={background.src} />
+      <MainBackgrounSC src={backgroundImage.src} />
       <WrapperSC>
         <ContainerSC>
           <DescriptionContainerSC>

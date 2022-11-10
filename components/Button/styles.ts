@@ -1,8 +1,7 @@
 import { css } from "@emotion/react";
 import styled from "@emotion/styled";
-import { ButtonVariants } from "../../enums/ButtonVariants";
-import { Colors } from "../../ui/colors";
-import { media } from "../../ui/media";
+import { ButtonVariants } from "../../enums";
+import { Colors, media } from "../../ui";
 import { IButton } from "./types";
 
 export const theme = {

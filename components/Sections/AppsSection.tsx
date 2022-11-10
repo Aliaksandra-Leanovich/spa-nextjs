@@ -1,6 +1,6 @@
-import React from "react";
-import { Colors } from "../../ui/colors";
-import favoriteBackground from "/public/icons/favoriteBackground.png";
+import { LinkVariants, VariantsTypography } from "../../enums";
+import { Colors, Typography } from "../../ui";
+import { Link } from "../Link";
 import {
   BackgroundImageAppsSC,
   BlueContainerSC,
@@ -12,10 +12,7 @@ import {
   WrapperSC,
 } from "./styles";
 import ImageApps from "/public/icons/Apps.png";
-import { Typography } from "../../ui/Typography";
-import { Link } from "../Link/Link";
-import { LinkVariants } from "../../enums/LinkVariants";
-import { VariantsTypography } from "../../enums/TypographyVariants";
+import favoriteBackground from "/public/icons/favoriteBackground.png";
 
 export const AppsSection = () => {
   return (

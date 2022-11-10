@@ -1,7 +1,7 @@
 import { css } from "@emotion/react";
 import styled from "@emotion/styled";
-import { LinkVariants } from "../../enums/LinkVariants";
-import { Colors } from "../../ui/colors";
+import { LinkVariants } from "../../enums";
+import { Colors } from "../../ui";
 import { ILinkProps } from "./types";
 
 const variantStyles = (variant = LinkVariants.linkSmall) =>

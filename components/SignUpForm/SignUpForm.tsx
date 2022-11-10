@@ -1,20 +1,17 @@
-import React, { useState } from "react";
-import { useForm } from "react-hook-form";
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
-import { app } from "../../utils/firebase";
-import { useRouter } from "next/router";
-import { Input } from "../Input/Input";
 import { yupResolver } from "@hookform/resolvers/yup";
+import { createUserWithEmailAndPassword, getAuth } from "firebase/auth";
+import { useRouter } from "next/router";
+import { useState } from "react";
+import { useForm } from "react-hook-form";
 import * as Yup from "yup";
-import { Colors } from "../../ui/colors";
+import { ButtonVariants, LinkVariants, VariantsTypography } from "../../enums";
+import { Typography, Colors } from "../../ui";
+import { app } from "../../utils/firebase";
+import { Button } from "../Button";
+import { Input } from "../Input";
+import { Link } from "../Link";
 import { ContainerFormSC, EmailInUseMessageSC, StyledFormSC } from "./styles";
 import { IFormInput } from "./types";
-import { VariantsTypography } from "../../enums/TypographyVariants";
-import { LinkVariants } from "../../enums/LinkVariants";
-import { Link } from "../Link/Link";
-import { ButtonVariants } from "../../enums/ButtonVariants";
-import { Button } from "../Button/Button";
-import Typography from "../../ui/Typography";
 
 const validationSchema = Yup.object().shape({
   name: Yup.string()
@@ -43,7 +40,7 @@ const getAuthError = (error: string) => {
 
 export const SignUpForm = () => {
   const router = useRouter();
-  const [error, setError] = useState(getAuthError(""));
+  const [error, setError] = useState("");
 
   const {
     register,

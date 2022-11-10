@@ -1,10 +1,7 @@
-import React from "react";
-import { Colors } from "../../ui/colors";
-import { Typography } from "../../ui/Typography";
-import { VariantsTypography } from "../../enums/TypographyVariants";
-import { LinkVariants } from "../../enums/LinkVariants";
-import { Link } from "../Link/Link";
-
+import { LinkVariants, VariantsTypography } from "../../enums";
+import { Colors, Typography } from "../../ui";
+import { Link } from "../Link";
+import { UnderlinedTitle } from "../Underline";
 import {
   BlueContainerSC,
   ContainerSC,
@@ -15,7 +12,6 @@ import {
   WrapperSC,
 } from "./styles";
 import ImageWork from "/public/icons/team-work4.png";
-import UnderlinedTitle from "../Underline/Underline";
 import underlineIcon from "/public/icons/underline.png";
 
 export const ExtensionSection = () => {

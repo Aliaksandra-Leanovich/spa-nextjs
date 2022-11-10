@@ -1,12 +1,10 @@
 import { getAuth, signOut } from "firebase/auth";
 import router from "next/router";
-import React from "react";
-import { ButtonVariants } from "../../enums/ButtonVariants";
-import { LinkVariants } from "../../enums/LinkVariants";
+import { ButtonVariants, LinkVariants } from "../../enums";
 import { app } from "../../utils/firebase";
-import { Button } from "../Button/Button";
-import { Link } from "../Link/Link";
-import { ItemMobileNavigation } from "./ItemMobileNavigation";
+import { Button } from "../Button";
+import { Link } from "../Link";
+import { ItemMobileNavigation } from "./";
 import {
   ContainerButtonsSC,
   ContainerLinks,

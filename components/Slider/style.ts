@@ -1,7 +1,6 @@
 import styled from "@emotion/styled";
-import { Colors } from "../../ui/colors";
-import { media } from "../../ui/media";
 import { Swiper } from "swiper/react";
+import { Colors, media } from "../../ui";
 
 export const BlockReviewSC = styled.div`
   border-bottom: 1px solid ${Colors.WHITE};
