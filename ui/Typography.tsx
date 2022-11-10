@@ -2,11 +2,11 @@ import { css } from "@emotion/react";
 import styled from "@emotion/styled";
 import React from "react";
 import { VariantsTypography } from "../enums/TypographyVariants";
+import { media } from "./media";
 
 export interface IProps {
   variant: VariantsTypography;
   color?: string;
-  children: string;
 }
 interface ITypography {
   color?: string;
@@ -31,15 +31,23 @@ const variantTypography = {
   h1: css`
     font-family: "Inter";
     font-weight: 700;
-    font-size: 56px;
-    line-height: 64px;
+    font-size: 70px;
+    line-height: 84px;
+    letter-spacing: -0.02em;
+    ${media.TABLET} {
+      font-size: 54px;
+      line-height: 66px;
+    }
+    ${media.PHONE} {
+      font-size: 36px;
+      line-height: 44px;
+    }
   `,
   h2: css`
     font-family: "Inter";
     font-weight: 700;
-    font-size: 64px;
-    line-height: 77px;
-    letter-spacing: -0.02em;
+    font-size: 56px;
+    line-height: 64px;
   `,
   h3: css`
     font-family: "Inter";
@@ -96,7 +104,11 @@ export const TypographyRoot = styled("p")<ITypography>`
   color: ${({ color }) => color};
 `;
 
-export const Typography = ({ variant, color, children }: IProps) => {
+export const Typography = ({
+  variant,
+  color,
+  children,
+}: React.PropsWithChildren<IProps>) => {
   const Component = variant
     ? TypographyTypes[variant]
     : ("p" as React.ElementType<any>);

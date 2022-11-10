@@ -1,8 +1,7 @@
-import React from "react";
-import AppleIcon from "/public/icons/apple-black-logo 2.svg";
-import WindowIcon from "/public/icons/windows-logo 1.svg";
-import AndroidIcon from "/public/icons/android-logo 1.svg";
+import { LinkVariants, VariantsTypography } from "../../enums";
+import { Typography } from "../../ui";
 import { Colors } from "../../ui/colors";
+import { Link } from "../Link";
 import {
   AppImageSC,
   AppsContainerSC,
@@ -13,17 +12,16 @@ import {
   TextContainerFreeTrialSecondSC,
   WrapperSC,
 } from "./styles";
-import { Typography } from "../../ui/Typography";
-import { Link } from "../Link/Link";
-import { LinkVariants } from "../../enums/LinkVariants";
-import { VariantsTypography } from "../../enums/TypographyVariants";
+import AndroidIcon from "/public/icons/android-logo 1.svg";
+import AppleIcon from "/public/icons/apple-black-logo 2.svg";
+import WindowIcon from "/public/icons/windows-logo 1.svg";
 
 export const FreeTrialSection = () => {
   return (
     <BlueContainerSC>
       <WrapperSC>
         <FreeTrialContainerSC>
-          <FreeTrialTitleSC>
+          <FreeTrialTitleSC variant={VariantsTypography.h1}>
             Try Whitepace <span>today</span>
           </FreeTrialTitleSC>
 

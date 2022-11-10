@@ -1,8 +1,6 @@
 import styled from "@emotion/styled";
-import { Colors } from "../../ui/colors";
-import { media } from "../../ui/media";
 import { Swiper } from "swiper/react";
-import { Typography } from "../../ui/typography";
+import { Colors, media, Typography } from "../../ui";
 
 export const ContainerMobileSC = styled.div`
   display: none;

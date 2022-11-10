@@ -1,35 +1,51 @@
-import React from "react";
-import ImageWork from "/public/icons/worktogether.jpg";
-import ImageWorkManag from "/public/icons/team-work3.png";
-import Background from "/public/icons/managmentbackground.svg";
+import { LinkVariants, VariantsTypography } from "../../enums";
+import { Colors, Typography } from "../../ui";
+import { Link } from "../Link";
+import { UnderlinedTitle } from "../Underline";
 import {
+  BackgroundImageContainerManagSC,
   ContainerSC,
   DescriptionContainerSC,
   ImageContainerSC,
-  BackgroundImageContainerManagSC,
+  ImageSC,
   TextContainerSC,
   WhiteContainerSC,
-  ImageSC,
   WrapperSC,
 } from "./styles";
-import { Colors } from "../../ui/colors";
-import { Typography } from "../../ui/Typography";
-import { VariantsTypography } from "../../enums/TypographyVariants";
-import { LinkVariants } from "../../enums/LinkVariants";
-import { Link } from "../Link/Link";
+import BackgroundImageManagment from "/public/icons/managmentbackground.svg";
+import ImageWorkFifth from "/public/icons/team-work3.png";
+import underlineIcon from "/public/icons/underline.png";
+import ImageWorkFourth from "/public/icons/worktogether.jpg";
 
 export const ManagementSection = () => {
   return (
     <WhiteContainerSC>
       <BackgroundImageContainerManagSC>
-        <Background />
+        <BackgroundImageManagment />
       </BackgroundImageContainerManagSC>
       <WrapperSC>
         <ContainerSC id="products">
           <DescriptionContainerSC>
-            <Typography variant={VariantsTypography.h2} color={Colors.BLACK}>
+            <UnderlinedTitle
+              img={underlineIcon.src}
+              color={Colors.BLACK}
+              css={{
+                width: "70%",
+                height: "30px",
+                left: "0%",
+                top: "72%",
+                "@media (max-width: 768px)": {
+                  left: "34%",
+                },
+                "@media (max-width: 541px)": {
+                  width: "90%",
+                  left: "8%",
+                  top: "72%",
+                },
+              }}
+            >
               Project Management
-            </Typography>
+            </UnderlinedTitle>
 
             <TextContainerSC>
               <Typography
@@ -49,19 +65,48 @@ export const ManagementSection = () => {
             />
           </DescriptionContainerSC>
           <ImageContainerSC>
-            <ImageSC src={ImageWorkManag.src} alt={"work together"} />
+            <ImageSC src={ImageWorkFifth.src} alt={"work together"} />
           </ImageContainerSC>
         </ContainerSC>
 
         <ContainerSC>
           <ImageContainerSC>
-            <ImageSC src={ImageWork.src} alt={"work together"} />
+            <ImageSC src={ImageWorkFourth.src} alt={"work together"} />
           </ImageContainerSC>
 
           <DescriptionContainerSC>
-            <Typography variant={VariantsTypography.h2} color={Colors.BLACK}>
+            <UnderlinedTitle
+              img={underlineIcon.src}
+              color={Colors.BLACK}
+              css={{
+                width: "60%",
+                height: "28px",
+                left: "42%",
+                top: "66%",
+                "@media (max-width: 1037px ) ": {
+                  left: "0%",
+                  top: "86%",
+                },
+                "@media (max-width: 768px)": {
+                  left: "42%",
+                  top: "66%",
+                },
+                "@media (max-width: 382px) ": {
+                  left: "28%",
+                  top: "86%",
+                },
+                "@media (max-width: 365px)": {
+                  left: "42%",
+                  top: "66%",
+                },
+                "@media (max-width: 265px)": {
+                  left: "28%",
+                  top: "76%",
+                },
+              }}
+            >
               Work together
-            </Typography>
+            </UnderlinedTitle>
             <TextContainerSC>
               <Typography
                 variant={VariantsTypography.paragraphSmall}

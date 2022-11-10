@@ -1,7 +1,5 @@
 import styled from "@emotion/styled";
-import { Colors } from "../../ui/colors";
-import { media } from "../../ui/media";
-import { Typography } from "../../ui/Typography";
+import { Colors, media, TypographyRoot } from "../../ui";
 
 export const PricingContainerSC = styled.section`
   overflow-y: scroll;
@@ -34,7 +32,9 @@ export const BlockTabsSC = styled.div`
   }
 `;
 export const TextContainerTitleSC = styled.div`
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 export const ContainerSliderSC = styled.div`
   display: none;
@@ -73,7 +73,7 @@ export const TextContainerSC = styled.div`
 export const TabTextContainerSC = styled.div`
   padding: 40px 44px;
 `;
-export const TextPriceSC = styled(Typography)`
+export const TextPriceSC = styled(TypographyRoot)`
   color: ${Colors.BLACK};
 `;
 export const TabSC = styled.div`

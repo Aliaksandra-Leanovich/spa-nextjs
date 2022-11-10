@@ -1,22 +1,20 @@
-import React, { useState } from "react";
-import {
-  StyledNavigation,
-  NavigationContainer,
-  Arrow,
-  ContainerButtonsSC,
-} from "./styles";
-import { app } from "../../utils/firebase";
 import { getAuth, signOut } from "firebase/auth";
 import router from "next/router";
-import { Burger } from "../Burger/Burger";
-import { Button } from "../Button/Button";
+import { useState } from "react";
+import { ButtonVariants, LinkVariants } from "../../enums";
 import ArrowIcon from "../../public/icons/arrow.png";
-import { ItemNavigation } from "./ItemNavigation";
+import { app } from "../../utils/firebase";
+import { Burger } from "../Burger";
+import { Button } from "../Button";
+import { Link } from "../Link";
+import { ItemNavigation, RightNavigation } from "./";
+import {
+  Arrow,
+  ContainerButtonsSC,
+  NavigationContainer,
+  StyledNavigation,
+} from "./styles";
 import { ILinkNavigationProps } from "./types";
-import { Link } from "../Link/Link";
-import { LinkVariants } from "../../enums/LinkVariants";
-import { RightNavigation } from "./RightNavigation";
-import { ButtonVariants } from "../../enums/ButtonVariants";
 
 const config: ILinkNavigationProps[] = [
   {

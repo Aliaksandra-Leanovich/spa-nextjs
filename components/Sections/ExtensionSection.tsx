@@ -1,10 +1,7 @@
-import React from "react";
-import { Colors } from "../../ui/colors";
-import { Typography } from "../../ui/Typography";
-import { VariantsTypography } from "../../enums/TypographyVariants";
-import { LinkVariants } from "../../enums/LinkVariants";
-import { Link } from "../Link/Link";
-
+import { LinkVariants, VariantsTypography } from "../../enums";
+import { Colors, Typography } from "../../ui";
+import { Link } from "../Link";
+import { UnderlinedTitle } from "../Underline";
 import {
   BlueContainerSC,
   ContainerSC,
@@ -15,6 +12,7 @@ import {
   WrapperSC,
 } from "./styles";
 import ImageWork from "/public/icons/team-work4.png";
+import underlineIcon from "/public/icons/underline.png";
 
 export const ExtensionSection = () => {
   return (
@@ -22,9 +20,38 @@ export const ExtensionSection = () => {
       <WrapperSC>
         <ContainerSC id="solutions">
           <DescriptionContainerSC>
-            <Typography variant={VariantsTypography.h2} color={Colors.WHITE}>
+            <UnderlinedTitle
+              img={underlineIcon.src}
+              color={Colors.WHITE}
+              css={{
+                width: "60%",
+                height: "24px",
+                left: "44%",
+                top: "72%",
+                "@media  (max-width: 1589px)": {
+                  left: "0%",
+                  top: "88%",
+                },
+                "@media (max-width: 1440px)": {
+                  left: "44%",
+                  top: "72%",
+                },
+                "@media (max-width: 1217px)": {
+                  left: "0%",
+                  top: "88%",
+                },
+                "@media (max-width: 529px)": {
+                  left: "26%",
+                  top: "88%",
+                },
+                "@media (max-width: 400px)": {
+                  left: "10%",
+                  top: "78%",
+                },
+              }}
+            >
               Use as Extension
-            </Typography>
+            </UnderlinedTitle>
             <TextContainerSC>
               <Typography
                 variant={VariantsTypography.paragraphSmall}

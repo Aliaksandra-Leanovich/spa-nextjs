@@ -1,8 +1,5 @@
-import React from "react";
-import ImageApple from "/public/icons/Apple.svg";
-import ImageMicrosoft from "/public/icons/Microsoft.svg";
-import ImageSlack from "/public/icons/Slack.svg";
-import ImageGoogle from "/public/icons/Google.svg";
+import { VariantsTypography } from "../../enums";
+import { Colors, Typography } from "../../ui";
 import {
   ClientsContainer,
   SponsorsContainerSC,
@@ -10,16 +7,17 @@ import {
   WhiteContainerSC,
   WrapperSC,
 } from "./styles";
-import { Colors } from "../../ui/colors";
-import { Typography } from "../../ui/Typography";
-import { VariantsTypography } from "../../enums/TypographyVariants";
+import ImageApple from "/public/icons/Apple.svg";
+import ImageGoogle from "/public/icons/Google.svg";
+import ImageMicrosoft from "/public/icons/Microsoft.svg";
+import ImageSlack from "/public/icons/Slack.svg";
 
 export const SponsorsSection = () => {
   return (
     <WhiteContainerSC>
       <WrapperSC>
         <ClientsContainer>
-          <Typography variant={VariantsTypography.h2} color={Colors.BLACK}>
+          <Typography variant={VariantsTypography.h1} color={Colors.BLACK}>
             Our sponsors
           </Typography>
           <SponsorsContainerSC>
