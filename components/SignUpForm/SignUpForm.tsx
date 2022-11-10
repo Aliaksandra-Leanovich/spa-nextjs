@@ -43,7 +43,7 @@ const getAuthError = (error: string) => {
 
 export const SignUpForm = () => {
   const router = useRouter();
-  const [error, setError] = useState(getAuthError(""));
+  const [error, setError] = useState("");
 
   const {
     register,
